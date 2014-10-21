@@ -11,14 +11,14 @@ class AMR:
 		self.file = '';
 		self.tokens = [];
 		self.alignments = '';
-		self.new_alignments = '';
 		self.alignment_annotator = '';
 		self.alignment_date = '';
-		self.AMR_string_printable = '';
-		self.AMR_aligned_string_printable = '';
-		self.AMR_string_parsable = '';
+		self.AMR_string_printable = '';			#AMR string prints just like in the original file
+		self.AMR_aligned_string_printable = '';	#AMR string annotated with alignment information prints in tree format
+		self.AMR_string_parsable = '';			#Linearized AMR string
 		self.AMR_tree = None;	
-		self.AMR_tree_aligned = None;
+		self.AMR_tree_aligned = None;			#AMR tree annotated with alignment information
+		self.AMR_dict = {};						#facilitates AMR string and tree lookup by ID
 
 	def read(self,s):
 	#reads a string that describes the AMR and parses the string into components
@@ -30,7 +30,7 @@ class AMR:
 		
 		AMR_lines = map(lambda s: s.lstrip(),AMR_lines);	
 		self.AMR_string_parsable=' '.join(AMR_lines);
-			
+	
 		ID_line = s[0];
 		ID_line = ID_line.split();
 		for i in range(0,len(ID_line)):
@@ -41,7 +41,11 @@ class AMR:
 				self.date = ID_line[i];
 			if(prev_token == '::annotator'):
 				self.annotator = ID_line[i];
-	
+
+		self.AMR_tree = parse_amr(self.AMR_string_parsable);		
+		self.AMR_tree_aligned = self.AMR_tree;
+		self.AMR_dict[self.ID] = [self.AMR_string_printable, self.AMR_tree];	#Ideally, we should be able to generate the printable string from the tree. 
+																				#Then we wouldn't have to save the printable string at all.
 		snt_line = s[1];	
 		self.sentence = snt_line[8:];
 
@@ -49,17 +53,18 @@ class AMR:
 		self.tokens = (tok_line[8:]).split();
 		#print self.tokens;	
 
-		alignment_line = s[4];
-		alignment_line = alignment_line[15:];
-		for i in range(0,len(alignment_line)):
-			if alignment_line[i] == ':':
-				break;
-		alignment_line = alignment_line[:i-1];
-		temp_split = alignment_line.split();
-		alignments = '';
-		for item in temp_split[:-5]:
-			alignments = alignments + " " + item;
-		self.alignments = alignments[1:];
+		alignment_line = (s[4]).split();
+		self.alignments = alignment_line[2:-5];	#remove the ::alignment tag
+	#	for i in range(0,len(alignment_line)):	#not sure what this is for, probably some border case
+	#		if alignment_line[i] == ':':
+	#			break;
+	#	alignment_line = alignment_line[:i-1];	
+	#	temp_split = alignment_line.split();	
+	#	alignments = '';
+	#	for item in temp_split[:-5]:			#remove the last 5 tokens after splitting. These are other metadata.
+	#		alignments = alignments + " " + item;
+	#	alignments = alignments[1:];
+
 		return;
 
 	def generate_printable_AMR(self):
@@ -76,7 +81,7 @@ class AMR:
 		for i in range(0,len(self.tokens)):
 			s = s + ' ' + str(i) + '-' + self.tokens[i];
 		s = s + '\n';
-		s = s + '# ::alignments' + self.new_alignments + ' * * * * *\n';
+		s = s + '# ::alignments ' + ' '.join(self.alignments) + ' * * * * *\n';
 		s = s + self.AMR_string_printable;
 		s = s + '\n';
 		
@@ -107,6 +112,7 @@ class AMR:
 		if len(v) > 1: 
 			n.setValue(newvar + " " + v[1] + " " + v[2]);
 		else: n.setValue(newvar);	
+
 	def convertISItoJAMR(self,address):
 		
 		if address == '1':
@@ -129,13 +135,23 @@ class AMR:
 		
 		return self.AMR_tree;
 
+	def getAMRStringByID(self,ID):
+		
+		return self.AMR_dict[ID][0];
+	
+	def getAMRTreeByID(self,ID):
+		
+		return self.AMR_dict[ID][1];
+
 	def setAlignments(self,alignments):
 		
-		self.new_alignments = alignments;
+		self.alignments = alignments;
 
 #Reads a corpus file and returns a list of AMR objects	
 def read_corpus_file(fname):
 
+	amr_objects = [];	
+	
 	f=open(fname);
 	s=f.read();
 	f.close();
@@ -143,14 +159,10 @@ def read_corpus_file(fname):
 	s = s.split('\n\n');	
 	del s[0];
 	del s[-1];
-	amr_objects = [];	
+
 	for amr_desc in s:
 		a = AMR();
 		a.read(amr_desc);
 		amr_objects.append(a);
-		amr_str = a.AMR_string_parsable;
-		amr_tree = parse_amr(amr_str);	
-		a.AMR_tree = amr_tree;
-		a.AMR_tree_aligned = amr_tree;	#Do they both point to the same object in memory?
 		
 	return amr_objects;

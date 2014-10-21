@@ -11,7 +11,7 @@ d = {};
 
 def push_alignment(toknum,address,alignment):
 
-	alignment = alignment + " " + str(toknum) + "-" + str(toknum+1) + "|" + address;
+	alignment.append(str(toknum) + "-" + str(toknum+1) + "|" + address);
 	
 	return alignment;
 
@@ -20,7 +20,7 @@ def apply_rules(concept,token):
 #	global test_concepts;
 #	global test_aligned;
 #	global d;
-#	polarity_token_list = ['no','not','non','never'];
+	polarity_token_list = ['no','not','non','never','n\'t','without'];
 #	if concept == '-': 
 #		#polarity_concepts += 1;
 #		d = count_dict_insert(d,token);
@@ -31,7 +31,7 @@ def apply_rules(concept,token):
 
 def aligner(concepts, tokens, a):
 
-	alignment = "";	
+	alignment = [];	
 	for i in range(0,len(concepts)):
 		concept = concepts[i][0];
 		concept = concept.lower();	

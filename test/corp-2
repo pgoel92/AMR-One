@@ -810,20 +810,6 @@
   :ARG1 (f / folk)
   :mode imperative)
 
-# ::id wb.eng_0003.55 ::date 2012-09-28T09:41:20 ::annotator ISI-AMR-01 ::preferred
-# ::snt TMT : I do n't understand your point .
-# ::save-date Fri Oct 5, 2012 ::file wb_eng_0003_55.txt
-# ::tok TMT : I do n't understand your point .
-# ::alignments 0-1|0.2+0.2.0+0.2.0.0 2-3|0.0 5-6|0.1+0.1.0 7-8|0.1.1 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.414
-(s / say-01
-      :ARG0 (i / i)
-      :ARG1 (u / understand-01 :polarity -
-            :ARG0 i
-            :ARG1 (p2 / point
-                  :poss p))
-      :ARG2 (p / person
-            :name (t / name :op1 "TMT")))
-
 # ::id wb.eng_0003.56 ::date 2012-09-28T09:42:09 ::annotator ISI-AMR-01 ::preferred
 # ::snt when was the last time you were stuck in traffic that you were n't on your way to or from some sort of business ?
 # ::save-date Mon Oct 15, 2012 ::file wb_eng_0003_56.txt
