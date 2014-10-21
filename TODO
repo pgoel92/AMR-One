@@ -1,3 +1,0 @@
-- Fix the precision errors
-- Add new rules to improve recall
-- Look at FPs and determine how many are caused by wrong orderings

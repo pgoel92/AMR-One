@@ -1,11 +1,6 @@
 #!/usr/bin/python
 
-#from Node_class import parse_amr
-#from Node_class import get_node_by_address
-#from Node_class import printStuff
-#from Node_class import print_amr
-#from Node_class import isReent
-from AMR_class import read_corpus_file
+from lib.AMR_class import read_corpus_file
 import numpy as np;
 import operator;
 import os;

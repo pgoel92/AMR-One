@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
-from AMR_class import read_corpus_file
-from dictlib import count_dict_insert, threshold_dict
+from lib.AMR_class import read_corpus_file
+from lib.dictlib import threshold_dict, count_dict_insert
 import re
 import sys
 
