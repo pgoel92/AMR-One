@@ -330,4 +330,4 @@ def main():
 	#generate_stats_files(dir,cdict_show,wdict,wwdict);
 	
 
-main();
+#main();

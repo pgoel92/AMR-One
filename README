@@ -3,6 +3,7 @@ Week 3 :
 Contents :
 
 evaluate_jamr_isi.py : Evaluation script for JAMR alignments with ISI alignments
+my_amr_parser.py : Parses the AMR and stores it in a tree. Supports node retrieval by address.
 mod_out.py : Used to generate corp_span from JAMR outputs corp and span
 run.sh : Runs JAMR on the dev and test data that was used by ISI for their alignments
 accuracy : Final precision, recall measures over the combined dev and test datasets
@@ -22,30 +23,43 @@ manual_testing/ : contains sampled data from the dev and test sets to verify man
 
 Summary :
 
-The only task for Week 3 was to run JAMR aligner on the data that ISI used and then evaluate the alignments. This was the dev_consensus and test_consensus datasets containing 100 AMRs from the LDC release of AMR in June 2014. The idea was to compare the accuracy of the two methods, the rule-based aligner used by JAMR and the statistical IBM Model based aligner used by ISI. 
-It was immediately apparent that the alignments of the two systems were very different. JAMR aligned spans of words to subgraphs, whereas ISI aligned individual tokens to one or more nodes. Also, ISI aligns tokens to edges. So, even :arg0, :arg1, :mod etc. could be aligned in ISI's method.
-So the main problem in evaluation was to handle the following :
+For Week 4, the first task was to recompute the Precision and Recall values after decomposing each one-to-many and many-to-many alignment into all possible combinations and treating each one as a separate alignment. I did, and the precision dropped way down. The recall drop was not that huge.
 
-JAMR alignment : 0-2|1.1+1.1.1+1.1.1.1+1.1.1.2 
-ISI alignment : 0-1.1.1.1 1-1.1.1.2
+Next, I had to build a simple parser for AMRs that would enable retrieval of concepts by their addresses. The purpose was to enable retrieving examples of False Positives and False Negatives when evaluating alignments. My parser is based on reading the AMR into a tree. Each node has a value and a list of children. 
+I am parsing the AMR literal character by character. It is sort of like the kind of parser that would use a grammar to generate the AMR. However, it parses in one scan of the string. I chose this over a regular expression based parser, although that mightve been simpler and wouldntve used up a lot of time either because the AMR string is never too long. The parse function is pretty hard to understand just by looking at it, needs a thorough dry run. I have tried to add comments to help out.
+When I used the parser on the dev(WSJ) sentences, I found that JAMR has a slightly different node addressing scheme than ISI. JAMR skips nodes that are re-entrancies.
+So if a node "cause-01" has three children "p", "ARG0" and "ARG1", where p is a re-entrancy, then JAMR would give them the indices (-,0,1) whereas ISI would mark them (0,1,2)
+This meant I had to keep track of re-entrancies in my parser. I implemented that by storing all variables in a dictionary and then looking up each new variable to see if it's already in the dict. I then store the pointer to the original node at this re-entrancy edge. This was suggested by Daniel. His exact words were :
 
-Also, tokens aligned to edges were denoted as follows :
+"I don't like the kind of node addressing they use anyway. It seems cumbersome
+since nodes have IDs anyway (b / boy => b uniquely identifies the node). 
+This works for the JAMR setting (align string tokens to nodes).
+For ISI that doesn't work, since they treat every mention of a node
+separately. The ISI algorithm can therefore in theory align a string token to
+a reentrency -- I don't know if this actually ever happens.
 
-ISI alignment : 13-1.1.2.1.1 13-1.1.2.1.1.1 13-1.1.2.1.1.1.r
+For the evaluation, if there is ever an alignment to a reentrency
+(intuitively this makes sense for pronouns), can you just collapse it with
+the original node? I.e. I think we should run the evalution on alignments to
+nodes, not to node mentions. It is then easier to work with explicit node IDs
+instead of tree addresses."
 
-To handle the first case, I simply assumed that if the ISI alignment matched even one of the alignments in JAMR, it would be marked as correct
-I handled the second by marking the role tokens and compiling statistics for them separately. However, it turns out that JAMR will never align to edges and hence the recall will be really poor.
+Daniel also pointed out a flaw in the algo for keeping track of re-entrancies : "Usually you find the original referent
+first when searching the graph, but not always."
+
+Well, my parser stopped working once I added the bit about re-entrancies. And I didn't have enough time to fix it. So I pulled out all the stats that I could and went to the meeting. These stats were the no. of role tokens, the no. of one-to-many alignments in ISI and the no. of many-to-many/one-to-many alignments in JAMR. 
+
+UPDATE from Week 5 : I fixed the parser. 
+
+Anomalies :
+
+Sentence ID 0003.8: It has a (r / realize-01 :polarity -) as its root. JAMR treats polarity as 1.1 whereas ISI treats it as 1.3. Therefore, my parser can't handle this sentence. Here is the sentence for reference :
+
+Sentence ID 0003.29: It has a re-entrancy edge to a node that occurs after it in the literal. My parser can't handle that.
+Sentence ID 0008.1 : Same issue as 0003.8
+Sentence ID 0008.2 : Same as 0003.8 
+Sentence ID 0008.3 : Same as 0003.29
 
 Meeting summary :
 
-We realized immediately that the evaluation was not correct because of the differences in alignments. We discussed how to evaluate in a fair manner. Daniel suggested that to handle the first problem (of many-to-many alignments), it is fair to decompose it into all possible combinations of tokens and concepts. E.g.
-
-0-2|1.1.1+1.1.1.2 will decompose into (0,1.1.1),(0,1.1.1.2),(1,1.1.1),(1,1.1.1.2)
-
-It was decided that role tokens will simply be ignored during evaluation. However, we will keep track of how many tokens are role tokens and what they are like. This will help in rule extraction. We also want to look at False Positive and False Negative examples, for which I will have to parse the AMR to get the correct concepts that were aligned in the gold alignments. 
-We also decided that it would be helpful to compile some more statistics, particularly about the many-to-many alignments in JAMR and how frequent they are, and about the role tokens which was already mentioned.
-
-Finally, we discussed the rule extraction phase. Daniel explained the intuition behind the "crossing-edge" approach to rule extraction. If we have two strings of tokens (think MT), and we have alignments for these two strings, then if there are crossings between the edges representing alignments, it is hard to extract a rule for the involved tokens. If there are no crossings, we can simply extract each alignment as a separate rule. 
-It works in a similar manner for a string-to-graph alignment scenario. Therefore, the alignments obtained are crucial for rule extraction.
-
-We discussed the complications involved with aligning prepositions and pronouns and also with learning rules for them. We need to think of ways to handle them.
+I showed the new numbers for Precision and Recall and also the no. of many-to-many/one-to-many alignments. It was clear that JAMR rules for alignment were not good enough for the gold set that ISI had defined (remember that this is the only gold set we have available to us. CMU didn't make it's set available). Therefore, it didn't take long for Daniel to decide that the ISI aligner clearly makes more sense, and it might be a good idea to use simple rules for alignment and then overlay that with a statistical aligner like the ISI one. The task for next week was to complete the pending work from last week i.e fix the parser and generate examples of False Positives and False Negatives, and to try to see which rules in the JAMR aligner make sense for the ISI gold alignments and which new rules should be added. The idea is to try to choose rules so as to increase accuracy when evaluated with the ISI gold set. We agreed to meet on Friday just to make sure I'm on the right track.
