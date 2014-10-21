@@ -4,6 +4,7 @@
 from nltk.corpus import stopwords
 import nltk
 import operator
+import os
 import re
 import sys
 import unicodedata
@@ -70,6 +71,10 @@ def magicsplit(l, *splitters):
 def magicsplitre(l, *splitters):
     return [subl for subl in _itersplitre(l, splitters) if subl]
 
+def isSpanLine(line):
+	
+	return re.match('Span.*',line);
+
 #Takes as input aligned corpus and spans as lists of line strings. Returns lists of chunks corresponding to each sentence in the corpus.
 def preprocess(corp_list,span_list):
 	
@@ -80,11 +85,11 @@ def preprocess(corp_list,span_list):
 	corp = magicsplit(corp,'\n',0);
 	
 	#anomalies: manually remove sentences in the corpus that do not get aligned
-	del corp[95];
-	del corp[272];
-	del corp[339];
-	del corp[681];
-	del corp[697];
+#	del corp[95];
+#	del corp[272];
+#	del corp[339];
+#	del corp[681];
+#	del corp[697];
 
 	#Split the alignemnt spans to correspond with the AMRs in the corpus
 	spans = span_list[3:];
@@ -98,15 +103,44 @@ def preprocess(corp_list,span_list):
 	newspans = []
 	for item in spans:
 		for line in item:
-			if not re.match('Span.*',line):
+			if not isSpanLine(line):
 				next.append(line);
 			else: current.append(line);
 		newitem = previous + current;
-		newspans.append(newitem);
+		if newitem != []: newspans.append(newitem);
 		previous = next;
 		current = [];
 		next = [];
 
+	return (corp,newspans);
+
+def preprocess_v2(corp_list,span_list):
+
+	#Remove HTML tags
+	corp=corp_list[5:-3];
+	
+	#Split the aligned AMR corpus at newlines
+	corp = magicsplit(corp,'\n',0);
+	
+	#anomalies: manually remove sentences in the corpus that do not get aligned
+#	del corp[95];
+#	del corp[272];
+#	del corp[339];
+#	del corp[681];
+#	del corp[697];
+
+	span = span_list[3:];
+	newspans = [];
+	tempspan = [];
+
+	for i in range(0,len(span_list)-1):
+		current=span_list[i];
+		next=span_list[i+1];
+		tempspan.append(current);	
+		if isSpanLine(current) and not isSpanLine(next):
+			newspans.append(tempspan);
+			tempspan = [];
+	
 	return (corp,newspans);
 
 #Separate spans with unaligned concepts
@@ -182,8 +216,8 @@ def stats(corp,spans,imperfect):
 #				print elt[1],elt[0]
 #			print
 	
-def write_to_file(corp,span,perfect,imperfect):
-	f = open('corp-span','w');
+def generate_alignment_files(dir,corp,span,perfect,imperfect,pflag):
+	f = open(dir+'/corp-span','w');
 	for i in range(0,len(corp)):
 		for line in corp[i]:
 			f.write(line);
@@ -192,23 +226,49 @@ def write_to_file(corp,span,perfect,imperfect):
 			f.write(line);
 		f.write('\n');
 	f.close();
-	f = open('corp-span-perfect','w');
-	for i in perfect:
-		for line in corp[i]:
-			f.write(line);
-		f.write('\n');
-		for line in span[i]:
-			f.write(line);
+	
+	if pflag:
+		f = open(dir+'/corp-span-perfect','w');
+		for i in perfect:
+			for line in corp[i]:
+				f.write(line);
+			f.write('\n');
+			for line in span[i]:
+				f.write(line);
+			f.write('\n');
+		f.close();
+		f = open(dir+'/corp-span-imperfect','w');
+		for i in imperfect:
+			for line in corp[i]:
+				f.write(line);
+			f.write('\n');
+			for line in span[i]:
+				f.write(line);
+			f.write('\n');
+		f.close();
+
+def generate_stats_files(dir,cdict_show,wdict,wwdict):
+
+	f = open(dir+'/freq_unaligned','w');
+	for tup in cdict_show:
+		f.write(str(tup[1]) + " " + tup[0]);
 		f.write('\n');
 	f.close();
-	f = open('corp-span-imperfect','w');
-	for i in imperfect:
-		for line in corp[i]:
-			f.write(line);
+
+	f = open(dir+'/cooccuring_words','w');
+	for elt in cdict_show:
+		f.write("## " + str(elt[1]) + " " + elt[0] + '\n\n'); 
+		tmpdict = wdict[elt[0]];
+		tmpdict_show = threshold_dict(tmpdict,cooccuring_freq);
+		for item in tmpdict_show:
+			f.write(str(item[1]) + " " + item[0] + '\n');
 		f.write('\n');
-		for line in span[i]:
-			f.write(line);
-		f.write('\n');
+	f.close();	
+
+	f = open(dir+'/cooccuring_words_two','w');		
+	wwshow = threshold_dict(wwdict,0);
+	for item in wwshow:
+		f.write(str(item[1]) + " (" + item[0][0] +", " + item[0][1] +  ')\n');
 	f.close();
 
 def main():
@@ -224,52 +284,50 @@ def main():
 	spans=f.readlines();
 	f.close();
 	
-	t = preprocess(corp,spans);
+	dir=os.path.dirname(sys.argv[1]);
+	print dir;
+	
+	t = preprocess_v2(corp,spans);
 	corp = t[0];
 	span = t[1];
-	#print len(corp),len(span);
-
+	print len(corp),len(span);
+	if len(corp) != len(span):
+		print "WARNING : There are some unaligned sentences. Please manually edit the generated corp_debug and span_debug files."
+		f = open(dir+"/corp_debug",'w');
+		for item in corp:
+			f.write(item[1]);
+		f.close();
+		f = open(dir+"/span_debug",'w');
+		for item in span:
+			s = ""
+			for elt in item:
+				s = s + elt[:-1] + " ";
+			f.write(s);
+			f.write('\n');
+		f.close();
 	tsep = separate(corp,span);
 	perfect = tsep[0];
 	imperfect = tsep[1];
-	
-	dic = stats(corp,span,imperfect);
-	cdict = dic[0];
-	wdict = dic[1];
-	
-	cdict_show = threshold_dict(cdict,concept_freq);
-	
-	wwdict = {}
-	for tup in cdict_show:
-		tmpdict = wdict[tup[0]]
-		for key in tmpdict:
-			keytup = (tup[0],key);
-			if keytup not in wwdict:
-				wwdict[keytup] = tmpdict[key]; 
-			else:
-				wwdict[keytup] = wwdict[keytup] + tmpdict[key];
 
-	f = open('freq_unaligned','w');
-	for tup in cdict_show:
-		f.write(str(tup[1]) + " " + tup[0]);
-		f.write('\n');
-	f.close();
-
-	f = open('cooccuring_words','w');
-	for elt in cdict_show:
-		f.write("## " + str(elt[1]) + " " + elt[0] + '\n\n'); 
-		tmpdict = wdict[elt[0]];
-		tmpdict_show = threshold_dict(tmpdict,cooccuring_freq);
-		for item in tmpdict_show:
-			f.write(str(item[1]) + " " + item[0] + '\n');
-		f.write('\n');
-	f.close();	
-
-	f = open('cooccuring_words_two','w');		
-	wwshow = threshold_dict(wwdict,0);
-	for item in wwshow:
-		f.write(str(item[1]) + " (" + item[0][0] +", " + item[0][1] +  ')\n');
-	f.close();
+	generate_alignment_files(dir,corp,span,perfect,imperfect,0);
+	
+#	dic = stats(corp,span,imperfect);
+#	cdict = dic[0];
+#	wdict = dic[1];
+#
+#	cdict_show = threshold_dict(cdict,concept_freq);
+#	
+#	wwdict = {}
+#	for tup in cdict_show:
+#		tmpdict = wdict[tup[0]]
+#		for key in tmpdict:
+#			keytup = (tup[0],key);
+#			if keytup not in wwdict:
+#				wwdict[keytup] = tmpdict[key]; 
+#			else:
+#				wwdict[keytup] = wwdict[keytup] + tmpdict[key];
+	
+	#generate_stats_files(dir,cdict_show,wdict,wwdict);
 	
 
 main();

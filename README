@@ -1,28 +1,51 @@
-Contents : 
+Week 3 :
 
-README
-corp : JAMR aligner output corpus file 
-span : JAMR aligner output span file
-corp-span : merged corpus and span file
-corp-span-perfect : merged file with only perfectly aligned sentences
-corp-span-imperfect : merged file with only imperfectly aligned sentences
-run.sh : script that runs the JAMR aligner on the test data from AMR public release 1.3
-mod-out.py : creates corp-span after taking as input files corp and span
-freq_unaligned : Lists all the frequently unaligned concepts with their counts
-cooccuring_words : Lists for each frequently unaligned concept, all the words it frequently occurs with
-cooccuring_words_two : Lists the most frequently occurring (unaligned concept,word) pairs
+Contents :
 
-I finished watching videos for and summarizing Week 2 of the Coursera course NLP. It was about the tagging problem and HMMs. I also went through the Bolinas tutorial, the AMR paper and the AMR guidelines, not very thoroughly though. On Sunday, after beating away a migraine, I sat all day to write code for compiling statistics as discussed in the meeting on Monday. I polished off the final code mod_out.py before the meeting to ensure it ran smoothly in case the need arose to demonstrate.
+evaluate_jamr_isi.py : Evaluation script for JAMR alignments with ISI alignments
+mod_out.py : Used to generate corp_span from JAMR outputs corp and span
+run.sh : Runs JAMR on the dev and test data that was used by ISI for their alignments
+accuracy : Final precision, recall measures over the combined dev and test datasets
+dev/
+  corp
+  span
+  true : ISI gold alignments for the dev 100 dataset
+  corp-span
+  accuracy
+test/
+  corp
+  span
+  true : ISI gold alignments for the test 100 dataset
+  corp-span
+  accuracy
+manual_testing/ : contains sampled data from the dev and test sets to verify manually if my evaluation was correct
 
-I could not complete the second task for the week, which was to merge the AMR bank and the Penn treebank for a certain 100 sentences. This was because I did not have access to the data. The AMR data released by LDC was available to Columbia but is accessible only on the CCLS servers through a cs.columbia.edu account. I did not hear from Owen about accessing the data. 
+Summary :
 
-End of Week Meeting Summary :
+The only task for Week 3 was to run JAMR aligner on the data that ISI used and then evaluate the alignments. This was the dev_consensus and test_consensus datasets containing 100 AMRs from the LDC release of AMR in June 2014. The idea was to compare the accuracy of the two methods, the rule-based aligner used by JAMR and the statistical IBM Model based aligner used by ISI. 
+It was immediately apparent that the alignments of the two systems were very different. JAMR aligned spans of words to subgraphs, whereas ISI aligned individual tokens to one or more nodes. Also, ISI aligns tokens to edges. So, even :arg0, :arg1, :mod etc. could be aligned in ISI's method.
+So the main problem in evaluation was to handle the following :
 
-I started off asking Daniel why Owen had not replied. He told me that Owen had issued a support ticket to get me a cs.columbia.edu account but had not received a reply. Daniel got me the data from the CCLS servers inspite of that.
-We had a look at the statistics and found several "low hanging fruit", as Daniel described it. These were very simple rules that could improve the accuracy by a huge margin. E.g. 
-1. - , the polarity sign, was not aligned with words like "never", "without", "n't"
-2. The concept 'you' went unaligned with "your". Also, whenever a verb was used imperatively, the concept 'you' was used, but went unaligned. e.g. "Please come with me" had the subgraph (come: imperative)..(you)...
+JAMR alignment : 0-2|1.1+1.1.1+1.1.1.1+1.1.1.2 
+ISI alignment : 0-1.1.1.1 1-1.1.1.2
 
-We decided that we can try adding rules to the JAMR aligner and improve its accuracy, or use a hybrid approach which used statistical alignment based on the IBM models to identify cases missed by our rules (the USC ISI paper used the IBM model approach).
-The todo for the next week was to run the JAMR aligner on the data that was used by the ISI people so as to get a direct comparison of the two methods. We would then decide how to progress. 
-Daniel decided that he would do the pending task of creating the joint Penn treebank and AMR file, to give me time for the other task.
+Also, tokens aligned to edges were denoted as follows :
+
+ISI alignment : 13-1.1.2.1.1 13-1.1.2.1.1.1 13-1.1.2.1.1.1.r
+
+To handle the first case, I simply assumed that if the ISI alignment matched even one of the alignments in JAMR, it would be marked as correct
+I handled the second by marking the role tokens and compiling statistics for them separately. However, it turns out that JAMR will never align to edges and hence the recall will be really poor.
+
+Meeting summary :
+
+We realized immediately that the evaluation was not correct because of the differences in alignments. We discussed how to evaluate in a fair manner. Daniel suggested that to handle the first problem (of many-to-many alignments), it is fair to decompose it into all possible combinations of tokens and concepts. E.g.
+
+0-2|1.1.1+1.1.1.2 will decompose into (0,1.1.1),(0,1.1.1.2),(1,1.1.1),(1,1.1.1.2)
+
+It was decided that role tokens will simply be ignored during evaluation. However, we will keep track of how many tokens are role tokens and what they are like. This will help in rule extraction. We also want to look at False Positive and False Negative examples, for which I will have to parse the AMR to get the correct concepts that were aligned in the gold alignments. 
+We also decided that it would be helpful to compile some more statistics, particularly about the many-to-many alignments in JAMR and how frequent they are, and about the role tokens which was already mentioned.
+
+Finally, we discussed the rule extraction phase. Daniel explained the intuition behind the "crossing-edge" approach to rule extraction. If we have two strings of tokens (think MT), and we have alignments for these two strings, then if there are crossings between the edges representing alignments, it is hard to extract a rule for the involved tokens. If there are no crossings, we can simply extract each alignment as a separate rule. 
+It works in a similar manner for a string-to-graph alignment scenario. Therefore, the alignments obtained are crucial for rule extraction.
+
+We discussed the complications involved with aligning prepositions and pronouns and also with learning rules for them. We need to think of ways to handle them.
