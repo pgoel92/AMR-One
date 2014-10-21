@@ -1,0 +1,1070 @@
+# ::id lpp_1943.146 ::date 2012-07-31T11:20:57 ::annotator ISI-AMR-05 ::preferred
+# ::snt Chapter 4 .
+# ::zh IVã€‚
+# ::save-date Tue Apr 16, 2013 ::file lpp_1943_146.txt
+# ::tok Chapter 4 .
+# ::alignments 0-1|0 1-2|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:14.463
+(c / chapter
+  :mod 4)
+
+Span 1:  Chapter => chapter
+Span 2:  4 => 4
+
+# ::id lpp_1943.155 ::date 2012-07-31T11:53:09 ::annotator ISI-AMR-05 ::preferred
+# ::snt On making his discovery , the astronomer had presented it to the International Astronomical Congress , in a great demonstration .
+# ::zh å½“æ—¶ä»–æ›¾ç»åœ¨ä¸€æ¬¡å›½é™…å¤©æ–‡å­¦å®¶ä»£è¡¨å¤§ä¼šä¸Šå¯¹ä»–çš„å‘çŽ°ä½œäº†é‡è¦çš„è®ºè¯ã€‚
+# ::save-date Wed Apr 17, 2013 ::file lpp_1943_155.txt
+# ::tok On making his discovery , the astronomer had presented it to the International Astronomical Congress , in a great demonstration .
+# ::alignments 12-15|0.1+0.1.0+0.1.0.0+0.1.0.1+0.1.0.2 8-9|0 18-19|0.3.0 0-1|0.2 6-7|0.2.0.0 9-10|0.0 19-20|0.3 3-4|0.2.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:14.917
+(p / present-01
+      :ARG0 a
+      :ARG1 (i / it)
+      :ARG2 (o / organization
+            :name (n / name :op1 "International" :op2 "Astronomical" :op3 "Congress"))
+      :time (o2 / on
+            :op1 (d3 / discover-01
+                  :ARG0 (a / astronomer)))
+      :manner (d2 / demonstrate-01
+            :ARG0 a
+            :mod (g / great)))
+
+Fuzzy Matcher concept: demonstrate-01 word: demonstration
+Fuzzy Matcher concept: demonstrate-01 word: demonstration
+Fuzzy Matcher concept: discover-01 word: discovery
+Fuzzy Matcher concept: discover-01 word: discovery
+Span 1:  International Astronomical Congress => (organization :name (name :op3 "Congress" :op2 "Astronomical" :op1 "International"))
+Span 2:  presented => present-01
+Span 3:  great => great
+Span 4:  On => on
+Span 5:  astronomer => astronomer
+Span 6:  it => it
+Span 7:  demonstration => demonstrate-01
+Span 8:  discovery => discover-01
+
+# ::id lpp_1943.171 ::date 2012-07-31T13:01:40 ::annotator ISI-AMR-05 ::preferred
+# ::snt If you were to say to the grown - ups : " I saw a beautiful house made of rosy brick , with geraniums in the windows and doves on the roof , " they would not be able to get any idea of that house at all .
+# ::zh å¦‚æžœä½ å¯¹å¤§äººä»¬è¯´ï¼šâ€œæˆ‘çœ‹åˆ°ä¸€å¹¢ç”¨çŽ«ç‘°è‰²çš„ç –ç›–æˆçš„æ¼‚äº®çš„æˆ¿å­ï¼Œå®ƒçš„çª—æˆ·ä¸Šæœ‰å¤©ç«ºè‘µï¼Œå±‹é¡¶ä¸Šè¿˜æœ‰é¸½å­â€¦â€ä»–ä»¬æ€Žä¹ˆä¹Ÿæƒ³è±¡ä¸å‡ºè¿™ç§æˆ¿å­æœ‰å¤šä¹ˆå¥½ã€‚
+# ::save-date Fri Apr 19, 2013 ::file lpp_1943_171.txt
+# ::tok If you were to say to the grown - ups : " I saw a beautiful house made of rosy brick , with geraniums in the windows and doves on the roof , " they would not be able to get any idea of that house at all .
+# ::alignments  38-39|0 4-5|0.2 13-14|0.2.1 16-17|0.2.1.0 15-16|0.2.1.0.2 27-28|0.2.1.0.1 28-29|0.2.1.0.1.1 31-32|0.2.1.0.1.1.0 23-24|0.2.1.0.1.0 26-27|0.2.1.0.1.0.0 17-18|0.2.1.0.0 20-21|0.2.1.0.0.0 19-20|0.2.1.0.0.0.0 1-2|0.2.0 40-41|0.1 42-43|0.1.0 46-47|0.1.0.1 47-48|0.1.0.1.0 41-42|0.1.0.0 7-8|0.2.2 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.177
+(p / possible :polarity -
+      :domain (g / get-01
+            :ARG0 g2
+            :ARG1 (i / idea
+                  :mod (a / any)
+                  :mod (a2 / at
+                        :mod (a3 / all))
+                  :topic h2))
+      :condition (s / say-01
+            :ARG0 (y / you)
+            :ARG1 (s2 / see-01
+                  :ARG0 y
+                  :ARG1 (h2 / house
+                        :ARG1-of (m / make-01
+                              :ARG2 (b / brick
+                                    :mod (r / rosy)))
+                        :accompanier (a4 / and
+                              :op1 (g3 / geranium
+                                    :location (w / window))
+                              :op2 (d / dove
+                                    :location (r2 / roof)))
+                        :mod (b3 / beautiful)))
+            :ARG2 (g2 / grown-up)))
+
+WARNING: Found duplicate match for concept -
+WARNING: Found duplicate match for concept house
+WARNING: Found duplicate match for concept house
+WARNING: Found duplicate match for concept house
+Fuzzy Matcher concept: grown-up word: grown
+Fuzzy Matcher concept: grown-up word: grown
+Span 1:   => -
+Span 2:  able => possible
+Span 3:  say => say-01
+Span 4:  saw => see-01
+Span 5:  house => house
+Span 6:  beautiful => beautiful
+Span 7:  and => and
+Span 8:  doves => dove
+Span 9:  roof => roof
+Span 10:  geraniums => geranium
+Span 11:  windows => window
+Span 12:  made => make-01
+Span 13:  brick => brick
+Span 14:  rosy => rosy
+Span 15:  you => you
+Span 16:  get => get-01
+Span 17:  idea => idea
+Span 18:  at => at
+Span 19:  all => all
+Span 20:  any => any
+Span 21:  grown => grown-up
+
+# ::id lpp_1943.173 ::date 2012-07-31T13:13:23 ::annotator ISI-AMR-05 ::preferred
+# ::snt Then they would exclaim : " Oh , what a pretty house that is ! "
+# ::zh é‚£ä¹ˆä»–ä»¬å°±æƒŠå«é“ï¼šâ€œå¤šä¹ˆæ¼‚äº®çš„æˆ¿å­å•Šï¼Ÿ
+# ::save-date Wed Apr 17, 2013 ::file lpp_1943_173.txt
+# ::tok Then they would exclaim : " Oh , what a pretty house that is ! "
+# ::alignments 3-4|0 0-1|0.2 10-11|0.1 11-12|0.1.0 12-13|0.1.0.0 1-2|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.201
+(e / exclaim-01
+  :ARG0 (t / they)
+  :ARG1 (p2 / pretty
+          :domain (h2 / house
+                    :mod (t4 / that)))
+  :time (t3 / then))
+
+Span 1:  exclaim => exclaim-01
+Span 2:  Then => then
+Span 3:  pretty => pretty
+Span 4:  house => house
+Span 5:  that => that
+Span 6:  they => they
+
+# ::id lpp_1943.177 ::date 2012-07-31T13:24:50 ::annotator ISI-AMR-05 ::preferred
+# ::snt They would shrug their shoulders , and treat you like a child .
+# ::zh ä»–ä»¬ä¸€å®šä¼šè€¸è€¸è‚©è†€ï¼ŒæŠŠä½ å½“ä½œå­©å­çœ‹å¾…ï¼
+# ::save-date Tue Jul 31, 2012 ::file lpp_1943_177.txt
+# ::tok They would shrug their shoulders , and treat you like a child .
+# ::alignments 6-7|0 7-8|0.1 11-12|0.1.1 8-9|0.1.0 2-3|0.0 4-5|0.0.1 0-1|0.0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.256
+(a / and
+      :op1 (s / shrug-01
+            :ARG0 (t / they)
+            :ARG1 (s2 / shoulder
+                  :poss t))
+      :op2 (t2 / treat-01
+            :ARG0 t
+            :ARG1 (y / you)
+            :ARG2 (c / child)))
+
+Span 1:  and => and
+Span 2:  treat => treat-01
+Span 3:  child => child
+Span 4:  you => you
+Span 5:  shrug => shrug-01
+Span 6:  shoulders => shoulder
+Span 7:  They => they
+
+# ::id lpp_1943.178 ::date 2012-07-31T13:26:24 ::annotator ISI-AMR-05 ::preferred
+# ::snt But if you said to them : " The planet he came from is Asteroid B-612 , " then they would be convinced , and leave you in peace from their questions .
+# ::zh ä½†æ˜¯ï¼Œå¦‚æžœä½ å¯¹ä»–ä»¬è¯´ï¼šâ€œå°çŽ‹å­æ¥è‡ªçš„æ˜Ÿçƒå°±æ˜¯å°è¡Œæ˜ŸB612â€ï¼Œé‚£ä¹ˆä»–ä»¬å°±ååˆ†ä¿¡æœï¼Œä»–ä»¬å°±ä¸ä¼šæå‡ºä¸€å¤§å †é—®é¢˜æ¥å’Œä½ çº ç¼ ã€‚
+# ::save-date Sat Jan 25, 2014 ::file lpp_1943_178.txt
+# ::tok But if you said to them : " The planet he came from is Asteroid B - 612 , " then they would be convinced , and leave you in peace from their questions .
+# ::alignments 14-16|0.0.2.1.1.0+0.0.2.1.1.0.0+0.0.2.1.1.0.1 0-1|0 26-27|0.0 3-4|0.0.2 11-12|0.0.2.1 9-10|0.0.2.1.1 10-11|0.0.2.1.0 2-3|0.0.2.0 27-28|0.0.1 30-31|0.0.1.0 33-34|0.0.1.0.0 24-25|0.0.0 21-22|0.0.0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.278
+(c3 / contrast-01
+      :ARG2 (a / and
+            :op1 (c / convince-01
+                  :ARG1 (t / they))
+            :op2 (l / leave-01
+                  :ARG0 t
+                  :ARG1 y
+                  :ARG2 (p2 / peace
+                        :prep-from (q2 / question-01
+                              :ARG0 t)))
+            :condition (s / say-01
+                  :ARG0 (y / you)
+                  :ARG1 (c2 / come-01
+                        :ARG1 (h / he)
+                        :ARG3 (p / planet
+                              :name (n / name :op1 "Asteroid" :op2 "B-612")))
+                  :ARG2 t)))
+
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+Span 1:  Asteroid B => (name :op2 "B-612" :op1 "Asteroid")
+Span 2:  But => contrast-01
+Span 3:  and => and
+Span 4:  said => say-01
+Span 5:  came => come-01
+Span 6:  planet => planet
+Span 7:  he => he
+Span 8:  you => you
+Span 9:  leave => leave-01
+Span 10:  peace => peace
+Span 11:  questions => question-01
+Span 12:  convinced => convince-01
+Span 13:  they => they
+
+# ::id lpp_1943.181 ::date 2012-07-31T13:36:08 ::annotator ISI-AMR-05 ::preferred
+# ::snt Children should always show great forbearance toward grown - up people .
+# ::zh ä¸è¦åŸ‹æ€¨ä»–ä»¬ã€‚
+# ::save-date Sat May 10, 2014 ::file lpp_1943_181.txt
+# ::tok Children should always show great forbearance toward grown - up people .
+# ::alignments 1-2|0 3-4|0.0 2-3|0.0.2 5-6|0.0.1 4-5|0.0.1.0 0-1|0.0.0 7-8|0.0.1.1+0.0.1.1.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.300
+(r / recommend-01
+      :ARG1 (s / show-01
+            :ARG0 (c / child)
+            :ARG1 (f / forbearance
+                  :mod (g / great)
+                  :prep-toward (p / person
+                        :mod (g2 / grown-up)))
+            :time (a / always)))
+
+Fuzzy Matcher concept: grown-up word: grown
+Fuzzy Matcher concept: grown-up word: grown
+Span 1:  should => recommend-01
+Span 2:  show => show-01
+Span 3:  always => always
+Span 4:  forbearance => forbearance
+Span 5:  great => great
+Span 6:  Children => child
+Span 7:  grown => (person :mod grown-up)
+
+# ::id lpp_1943.183 ::date 2012-07-31T13:42:49 ::annotator ISI-AMR-05 ::preferred
+# ::snt I should have liked to begin this story in the fashion of the fairy - tales .
+# ::zh æˆ‘çœŸæ„¿æ„è±¡è®²ç¥žè¯é‚£æ ·æ¥å¼€å§‹è¿™ä¸ªæ•…äº‹ï¼Œ
+# ::save-date Wed Apr 17, 2013 ::file lpp_1943_183.txt
+# ::tok I should have liked to begin this story in the fashion of the fairy - tales .
+# ::alignments 3-4|0 5-6|0.1 10-11|0.1.1 15-16|0.1.1.0 13-14|0.1.1.0.0 7-8|0.1.0 6-7|0.1.0.0 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.319
+(l / like-02
+  :ARG0 (i / i)
+  :ARG1 (b / begin-01
+          :ARG0 i
+          :ARG1 (s / story
+                  :mod (t / this))
+          :manner (f / fashion
+                    :mod (t2 / tale
+                           :mod (f2 / fairy)))))
+
+Span 1:  liked => like-02
+Span 2:  begin => begin-01
+Span 3:  fashion => fashion
+Span 4:  tales => tale
+Span 5:  fairy => fairy
+Span 6:  story => story
+Span 7:  this => this
+Span 8:  I => i
+
+# ::id lpp_1943.193 ::date 2012-08-07T07:46:17 ::annotator ISI-AMR-05 ::preferred
+# ::snt It is for that purpose , again , that I have bought a box of paints and some pencils .
+# ::zh ä¹Ÿæ­£æ˜¯ä¸ºäº†è¿™ä¸ªç¼˜æ•…ï¼Œæˆ‘ä¹°äº†ä¸€ç›’é¢œæ–™å’Œä¸€äº›é“…ç¬”ã€‚
+# ::save-date Wed Apr 17, 2013 ::file lpp_1943_193.txt
+# ::tok It is for that purpose , again , that I have bought a box of paints and some pencils .
+# ::alignments 11-12|0 3-4|0.2 16-17|0.1 18-19|0.1.1 17-18|0.1.1.0 15-16|0.1.0 13-14|0.1.0.0 9-10|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.437
+(b / buy-01
+  :ARG0 (i / i)
+  :ARG1 (a / and
+          :op1 (p / paint
+                 :location (b2 / box))
+          :op2 (p2 / pencil
+                 :quant (s / some)))
+  :purpose (t2 / that))
+
+WARNING: Found duplicate match for concept that
+WARNING: Found duplicate match for concept that
+WARNING: Found duplicate match for concept that
+Span 1:  bought => buy-01
+Span 2:  that => that
+Span 3:  and => and
+Span 4:  pencils => pencil
+Span 5:  some => some
+Span 6:  paints => paint
+Span 7:  box => box
+Span 8:  I => i
+
+# ::id lpp_1943.195 ::date 2012-08-07T10:20:58 ::annotator ISI-AMR-05 ::preferred
+# ::snt I shall certainly try to make my portraits as true to life as possible .
+# ::zh å½“ç„¶ï¼Œæˆ‘ä¸€å®šè¦æŠŠè¿™äº›ç”»å°½é‡åœ°ç”»å¾—é€¼çœŸï¼Œ
+# ::save-date Tue May 7, 2013 ::file lpp_1943_195.txt
+# ::tok I shall certainly try to make my portraits as true to life as possible .
+# ::alignments 3-4|0 5-6|0.1 9-10|0.1.0 13-14|0.1.0.2 11-12|0.1.0.1 7-8|0.1.0.0 0-1|0.0 2-3|0.2 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.484
+(t / try-01
+      :ARG0 (i / i)
+      :ARG1 (m / make-02
+            :ARG0 i
+            :ARG1 (t2 / true-41
+                  :ARG1 (p / portrait
+                        :topic i)
+                  :ARG2 (l2 / life)
+                  :prep-as (p4 / possible)))
+      :mod (c / certain))
+
+Fuzzy Matcher concept: certain word: certainly
+Fuzzy Matcher concept: certain word: certainly
+Span 1:  try => try-01
+Span 2:  make => make-02
+Span 3:  true => true-41
+Span 4:  possible => possible
+Span 5:  life => life
+Span 6:  portraits => portrait
+Span 7:  I => i
+Span 8:  certainly => certain
+
+# ::id lpp_1943.196 ::date 2012-08-07T10:27:53 ::annotator ISI-AMR-05 ::preferred
+# ::snt But I am not at all sure of success .
+# ::zh ä½†æˆ‘è‡ªå·±ä¹Ÿæ²¡æœ‰æŠŠæ¡ã€‚
+# ::save-date Wed Apr 17, 2013 ::file lpp_1943_196.txt
+# ::tok But I am not at all sure of success .
+# ::alignments  0-1|0 6-7|0.0 4-5|0.0.2 5-6|0.0.2.0 1-2|0.0.0 8-9|0.0.3 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.491
+(c / contrast-01
+  :ARG2 (s / sure
+          :domain (i / i)
+          :polarity -
+          :degree (a / at
+                    :op1 (a2 / all))
+          :topic (s2 / succeed-01
+                   :ARG0 i)))
+
+Fuzzy Matcher concept: succeed-01 word: success
+Fuzzy Matcher concept: succeed-01 word: success
+Span 1:   => -
+Span 2:  But => contrast-01
+Span 3:  sure => sure
+Span 4:  at => at
+Span 5:  all => all
+Span 6:  I => i
+Span 7:  success => succeed-01
+
+# ::id lpp_1943.201 ::date 2012-08-07T10:54:07 ::annotator ISI-AMR-05 ::preferred
+# ::snt In certain more important details I shall make mistakes , also .
+# ::zh æˆ‘å¾ˆå¯èƒ½åœ¨æŸäº›é‡è¦çš„ç»†èŠ‚ä¸Šç”»é”™äº†ã€‚
+# ::save-date Wed Apr 17, 2013 ::file lpp_1943_201.txt
+# ::tok In certain more important details I shall make mistakes , also .
+# ::alignments 7-8|0 10-11|0.2 8-9|0.1 4-5|0.1.0 1-2|0.1.0.1 3-4|0.1.0.0 2-3|0.1.0.0.0 5-6|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.557
+(m / make-01
+  :ARG0 (i / i)
+  :ARG1 (m2 / mistake
+          :topic (d / detail
+                   :mod (i2 / important
+                          :degree (m3 / more))
+                   :mod (c / certain)))
+  :mod (a / also))
+
+Span 1:  make => make-01
+Span 2:  also => also
+Span 3:  mistakes => mistake
+Span 4:  details => detail
+Span 5:  certain => certain
+Span 6:  important => important
+Span 7:  more => more
+Span 8:  I => i
+
+# ::id lpp_1943.205 ::date 2012-08-07T11:01:49 ::annotator ISI-AMR-05 ::preferred
+# ::snt But I , alas , do not know how to see sheep through the walls of boxes .
+# ::zh å¯æ˜¯ï¼Œå¾ˆé—æ†¾ï¼Œæˆ‘å´ä¸èƒ½é€è¿‡ç›’å­çœ‹è§å°ç¾Šã€‚
+# ::save-date Wed Apr 17, 2013 ::file lpp_1943_205.txt
+# ::tok But I , alas , do not know how to see sheep through the walls of boxes .
+# ::alignments  0-1|0 3-4|0.1 7-8|0.0 10-11|0.0.1+0.0.1.0 12-13|0.0.1.0.1 14-15|0.0.1.0.1.0 16-17|0.0.1.0.1.0.0 11-12|0.0.1.0.0 1-2|0.0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.583
+(c / contrast-01
+  :ARG2 (k / know-01
+          :ARG0 (i / i)
+          :ARG1 (t2 / thing
+                  :manner-of (s / see-01
+                               :ARG1 (s2 / sheep)
+                               :prep-through (t / through
+                                               :op1 (w / wall
+                                                      :part-of (b2 / box)))))
+          :polarity -)
+  :mod (a / alas))
+
+Span 1:   => -
+Span 2:  But => contrast-01
+Span 3:  alas => alas
+Span 4:  know => know-01
+Span 5:  see => (thing :manner-of see-01)
+Span 6:  through => through
+Span 7:  walls => wall
+Span 8:  boxes => box
+Span 9:  sheep => sheep
+Span 10:  I => i
+
+# ::id lpp_1943.208 ::date 2012-11-05T18:05:56 ::annotator ISI-AMR-05 ::preferred
+# ::snt Chapter 5 .
+# ::zh Vã€‚
+# ::save-date Tue Apr 9, 2013 ::file lpp_1943_208.txt
+# ::tok Chapter 5 .
+# ::alignments 0-1|0 1-2|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.594
+(c / chapter :mod 5)
+
+Span 1:  Chapter => chapter
+Span 2:  5 => 5
+
+# ::id lpp_1943.214 ::date 2012-11-07T13:34:56 ::annotator ISI-AMR-05 ::preferred
+# ::snt " Yes , that is true . "
+# ::zh â€œæ˜¯çš„ï¼Œæ˜¯çœŸçš„ã€‚â€
+# ::save-date Tue Apr 9, 2013 ::file lpp_1943_214.txt
+# ::tok " Yes , that is true . "
+# ::alignments 5-6|0 3-4|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.654
+(t / true
+      :domain (t2 / that))
+
+Span 1:  true => true
+Span 2:  that => that
+
+# ::id lpp_1943.216 ::date 2012-11-07T13:37:55 ::annotator ISI-AMR-05 ::preferred
+# ::snt I am glad ! "
+# ::zh æˆ‘çœŸé«˜å…´ã€‚â€
+# ::save-date Tue Apr 9, 2013 ::file lpp_1943_216.txt
+# ::tok I am glad ! "
+# ::alignments 2-3|0 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.661
+(g / glad
+      :domain (i / i))
+
+Span 1:  glad => glad
+Span 2:  I => i
+
+# ::id lpp_1943.219 ::date 2012-11-07T13:43:31 ::annotator ISI-AMR-05 ::preferred
+# ::snt I pointed out to the little prince that baobabs were not little bushes , but , on the contrary , trees as big as castles ; and that even if he took a whole herd of elephants away with him , the herd would not eat up one single baobab .
+# ::zh æˆ‘å¯¹å°çŽ‹å­è¯´ï¼ŒçŒ´é¢åŒ…æ ‘å¯ä¸æ˜¯å°çŒæœ¨ï¼Œè€Œæ˜¯åƒæ•™å ‚é‚£ä¹ˆå¤§çš„å¤§æ ‘ï¼›å³ä¾¿æ˜¯å¸¦å›žä¸€ç¾¤å¤§è±¡ï¼Œä¹Ÿå•ƒä¸äº†ä¸€æ£µçŒ´é¢åŒ…æ ‘ã€‚
+# ::save-date Sat Apr 27, 2013 ::file lpp_1943_219.txt
+# ::tok I pointed out to the little prince that baobabs were not little bushes , but , on the contrary , trees as big as castles ; and that even if he took a whole herd of elephants away with him , the herd would not eat up one single baobab .
+# ::alignments   1-2|0 6-7|0.2 5-6|0.2.0 25-26|0.1 45-46|0.1.1 31-32|0.1.1.2.0 34-35|0.1.1.2.0.0 33-34|0.1.1.2.0.0.1 36-37|0.1.1.2.0.0.0 8-9|0.1.1.1 48-49|0.1.1.1.1 47-48|0.1.1.1.0 14-15|0.1.0 20-21|0.1.0.1 22-23|0.1.0.1.0 24-25|0.1.0.1.0.0 12-13|0.1.0.0 49-50|0.1.0.0.2 11-12|0.1.0.0.1 0-1|0.0 28-29|0.1.1.2 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.722
+(p2 / point-02
+      :ARG0 (i / i)
+      :ARG1 (a / and
+            :op1 (c / contrast-01
+                  :ARG1 (b3 / bush :polarity -
+                        :mod (l3 / little)
+                        :domain (b2 / baobab))
+                  :ARG2 (t2 / tree
+                        :mod (b5 / big
+                              :compared-to (c2 / castle))
+                        :domain b2))
+            :op2 (e / eat-02 :polarity -
+                  :ARG0 h
+                  :ARG1 (b / baobab :quant 1
+                        :mod (s / single))
+                  :concession (e3 / even-if
+                        :op1 (t / take-05
+                              :ARG0 p
+                              :ARG1 (h / herd
+                                    :consist-of (e2 / elephant)
+                                    :mod (w / whole))))))
+      :beneficiary (p / prince
+            :mod (l2 / little)))
+
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept -
+WARNING: Found duplicate match for concept little
+WARNING: Found duplicate match for concept baobab
+WARNING: Found duplicate match for concept herd
+WARNING: Found duplicate match for concept little
+WARNING: Found duplicate match for concept little
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept herd
+WARNING: Found duplicate match for concept herd
+WARNING: Found duplicate match for concept baobab
+WARNING: Found duplicate match for concept baobab
+Fuzzy Matcher concept: even-if word: even
+Fuzzy Matcher concept: even-if word: even
+Span 1:   => -
+Span 2:   => -
+Span 3:  pointed => point-02
+Span 4:  prince => prince
+Span 5:  little => little
+Span 6:  ; => and
+Span 7:  eat => eat-02
+Span 8:  took => take-05
+Span 9:  herd => herd
+Span 10:  whole => whole
+Span 11:  elephants => elephant
+Span 12:  baobabs => baobab
+Span 13:  single => single
+Span 14:  one => 1
+Span 15:  but => contrast-01
+Span 16:  trees => tree
+Span 17:  big => big
+Span 18:  castles => castle
+Span 19:  bushes => bush
+Span 20:  baobab => baobab
+Span 21:  little => little
+Span 22:  I => i
+Span 23:  even => even-if
+
+# ::id lpp_1943.220 ::date 2012-11-07T13:48:45 ::annotator ISI-AMR-05 ::preferred
+# ::snt The idea of the herd of elephants made the little prince laugh .
+# ::zh ä¸€ç¾¤å¤§è±¡è¿™ç§æƒ³æ³•ä½¿å°çŽ‹å­å‘ç¬‘ï¼šâ€œ
+# ::save-date Tue Apr 9, 2013 ::file lpp_1943_220.txt
+# ::tok The idea of the herd of elephants made the little prince laugh .
+# ::alignments 7-8|0 11-12|0.1 10-11|0.1.0 9-10|0.1.0.0 1-2|0.0 4-5|0.0.0 6-7|0.0.0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.731
+(m / make-02
+      :ARG0 (i / idea
+            :topic (h / herd
+                  :consist-of (e / elephant)))
+      :ARG1 (l / laugh-01
+            :ARG0 (p / prince
+                  :mod (l2 / little))))
+
+Span 1:  made => make-02
+Span 2:  laugh => laugh-01
+Span 3:  prince => prince
+Span 4:  little => little
+Span 5:  idea => idea
+Span 6:  herd => herd
+Span 7:  elephants => elephant
+
+# ::id lpp_1943.222 ::date 2012-11-07T14:04:22 ::annotator ISI-AMR-05 ::preferred
+# ::snt But he made a wise comment : " Before they grow so big , the baobabs start out by being little . "
+# ::zh ä»–å¾ˆæœ‰è§è¯†åœ°è¯´ï¼šâ€œçŒ´é¢åŒ…æ ‘åœ¨é•¿å¤§ä¹‹å‰ï¼Œå¼€å§‹ä¹Ÿæ˜¯å°å°çš„ã€‚â€
+# ::save-date Thu May 2, 2013 ::file lpp_1943_222.txt
+# ::tok But he made a wise comment : " Before they grow so big , the baobabs start out by being little . "
+# ::alignments 0-1|0 5-6|0.0 4-5|0.0.2 16-17|0.0.1 8-9|0.0.1.2 10-11|0.0.1.2.0 12-13|0.0.1.2.0.0 11-12|0.0.1.2.0.0.0 20-21|0.0.1.1 15-16|0.0.1.0 1-2|0.0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.756
+(c2 / contrast-01
+      :ARG2 (c / comment-02
+            :ARG0 (h / he)
+            :ARG1 (s / start-05
+                  :ARG0 (b2 / baobab)
+                  :ARG2 (l / little)
+                  :time (b4 / before
+                        :op1 (g / grow-02
+                              :ARG1 b2
+                              :ARG2 (b5 / big
+                                    :degree (s2 / so)))))
+            :manner (w / wise)))
+
+Span 1:  But => contrast-01
+Span 2:  comment => comment-02
+Span 3:  wise => wise
+Span 4:  start => start-05
+Span 5:  Before => before
+Span 6:  grow => grow-02
+Span 7:  big => big
+Span 8:  so => so
+Span 9:  little => little
+Span 10:  baobabs => baobab
+Span 11:  he => he
+
+# ::id lpp_1943.223 ::date 2012-11-07T14:07:23 ::annotator ISI-AMR-05 ::preferred
+# ::snt " That is strictly correct , "
+# ::zh â€œé‚£æ˜¯ä¸é”™ã€‚
+# ::save-date Tue Apr 9, 2013 ::file lpp_1943_223.txt
+# ::tok " That is strictly correct , "
+# ::alignments 4-5|0 1-2|0.1 3-4|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.762
+(c / correct
+      :mod (s / strict)
+      :domain (t / that))
+
+Fuzzy Matcher concept: strict word: strictly
+Fuzzy Matcher concept: strict word: strictly
+Span 1:  correct => correct
+Span 2:  That => that
+Span 3:  strictly => strict
+
+# ::id lpp_1943.224 ::date 2012-11-07T14:13:23 ::annotator ISI-AMR-05 ::preferred
+# ::snt I said .
+# ::zh æˆ‘è¯´ã€‚
+# ::save-date Wed Nov 7, 2012 ::file lpp_1943_224.txt
+# ::tok I said .
+# ::alignments 1-2|0 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.765
+(s / say-01
+  :ARG0 (i / i))
+
+Span 1:  said => say-01
+Span 2:  I => i
+
+# ::id lpp_1943.230 ::date 2012-11-07T15:42:40 ::annotator ISI-AMR-05 ::preferred
+# ::snt But seeds are invisible .
+# ::zh å¯æ˜¯è‰ç±½æ˜¯çœ‹ä¸è§çš„ã€‚
+# ::save-date Mon Apr 15, 2013 ::file lpp_1943_230.txt
+# ::tok But seeds are invisible .
+# ::alignments 0-1|0 3-4|0.0+0.0.0 1-2|0.0.1 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.841
+(c / contrast-01
+      :ARG2 (v / visible :polarity -
+            :domain (s / seed)))
+
+Span 1:  But => contrast-01
+Span 2:  invisible => (visible :polarity -)
+Span 3:  seeds => seed
+
+# ::id lpp_1943.231 ::date 2012-11-08T07:38:34 ::annotator ISI-AMR-05 ::preferred
+# ::snt They sleep deep in the heart of the earth 's darkness , until some one among them is seized with the desire to awaken .
+# ::zh å®ƒä»¬æ²‰ç¡åœ¨æ³¥åœŸé‡Œï¼Œç›´åˆ°å…¶ä¸­çš„ä¸€ç²’å¿½ç„¶æƒ³è¦è‹é†’è¿‡æ¥â€¦
+# ::save-date Thu May 2, 2013 ::file lpp_1943_231.txt
+# ::tok They sleep deep in the heart of the earth 's darkness , until some one among them is seized with the desire to awaken .
+# ::alignments 1-2|0 12-13|0.2 18-19|0.2.0 6-7|0.2.0.1.0 21-22|0.2.0.0 23-24|0.2.0.0.0 5-6|0.1 10-11|0.1.1 8-9|0.1.1.0 2-3|0.1.0 0-1|0.0 13-14|0.2.0.1 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.857
+(s / sleep-01
+      :ARG0 (t / they)
+      :location (h / heart
+            :location (d / deep)
+            :part-of (d2 / darkness
+                  :poss (e / earth)))
+      :time (u / until
+            :op1 (s2 / seize-01
+                  :ARG0 (d3 / desire-01
+                        :ARG1 (a / awaken-01))
+                  :ARG1 (s3 / someone
+                        :ARG1-of (i / include-91
+                              :ARG2 t)))))
+
+Fuzzy Matcher concept: someone word: some
+Fuzzy Matcher concept: someone word: some
+Span 1:  sleep => sleep-01
+Span 2:  until => until
+Span 3:  seized => seize-01
+Span 4:  of => include-91
+Span 5:  desire => desire-01
+Span 6:  awaken => awaken-01
+Span 7:  heart => heart
+Span 8:  darkness => darkness
+Span 9:  earth => earth
+Span 10:  deep => deep
+Span 11:  They => they
+Span 12:  some => someone
+
+# ::id lpp_1943.238 ::date 2012-11-08T08:10:42 ::annotator ISI-AMR-05 ::preferred
+# ::snt It spreads over the entire planet .
+# ::zh å®ƒå°±ä¼šç›˜è¸žæ•´ä¸ªæ˜Ÿçƒã€‚
+# ::save-date Thu Nov 8, 2012 ::file lpp_1943_238.txt
+# ::tok It spreads over the entire planet .
+# ::alignments 1-2|0 5-6|0.1 4-5|0.1.0 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.911
+(s / spread-01
+  :ARG1 (i / it)
+  :ARG2 (p / planet
+          :mod (e / entire)))
+
+Span 1:  spreads => spread-01
+Span 2:  planet => planet
+Span 3:  entire => entire
+Span 4:  It => it
+
+# ::id lpp_1943.239 ::date 2012-11-08T08:11:46 ::annotator ISI-AMR-05 ::preferred
+# ::snt It bores clear through it with its roots .
+# ::zh å®ƒçš„æ ‘æ ¹èƒ½æŠŠæ˜Ÿçƒé’»é€ï¼Œ
+# ::save-date Tue Apr 16, 2013 ::file lpp_1943_239.txt
+# ::tok It bores clear through it with its roots .
+# ::alignments 1-2|0 7-8|0.2 3-4|0.1 2-3|0.1.1 0-1|0.1.0 4-5|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.915
+(b / bore-01
+      :ARG0 (i / it)
+      :ARG2 (t2 / through
+            :op1 (i2 / it)
+            :mod (c2 / clear))
+      :ARG3 (r / root
+            :poss i))
+
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+Span 1:  bores => bore-01
+Span 2:  roots => root
+Span 3:  through => through
+Span 4:  clear => clear
+Span 5:  It => it
+Span 6:  it => it
+
+# ::id lpp_1943.240 ::date 2012-11-08T08:19:24 ::annotator ISI-AMR-05 ::preferred
+# ::snt And if the planet is too small , and the baobabs are too many , they split it in pieces ...
+# ::zh å¦‚æžœæ˜Ÿçƒå¾ˆå°ï¼Œè€ŒçŒ´é¢åŒ…æ ‘å¾ˆå¤šï¼Œå®ƒå°±æŠŠæ•´ä¸ªæ˜Ÿçƒæžå¾—æ”¯ç¦»ç ´ç¢Žã€‚
+# ::save-date Tue Apr 16, 2013 ::file lpp_1943_240.txt
+# ::tok And if the planet is too small , and the baobabs are too many , they split it in pieces ...
+# ::alignments 0-1|0 16-17|0.0 8-9|0.0.1 10-11|0.0.1.1 13-14|0.0.1.1.0 5-6|0.0.1.1.0.0 6-7|0.0.1.0 3-4|0.0.1.0.1 12-13|0.0.1.0.0 19-20|0.0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.924
+(a / and
+      :op1 (s / split-01
+            :ARG0 b
+            :ARG1 p2
+            :ARG2 (p / piece)
+            :condition (a2 / and
+                  :op1 (s2 / small
+                        :degree (t2 / too)
+                        :domain (p2 / planet))
+                  :op2 (b / baobab
+                        :quant (m / many
+                              :degree (t3 / too))))))
+
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept too
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept too
+WARNING: Found duplicate match for concept too
+Span 1:  And => and
+Span 2:  split => split-01
+Span 3:  and => and
+Span 4:  baobabs => baobab
+Span 5:  many => many
+Span 6:  too => too
+Span 7:  small => small
+Span 8:  planet => planet
+Span 9:  too => too
+Span 10:  pieces => piece
+
+# ::id lpp_1943.244 ::date 2012-11-08T08:31:41 ::annotator ISI-AMR-05 ::preferred
+# ::snt It is very tedious work , " the little prince added , " but very easy . "
+# ::zh è¿™æ˜¯ä¸€ä»¶éžå¸¸ä¹å‘³çš„å·¥ä½œï¼Œä½†å¾ˆå®¹æ˜“ã€‚â€ å°çŽ‹å­è¯´ã€‚
+# ::save-date Tue Apr 16, 2013 ::file lpp_1943_244.txt
+# ::tok It is very tedious work , " the little prince added , " but very easy . "
+# ::alignments 10-11|0 13-14|0.1 15-16|0.1.1 2-3|0.1.1.0 3-4|0.1.0 4-5|0.1.0.1 14-15|0.1.0.0 9-10|0.0 8-9|0.0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.959
+(a / add-01
+      :ARG0 (p / prince
+            :mod (l / little))
+      :ARG1 (c / contrast-01
+            :ARG1 (t / tedious
+                  :degree (v / very)
+                  :domain (w / work-01))
+            :ARG2 (e / easy
+                  :degree (v2 / very)
+                  :domain w)))
+
+WARNING: Found duplicate match for concept very
+WARNING: Found duplicate match for concept very
+WARNING: Found duplicate match for concept very
+Span 1:  added => add-01
+Span 2:  but => contrast-01
+Span 3:  easy => easy
+Span 4:  very => very
+Span 5:  tedious => tedious
+Span 6:  work => work-01
+Span 7:  very => very
+Span 8:  prince => prince
+Span 9:  little => little
+
+# ::id lpp_1943.246 ::date 2012-11-08T08:41:55 ::annotator ISI-AMR-05 ::preferred
+# ::snt That would be very useful to them if they were to travel some day .
+# ::zh ä»–è¿˜å¯¹æˆ‘è¯´ï¼šâ€œå¦‚æžœå°†æ¥æœ‰ä¸€å¤©ä»–ä»¬å‡ºå¤–æ—…è¡Œï¼Œè¿™å¯¹ä»–ä»¬æ˜¯å¾ˆæœ‰ç”¨çš„ã€‚
+# ::save-date Fri May 17, 2013 ::file lpp_1943_246.txt
+# ::tok That would be very useful to them if they were to travel some day .
+# ::alignments 4-5|0 11-12|0.3 13-14|0.3.0 12-13|0.3.0.0 0-1|0.2 8-9|0.1 3-4|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.976
+(u / useful
+      :degree (v / very)
+      :beneficiary (t2 / they)
+      :domain (t / that)
+      :condition (t3 / travel-01
+            :ARG0 t2
+            :time (d / day
+                  :mod (s / some))))
+
+Span 1:  useful => useful
+Span 2:  travel => travel-01
+Span 3:  day => day
+Span 4:  some => some
+Span 5:  That => that
+Span 6:  they => they
+Span 7:  very => very
+
+# ::id lpp_1943.247 ::date 2012-11-13T07:34:31 ::annotator ISI-AMR-05 ::preferred
+# ::snt Sometimes , " he added , " there is no harm in putting off a piece of work until another day .
+# ::zh æœ‰æ—¶å€™ï¼Œäººä»¬æŠŠè‡ªå·±çš„å·¥ä½œæŽ¨åˆ°ä»¥åŽåŽ»åšï¼Œå¹¶æ²¡æœ‰ä»€ä¹ˆå¦¨å®³ï¼Œ
+# ::save-date Tue Apr 16, 2013 ::file lpp_1943_247.txt
+# ::tok Sometimes , " he added , " there is no harm in putting off a piece of work until another day .
+# ::alignments 9-10|0.1.0 4-5|0 10-11|0.1 0-1|0.1.2 12-13|0.1.1 20-21|0.1.1.1 19-20|0.1.1.1.0 17-18|0.1.1.0+0.1.1.0.0 15-16|0.1.1.0.1 3-4|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.984
+(a / add-01
+      :ARG0 (h / he)
+      :ARG1 (h2 / harm-01 :polarity -
+            :ARG0 (p / put-06
+                  :ARG1 (t / thing
+                        :ARG1-of (w / work-01)
+                        :quant (p3 / piece))
+                  :ARG2 (d / day
+                        :mod (a2 / another)))
+            :time (s / sometimes)))
+
+Span 1:  no => -
+Span 2:  added => add-01
+Span 3:  harm => harm-01
+Span 4:  Sometimes => sometimes
+Span 5:  putting => put-06
+Span 6:  day => day
+Span 7:  another => another
+Span 8:  work => (thing :ARG1-of work-01)
+Span 9:  piece => piece
+Span 10:  he => he
+
+# ::id lpp_1943.248 ::date 2012-11-13T07:36:12 ::annotator ISI-AMR-05 ::preferred
+# ::snt But when it is a matter of baobabs , that always means a catastrophe .
+# ::zh ä½†è¦é‡åˆ°æ‹”çŒ´é¢åŒ…æ ‘è‹—è¿™ç§äº‹ï¼Œé‚£å°±éžé€ æˆå¤§ç¾éš¾ä¸å¯ã€‚
+# ::save-date Tue Apr 23, 2013 ::file lpp_1943_248.txt
+# ::tok But when it is a matter of baobabs , that always means a catastrophe .
+# ::alignments 0-1|0 11-12|0.0 7-8|0.0.3 10-11|0.0.2 13-14|0.0.1 9-10|0.0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.988
+(c2 / contrast-01
+      :ARG2 (m3 / mean-01
+            :ARG0 (t / that)
+            :ARG1 (c / catastrophe)
+            :time (a / always)
+            :condition (b / baobab)))
+
+Span 1:  But => contrast-01
+Span 2:  means => mean-01
+Span 3:  baobabs => baobab
+Span 4:  always => always
+Span 5:  catastrophe => catastrophe
+Span 6:  that => that
+
+# ::id lpp_1943.249 ::date 2012-11-13T07:39:23 ::annotator ISI-AMR-05 ::preferred
+# ::snt I knew a planet that was inhabited by a lazy man .
+# ::zh æˆ‘é‡åˆ°è¿‡ä¸€ä¸ªæ˜Ÿçƒï¼Œä¸Šé¢ä½ç€ä¸€ä¸ªæ‡’å®¶ä¼™ï¼Œ
+# ::save-date Tue Nov 13, 2012 ::file lpp_1943_249.txt
+# ::tok I knew a planet that was inhabited by a lazy man .
+# ::alignments 1-2|0 3-4|0.1 6-7|0.1.0 10-11|0.1.0.0 9-10|0.1.0.0.0 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.993
+(k / know-01
+  :ARG0 (i / i)
+  :ARG1 (p / planet
+          :ARG1-of (i2 / inhabit-01
+                     :ARG0 (m / man
+                             :mod (l / lazy)))))
+
+Span 1:  knew => know-01
+Span 2:  planet => planet
+Span 3:  inhabited => inhabit-01
+Span 4:  man => man
+Span 5:  lazy => lazy
+Span 6:  I => i
+
+# ::id lpp_1943.250 ::date 2012-11-13T07:40:51 ::annotator ISI-AMR-05 ::preferred
+# ::snt He neglected three little bushes ... "
+# ::zh ä»–æ”¾è¿‡äº†ä¸‰æ£µå°æ ‘è‹—â€¦â€
+# ::save-date Tue Nov 13, 2012 ::file lpp_1943_250.txt
+# ::tok He neglected three little bushes ... "
+# ::alignments 1-2|0 4-5|0.1 2-3|0.1.1 3-4|0.1.0 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:15.996
+(n / neglect-01
+  :ARG0 (h / he)
+  :ARG1 (b / bush
+          :mod (l / little)
+          :quant 3))
+
+Span 1:  neglected => neglect-01
+Span 2:  bushes => bush
+Span 3:  three => 3
+Span 4:  little => little
+Span 5:  He => he
+
+# ::id lpp_1943.252 ::date 2012-11-13T07:43:35 ::annotator ISI-AMR-05 ::preferred
+# ::snt I do not much like to take the tone of a moralist .
+# ::zh æˆ‘ä»Žæ¥ä¸å¤§æ„¿æ„ä»¥é“å­¦å®¶çš„å£å»æ¥è¯´è¯ï¼Œ
+# ::save-date Tue Apr 16, 2013 ::file lpp_1943_252.txt
+# ::tok I do not much like to take the tone of a moralist .
+# ::alignments  4-5|0 3-4|0.3 6-7|0.2 8-9|0.2.0 11-12|0.2.0.0 0-1|0.1 ::annotator Aligner v.02 ::date 2014-09-13T19:22:16.007
+(l / like-02 :polarity -
+      :ARG0 (i / i)
+      :ARG1 (t / take-01
+            :ARG0 i
+            :ARG1 (t2 / tone
+                  :poss (m2 / moralist)))
+      :degree (m / much))
+
+Span 1:   => -
+Span 2:  like => like-02
+Span 3:  much => much
+Span 4:  take => take-01
+Span 5:  tone => tone
+Span 6:  moralist => moralist
+Span 7:  I => i
+
+# ::id lpp_1943.254 ::date 2012-11-13T07:52:33 ::annotator ISI-AMR-05 ::preferred
+# ::snt " Children , "
+# ::zh â€œå­©å­ä»¬ï¼Œâ€
+# ::save-date Tue Apr 23, 2013 ::file lpp_1943_254.txt
+# ::tok " Children , "
+# ::alignments 1-2|0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:16.020
+(c2 / child)
+
+Span 1:  Children => child
+
+# ::id lpp_1943.257 ::date 2012-11-13T07:57:38 ::annotator ISI-AMR-05 ::preferred
+# ::snt The lesson which I pass on by this means is worth all the trouble it has cost me .
+# ::zh æˆ‘æå‡ºçš„è¿™ä¸ªæ•™è®­æ„ä¹‰æ˜¯å¾ˆé‡å¤§çš„ï¼ŒèŠ±ç‚¹åŠŸå¤«æ˜¯å¾ˆå€¼å¾—çš„ã€‚
+# ::save-date Mon Apr 15, 2013 ::file lpp_1943_257.txt
+# ::tok The lesson which I pass on by this means is worth all the trouble it has cost me .
+# ::alignments 10-11|0 1-2|0.1 4-5|0.1.0 7-8|0.1.0.1 3-4|0.1.0.0 13-14|0.0 11-12|0.0.1 16-17|0.0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:16.049
+(w / worth
+      :extent (t / trouble
+            :ARG2-of (c / cost-01
+                  :ARG1 l
+                  :ARG3 i)
+            :mod (a / all))
+      :domain (l / lesson
+            :ARG1-of (p / pass-09
+                  :ARG0 (i / i)
+                  :manner (t2 / this))))
+
+Span 1:  worth => worth
+Span 2:  lesson => lesson
+Span 3:  pass => pass-09
+Span 4:  this => this
+Span 5:  I => i
+Span 6:  trouble => trouble
+Span 7:  all => all
+Span 8:  cost => cost-01
+
+# ::id lpp_1943.259 ::date 2012-11-13T08:04:09 ::annotator ISI-AMR-05 ::preferred
+# ::snt The reply is simple .
+# ::zh å›žç­”å¾ˆç®€å•ï¼š
+# ::save-date Tue Apr 16, 2013 ::file lpp_1943_259.txt
+# ::tok The reply is simple .
+# ::alignments 3-4|0 1-2|0.0+0.0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:16.062
+(s / simple
+      :domain (t / thing
+            :ARG2-of (r / reply-01)))
+
+Span 1:  simple => simple
+Span 2:  reply => (thing :ARG2-of reply-01)
+
+# ::id lpp_1943.260 ::date 2012-11-13T08:04:46 ::annotator ISI-AMR-05 ::preferred
+# ::snt I have tried .
+# ::zh æˆ‘ä¹Ÿè¯•äº†ã€‚
+# ::save-date Tue Nov 13, 2012 ::file lpp_1943_260.txt
+# ::tok I have tried .
+# ::alignments 2-3|0 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:16.064
+(t / try-01
+  :ARG0 (i / i))
+
+Span 1:  tried => try-01
+Span 2:  I => i
+
+# ::id lpp_1943.261 ::date 2012-11-13T08:05:06 ::annotator ISI-AMR-05 ::preferred
+# ::snt But with the others I have not been successful .
+# ::zh åˆ«çš„ç”»æˆ‘ä¹Ÿæ›¾ç»è¯•å›¾ç”»å¾—å¥½äº›ï¼Œå´æ²¡æˆåŠŸã€‚
+# ::save-date Tue Apr 16, 2013 ::file lpp_1943_261.txt
+# ::tok But with the others I have not been successful .
+# ::alignments  0-1|0 4-5|0.0.1 3-4|0.0.2 8-9|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:16.068
+(c / contrast-01
+      :ARG2 (s / succeed-01 :polarity -
+            :ARG0 (i / i)
+            :ARG1 (o / other)))
+
+Fuzzy Matcher concept: succeed-01 word: successful
+Fuzzy Matcher concept: succeed-01 word: successful
+Span 1:   => -
+Span 2:  But => contrast-01
+Span 3:  I => i
+Span 4:  others => other
+Span 5:  successful => succeed-01
+
+# ::id lpp_1943.262 ::date 2012-11-13T08:06:04 ::annotator ISI-AMR-05 ::preferred
+# ::snt When I made the drawing of the baobabs I was carried beyond myself by the inspiring force of urgent necessity .
+# ::zh è€Œå½“æˆ‘ç”»çŒ´é¢åŒ…æ ‘æ—¶ï¼Œæœ‰ä¸€ç§æ€¥åˆ‡çš„å¿ƒæƒ…åœ¨æ¿€åŠ±ç€æˆ‘ã€‚
+# ::save-date Tue Apr 16, 2013 ::file lpp_1943_262.txt
+# ::tok When I made the drawing of the baobabs I was carried beyond myself by the inspiring force of urgent necessity .
+# ::alignments 10-11|0 4-5|0.3 7-8|0.3.0 11-12|0.2 1-2|0.1 16-17|0.0 15-16|0.0.1 19-20|0.0.0 18-19|0.0.0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:16.075
+(c / carry-01
+      :ARG0 (f / force-01
+            :ARG0 (n / necessity
+                  :mod (u / urgent))
+            :ARG0-of (i2 / inspire-01))
+      :ARG1 (i / i)
+      :destination (b / beyond
+            :op1 i)
+      :time (d / draw-01
+            :ARG0 i
+            :ARG1 (b2 / baobab)))
+
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept i
+Span 1:  carried => carry-01
+Span 2:  drawing => draw-01
+Span 3:  baobabs => baobab
+Span 4:  beyond => beyond
+Span 5:  I => i
+Span 6:  force => force-01
+Span 7:  inspiring => inspire-01
+Span 8:  necessity => necessity
+Span 9:  urgent => urgent
+
+# ::id lpp_1943.263 ::date 2012-11-13T08:13:15 ::annotator ISI-AMR-05 ::preferred
+# ::snt Chapter 6 .
+# ::zh VIã€‚
+# ::save-date Tue Apr 16, 2013 ::file lpp_1943_263.txt
+# ::tok Chapter 6 .
+# ::alignments 0-1|0 1-2|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:16.076
+(c / chapter :mod 6)
+
+Span 1:  Chapter => chapter
+Span 2:  6 => 6
+
+# ::id lpp_1943.264 ::date 2012-11-13T08:13:30 ::annotator ISI-AMR-05 ::preferred
+# ::snt Oh , little prince !
+# ::zh å•Šï¼Œå°çŽ‹å­ï¼
+# ::save-date Thu May 2, 2013 ::file lpp_1943_264.txt
+# ::tok Oh , little prince !
+# ::alignments 3-4|0 2-3|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:16.078
+(p / prince
+      :mod (l / little))
+
+Span 1:  prince => prince
+Span 2:  little => little
+
+# ::id lpp_1943.266 ::date 2012-11-13T08:20:17 ::annotator ISI-AMR-05 ::preferred
+# ::snt For a long time you had found your only entertainment in the quiet pleasure of looking at the sunset .
+# ::zh è¿‡åŽ»ç›¸å½“é•¿çš„æ—¶é—´é‡Œä½ å”¯ä¸€çš„ä¹è¶£å°±æ˜¯è§‚èµé‚£å¤•é˜³è¥¿ä¸‹çš„æ¸©æŸ”æ™šæ™¯ã€‚
+# ::save-date Tue Apr 16, 2013 ::file lpp_1943_266.txt
+# ::tok For a long time you had found your only entertainment in the quiet pleasure of looking at the sunset .
+# ::alignments 6-7|0 3-4|0.2 2-3|0.2.0 15-16|0.1.0 13-14|0.1.0.1 12-13|0.1.0.1.0 18-19|0.1.0.0 8-9|0.1.1 4-5|0.0 9-10|0.1 ::annotator Aligner v.02 ::date 2014-09-13T19:22:16.090
+(f / find-01
+      :ARG0 (y / you)
+      :ARG1 (e / entertain-01
+            :ARG0 (l2 / look-01
+                  :ARG0 y
+                  :ARG1 (s / sunset)
+                  :mod (p / pleasure
+                        :mod (q / quiet)))
+            :ARG1 y
+            :mod (o / only))
+      :duration (t / time
+            :mod (l / long)))
+
+Fuzzy Matcher concept: entertain-01 word: entertainment
+Fuzzy Matcher concept: entertain-01 word: entertainment
+Span 1:  found => find-01
+Span 2:  time => time
+Span 3:  long => long
+Span 4:  looking => look-01
+Span 5:  pleasure => pleasure
+Span 6:  quiet => quiet
+Span 7:  sunset => sunset
+Span 8:  only => only
+Span 9:  you => you
+Span 10:  entertainment => entertain-01
+
+# ::id lpp_1943.270 ::date 2012-11-14T10:41:07 ::annotator ISI-AMR-05 ::preferred
+# ::snt I said .
+# ::zh æˆ‘è¯´ã€‚
+# ::save-date Wed Nov 14, 2012 ::file lpp_1943_270.txt
+# ::tok I said .
+# ::alignments 1-2|0 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:16.107
+(s / say-01
+  :ARG0 (i / i))
+
+Span 1:  said => say-01
+Span 2:  I => i
+
+# ::id lpp_1943.276 ::date 2012-11-14T11:01:40 ::annotator ISI-AMR-05 ::preferred
+# ::snt And then you laughed to yourself .
+# ::zh éšåŽä½ ç¬‘è‡ªå·±çš„ç³Šæ¶‚ã€‚
+# ::save-date Wed Apr 17, 2013 ::file lpp_1943_276.txt
+# ::tok And then you laughed to yourself .
+# ::alignments 0-1|0 3-4|0.0 1-2|0.0.1 2-3|0.0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:16.121
+(a / and
+      :op1 (l / laugh-01
+            :ARG0 (y / you)
+            :ARG2 y
+            :time (t / then)))
+
+Span 1:  And => and
+Span 2:  laughed => laugh-01
+Span 3:  then => then
+Span 4:  you => you
+
+# ::id lpp_1943.278 ::date 2012-11-15T08:05:52 ::annotator ISI-AMR-05 ::preferred
+# ::snt Just so .
+# ::zh ç¡®å®žï¼Œ
+# ::save-date Thu Nov 15, 2012 ::file lpp_1943_278.txt
+# ::tok Just so .
+# ::alignments 1-2|0 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:16.128
+(s / so
+  :mod (j / just))
+
+Span 1:  so => so
+Span 2:  Just => just
+
+# ::id lpp_1943.288 ::date 2012-11-18T16:25:48 ::annotator ISI-AMR-05 ::preferred
+# ::snt But the little prince made no reply .
+# ::zh ä½†æ˜¯å°çŽ‹å­æ²¡æœ‰å›žç­”ã€‚
+# ::save-date Sun Dec 9, 2012 ::file lpp_1943_288.txt
+# ::tok But the little prince made no reply .
+# ::alignments 5-6|0.0.0 0-1|0 6-7|0.0 3-4|0.0.1 2-3|0.0.1.0 ::annotator Aligner v.02 ::date 2014-09-13T19:22:16.191
+(c / contrast-01
+      :ARG2 (r / reply-01 :polarity -
+            :ARG0 (p / prince
+                  :mod (l / little))))
+
+Span 1:  no => -
+Span 2:  But => contrast-01
+Span 3:  reply => reply-01
+Span 4:  prince => prince
+Span 5:  little => little
+

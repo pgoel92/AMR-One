@@ -1,0 +1,29 @@
+Contents:
+
+README
+corp : JAMR aligner output corpus file 
+span : JAMR aligner output span file
+corp-span : merged corpus and span file
+corp-span-perfect : merged file with only perfectly aligned sentences
+corp-span-imperfect : merged file with only imperfectly aligned sentences
+run.sh : script that runs the JAMR aligner on the test data from AMR public release 1.3
+mod-out.py : creates corp-span after taking as input files corp and span
+stats.py : compare avg sentence length of perfect and imperfectly aligned corpora
+
+The python script stats.py was to get an idea of the average length of sentences which are perfectly aligned versus those that have atleast one unaligned concept. The avg length of imperfect sentences was 4 words longer than perfect sentences.
+
+Week 1 summary : 
+
+In the first week of the project, I ran the JAMR aligner on the 143 test AMRs from the Public Release 1.3. 
+The JAMR aligner outputs the corpus file with an additional line for alignments. But the alignments are in a format that's hard to understand manually. The aligner has an option to produce a file that displays the alignment spans which are understandable. So I had to merge the two files. 
+I separated the sentences which are correctly aligned from those which have atleast one unaligned concept.
+In parallel, I started reading literature. I decided that I'd spend most of my time reading about the first phase of the project i.e the alignment phase. I started with the JAMR paper, which took about 2-3 readings to start making sense. I also read the writeup on IBM Models by Prof. Michael Collins. 
+Thinking about the long term benefits of doing so, I decided to watch the videos for the Coursera course NLP offered by Prof. Michael Collins. I can see myself establishing a research career in the field of NLP, so it's an investment towards that.
+I am going to write summaries of each week without going into a lot of detail. I finished watching and summarizing Week 1 videos. 
+
+End of Week Meeting summary - Monday, September 15
+
+We looked at the alignments manually. We found several issues with the alignments that can be fixed easily. To get a better idea, we decided to compile a list of the most frequently  unaligned concepts and the words that they cooccur with.
+We also discussed the idea of relating the AMR graph with the syntactic parse tree of the sentence. The idea was that concepts that are close by in the AMR should be close in the parse tree as well. But if there exist cases where this is not true, then these cases should be identified so that we can extract rules for them later. So we decided to look at sentences which have both AMRs and parse trees available i.e the result of intersecting AMR sembank with the Penn treebank. Turns out there are only 100 such sentences. So another task for next week was to create a separate corpus with these 100 sentences with the parse trees added as well.
+Daniel mentioned that he has not yet finalized on a grammar formalism to use for the AMR parser. He had thought of using Hyperedge Replacement Grammars but now thinks he will have to think up some other formalism. I was wowed by that.
+Finally, Daniel wrote to Owen asking him about how I could access the AMR and Penn Treebank files from the CCLS servers.

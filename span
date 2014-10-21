@@ -1,0 +1,1542 @@
+ ### Tokenizing ###
+/Users/pgoel/Desktop/Git/AMR-One/tools/cdec/corpus/support/utf8-normalize.sh: Cannot find ICU uconv (http://site.icu-project.org/) ... falling back to iconv. Quality may suffer.
+ ### Running aligner ###
+Span 1:  Chapter => chapter
+Span 2:  4 => 4
+Fuzzy Matcher concept: scarce word: scarcely
+Fuzzy Matcher concept: scarce word: scarcely
+Fuzzy Matcher concept: important word: importance
+Fuzzy Matcher concept: important word: importance
+WARNING: Unaligned concept cause-01
+WARNING: Unaligned concept more
+WARNING: Unaligned concept ordinal-entity
+WARNING: Unaligned concept 2
+Span 1:  learned => learn-01
+Span 2:  fact => fact
+Span 3:  larger => large
+Span 4:  planet => planet
+Span 5:  came => come-01
+Span 6:  prince => prince
+Span 7:  little => little
+Span 8:  house => house
+Span 9:  any => any
+Span 10:  great => great
+Span 11:  I => i
+Span 12:  scarcely => scarce
+Span 13:  importance => important
+WARNING: Unaligned concept i
+Span 1:   => -
+Span 2:  But => contrast-01
+Span 3:  surprise => surprise-01
+Span 4:  really => really
+Span 5:  much => much
+Span 6:  that => that
+WARNING: Found duplicate match for concept include-91
+WARNING: Found duplicate match for concept include-91
+WARNING: Found duplicate match for concept include-91
+WARNING: Found duplicate match for concept include-91
+WARNING: Found duplicate match for concept include-91
+WARNING: Found duplicate match for concept include-91
+WARNING: Unaligned concept exist-01
+WARNING: Unaligned concept multiple
+WARNING: Unaligned concept 100
+WARNING: Unaligned concept planet
+WARNING: Unaligned concept cause-01
+WARNING: Unaligned concept difficult
+WARNING: Unaligned concept also
+WARNING: Unaligned concept planet
+Span 1:  Earth => (planet :name (name :op1 "Earth"))
+Span 2:  Jupiter => (planet :name (name :op1 "Jupiter"))
+Span 3:  Mars => (planet :name (name :op1 "Mars"))
+Span 4:  Venus => (planet :name (name :op1 "Venus"))
+Span 5:  knew => know-01
+Span 6:  well => well
+Span 7:  very => very
+Span 8:  planets => planet
+Span 9:  others => other
+Span 10:  also => include-91
+Span 11:  small => small
+Span 12:  seeing => see-01
+Span 13:  telescope => telescope
+Span 14:  so => so
+Span 15:  great => great
+Span 16:  names => name-01
+Span 17:  we => we
+Span 18:  I => i
+WARNING: Unaligned concept this
+Span 1:   => -
+Span 2:  but => contrast-01
+Span 3:  discovers => discover-01
+Span 4:  give => give-01
+Span 5:  only => only
+Span 6:  number => number
+Span 7:  name => name-01
+Span 8:  one => 1
+Span 9:  of => (thing :ARG1-of include-91)
+Span 10:  astronomer => astronomer
+WARNING: Unaligned concept possible
+WARNING: Unaligned concept exemplify-01
+Span 1:  Asteroid 325 => (name :op2 325 :op1 "Asteroid")
+Span 2:  call => call-01
+Span 3:  it => it
+Span 4:  He => he
+WARNING: Unaligned concept cause-01
+Span 1:  B => (name :op1 "B-612")
+Span 2:  reason => reason
+Span 3:  serious => serious
+Span 4:  believe => believe-01
+Span 5:  came => come-01
+Span 6:  asteroid => asteroid
+Span 7:  planet => planet
+Span 8:  prince => prince
+Span 9:  little => little
+Span 10:  I => i
+Fuzzy Matcher concept: have-frequency-91 word: has
+Fuzzy Matcher concept: have-frequency-91 word: has
+WARNING: Unaligned concept 1
+Span 1:  seen => see-01
+Span 2:  only => only
+Span 3:  telescope => telescope
+Span 4:  asteroid => asteroid
+Span 5:  This => this
+Span 6:  has => have-frequency-91
+WARNING: Unaligned concept see-01
+Span 1:  Turkish => (country :name (name :op1 "Turkey"))
+Span 2:  1909 => (date-entity :year 1909)
+Span 3:  astronomer => astronomer
+Fuzzy Matcher concept: demonstrate-01 word: demonstration
+Fuzzy Matcher concept: demonstrate-01 word: demonstration
+Fuzzy Matcher concept: discover-01 word: discovery
+Fuzzy Matcher concept: discover-01 word: discovery
+Span 1:  International Astronomical Congress => (organization :name (name :op3 "Congress" :op2 "Astronomical" :op1 "International"))
+Span 2:  presented => present-01
+Span 3:  great => great
+Span 4:  On => on
+Span 5:  astronomer => astronomer
+Span 6:  it => it
+Span 7:  demonstration => demonstrate-01
+Span 8:  discovery => discover-01
+WARNING: Found duplicate match for concept he
+WARNING: Found duplicate match for concept he
+WARNING: Found duplicate match for concept he
+WARNING: Unaligned concept cause-01
+WARNING: Unaligned concept somebody
+WARNING: Unaligned concept -
+Span 1:  Turkish => (country :name (name :op1 "Turkey"))
+Span 2:  But => contrast-01
+Span 3:  costume => costume-01
+Span 4:  believe => believe-01
+Span 5:  said => (thing :ARG1-of say-01)
+Span 6:  he => he
+Fuzzy Matcher concept: grown-up word: Grown
+Fuzzy Matcher concept: grown-up word: Grown
+WARNING: Unaligned concept resemble-01
+Span 1:  that => that
+Span 2:  Grown => grown-up
+Fuzzy Matcher concept: fortunate-41 word: Fortunately
+Fuzzy Matcher concept: fortunate-41 word: Fortunately
+WARNING: Unaligned concept contrast-01
+WARNING: Unaligned concept person
+WARNING: Unaligned concept have-org-role-91
+Span 1:  Asteroid B => (planet :name (name :op2 "B-612" :op1 "Asteroid"))
+Span 2:  Turkish => (country :name (name :op1 "Turkey"))
+Span 3:  European => (continent :name (name :op1 "Europe"))
+Span 4:  made => make-01
+Span 5:  reputation => reputation
+Span 6:  law => law
+Span 7:  change => change-01
+Span 8:  pain => pain
+Span 9:  death => death
+Span 10:  costume => costume
+Span 11:  subjects => subject
+Span 12:  dictator => dictator
+Span 13:  Fortunately => fortunate-41
+Fuzzy Matcher concept: demonstrate-01 word: demonstration
+Fuzzy Matcher concept: demonstrate-01 word: demonstration
+Fuzzy Matcher concept: impress-01 word: impressive
+Fuzzy Matcher concept: impress-01 word: impressive
+WARNING: Unaligned concept cause-01
+Span 1:  1920 => (date-entity :year 1920)
+Span 2:  astronomer => astronomer
+Span 3:  dressed => dress-01
+Span 4:  and => and
+Span 5:  elegance => elegance
+Span 6:  style => style
+Span 7:  all => all
+Span 8:  over => over
+Span 9:  again => again
+Span 10:  demonstration => demonstrate-01
+Span 11:  impressive => impress-01
+WARNING: Unaligned concept he
+Span 1:  And => and
+Span 2:  accepted => accept-01
+Span 3:  time => time
+Span 4:  this => this
+Span 5:  report => (thing :ARG1-of report-01)
+Span 6:  everybody => everybody
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+Fuzzy Matcher concept: grown-up word: grown
+Fuzzy Matcher concept: grown-up word: grown
+WARNING: Unaligned concept this
+Span 1:  account => account-01
+Span 2:  and => and
+Span 3:  note => note-01
+Span 4:  number => number
+Span 5:  told => tell-01
+Span 6:  you => you
+Span 7:  details => detail
+Span 8:  asteroid => asteroid
+Span 9:  I => i
+Span 10:  and => and
+Span 11:  ways => way
+Span 12:  grown => grown-up
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+Fuzzy Matcher concept: have-rel-role-91 word: have
+Fuzzy Matcher concept: have-rel-role-91 word: have
+WARNING: Unaligned concept ever
+WARNING: Unaligned concept person
+WARNING: Unaligned concept they
+WARNING: Unaligned concept -
+Span 1:  ask => ask-01
+Span 2:  tell => tell-01
+Span 3:  they => they
+Span 4:  made => make-01
+Span 5:  friend => friend
+Span 6:  new => new
+Span 7:  you => you
+Span 8:  questions => question
+Span 9:  matters => matter
+Span 10:  essential => essential
+Span 11:  any => any
+Span 12:  have => have-rel-role-91
+WARNING: Unaligned concept -
+WARNING: Unaligned concept ever
+WARNING: Unaligned concept amr-unknown
+WARNING: Unaligned concept he
+Span 1:  say => say-01
+Span 2:  you => you
+Span 3:  sound => sound-01
+Span 4:  voice => voice
+Span 5:  They => they
+WARNING: Unaligned concept amr-unknown
+Span 1:  love => love-01
+Span 2:  best => (good :degree most)
+Span 3:  games => game
+Span 4:  he => he
+WARNING: Unaligned concept interrogative
+Span 1:  collect => collect-01
+Span 2:  butterflies => butterfly
+Span 3:  he => he
+WARNING: Unaligned concept age-01
+WARNING: Unaligned concept amr-unknown
+Span 1:  demand => demand-01
+Span 2:  Instead => instead
+Span 3:  he => he
+Span 4:  they => they
+Fuzzy Matcher concept: have-rel-role-91 word: has
+Fuzzy Matcher concept: have-rel-role-91 word: has
+WARNING: Unaligned concept person
+WARNING: Unaligned concept amr-unknown
+Span 1:  he => he
+Span 2:  brothers => brother
+Span 3:  has => have-rel-role-91
+WARNING: Unaligned concept amr-unknown
+Span 1:  weigh => weigh-01
+Span 2:  he => he
+Fuzzy Matcher concept: monetary-quantity word: money
+Fuzzy Matcher concept: monetary-quantity word: money
+WARNING: Unaligned concept amr-unknown
+WARNING: Unaligned concept person
+WARNING: Unaligned concept have-rel-role-91
+WARNING: Unaligned concept he
+Span 1:  make => make-05
+Span 2:  father => father
+Span 3:  money => monetary-quantity
+WARNING: Found duplicate match for concept they
+WARNING: Found duplicate match for concept they
+WARNING: Found duplicate match for concept they
+WARNING: Unaligned concept this
+WARNING: Unaligned concept he
+Span 1:  think => think-01
+Span 2:  learned => learn-01
+Span 3:  figures => figure
+Span 4:  Only => only
+Span 5:  anything => anything
+Span 6:  they => they
+WARNING: Found duplicate match for concept -
+WARNING: Found duplicate match for concept house
+WARNING: Found duplicate match for concept house
+WARNING: Found duplicate match for concept house
+Fuzzy Matcher concept: grown-up word: grown
+Fuzzy Matcher concept: grown-up word: grown
+Span 1:   => -
+Span 2:  able => possible
+Span 3:  say => say-01
+Span 4:  saw => see-01
+Span 5:  house => house
+Span 6:  beautiful => beautiful
+Span 7:  and => and
+Span 8:  doves => dove
+Span 9:  roof => roof
+Span 10:  geraniums => geranium
+Span 11:  windows => window
+Span 12:  made => make-01
+Span 13:  brick => brick
+Span 14:  rosy => rosy
+Span 15:  you => you
+Span 16:  get => get-01
+Span 17:  idea => idea
+Span 18:  at => at
+Span 19:  all => all
+Span 20:  any => any
+Span 21:  grown => grown-up
+WARNING: Unaligned concept obligate-01
+WARNING: Unaligned concept they
+WARNING: Unaligned concept monetary-quantity
+WARNING: Unaligned concept dollar
+WARNING: Unaligned concept 20000
+Span 1:  say => say-01
+Span 2:  saw => see-01
+Span 3:  house => house
+Span 4:  cost => cost-01
+Span 5:  You => you
+Span 1:  exclaim => exclaim-01
+Span 2:  Then => then
+Span 3:  pretty => pretty
+Span 4:  house => house
+Span 5:  that => that
+Span 6:  they => they
+WARNING: Found duplicate match for concept he
+WARNING: Found duplicate match for concept he
+WARNING: Found duplicate match for concept he
+WARNING: Found duplicate match for concept he
+WARNING: Found duplicate match for concept he
+WARNING: Found duplicate match for concept he
+Fuzzy Matcher concept: just-so word: Just
+Fuzzy Matcher concept: just-so word: Just
+WARNING: Unaligned concept possible
+WARNING: Unaligned concept they
+WARNING: Unaligned concept prove-01
+Span 1:  say => say-01
+Span 2:  and => and
+Span 3:  looking => look-01
+Span 4:  sheep => sheep
+Span 5:  laughed => laugh-01
+Span 6:  charming => charming
+Span 7:  he => he
+Span 8:  existed => exist-01
+Span 9:  prince => prince
+Span 10:  little => little
+Span 11:  you => you
+Span 12:  Just => just-so
+WARNING: Unaligned concept prove-01
+Span 1:  wants => want-01
+Span 2:  sheep => sheep
+Span 3:  anybody => anybody
+Span 4:  exists => exist-01
+WARNING: Unaligned concept amr-unknown
+WARNING: Unaligned concept they
+Span 1:  And => and
+Span 2:  do => do-02
+Span 3:  good => good
+Span 4:  tell => tell-01
+Span 5:  that => that
+Span 1:  and => and
+Span 2:  treat => treat-01
+Span 3:  child => child
+Span 4:  you => you
+Span 5:  shrug => shrug-01
+Span 6:  shoulders => shoulder
+Span 7:  They => they
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+Span 1:  Asteroid B => (name :op2 "B-612" :op1 "Asteroid")
+Span 2:  But => contrast-01
+Span 3:  and => and
+Span 4:  said => say-01
+Span 5:  came => come-01
+Span 6:  planet => planet
+Span 7:  he => he
+Span 8:  you => you
+Span 9:  leave => leave-01
+Span 10:  peace => peace
+Span 11:  questions => question-01
+Span 12:  convinced => convince-01
+Span 13:  they => they
+WARNING: Unaligned concept resemble-01
+Span 1:  They => they
+Span 2:  that => that
+WARNING: Unaligned concept obligate-01
+WARNING: Unaligned concept they
+Span 1:   => -
+Span 2:  One => one
+Span 3:  hold => hold-01
+Span 4:  it => it
+Fuzzy Matcher concept: grown-up word: grown
+Fuzzy Matcher concept: grown-up word: grown
+Span 1:  should => recommend-01
+Span 2:  show => show-01
+Span 3:  always => always
+Span 4:  forbearance => forbearance
+Span 5:  great => great
+Span 6:  Children => child
+Span 7:  grown => (person :mod grown-up)
+Fuzzy Matcher concept: certain word: certainly
+Fuzzy Matcher concept: certain word: certainly
+Fuzzy Matcher concept: indifferent-41 word: indifference
+Fuzzy Matcher concept: indifferent-41 word: indifference
+WARNING: Unaligned concept we
+Span 1:  But => contrast-01
+Span 2:  understand => understand-01
+Span 3:  life => life
+Span 4:  figures => figure
+Span 5:  certainly => certain
+Span 6:  indifference => indifferent-41
+Span 1:  liked => like-02
+Span 2:  begin => begin-01
+Span 3:  fashion => fashion
+Span 4:  tales => tale
+Span 5:  fairy => fairy
+Span 6:  story => story
+Span 7:  this => this
+Span 8:  I => i
+Fuzzy Matcher concept: once-upon-a-time word: Once
+Fuzzy Matcher concept: once-upon-a-time word: Once
+WARNING: Unaligned concept more
+Span 1:  like => like-02
+Span 2:  say => say-01
+Span 3:  prince => prince
+Span 4:  need => need-01
+Span 5:  sheep => sheep
+Span 6:  lived => live-01
+Span 7:  planet => planet
+Span 8:  bigger => big
+Span 9:  any => any
+Span 10:  scarcely => scarcely
+Span 11:  little => little
+Span 12:  I => i
+Span 13:  Once => once-upon-a-time
+WARNING: Unaligned concept i
+WARNING: Unaligned concept more
+Span 1:  given => give-01
+Span 2:  understand => (person :ARG0-of understand-01)
+Span 3:  life => life
+Span 4:  story => story
+Span 5:  truth => truth
+Span 6:  air => air
+Span 7:  greater => great
+Span 8:  much => much
+Span 9:  that => that
+Fuzzy Matcher concept: careless word: carelessly
+Fuzzy Matcher concept: careless word: carelessly
+WARNING: Unaligned concept cause-01
+WARNING: Unaligned concept anyone
+Span 1:   => -
+Span 2:  want => want-01
+Span 3:  read => read-01
+Span 4:  book => book
+Span 5:  I => i
+Span 6:  carelessly => careless
+WARNING: Unaligned concept this
+Span 1:  suffered => suffer-01
+Span 2:  setting => set-09
+Span 3:  memories => memory
+Span 4:  grief => grief
+Span 5:  much => much
+Span 6:  too => too
+Span 7:  I => i
+Fuzzy Matcher concept: have-rel-role-91 word: have
+Fuzzy Matcher concept: have-rel-role-91 word: have
+WARNING: Unaligned concept before
+WARNING: Unaligned concept now
+WARNING: Unaligned concept i
+Span 1:  went => go-02
+Span 2:  already => already
+Span 3:  Six => 6
+Span 4:  years => (temporal-quantity :unit year)
+Span 5:  sheep => sheep
+Span 6:  away => away
+Span 7:  friend => friend
+Span 8:  have => (person :ARG0-of have-rel-role-91)
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept i
+WARNING: Unaligned concept ensure-01
+WARNING: Unaligned concept he
+WARNING: Unaligned concept he
+Span 1:   => -
+Span 2:  forget => forget-01
+Span 3:  try => try-01
+Span 4:  describe => describe-01
+Span 5:  here => here
+Span 6:  I => i
+WARNING: Unaligned concept person
+WARNING: Unaligned concept have-rel-role-91
+Span 1:  sad => sad
+Span 2:  forget => forget-01
+Span 3:  friend => friend
+WARNING: Found duplicate match for concept have-03
+WARNING: Found duplicate match for concept have-03
+WARNING: Found duplicate match for concept have-03
+Fuzzy Matcher concept: have-rel-role-91 word: had
+Fuzzy Matcher concept: have-rel-role-91 word: had
+Fuzzy Matcher concept: everyone word: every
+Fuzzy Matcher concept: everyone word: every
+WARNING: Unaligned concept -
+Span 1:  has => have-03
+Span 2:  friend => friend
+Span 3:  had => (person :ARG0-of have-rel-role-91)
+Span 4:  every => everyone
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept -
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept i
+Fuzzy Matcher concept: grown-up word: grown
+Fuzzy Matcher concept: grown-up word: grown
+WARNING: Unaligned concept he
+WARNING: Unaligned concept resemble-01
+Span 1:  no => -
+Span 2:  And => and
+Span 3:  may => possible
+Span 4:  forget => forget-01
+Span 5:  I => i
+Span 6:  interested => interest-01
+Span 7:  anything => anything
+Span 8:  figures => figure
+Span 9:  grown => grown-up
+WARNING: Found duplicate match for concept that
+WARNING: Found duplicate match for concept that
+WARNING: Found duplicate match for concept that
+Span 1:  bought => buy-01
+Span 2:  that => that
+Span 3:  and => and
+Span 4:  pencils => pencil
+Span 5:  some => some
+Span 6:  paints => paint
+Span 7:  box => box
+Span 8:  I => i
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept boa
+WARNING: Found duplicate match for concept constrictor
+WARNING: Found duplicate match for concept from
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept boa
+WARNING: Found duplicate match for concept boa
+WARNING: Found duplicate match for concept from
+WARNING: Found duplicate match for concept from
+WARNING: Found duplicate match for concept constrictor
+WARNING: Found duplicate match for concept constrictor
+WARNING: Unaligned concept cause-01
+WARNING: Unaligned concept temporal-quantity
+WARNING: Unaligned concept -
+WARNING: Unaligned concept ever
+WARNING: Unaligned concept time
+WARNING: Unaligned concept temporal-quantity
+WARNING: Unaligned concept year
+WARNING: Unaligned concept picture
+WARNING: Unaligned concept picture
+Span 1:  hard => hard
+Span 2:  take => take-13
+Span 3:  again => again
+Span 4:  drawing => draw-01
+Span 5:  I => i
+Span 6:  made => make-01
+Span 7:  since => since
+Span 8:  age => age-01
+Span 9:  six => 6
+Span 10:  pictures => picture
+Span 11:  and => and
+Span 12:  boa => boa
+Span 13:  from => from
+Span 14:  inside => inside
+Span 15:  constrictor => constrictor
+Span 16:  boa => boa
+Span 17:  from => from
+Span 18:  outside => outside
+Span 19:  constrictor => constrictor
+Span 20:  any => any
+Fuzzy Matcher concept: certain word: certainly
+Fuzzy Matcher concept: certain word: certainly
+Span 1:  try => try-01
+Span 2:  make => make-02
+Span 3:  true => true-41
+Span 4:  possible => possible
+Span 5:  life => life
+Span 6:  portraits => portrait
+Span 7:  I => i
+Span 8:  certainly => certain
+Fuzzy Matcher concept: succeed-01 word: success
+Fuzzy Matcher concept: succeed-01 word: success
+Span 1:   => -
+Span 2:  But => contrast-01
+Span 3:  sure => sure
+Span 4:  at => at
+Span 5:  all => all
+Span 6:  I => i
+Span 7:  success => succeed-01
+Fuzzy Matcher concept: resemble-01 word: resemblance
+Fuzzy Matcher concept: resemble-01 word: resemblance
+WARNING: Unaligned concept thing
+WARNING: Unaligned concept draw-01
+Span 1:  no => -
+Span 2:  and => and
+Span 3:  drawing => (thing :ARG1-of draw-01)
+Span 4:  another => another
+Span 5:  subject => subject
+Span 6:  goes => go-06
+Span 7:  right => right
+Span 8:  all => all
+Span 9:  along => along
+Span 10:  One => 1
+Span 11:  resemblance => resemble-01
+WARNING: Found duplicate match for concept too
+WARNING: Found duplicate match for concept too
+WARNING: Found duplicate match for concept too
+WARNING: Found duplicate match for concept too
+WARNING: Found duplicate match for concept too
+WARNING: Found duplicate match for concept too
+WARNING: Found duplicate match for concept too
+WARNING: Found duplicate match for concept too
+WARNING: Found duplicate match for concept too
+WARNING: Unaligned concept err-01
+WARNING: Unaligned concept place
+Span 1:  I => i
+Span 2:  height => height
+Span 3:  prince => prince
+Span 4:  little => little
+Span 5:  too => too
+Span 6:  and => and
+Span 7:  short => short
+Span 8:  place => place
+Span 9:  another => another
+Span 10:  too => too
+Span 11:  tall => tall
+Span 12:  one => one
+Span 13:  too => too
+Span 14:  some => some
+WARNING: Unaligned concept he
+Span 1:  And => and
+Span 2:  feel => feel-01
+Span 3:  doubts => doubt-01
+Span 4:  some => some
+Span 5:  color => color
+Span 6:  costume => costume
+Span 7:  I => i
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept good
+WARNING: Found duplicate match for concept now
+WARNING: Found duplicate match for concept good
+WARNING: Found duplicate match for concept good
+WARNING: Found duplicate match for concept now
+WARNING: Found duplicate match for concept now
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept i
+Fuzzy Matcher concept: fair-to-middling word: fair
+Fuzzy Matcher concept: fair-to-middling word: fair
+WARNING: Unaligned concept cause-01
+Span 1:  fumble => fumble-01
+Span 2:  best => (good :degree most)
+Span 3:  generally => generally
+Span 4:  hope => hope-01
+Span 5:  bad => bad
+Span 6:  now => now
+Span 7:  good => good
+Span 8:  now => now
+Span 9:  can => possible
+Span 10:  along => along
+Span 11:  I => i
+Span 12:  fair => fair-to-middling
+Span 1:  make => make-01
+Span 2:  also => also
+Span 3:  mistakes => mistake
+Span 4:  details => detail
+Span 5:  certain => certain
+Span 6:  important => important
+Span 7:  more => more
+Span 8:  I => i
+WARNING: Found duplicate match for concept that
+WARNING: Found duplicate match for concept that
+WARNING: Found duplicate match for concept that
+WARNING: Unaligned concept i
+Span 1:   => -
+Span 2:  But => contrast-01
+Span 3:  fault => fault-01
+Span 4:  something => something
+Span 5:  that => that
+WARNING: Unaligned concept ever
+WARNING: Unaligned concept i
+WARNING: Unaligned concept person
+WARNING: Unaligned concept have-rel-role-91
+WARNING: Unaligned concept -
+Span 1:  explained => explain-01
+Span 2:  anything => anything
+Span 3:  friend => friend
+WARNING: Unaligned concept resemble-01
+Span 1:  thought => think-01
+Span 2:  perhaps => perhaps
+Span 3:  I => i
+Span 4:  He => he
+Span 1:   => -
+Span 2:  But => contrast-01
+Span 3:  alas => alas
+Span 4:  know => know-01
+Span 5:  see => (thing :manner-of see-01)
+Span 6:  through => through
+Span 7:  walls => wall
+Span 8:  boxes => box
+Span 9:  sheep => sheep
+Span 10:  I => i
+Fuzzy Matcher concept: grown-up word: grown
+Fuzzy Matcher concept: grown-up word: grown
+WARNING: Unaligned concept resemble-01
+Span 1:  I => i
+Span 2:  Perhaps => perhaps
+Span 3:  little => little
+Span 4:  grown => grown-up
+WARNING: Unaligned concept obligate-01
+Span 1:  I => i
+Span 2:  grow => grow-02
+Span 3:  old => old
+Span 1:  Chapter => chapter
+Span 2:  5 => 5
+Fuzzy Matcher concept: depart-01 word: departure
+Fuzzy Matcher concept: depart-01 word: departure
+WARNING: Unaligned concept we
+WARNING: Unaligned concept and
+Span 1:  learn => learn-01
+Span 2:  talk => talk-01
+Span 3:  passed => pass-03
+Span 4:  day => day
+Span 5:  each => each
+Span 6:  something => something
+Span 7:  planet => planet
+Span 8:  prince => prince
+Span 9:  little => little
+Span 10:  journey => journey-01
+Span 11:  I => i
+Span 12:  departure => depart-01
+Fuzzy Matcher concept: slow word: slowly
+Fuzzy Matcher concept: slow word: slowly
+WARNING: Unaligned concept possible
+WARNING: Unaligned concept thing
+WARNING: Unaligned concept think-01
+WARNING: Unaligned concept he
+Span 1:  come => come-01
+Span 2:  fall => fall-01
+Span 3:  very => very
+Span 4:  information => information
+Span 5:  slowly => slow
+WARNING: Unaligned concept ordinal-entity
+WARNING: Unaligned concept 3
+Span 1:  heard => hear-01
+Span 2:  day => day
+Span 3:  this => this
+Span 4:  catastrophe => catastrophe
+Span 5:  baobabs => baobab
+Span 6:  I => i
+WARNING: Unaligned concept obligate-01
+WARNING: Unaligned concept again
+Span 1:  thank => thank-01
+Span 2:  it => it
+Span 3:  sheep => sheep
+Span 4:  I => i
+Span 5:  time => time
+Span 6:  This => this
+WARNING: Found duplicate match for concept little
+WARNING: Found duplicate match for concept little
+WARNING: Found duplicate match for concept little
+Fuzzy Matcher concept: abrupt word: abruptly
+Fuzzy Matcher concept: abrupt word: abruptly
+WARNING: Unaligned concept i
+WARNING: Unaligned concept interrogative
+Span 1:  asked => ask-01
+Span 2:  seized => seize-01
+Span 3:  doubt => doubt-01
+Span 4:  grave => grave
+Span 5:  true => true
+Span 6:  eat => eat-01
+Span 7:  bushes => bush
+Span 8:  little => little
+Span 9:  sheep => sheep
+Span 10:  prince => prince
+Span 11:  little => little
+Span 12:  abruptly => abrupt
+Span 1:  true => true
+Span 2:  that => that
+WARNING: Unaligned concept expressive
+Span 1:  Ah => ah
+Span 1:  glad => glad
+Span 2:  I => i
+WARNING: Unaligned concept cause-01
+WARNING: Unaligned concept amr-unknown
+Span 1:   => -
+Span 2:  understand => understand-01
+Span 3:  important => important
+Span 4:  should => recommend-01
+Span 5:  eat => eat-01
+Span 6:  bushes => bush
+Span 7:  little => little
+Span 8:  sheep => sheep
+Span 9:  so => so
+Span 10:  I => i
+WARNING: Unaligned concept have-condition-91
+Span 1:  But => contrast-01
+Span 2:  added => add-01
+Span 3:  follows => follow-05
+Span 4:  eat => eat-01
+Span 5:  also => also
+Span 6:  baobabs => baobab
+Span 7:  they => they
+Span 8:  prince => prince
+Span 9:  little => little
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept -
+WARNING: Found duplicate match for concept little
+WARNING: Found duplicate match for concept baobab
+WARNING: Found duplicate match for concept herd
+WARNING: Found duplicate match for concept little
+WARNING: Found duplicate match for concept little
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept herd
+WARNING: Found duplicate match for concept herd
+WARNING: Found duplicate match for concept baobab
+WARNING: Found duplicate match for concept baobab
+Fuzzy Matcher concept: even-if word: even
+Fuzzy Matcher concept: even-if word: even
+Span 1:   => -
+Span 2:   => -
+Span 3:  pointed => point-02
+Span 4:  prince => prince
+Span 5:  little => little
+Span 6:  ; => and
+Span 7:  eat => eat-02
+Span 8:  took => take-05
+Span 9:  herd => herd
+Span 10:  whole => whole
+Span 11:  elephants => elephant
+Span 12:  baobabs => baobab
+Span 13:  single => single
+Span 14:  one => 1
+Span 15:  but => contrast-01
+Span 16:  trees => tree
+Span 17:  big => big
+Span 18:  castles => castle
+Span 19:  bushes => bush
+Span 20:  baobab => baobab
+Span 21:  little => little
+Span 22:  I => i
+Span 23:  even => even-if
+Span 1:  made => make-02
+Span 2:  laugh => laugh-01
+Span 3:  prince => prince
+Span 4:  little => little
+Span 5:  idea => idea
+Span 6:  herd => herd
+Span 7:  elephants => elephant
+WARNING: Unaligned concept obligate-01
+WARNING: Unaligned concept stack-01
+WARNING: Unaligned concept they
+Span 1:  said => say-01
+Span 2:  We => we
+Span 3:  he => he
+Span 1:  But => contrast-01
+Span 2:  comment => comment-02
+Span 3:  wise => wise
+Span 4:  start => start-05
+Span 5:  Before => before
+Span 6:  grow => grow-02
+Span 7:  big => big
+Span 8:  so => so
+Span 9:  little => little
+Span 10:  baobabs => baobab
+Span 11:  he => he
+Fuzzy Matcher concept: strict word: strictly
+Fuzzy Matcher concept: strict word: strictly
+Span 1:  correct => correct
+Span 2:  That => that
+Span 3:  strictly => strict
+Span 1:  said => say-01
+Span 2:  I => i
+WARNING: Unaligned concept cause-01
+WARNING: Unaligned concept amr-unknown
+Span 1:  But => contrast-01
+Span 2:  want => want-01
+Span 3:  eat => eat-01
+Span 4:  baobabs => baobab
+Span 5:  little => little
+Span 6:  sheep => sheep
+Span 7:  you => you
+WARNING: Found duplicate match for concept he
+WARNING: Found duplicate match for concept come-25
+WARNING: Found duplicate match for concept come-25
+WARNING: Found duplicate match for concept come-25
+WARNING: Found duplicate match for concept he
+WARNING: Found duplicate match for concept he
+Fuzzy Matcher concept: self-evident word: self
+Fuzzy Matcher concept: self-evident word: self
+WARNING: Unaligned concept immediate
+WARNING: Unaligned concept i
+Span 1:  answered => answer-01
+Span 2:  speaking => speak-01
+Span 3:  something => something
+Span 4:  come => come-25
+Span 5:  He => he
+Span 6:  self => self-evident
+Fuzzy Matcher concept: assist-01 word: assistance
+Fuzzy Matcher concept: assist-01 word: assistance
+WARNING: Unaligned concept try-01
+WARNING: Unaligned concept -
+Span 1:  And => and
+Span 2:  obliged => oblige-02
+Span 3:  I => i
+Span 4:  solve => solve-01
+Span 5:  problem => problem
+Span 6:  this => this
+Span 7:  mental => mental
+Span 8:  great => great
+Span 9:  assistance => assist-01
+WARNING: Found duplicate match for concept plant
+WARNING: Found duplicate match for concept planet
+WARNING: Found duplicate match for concept plant
+WARNING: Found duplicate match for concept plant
+WARNING: Found duplicate match for concept planet
+WARNING: Found duplicate match for concept planet
+WARNING: Unaligned concept be-located-at-91
+WARNING: Unaligned concept and
+Span 1:  and => and
+Span 2:  Indeed => indeed
+Span 3:  plants => plant
+Span 4:  bad => bad
+Span 5:  plants => plant
+Span 6:  good => good
+Span 7:  planet => planet
+Span 8:  lived => live-01
+Span 9:  prince => prince
+Span 10:  little => little
+Span 11:  planets => planet
+Span 12:  all => all
+Span 13:  learned => learn-01
+Span 14:  I => i
+WARNING: Found duplicate match for concept seed
+WARNING: Found duplicate match for concept good
+WARNING: Found duplicate match for concept plant
+WARNING: Found duplicate match for concept bad
+WARNING: Found duplicate match for concept seed
+WARNING: Found duplicate match for concept seed
+WARNING: Found duplicate match for concept plant
+WARNING: Found duplicate match for concept plant
+WARNING: Found duplicate match for concept bad
+WARNING: Found duplicate match for concept bad
+WARNING: Found duplicate match for concept good
+WARNING: Found duplicate match for concept good
+WARNING: Unaligned concept cause-01
+Span 1:  and => and
+Span 2:  seeds => seed
+Span 3:  plants => plant
+Span 4:  bad => bad
+Span 5:  bad => bad
+Span 6:  seeds => seed
+Span 7:  plants => plant
+Span 8:  good => good
+Span 9:  good => good
+Span 1:  But => contrast-01
+Span 2:  invisible => (visible :polarity -)
+Span 3:  seeds => seed
+Fuzzy Matcher concept: someone word: some
+Fuzzy Matcher concept: someone word: some
+Span 1:  sleep => sleep-01
+Span 2:  until => until
+Span 3:  seized => seize-01
+Span 4:  of => include-91
+Span 5:  desire => desire-01
+Span 6:  awaken => awaken-01
+Span 7:  heart => heart
+Span 8:  darkness => darkness
+Span 9:  earth => earth
+Span 10:  deep => deep
+Span 11:  They => they
+Span 12:  some => someone
+WARNING: Found duplicate match for concept little
+WARNING: Found duplicate match for concept little
+WARNING: Found duplicate match for concept little
+Fuzzy Matcher concept: timid word: timidly
+Fuzzy Matcher concept: timid word: timidly
+Fuzzy Matcher concept: offensive word: inoffensively
+Fuzzy Matcher concept: offensive word: inoffensively
+WARNING: Unaligned concept at-first
+Span 1:  and => and
+Span 2:  Then => then
+Span 3:  begin => begin-01
+Span 4:  push => push-01
+Span 5:  upward => upward
+Span 6:  sun => sun
+Span 7:  sprig => sprig
+Span 8:  charming => charm-01
+Span 9:  little => little
+Span 10:  stretch => stretch-01
+Span 11:  seed => seed
+Span 12:  this => this
+Span 13:  little => little
+Span 14:  timidly => timid
+Span 15:  inoffensively => (offensive :polarity -)
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Unaligned concept allow-01
+WARNING: Unaligned concept possible
+Span 1:  one => one
+Span 2:  grow => grow-01
+Span 3:  wish => wish-01
+Span 4:  or => or
+Span 5:  it => it
+Span 6:  only => only
+Span 7:  sprig => sprig
+Span 8:  bush => bush
+Span 9:  rose => rose
+Span 10:  sprout => sprout
+Span 11:  radish => radish
+WARNING: Found duplicate match for concept one
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept 1
+WARNING: Found duplicate match for concept 1
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Unaligned concept obligate-01
+WARNING: Unaligned concept ordinal-entity
+Span 1:  But => contrast-01
+Span 2:  destroy => destroy-01
+Span 3:  instant => instant
+Span 4:  one => 1
+Span 5:  very => very
+Span 6:  recognizes => recognize-01
+Span 7:  one => one
+Span 8:  plant => plant
+Span 9:  it => it
+Span 10:  bad => bad
+WARNING: Found duplicate match for concept seed
+WARNING: Found duplicate match for concept seed
+WARNING: Found duplicate match for concept seed
+WARNING: Unaligned concept be-located-at-91
+Span 1:  seeds => seed
+Span 2:  baobab => baobab
+Span 3:  some => some
+Span 4:  terrible => terrible
+Span 5:  planet => planet
+Span 6:  home => home
+Span 7:  prince => prince
+Span 8:  little => little
+Span 9:  Now => now
+WARNING: Unaligned concept they
+Span 1:  infested => infest-01
+Span 2:  soil => soil
+Span 3:  planet => planet
+Span 4:  that => that
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+WARNING: Unaligned concept eliminate-01
+WARNING: Unaligned concept ever
+WARNING: Unaligned concept -
+Span 1:  able => possible
+Span 2:  attend => attend-01
+Span 3:  late => late
+Span 4:  too => too
+Span 5:  you => you
+Span 6:  baobab => baobab
+Span 1:  spreads => spread-01
+Span 2:  planet => planet
+Span 3:  entire => entire
+Span 4:  It => it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+WARNING: Found duplicate match for concept it
+Span 1:  bores => bore-01
+Span 2:  roots => root
+Span 3:  through => through
+Span 4:  clear => clear
+Span 5:  It => it
+Span 6:  it => it
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept too
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept too
+WARNING: Found duplicate match for concept too
+Span 1:  And => and
+Span 2:  split => split-01
+Span 3:  and => and
+Span 4:  baobabs => baobab
+Span 5:  many => many
+Span 6:  too => too
+Span 7:  small => small
+Span 8:  planet => planet
+Span 9:  too => too
+Span 10:  pieces => piece
+WARNING: Unaligned concept more
+WARNING: Unaligned concept i
+Span 1:  said => say-01
+Span 2:  later => late
+Span 3:  question => question
+Span 4:  It => it
+Span 5:  discipline => discipline
+Span 6:  prince => prince
+Span 7:  little => little
+WARNING: Found duplicate match for concept toilet
+WARNING: Found duplicate match for concept toilet
+WARNING: Found duplicate match for concept toilet
+WARNING: Unaligned concept resemble-01
+WARNING: Unaligned concept you
+Span 1:  attend => attend-01
+Span 2:  finished => finish-01
+Span 3:  morning => morning
+Span 4:  toilet => toilet
+Span 5:  you => you
+Span 6:  care => care-01
+Span 7:  greatest => (great :degree most)
+Span 8:  toilet => toilet
+Span 9:  planet => planet
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+Fuzzy Matcher concept: close word: closely
+Fuzzy Matcher concept: close word: closely
+Fuzzy Matcher concept: regular word: regularly
+Fuzzy Matcher concept: regular word: regularly
+WARNING: Unaligned concept obligate-01
+WARNING: Unaligned concept most
+WARNING: Unaligned concept ordinal-entity
+WARNING: Unaligned concept 1
+Span 1:  pull => pull-01
+Span 2:  moment => moment
+Span 3:  can => possible
+Span 4:  distinguished => distinguish-01
+Span 5:  rosebushes => rosebush
+Span 6:  resemble => resemble-01
+Span 7:  youth => youth
+Span 8:  earliest => early
+Span 9:  so => so
+Span 10:  very => very
+Span 11:  baobabs => baobab
+Span 12:  all => all
+Span 13:  You => you
+Span 14:  closely => close
+Span 15:  regularly => regular
+WARNING: Found duplicate match for concept very
+WARNING: Found duplicate match for concept very
+WARNING: Found duplicate match for concept very
+Span 1:  added => add-01
+Span 2:  but => contrast-01
+Span 3:  easy => easy
+Span 4:  very => very
+Span 5:  tedious => tedious
+Span 6:  work => work-01
+Span 7:  very => very
+Span 8:  prince => prince
+Span 9:  little => little
+Fuzzy Matcher concept: exact word: exactly
+Fuzzy Matcher concept: exact word: exactly
+WARNING: Unaligned concept i
+WARNING: Unaligned concept recommend-01
+WARNING: Unaligned concept picture
+Span 1:  And => and
+Span 2:  said => say-01
+Span 3:  day => day
+Span 4:  one => one
+Span 5:  drawing => draw-01
+Span 6:  can => possible
+Span 7:  see => see-01
+Span 8:  this => this
+Span 9:  all => all
+Span 10:  children => child
+Span 11:  live => live-01
+Span 12:  beautiful => beautiful
+Span 13:  he => he
+Span 14:  exactly => exact
+Span 1:  useful => useful
+Span 2:  travel => travel-01
+Span 3:  day => day
+Span 4:  some => some
+Span 5:  That => that
+Span 6:  they => they
+Span 7:  very => very
+Span 1:  no => -
+Span 2:  added => add-01
+Span 3:  harm => harm-01
+Span 4:  Sometimes => sometimes
+Span 5:  putting => put-06
+Span 6:  day => day
+Span 7:  another => another
+Span 8:  work => (thing :ARG1-of work-01)
+Span 9:  piece => piece
+Span 10:  he => he
+Span 1:  But => contrast-01
+Span 2:  means => mean-01
+Span 3:  baobabs => baobab
+Span 4:  always => always
+Span 5:  catastrophe => catastrophe
+Span 6:  that => that
+Span 1:  knew => know-01
+Span 2:  planet => planet
+Span 3:  inhabited => inhabit-01
+Span 4:  man => man
+Span 5:  lazy => lazy
+Span 6:  I => i
+Span 1:  neglected => neglect-01
+Span 2:  bushes => bush
+Span 3:  three => 3
+Span 4:  little => little
+Span 5:  He => he
+WARNING: Unaligned concept cause-01
+Span 1:  drawing => draw-01
+Span 2:  described => describe-01
+Span 3:  prince => prince
+Span 4:  little => little
+Span 5:  planet => planet
+Span 6:  that => that
+Span 7:  I => i
+Span 1:   => -
+Span 2:  like => like-02
+Span 3:  much => much
+Span 4:  take => take-01
+Span 5:  tone => tone
+Span 6:  moralist => moralist
+Span 7:  I => i
+WARNING: Unaligned concept cause-01
+WARNING: Unaligned concept possible
+WARNING: Unaligned concept for-once
+Span 1:  But => contrast-01
+Span 2:  and => and
+Span 3:  risks => risk-01
+Span 4:  considerable => considerable
+Span 5:  such => such
+Span 6:  anyone => anyone
+Span 7:  lost => lose-02
+Span 8:  asteroid => asteroid
+Span 9:  understood => understand-01
+Span 10:  little => little
+Span 11:  so => so
+Span 12:  danger => danger
+Span 13:  baobabs => baobab
+Span 14:  breaking => break-14
+Span 15:  reserve => reserve
+Span 16:  I => i
+Span 1:  Children => child
+Fuzzy Matcher concept: plain word: plainly
+Fuzzy Matcher concept: plain word: plainly
+WARNING: Unaligned concept you
+WARNING: Unaligned concept imperative
+Span 1:  say => say-01
+Span 2:  watch => watch-02
+Span 3:  baobabs => baobab
+Span 4:  I => i
+Span 5:  plainly => plain
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept this
+WARNING: Found duplicate match for concept so
+WARNING: Found duplicate match for concept this
+WARNING: Found duplicate match for concept this
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept and
+WARNING: Found duplicate match for concept so
+WARNING: Found duplicate match for concept so
+Fuzzy Matcher concept: have-rel-role-91 word: have
+WARNING: duplicate fuzzy matches for concept have-rel-role-91
+Fuzzy Matcher concept: have-rel-role-91 word: have
+WARNING: duplicate fuzzy matches for concept have-rel-role-91
+WARNING: Unaligned concept cause-01
+WARNING: Unaligned concept -
+WARNING: Unaligned concept picture
+Span 1:  skirting => skirt-02
+Span 2:  knowing => know-01
+Span 3:  ever => ever
+Span 4:  time => time
+Span 5:  long => long
+Span 6:  danger => danger
+Span 7:  this => this
+Span 8:  ; => and
+Span 9:  I => i
+Span 10:  friends => friend
+Span 11:  worked => work-01
+Span 12:  hard => hard
+Span 13:  so => so
+Span 14:  drawing => draw-01
+Span 15:  this => this
+Span 16:  have => (person :ARG0-of have-rel-role-91)
+Span 1:  worth => worth
+Span 2:  lesson => lesson
+Span 3:  pass => pass-09
+Span 4:  this => this
+Span 5:  I => i
+Span 6:  trouble => trouble
+Span 7:  all => all
+Span 8:  cost => cost-01
+WARNING: Found duplicate match for concept draw-01
+WARNING: Found duplicate match for concept this
+WARNING: Found duplicate match for concept draw-01
+WARNING: Found duplicate match for concept draw-01
+WARNING: Found duplicate match for concept this
+WARNING: Found duplicate match for concept this
+Fuzzy Matcher concept: impress-01 word: impressive
+Fuzzy Matcher concept: impress-01 word: impressive
+WARNING: Unaligned concept possible
+WARNING: Unaligned concept i
+WARNING: Unaligned concept thing
+WARNING: Unaligned concept cause-01
+WARNING: Unaligned concept picture
+WARNING: Unaligned concept resemble-01
+WARNING: Unaligned concept picture
+Span 1:  no => -
+Span 2:  ask => ask-01
+Span 3:  drawing => draw-01
+Span 4:  other => other
+Span 5:  book => book
+Span 6:  this => this
+Span 7:  drawing => draw-01
+Span 8:  this => this
+Span 9:  magnificent => magnificent
+Span 10:  baobabs => baobab
+Span 11:  you => you
+Span 12:  impressive => impress-01
+Span 1:  simple => simple
+Span 2:  reply => (thing :ARG2-of reply-01)
+Span 1:  tried => try-01
+Span 2:  I => i
+Fuzzy Matcher concept: succeed-01 word: successful
+Fuzzy Matcher concept: succeed-01 word: successful
+Span 1:   => -
+Span 2:  But => contrast-01
+Span 3:  I => i
+Span 4:  others => other
+Span 5:  successful => succeed-01
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept i
+Span 1:  carried => carry-01
+Span 2:  drawing => draw-01
+Span 3:  baobabs => baobab
+Span 4:  beyond => beyond
+Span 5:  I => i
+Span 6:  force => force-01
+Span 7:  inspiring => inspire-01
+Span 8:  necessity => necessity
+Span 9:  urgent => urgent
+Span 1:  Chapter => chapter
+Span 2:  6 => 6
+Span 1:  prince => prince
+Span 2:  little => little
+WARNING: Unaligned concept bit-by-bit
+WARNING: Unaligned concept you
+Span 1:  understand => understand-01
+Span 2:  secrets => secret
+Span 3:  life => life
+Span 4:  sad => sad
+Span 5:  little => little
+Span 6:  I => i
+Fuzzy Matcher concept: entertain-01 word: entertainment
+Fuzzy Matcher concept: entertain-01 word: entertainment
+Span 1:  found => find-01
+Span 2:  time => time
+Span 3:  long => long
+Span 4:  looking => look-01
+Span 5:  pleasure => pleasure
+Span 6:  quiet => quiet
+Span 7:  sunset => sunset
+Span 8:  only => only
+Span 9:  you => you
+Span 10:  entertainment => entertain-01
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept i
+WARNING: Unaligned concept like-01
+WARNING: Unaligned concept ordinal-entity
+WARNING: Unaligned concept 4
+Span 1:  learned => learn-01
+Span 2:  said => say-01
+Span 3:  sunsets => sunset
+Span 4:  very => very
+Span 5:  you => you
+Span 6:  morning => morning
+Span 7:  day => day
+Span 8:  detail => detail
+Span 9:  that => that
+Span 10:  new => new
+Span 11:  I => i
+WARNING: Unaligned concept and
+WARNING: Unaligned concept you
+WARNING: Unaligned concept imperative
+WARNING: Unaligned concept we
+WARNING: Unaligned concept imperative
+Span 1:  Come => come-01
+Span 2:  go => go-05
+Span 3:  look => look-01
+Span 4:  now => now
+Span 5:  sunset => sunset
+WARNING: Unaligned concept obligate-01
+Span 1:  But => contrast-01
+Span 2:  wait => wait-01
+Span 3:  we => we
+Span 1:  said => say-01
+Span 2:  I => i
+WARNING: Unaligned concept interrogative
+Span 1:  Wait => wait-01
+WARNING: Unaligned concept wait-01
+WARNING: Unaligned concept amr-unknown
+WARNING: Unaligned concept wait-01
+Span 1:  sunset => sunset
+WARNING: Unaligned concept obligate-01
+Span 1:  wait => wait-01
+Span 2:  until => until
+Span 3:  time => time
+Span 4:  We => we
+WARNING: Unaligned concept at-first
+Span 1:  seemed => seem-01
+Span 2:  surprised => surprise-01
+Span 3:  much => much
+Span 4:  very => very
+Span 5:  you => you
+Span 1:  And => and
+Span 2:  laughed => laugh-01
+Span 3:  then => then
+Span 4:  you => you
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept i
+WARNING: Found duplicate match for concept i
+WARNING: Unaligned concept be-located-at-91
+Span 1:  said => say-01
+Span 2:  I => i
+Span 3:  thinking => think-01
+Span 4:  always => always
+Span 5:  home => home
+Span 6:  You => you
+Span 1:  so => so
+Span 2:  Just => just
+WARNING: Unaligned concept date-entity
+WARNING: Unaligned concept "12:00"
+Span 1:  France => (country :name (name :op1 "France"))
+Span 2:  United States => (country :name (name :op2 "States" :op1 "United"))
+Span 3:  knows => know-01
+Span 4:  setting => set-11
+Span 5:  sun => sun
+Span 6:  Everybody => everybody
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept possible
+WARNING: Found duplicate match for concept possible
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+WARNING: Unaligned concept date-entity
+WARNING: Unaligned concept "12:00"
+Span 1:  France => (country :name (name :op1 "France"))
+Span 2:  could => possible
+Span 3:  could => possible
+Span 4:  fly => fly-01
+Span 5:  one => 1
+Span 6:  minute => (temporal-quantity :unit minute)
+Span 7:  you => you
+Span 8:  go => go-02
+Span 9:  straight => straight
+Span 10:  sunset => sunset
+WARNING: Unaligned concept fortunate-41
+WARNING: Unaligned concept -
+WARNING: Unaligned concept be-located-at-91
+Span 1:  France => (country :name (name :op1 "France"))
+Span 2:  away => away
+Span 3:  far => far
+Span 4:  too => too
+Span 5:  that => that
+WARNING: Unaligned concept say-01
+WARNING: Unaligned concept obligate-01
+WARNING: Unaligned concept only
+WARNING: Unaligned concept i
+Span 1:  But => contrast-01
+Span 2:  move => move-01
+Span 3:  steps => step
+Span 4:  few => few
+Span 5:  chair => chair
+Span 6:  planet => planet
+Span 7:  prince => prince
+Span 8:  little => little
+Span 9:  tiny => tiny
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+WARNING: Unaligned concept ever
+Span 1:  can => possible
+Span 2:  see => see-01
+Span 3:  like => like-01
+Span 4:  and => and
+Span 5:  falling => fall-01
+Span 6:  twilight => twilight
+Span 7:  end => end-01
+Span 8:  day => day
+Span 9:  You => you
+WARNING: Unaligned concept 44
+Span 1:  said => say-01
+Span 2:  I => i
+Span 3:  saw => see-01
+Span 4:  day => day
+Span 5:  One => one
+Span 6:  sunset => sunset
+Span 7:  you => you
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept one
+WARNING: Found duplicate match for concept one
+WARNING: Found duplicate match for concept one
+WARNING: Found duplicate match for concept you
+WARNING: Found duplicate match for concept you
+WARNING: Unaligned concept more
+Span 1:  And => and
+Span 2:  added => add-01
+Span 3:  later => late
+Span 4:  little => little
+Span 5:  know => know-01
+Span 6:  loves => love-01
+Span 7:  sad => sad
+Span 8:  so => so
+Span 9:  sunset => sunset
+Span 10:  one => one
+Span 11:  you => you
+Span 12:  You => you
+WARNING: Unaligned concept interrogative
+Span 1:  sad => sad
+Span 2:  so => so
+Span 3:  then => then
+Span 4:  you => you
+WARNING: Unaligned concept time
+WARNING: Unaligned concept 44
+Span 1:  asked => ask-01
+Span 2:  day => day
+Span 3:  sunsets => sunset
+Span 4:  I => i
+Span 1:  no => -
+Span 2:  But => contrast-01
+Span 3:  reply => reply-01
+Span 4:  prince => prince
+Span 5:  little => little
