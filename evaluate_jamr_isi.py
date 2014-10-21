@@ -116,11 +116,11 @@ def isAlignmentCorrect(jamr_nodes,true_nodes,token,amr):
 				incorrect = incorrect + 1;
 				#print amr;
 				#print jamrnode;
-			#	cj =  get_node_by_address(amr,jamrnode,1);
-			#	#print cj;
-			#	#print truenode;
-			#	ct =  get_node_by_address(amr,truenode,0);
-			#	
+				cj =  get_node_by_address(amr,jamrnode,1);
+				#print cj;
+				#print truenode;
+				ct =  get_node_by_address(amr,truenode,0);
+				
 			#	r = isReent(amr,truenode);
 			#	if r!= False:
 			#		reent_aligned_tokens.append((token,r));
@@ -129,13 +129,13 @@ def isAlignmentCorrect(jamr_nodes,true_nodes,token,amr):
 				#print ct;
 			#	print
 			#	#print
-			#	jamr_concept = get_concept_name(cj)
-			#	true_concept = get_concept_name(ct)
-			#	FP_examples.append((token,jamr_concept,true_concept));
-			#	FP_dict = count_dict_insert(FP_dict,jamr_concept);
-			#	if jamr_concept in FP_dict:
-			#		FP_dict[jamr_concept] = FP_dict[jamr_concept] + 1;
-			#	else: FP_dict[jamr_concept] = 1;
+				jamr_concept = get_concept_name(cj)
+				true_concept = get_concept_name(ct)
+				FP_examples.append((token,jamr_concept,true_concept));
+				FP_dict = count_dict_insert(FP_dict,jamr_concept);
+				if jamr_concept in FP_dict:
+					FP_dict[jamr_concept] = FP_dict[jamr_concept] + 1;
+				else: FP_dict[jamr_concept] = 1;
 			#	#print "False"
 	
 	return (correct,incorrect);
@@ -183,7 +183,8 @@ def populate_bin_arrays(jamr_alignment,true_alignment,toklist):
 
 	for alignment in jamr_alignment:
 		t = alignment.split('|');
-		nodes = correct_node_indices(t[1]);
+		#nodes = correct_node_indices(t[1]);
+		nodes = t[1];
 		nodes = nodes.split('+');
 		if len(nodes) > 1: many_to_many += 1;
 		span = t[0].split('-');
@@ -288,10 +289,10 @@ def main():
 	total_tokens = 0;
 	#roledic = {};
 	#nonroledic = {};
-	tot_isi = 0;
-	one_to_many = 0;	
-	tot_jamr = 0;
-	many_to_many = 0;
+#	tot_isi = 0;
+#	one_to_many = 0;	
+#	tot_jamr = 0;
+#	many_to_many = 0;
 
 	for i in range(0,N):
 	
@@ -304,10 +305,10 @@ def main():
 		bin_arrays = populate_bin_arrays(jamr_alignments,true_alignments,toklist);
 		stats = evaluate(bin_arrays,toklist,amr);
 		many_stats = bin_arrays[4];		
-		tot_isi += many_stats[0];
-		one_to_many += many_stats[1];
-		tot_jamr += many_stats[2];
-		many_to_many += many_stats[3];
+#		tot_isi += many_stats[0];
+#		one_to_many += many_stats[1];
+#		tot_jamr += many_stats[2];
+#		many_to_many += many_stats[3];
 		
 		TP = TP + stats[0];
 		FP = FP + stats[1];
@@ -333,8 +334,8 @@ def main():
 #	print Aligned_reentrancies	
 #	print reent_aligned_tokens
 #	print;
-#	for ex in FP_examples:
-#		print ex[0],"	",ex[1],"	",ex[2]
+	for ex in FP_examples:
+		print ex[0],"	",ex[1],"	",ex[2]
 	
 
 	

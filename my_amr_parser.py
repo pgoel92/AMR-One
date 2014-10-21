@@ -17,12 +17,33 @@ class node():
 		self.reent.append(reent);
 
 	def printSubtree(self,index):
-		print self.value,
+		print index,"(" + self.value + ")";
 		for i in range(0,len(self.edge_ptrs_nr)):
 			#print len(self.edge_ptrs_nr);
 			#print self.edge_names[i];
 			self.edge_ptrs_nr[i].printSubtree(index+'.'+str(i+1));
 
+	def getConcepts(self,index):
+	
+		concepts = [];	
+		v = self.value.split('/');
+		if len(v) > 1: c = v[1][1:];
+		else: 
+			c = v[0];
+			if c[0] == '"':
+				c = c[1:-1];
+		concepts.append((c,index));	
+		
+		if len(self.edge_ptrs) == 0: return concepts;
+	
+		for i in range(0,len(self.edge_ptrs_nr)):
+			child = self.edge_ptrs_nr[i];
+			subc = child.getConcepts(index+'.'+str(i+1)); 	
+			concepts = concepts + subc;	
+
+		return concepts;
+			
+			
 	def getVal(self):
 		return self.value
 
@@ -44,13 +65,13 @@ class node():
 		for ptr in self.edge_ptrs_nr:		#Recurse on non-reentrancy edges
 			ptr.adjustIndices();
 	
-	def printEdgeAndReent(self):
-		if len(self.edge_names) == 0: return;
-		#print self.edge_names;
-		#print self.reent;	
-		#print
-		for edge in self.edge_ptrs:
-			edge.printEdgeAndReent();
+#	def printEdgeAndReent(self):
+#		if len(self.edge_names) == 0: return;
+#		#print self.edge_names;
+#		#print self.reent;	
+#		#print
+#		for edge in self.edge_ptrs:
+#			edge.printEdgeAndReent();
 
 	def getNode(self,address,r,jamr_addr):
 		

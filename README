@@ -23,43 +23,37 @@ manual_testing/ : contains sampled data from the dev and test sets to verify man
 
 Summary :
 
-For Week 4, the first task was to recompute the Precision and Recall values after decomposing each one-to-many and many-to-many alignment into all possible combinations and treating each one as a separate alignment. I did, and the precision dropped way down. The recall drop was not that huge.
+For Week 5, the first task was to fix the parser such that it runs on all the dev and test examples, after implementing the re-entrancy feature. I fixed the re-entrancy feature, turns out I was assigning the same list of nodes to edge_ptrs and edge_ptrs_nr during initialization. The parser still does not work for two cases :
+- If there is a polarity edge, ISI uses a different addressing scheme
+- If a re-entrancy appears before it's original mention 
 
-Next, I had to build a simple parser for AMRs that would enable retrieval of concepts by their addresses. The purpose was to enable retrieving examples of False Positives and False Negatives when evaluating alignments. My parser is based on reading the AMR into a tree. Each node has a value and a list of children. 
-I am parsing the AMR literal character by character. It is sort of like the kind of parser that would use a grammar to generate the AMR. However, it parses in one scan of the string. I chose this over a regular expression based parser, although that mightve been simpler and wouldntve used up a lot of time either because the AMR string is never too long. The parse function is pretty hard to understand just by looking at it, needs a thorough dry run. I have tried to add comments to help out.
-When I used the parser on the dev(WSJ) sentences, I found that JAMR has a slightly different node addressing scheme than ISI. JAMR skips nodes that are re-entrancies.
-So if a node "cause-01" has three children "p", "ARG0" and "ARG1", where p is a re-entrancy, then JAMR would give them the indices (-,0,1) whereas ISI would mark them (0,1,2)
-This meant I had to keep track of re-entrancies in my parser. I implemented that by storing all variables in a dictionary and then looking up each new variable to see if it's already in the dict. I then store the pointer to the original node at this re-entrancy edge. This was suggested by Daniel. His exact words were :
+The next task was to look at the rules that JAMR uses and try to figure out which one's are suitable to the ISI gold alignments. I was able to come to the foll. conclusions :
+- Dates : Yes. 
+- Polarity : Yes.
+- *-quantity : No.
+- person-of, thing-of : Yes.
+- person : No.
+- govt-organization : ?
+- degree : Yes.
+- Entity-type : No.
 
-"I don't like the kind of node addressing they use anyway. It seems cumbersome
-since nodes have IDs anyway (b / boy => b uniquely identifies the node). 
-This works for the JAMR setting (align string tokens to nodes).
-For ISI that doesn't work, since they treat every mention of a node
-separately. The ISI algorithm can therefore in theory align a string token to
-a reentrency -- I don't know if this actually ever happens.
+With slight modifications, the rules can be used to give more ISI like alignments. 
+I met Daniel on the Friday of this week just to make sure things are on track. We discussed a new technique where we would use very simple alignments and extract rules from it. We can then use these rules to obtain better alignments. The idea is that alignments limit the rules that can be extracted. The rules then give us information about what alignments are possible. We decided that the next step was to write a very simple aligner that only matches exact words with concepts and see how it performs on the ISI gold alignments. Daniel would apply rule extraction to those alignments.
 
-For the evaluation, if there is ever an alignment to a reentrency
-(intuitively this makes sense for pronouns), can you just collapse it with
-the original node? I.e. I think we should run the evalution on alignments to
-nodes, not to node mentions. It is then easier to work with explicit node IDs
-instead of tree addresses."
+The meeting on Monday was cancelled because Daniel had other engagements. I had already written a simple aligner by then. I had also implemented an AMR class to make things easier. The aligner went through all the concepts in the AMR, removed quotations and number tags (-[0-9]+*), converted to lowercase and then looked for exact matching words. The precision and recall numbers were :
 
-Daniel also pointed out a flaw in the algo for keeping track of re-entrancies : "Usually you find the original referent
-first when searching the graph, but not always."
+Dev Precision : 81.55
+Dev Recall : 39.85
+Test Precision : 82.2
+Test Recall : 43.6
 
-Well, my parser stopped working once I added the bit about re-entrancies. And I didn't have enough time to fix it. So I pulled out all the stats that I could and went to the meeting. These stats were the no. of role tokens, the no. of one-to-many alignments in ISI and the no. of many-to-many/one-to-many alignments in JAMR. 
-
-UPDATE from Week 5 : I fixed the parser. 
-
-Anomalies :
-
-Sentence ID 0003.8: It has a (r / realize-01 :polarity -) as its root. JAMR treats polarity as 1.1 whereas ISI treats it as 1.3. Therefore, my parser can't handle this sentence. Here is the sentence for reference :
-
-Sentence ID 0003.29: It has a re-entrancy edge to a node that occurs after it in the literal. My parser can't handle that.
-Sentence ID 0008.1 : Same issue as 0003.8
-Sentence ID 0008.2 : Same as 0003.8 
-Sentence ID 0008.3 : Same as 0003.29
+I thought that all the misalignments were probably because I align with the first matching word, whereas the true alignment may occur later in the sentence. On looking at the False Positives, I realized that a lot of the misalignments were caused by a problem in the evaluation, not in the aligner. I wasn't converting ISI addresses to the JAMR style addresses when there was a re-entrancy. I was directly comparing the address string to tell whether it was a correct alignment or not, but that wouldn't work when the addresses were different because of a re-entrancy. I didn't have enough time to fix this error before the meeting on Friday that we had setup in Week 6.
 
 Meeting summary :
 
-I showed the new numbers for Precision and Recall and also the no. of many-to-many/one-to-many alignments. It was clear that JAMR rules for alignment were not good enough for the gold set that ISI had defined (remember that this is the only gold set we have available to us. CMU didn't make it's set available). Therefore, it didn't take long for Daniel to decide that the ISI aligner clearly makes more sense, and it might be a good idea to use simple rules for alignment and then overlay that with a statistical aligner like the ISI one. The task for next week was to complete the pending work from last week i.e fix the parser and generate examples of False Positives and False Negatives, and to try to see which rules in the JAMR aligner make sense for the ISI gold alignments and which new rules should be added. The idea is to try to choose rules so as to increase accuracy when evaluated with the ISI gold set. We agreed to meet on Friday just to make sure I'm on the right track.
+We met on Friday this week instead of the usual Monday meeting. I had reported the numbers for my basic aligner. I also told Daniel about the error in the evaluation due to incorrect addressing and that the precision should go up by 5-6% once I correct those errors. Daniel suggested we also do something to handle the errors due to ordering i.e aligning with the first match even though the true match may occur later in the sentence. He suggested a statistical method that captures the most frequent bindings based on position in the sentence. For instance, the model might tell us that words occurring at the beginning of the sentence are usually aligned to concepts in the beginning of the AMR. So when we are looking to find a match for a concept, and we have two or more matches, the model will tell us which one is more likely the correct match. 
+
+I asked him if it was worth doing all of that for a few precision points. Daniel explained that it is indeed worth the effort. We don't care if the recall is low but we do care if the precision is low. He explained this by going back to the idea of crossing edges. We had discussed earlier that we ideally want subspans of the sentence to be aligned to subgraphs such that there are no alignments between a concept in that subgraph and some token that "crosses" these alignments. So each alignment that causes a crossing messes up our rule extraction. Because mis-alignments are likely to cause such crossings, we want as few mis-alignments as possible i.e as high precision as possible.
+On the other hand, low recall simply means an absence of good alignments, which can't cause crossings. Therefore, it does not mess up rule extraction.
+
+For the rest of this week (Week 6), we decided that I would fix the evaluation error and report the new precision measures. Also, I would add more rules to the aligner and try to improve recall. After doing that, I would run the aligner on the entire dev dataset (not only WSJ) and send the results to Daniel.
