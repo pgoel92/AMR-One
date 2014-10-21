@@ -1,7 +1,13 @@
 #!/usr/bin/python
 
 from AMR_class import read_corpus_file
+from dictlib import count_dict_insert, threshold_dict
 import re
+import sys
+
+test_concepts = 0;
+test_aligned = 0;
+d = {};
 
 def push_alignment(toknum,address,alignment):
 
@@ -9,7 +15,21 @@ def push_alignment(toknum,address,alignment):
 	
 	return alignment;
 
-def aligner(concepts, tokens):
+def apply_rules(concept,token):
+
+#	global test_concepts;
+#	global test_aligned;
+#	global d;
+#	polarity_token_list = ['no','not','non','never'];
+#	if concept == '-': 
+#		#polarity_concepts += 1;
+#		d = count_dict_insert(d,token);
+#		
+#	if concept == '-' and token in polarity_token_list: return True;
+	if concept == token: return True;
+	return False;
+
+def aligner(concepts, tokens, a):
 
 	alignment = "";	
 	for i in range(0,len(concepts)):
@@ -18,15 +38,19 @@ def aligner(concepts, tokens):
 		address = concepts[i][1];
 		for j in range(0,len(tokens)):
 			token = tokens[j].lower();
-			if concept == token:
+			#if concept == token:
+			if apply_rules(concept,token):
 				#print concept, token
+				#a.annotate(j,address);
 				alignment = push_alignment(j,address,alignment);
 
 	return alignment;
 
 def main():
 
-	amr_objects = read_corpus_file('test/corp');
+	amr_objects = read_corpus_file(sys.argv[1]);
+	print;
+	print;	#Add blank line to make consistent with JAMR output file format
 	for a in amr_objects:
 		concept_tuples = a.getConcepts();
 		#remove number tags from concepts
@@ -37,8 +61,13 @@ def main():
 			newc.append(t);
 		
 		tokens = a.getTokens();
-		a.setAlignments(aligner(newc,tokens));
+		a.setAlignments(aligner(newc,tokens,a));
+		a.generate_printable_AMR();
 		s = a.generate_writable();
 		print s;
+	#print polarity_concepts;
+#	dt = threshold_dict(d,0);
+#	for item in dt:
+#		print item[1],item[0];
 
 main();

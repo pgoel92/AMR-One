@@ -23,7 +23,7 @@ class node():
 			#print self.edge_names[i];
 			self.edge_ptrs_nr[i].printSubtree(index+'.'+str(i+1));
 
-	def getConcepts(self,index):
+	def getConcepts(self,index):	#Returns a list of concepts and their JAMR node addresses
 	
 		concepts = [];	
 		v = self.value.split('/');
@@ -42,9 +42,24 @@ class node():
 			concepts = concepts + subc;	
 
 		return concepts;
-			
-			
-	def getVal(self):
+		
+	def generatePrintableAMR(self,s,tabs):
+		
+		s = s + '(' + self.value;			
+		if len(self.edge_ptrs) == 0: return s;
+		for i in range(0,len(self.edge_ptrs)):
+			child = self.edge_ptrs[i];
+			#print self.edge_names[i],child.value
+			s = s + '\n' + tabs + ':' + self.edge_names[i] + ' ';
+			#print s;
+			if self.reent[i] == 0:
+				s = child.generatePrintableAMR(s,tabs + '\t');
+			else:
+				s = s + '(' + self.edge_ptrs[i].getValue();
+			s = s + ')';
+		return s;
+
+	def getValue(self):
 		return self.value
 
 #	def getCorrectEdgeIndex(self,index):	#Skips re-entrancy edges and assigns a new index
@@ -64,7 +79,8 @@ class node():
 		#self.edge_ptrs_nr[i];
 		for ptr in self.edge_ptrs_nr:		#Recurse on non-reentrancy edges
 			ptr.adjustIndices();
-	
+
+			
 #	def printEdgeAndReent(self):
 #		if len(self.edge_names) == 0: return;
 #		#print self.edge_names;
@@ -81,9 +97,9 @@ class node():
 		childnum = int(address[0])-1;	
 		if len(address) == 1:	#if we are 1 step away from target node 
 			if not r: 
-				if jamr_addr == 1: return self.edge_ptrs_nr[childnum].getVal();
+				if jamr_addr == 1: return self.edge_ptrs_nr[childnum].getValue();
 				#print childnum;
-				return self.edge_ptrs[childnum].getVal();
+				return self.edge_ptrs[childnum].getValue();
 			else: return self.edge_names[childnum-1];
 		else:					
 			if len(self.edge_ptrs) == 0: return "Node does not exist";
@@ -92,11 +108,46 @@ class node():
 				if jamr_addr == 1: return self.edge_ptrs_nr[childnum].getNode(address[2:],r,jamr_addr);
 				return self.edge_ptrs[childnum].getNode(address[2:],r,jamr_addr);	#recurse on child node
 
+	def getNodePointer(self,address,r,jamr_addr):
+		
+		#address : The address of node relative to the root of the current subtree
+		#r : Tells whether or not the address refers to a role	
+		#jamr_addr : Tells whether addressing format is from JAMR (1) or ISI (0)
+		childnum = int(address[0])-1;	
+		if len(address) == 1:	#if we are 1 step away from target node 
+			if not r: 
+				#print childnum;
+				if jamr_addr == 1: return self.edge_ptrs_nr[childnum];
+				return self.edge_ptrs[childnum];
+			else: return self.edge_names[childnum-1];
+		else:					
+			if len(self.edge_ptrs) == 0: return "Node does not exist";
+			elif childnum > len(self.edge_ptrs): return "Node does not exist";	
+			else: 
+				if jamr_addr == 1: return self.edge_ptrs_nr[childnum].getNodePointer(address[2:],r,jamr_addr);
+				return self.edge_ptrs[childnum].getNodePointer(address[2:],r,jamr_addr);	#recurse on child node
+	
+	def ISItoJAMR(self,address, new_address):
+		
+		childnum = int(address[0]) - 1;
+		new_childnum = childnum+1;
+		for i in range(0,childnum):	
+			if self.reent[i] != 0:
+				new_childnum = new_childnum - 1;
+		
+		if len(address) == 1:
+			return new_address + "." + str(new_childnum);
+		else:
+			if len(self.edge_ptrs) == 0: return "Node does not exist";
+			elif childnum > len(self.edge_ptrs): return "Node does not exist";	
+			else: 
+				return self.edge_ptrs[childnum].ISItoJAMR(address[2:], new_address + "." + str(new_childnum));	#recurse on child node
+			
 	def isReentrancy(self,address):
 			
 		childnum = int(address[0])-1;	
 		if len(address) == 1:	#if we are 1 step away from target node 
-			if self.reent[childnum] == 1: return self.edge_ptrs[childnum].getVal();
+			if self.reent[childnum] == 1: return self.edge_ptrs[childnum].getValue();
 			return False;
 		else:					
 			if len(self.edge_ptrs) == 0: return False;
@@ -176,10 +227,10 @@ def parse(amrstr,i,varlist):
 	#print "Returning with current char __" + cur + "__"
 	return (root,i);
 
-def print_amr(amr):
-
-	amr.printSubtree('1');
-
+#def print_amr(amr):
+#
+#	amr.printSubtree('1');
+#
 def parse_amr(amr):
 
 		
@@ -187,23 +238,23 @@ def parse_amr(amr):
 	r.adjustIndices();
 	return r;
 
-def printStuff(amr):
-		
-	amr.printEdgeAndReent();
+#def printStuff(amr):
+#		
+#	amr.printEdgeAndReent();
 
 def isReent(amr,address):
 	
 	if address == '1': return False;
 	else: return amr.isReentrancy(address[2:]);
-def get_node_by_address(amr_obj,address,jamr_addr):
-
-	role = 0;
-	if address[-1] == 'r':
-		address = address[:-2]; 
-		role = 1;
-	if address == '1':
-		return amr_obj.getVal();
-	else: 
-		return amr_obj.getNode(address[2:],role,jamr_addr);
-	
-	#r.printSubtree('1');
+#def get_node_by_address(amr_obj,address,jamr_addr):
+#
+#	role = 0;
+#	if address[-1] == 'r':
+#		address = address[:-2]; 
+#		role = 1;
+#	if address == '1':
+#		return amr_obj.getValue();
+#	else: 
+#		return amr_obj.getNode(address[2:],role,jamr_addr);
+#	
+#	#r.printSubtree('1');

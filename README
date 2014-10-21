@@ -23,37 +23,17 @@ manual_testing/ : contains sampled data from the dev and test sets to verify man
 
 Summary :
 
-For Week 5, the first task was to fix the parser such that it runs on all the dev and test examples, after implementing the re-entrancy feature. I fixed the re-entrancy feature, turns out I was assigning the same list of nodes to edge_ptrs and edge_ptrs_nr during initialization. The parser still does not work for two cases :
-- If there is a polarity edge, ISI uses a different addressing scheme
-- If a re-entrancy appears before it's original mention 
+I fixed the evaluation error. I had to write a function that converts an ISI address to a JAMR address in cases where there are re-entrancies. The new precision recall numbers are : 
 
-The next task was to look at the rules that JAMR uses and try to figure out which one's are suitable to the ISI gold alignments. I was able to come to the foll. conclusions :
-- Dates : Yes. 
-- Polarity : Yes.
-- *-quantity : No.
-- person-of, thing-of : Yes.
-- person : No.
-- govt-organization : ?
-- degree : Yes.
-- Entity-type : No.
-
-With slight modifications, the rules can be used to give more ISI like alignments. 
-I met Daniel on the Friday of this week just to make sure things are on track. We discussed a new technique where we would use very simple alignments and extract rules from it. We can then use these rules to obtain better alignments. The idea is that alignments limit the rules that can be extracted. The rules then give us information about what alignments are possible. We decided that the next step was to write a very simple aligner that only matches exact words with concepts and see how it performs on the ISI gold alignments. Daniel would apply rule extraction to those alignments.
-
-The meeting on Monday was cancelled because Daniel had other engagements. I had already written a simple aligner by then. I had also implemented an AMR class to make things easier. The aligner went through all the concepts in the AMR, removed quotations and number tags (-[0-9]+*), converted to lowercase and then looked for exact matching words. The precision and recall numbers were :
-
-Dev Precision : 81.55
+Dev Precision : 93.26
 Dev Recall : 39.85
-Test Precision : 82.2
-Test Recall : 43.6
+Test Precision : 92.67
+Test Recall : 39.30
 
-I thought that all the misalignments were probably because I align with the first matching word, whereas the true alignment may occur later in the sentence. On looking at the False Positives, I realized that a lot of the misalignments were caused by a problem in the evaluation, not in the aligner. I wasn't converting ISI addresses to the JAMR style addresses when there was a re-entrancy. I was directly comparing the address string to tell whether it was a correct alignment or not, but that wouldn't work when the addresses were different because of a re-entrancy. I didn't have enough time to fix this error before the meeting on Friday that we had setup in Week 6.
+I also calculated the number of FPs caused due to the ordering problem.
+
+Dev : 31/46
+Test : 21/34
 
 Meeting summary :
 
-We met on Friday this week instead of the usual Monday meeting. I had reported the numbers for my basic aligner. I also told Daniel about the error in the evaluation due to incorrect addressing and that the precision should go up by 5-6% once I correct those errors. Daniel suggested we also do something to handle the errors due to ordering i.e aligning with the first match even though the true match may occur later in the sentence. He suggested a statistical method that captures the most frequent bindings based on position in the sentence. For instance, the model might tell us that words occurring at the beginning of the sentence are usually aligned to concepts in the beginning of the AMR. So when we are looking to find a match for a concept, and we have two or more matches, the model will tell us which one is more likely the correct match. 
-
-I asked him if it was worth doing all of that for a few precision points. Daniel explained that it is indeed worth the effort. We don't care if the recall is low but we do care if the precision is low. He explained this by going back to the idea of crossing edges. We had discussed earlier that we ideally want subspans of the sentence to be aligned to subgraphs such that there are no alignments between a concept in that subgraph and some token that "crosses" these alignments. So each alignment that causes a crossing messes up our rule extraction. Because mis-alignments are likely to cause such crossings, we want as few mis-alignments as possible i.e as high precision as possible.
-On the other hand, low recall simply means an absence of good alignments, which can't cause crossings. Therefore, it does not mess up rule extraction.
-
-For the rest of this week (Week 6), we decided that I would fix the evaluation error and report the new precision measures. Also, I would add more rules to the aligner and try to improve recall. After doing that, I would run the aligner on the entire dev dataset (not only WSJ) and send the results to Daniel.

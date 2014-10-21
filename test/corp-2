@@ -1,32 +1,34 @@
-# ::id wb.eng_0003.1
+# AMR release; corpus: consensus; section: test; number of AMRs: 100 (generated on Tue May 13, 2014 at 16:15:49)
+
+# ::id wb.eng_0003.1 ::date 2012-09-10T09:58:40 ::annotator ISI-AMR-01 ::preferred
 # ::snt Braawwk !
-# ::save-date
+# ::save-date Mon Sep 10, 2012 ::file wb_eng_0003_1.txt
 # ::tok Braawwk !
-# ::alignments 0-1|1 * * * * *
+# ::alignments 0-1|0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.342
 (b / braawwk)
 
-# ::id wb.eng_0003.2
+# ::id wb.eng_0003.2 ::date 2012-08-27T10:23:11 ::annotator ISI-AMR-01 ::preferred
 # ::snt Braawwkkk !
-# ::save-date
+# ::save-date Tue Mar 26, 2013 ::file wb_eng_0003_2.txt
 # ::tok Braawwkkk !
-# ::alignments 0-1|1 * * * * *
+# ::alignments 0-1|0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.350
 (b / braawwkkk)
 
-# ::id wb.eng_0003.3
+# ::id wb.eng_0003.3 ::date 2012-08-27T10:23:14 ::annotator ISI-AMR-01 ::preferred
 # ::snt It did n't take long .
-# ::save-date
+# ::save-date Mon Sep 10, 2012 ::file wb_eng_0003_3.txt
 # ::tok It did n't take long .
-# ::alignments 3-4|1 0-1|1.1 4-5|1.2 * * * * *
+# ::alignments 3-4|0 4-5|0.1 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.378
 (t / take-10
   :ARG0 (i / it)
   :ARG1 (l2 / long
           :polarity -))
 
-# ::id wb.eng_0003.4
+# ::id wb.eng_0003.4 ::date 2012-08-27T10:23:18 ::annotator ISI-AMR-01 ::preferred
 # ::snt Route 288 , the circumferential highway running around the south - western quadrant of the Richmond New Urban Region , opened in late 2004 .
-# ::save-date
+# ::save-date Mon Sep 10, 2012 ::file wb_eng_0003_4.txt
 # ::tok Route 288 , the circumferential highway running around the south - western quadrant of the Richmond New Urban Region , opened in late 2004 .
-# ::alignments 5-6|1.1 0-1|1.1.1.1 1-2|1.1.1.2 7-8|1.1.2.1 12-13|1.1.2.1.1 15-16|1.1.2.1.1.1.1.1 16-17|1.1.2.1.1.1.1.2 17-18|1.1.2.1.1.1.1.3 18-19|1.1.2.1.1.1.1.4 22-23|1.2 23-24|1.2.1.1 * * * * *
+# ::alignments 0-2|0.0.0+0.0.0.0+0.0.0.1 15-19|0.0.1.0.0.0+0.0.1.0.0.0.0+0.0.1.0.0.0.0.0+0.0.1.0.0.0.0.1+0.0.1.0.0.0.0.2+0.0.1.0.0.0.0.3 23-24|0.1.0+0.1.0.0 20-21|0 22-23|0.1 5-6|0.0 6-7|0.0.1 7-8|0.0.1.0 12-13|0.0.1.0.0 4-5|0.0.2 9-10|0.0.1.0.0.1 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.515
 (o / open-01
       :ARG1 (h / highway
             :name (r / name :op1 "Route" :op2 288)
@@ -40,11 +42,11 @@
       :time (l / late
             :op1 (d / date-entity :year 2004)))
 
-# ::id wb.eng_0003.5
+# ::id wb.eng_0003.5 ::date 2012-08-27T11:30:38 ::annotator ISI-AMR-01 ::preferred
 # ::snt Already it is changing development patterns for the worse and causing localized traffic congestion around its exits .
-# ::save-date
+# ::save-date Mon Sep 10, 2012 ::file wb_eng_0003_5.txt
 # ::tok Already it is changing development patterns for the worse and causing localized traffic congestion around its exits .
-# ::alignments 9-10|1 1-2|1.1.1 14-15|1.2.1.1 12-13|1.2.1.2 0-1|1.3 * * * * *
+# ::alignments 9-10|0 0-1|0.2 10-11|0.1 14-15|0.1.0.0 16-17|0.1.0.0.0 12-13|0.1.0.1 11-12|0.1.0.2 3-4|0.0 8-9|0.0.2 5-6|0.0.1 1-2|0.0.0 13-14|0.1.0 4-5|0.0.1.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.572
 (a / and
   :op1 (c / change-01
          :ARG0 (i / it)
@@ -62,11 +64,11 @@
                  :ARG1-of (l2 / localize-01)))
   :time (a3 / already))
 
-# ::id wb.eng_0003.6
+# ::id wb.eng_0003.6 ::date 2012-08-27T11:30:44 ::annotator ISI-AMR-01 ::preferred
 # ::snt The Richmond Times - Dispatch tells the tale today about the impact on the Huguenot Trail in Powhatan County .
-# ::save-date
+# ::save-date Thu May 16, 2013 ::file wb_eng_0003_6.txt
 # ::tok The Richmond Times - Dispatch tells the tale today about the impact on the Huguenot Trail in Powhatan County .
-# ::alignments 1-2|1.1.1.1 7-8|1.2 11-12|1.2.1 14-15|1.2.1.1.1.1 15-16|1.2.1.1.1.2 18-19|1.2.1.1.2 17-18|1.2.1.1.2.1.1 18-19|1.2.1.1.2.1.2 8-9|1.3 * * * * *
+# ::alignments 1-5|0.0+0.0.0+0.0.0.0+0.0.0.1 14-16|0.1.0.0+0.1.0.0.0+0.1.0.0.0.0+0.1.0.0.0.1 17-19|0.1.0.0.1+0.1.0.0.1.0+0.1.0.0.1.0.0+0.1.0.0.1.0.1 5-6|0 8-9|0.2 7-8|0.1 11-12|0.1.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.613
 (t / tell-01
       :ARG0 (n / newspaper
             :name (r / name :op1 "Richmond" :op2 "Times-Dispatch"))
@@ -78,11 +80,11 @@
                               :name (p / name :op1 "Powhatan" :op2 "County")))))
       :time (t3 / today))
 
-# ::id wb.eng_0003.7
+# ::id wb.eng_0003.7 ::date 2012-08-27T11:30:51 ::annotator ISI-AMR-01 ::preferred
 # ::snt Traffic has more than doubled in one section of Huguenot Trail since 288 opened , reports Will Jones .
-# ::save-date
+# ::save-date Tue Mar 26, 2013 ::file wb_eng_0003_7.txt
 # ::tok Traffic has more than doubled in one section of Huguenot Trail since 288 opened , reports Will Jones .
-# ::alignments 16-17|1.1.1.1 17-18|1.1.1.2 0-1|1.2.1 7-8|1.2.1.1 9-10|1.2.1.1.2.1.1 10-11|1.2.1.1.2.1.2 11-12|1.2.2 12-13|1.2.2.1.1.1.1 * * * * *
+# ::alignments 16-18|0.0+0.0.0+0.0.0.0+0.0.0.1 9-11|0.1.0.0.1+0.1.0.0.1.0+0.1.0.0.1.0.0+0.1.0.0.1.0.1 12-13|0.1.1.0.0+0.1.1.0.0.0+0.1.1.0.0.0.0 15-16|0 4-5|0.1 11-12|0.1.1 13-14|0.1.1.0 0-1|0.1.0 7-8|0.1.0.0 6-7|0.1.0.0.0 2-3|0.1.2 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.658
 (r2 / report-01
       :ARG0 (p / person
             :name (w / name :op1 "Will" :op2 "Jones"))
@@ -97,22 +99,22 @@
                               :name (x / name :op1 288))))
             :mod (m / more-than)))
 
-# ::id wb.eng_0003.8
+# ::id wb.eng_0003.8 ::date 2012-08-27T11:30:55 ::annotator ISI-AMR-01 ::preferred
 # ::snt Speeding and accidents have surged as well :
-# ::save-date
+# ::save-date Tue Sep 11, 2012 ::file wb_eng_0003_8.txt
 # ::tok Speeding and accidents have surged as well :
-# ::alignments 1-2|1.1 * * * * *
+# ::alignments 4-5|0 1-2|0.0 2-3|0.0.1 0-1|0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.671
 (s / surge-01
   :ARG1 (a / and
           :op1 (s2 / speed-01)
           :op2 (a2 / accident))
   :mod (a3 / as-well))
 
-# ::id wb.eng_0003.9
+# ::id wb.eng_0003.9 ::date 2012-08-27T11:31:02 ::annotator ISI-AMR-01 ::preferred
 # ::snt 17 accidents have been reported near the intersection of Winterfield Road so far this year , up from 12 for all of 2004 .
-# ::save-date
+# ::save-date Sun Sep 16, 2012 ::file wb_eng_0003_9.txt
 # ::tok 17 accidents have been reported near the intersection of Winterfield Road so far this year , up from 12 for all of 2004 .
-# ::alignments 5-6|1.1.1 10-11|1.1.1.1.1 9-10|1.1.1.1.1.1.1 10-11|1.1.1.1.1.1.2 0-1|1.1.2 18-19|1.1.2.1.1 20-21|1.1.2.1.1.1.1 22-23|1.1.2.1.1.1.1.1.1 14-15|1.2.1 13-14|1.2.1.1 * * * * *
+# ::alignments 9-11|0.0.0.0.0+0.0.0.0.0.0+0.0.0.0.0.0.0+0.0.0.0.0.0.1 22-23|0.0.1.0.0.0.0.0+0.0.1.0.0.0.0.0.0 4-5|0 14-15|0.1.0 13-14|0.1.0.0 1-2|0.0 0-1|0.0.1 18-19|0.0.1.0.0 20-21|0.0.1.0.0.0.0 5-6|0.0.0 7-8|0.0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.716
 (r / report-01
       :ARG1 (a / accident
             :location (n / near
@@ -130,11 +132,11 @@
             :op1 (y / year
                   :mod (t / this))))
 
-# ::id wb.eng_0003.10
+# ::id wb.eng_0003.10 ::date 2012-08-27T11:31:19 ::annotator ISI-AMR-01 ::preferred
 # ::snt Dale Totten , resident engineer for the Virginia Department of Transportation , noted that VDOT would four - lane the road for about $ 13 million if it had more money .
-# ::save-date
+# ::save-date Mon Sep 23, 2013 ::file wb_eng_0003_10.txt
 # ::tok Dale Totten , resident engineer for the Virginia Department of Transportation , noted that VDOT would four - lane the road for about $ 13 million if it had more money .
-# ::alignments 0-1|1.1.1.1 1-2|1.1.1.2 7-8|1.1.2.1.1.1 8-9|1.1.2.1.1.2 9-10|1.1.2.1.1.3 10-11|1.1.2.1.1.4 4-5|1.1.2.2.1 18-19|1.2 20-21|1.2.2 30-31|1.2.3.1 29-30|1.2.3.1.1 22-23|1.2.4.1 * * * * *
+# ::alignments 0-2|0.0+0.0.0+0.0.0.0+0.0.0.1 7-11|0.0.1.0+0.0.1.0.0+0.0.1.0.0.0+0.0.1.0.0.1+0.0.1.0.0.2+0.0.1.0.0.3 12-13|0 18-19|0.1 22-23|0.1.3.0 28-29|0.1.2 30-31|0.1.2.0 29-30|0.1.2.0.0 20-21|0.1.1 16-17|0.1.0 4-5|0.0.1.1+0.0.1.1.0 3-4|0.0.1.1.1+0.0.1.1.1.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.771
 (n / note-01
       :ARG0 (p / person
             :name (d / name :op1 "Dale" :op2 "Totten")
@@ -157,11 +159,11 @@
                         :op1 (m / monetary-quantity :quant 13000000
                               :unit (d2 / dollar))))))
 
-# ::id wb.eng_0003.11
+# ::id wb.eng_0003.11 ::date 2012-08-27T11:31:24 ::annotator ISI-AMR-01 ::preferred
 # ::snt Of course , VDOT has no more money for road construction in the Richmond region .
-# ::save-date
+# ::save-date Wed Oct 17, 2012 ::file wb_eng_0003_11.txt
 # ::tok Of course , VDOT has no more money for road construction in the Richmond region .
-# ::alignments 3-4|1.2.1.1 7-8|1.3 9-10|1.3.1.1 14-15|1.3.1.1.1 13-14|1.3.1.1.1.1.1.1 * * * * *
+# ::alignments 3-4|0.1+0.1.0+0.1.0.0 13-14|0.2.0.0.0.0+0.2.0.0.0.0.0+0.2.0.0.0.0.0.0 5-6|0.0 4-5|0 7-8|0.2 9-10|0.2.0.0 14-15|0.2.0.0.0 10-11|0.2.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.792
 (h / have-03 :polarity -
       :ARG0 (g / government-organization
             :name (v / name :op1 "VDOT"))
@@ -173,11 +175,11 @@
                                     :name (r / name :op1 "Richmond"))))))
       :mod (o / of-course))
 
-# ::id wb.eng_0003.12
+# ::id wb.eng_0003.12 ::date 2012-09-13T09:10:43 ::annotator ISI-AMR-01 ::preferred
 # ::snt One reason is that VDOT , at the behest of local politicians and boosters , spent all its friggin' money on 288 !
-# ::save-date
+# ::save-date Wed Sep 19, 2012 ::file wb_eng_0003_12.txt
 # ::tok One reason is that VDOT , at the behest of local politicians and boosters , spent all its friggin ' money on 288 !
-# ::alignments 4-5|1.1.1.1.1 22-23|1.1.2.1.1 20-21|1.1.3 16-17|1.1.3.2 12-13|1.1.4.1 10-11|1.1.4.1.3 * * * * *
+# ::alignments 4-5|0.0.0+0.0.0.0+0.0.0.0.0 22-23|0.0.1+0.0.1.0+0.0.1.0.0 15-16|0.0 12-13|0.0.3.0 10-11|0.0.3.0.2 13-14|0.0.3.0.1+0.0.3.0.1.0 11-12|0.0.3.0.0 20-21|0.0.2 16-17|0.0.2.1 18-19|0.0.2.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.824
 (c / cause-01
       :ARG0 (s / spend-01
             :ARG0 (g / government-organization
@@ -195,11 +197,11 @@
                               :ARG0-of (b2 / boost-01))
                         :mod (l / local)))))
 
-# ::id wb.eng_0003.13
+# ::id wb.eng_0003.13 ::date 2012-09-14T14:13:20 ::annotator ISI-AMR-01 ::preferred
 # ::snt Where 's Homer Simpson when you need him ?
-# ::save-date
+# ::save-date Sun Sep 16, 2012 ::file wb_eng_0003_13.txt
 # ::tok Where 's Homer Simpson when you need him ?
-# ::alignments 2-3|1.1.1.1 3-4|1.1.1.2 6-7|1.3 5-6|1.3.1 * * * * *
+# ::alignments 2-4|0.0+0.0.0+0.0.0.0+0.0.0.1 6-7|0.2 5-6|0.2.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.835
 (b / be-located-at-91
       :ARG1 (p / person
             :name (h / name :op1 "Homer" :op2 "Simpson"))
@@ -208,21 +210,21 @@
             :ARG0 (y / you)
             :ARG1 p))
 
-# ::id wb.eng_0003.14
+# ::id wb.eng_0003.14 ::date 2012-09-14T14:16:05 ::annotator ISI-AMR-01 ::preferred
 # ::snt This is a major `` D'oh! '' moment .
-# ::save-date
+# ::save-date Mon Apr 29, 2013 ::file wb_eng_0003_14.txt
 # ::tok This is a major " D'oh ! " moment .
-# ::alignments 8-9|1 3-4|1.1 0-1|1.2 5-6|1.3 * * * * *
+# ::alignments 8-9|0 5-6|0.2 0-1|0.1 3-4|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.843
 (m / moment
       :mod (m2 / major)
       :domain (t / this)
       :mod (d / d'oh :mode expressive))
 
-# ::id wb.eng_0003.15
+# ::id wb.eng_0003.15 ::date 2012-09-13T09:18:19 ::annotator ISI-AMR-01 ::preferred
 # ::snt As we predicted , Route 288 is generating residential development in scarcely populated areas all around its exits , overtaxing the local country roads .
-# ::save-date
+# ::save-date Mon Sep 17, 2012 ::file wb_eng_0003_15.txt
 # ::tok As we predicted , Route 288 is generating residential development in scarcely populated areas all around its exits , overtaxing the local country roads .
-# ::alignments 4-5|1.1.1.1 5-6|1.1.1.2 15-16|1.2.2.2 14-15|1.2.2.2.2 21-22|1.2.3.1.1 22-23|1.2.3.1.2 1-2|1.3.1 * * * * *
+# ::alignments 4-6|0.0+0.0.0+0.0.0.0+0.0.0.1 7-8|0 2-3|0.2 1-2|0.2.0 13-14|0.1.1 15-16|0.1.1.1 14-15|0.1.1.1.1 17-18|0.1.1.1.0 12-13|0.1.1.0 19-20|0.1.2 23-24|0.1.2.0 22-23|0.1.2.0.1 21-22|0.1.2.0.0 9-10|0.1 11-12|0.1.1.0.0 8-9|0.1.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.870
 (g / generate-01
       :ARG0 (r2 / road
             :name (r / name :op1 "Route" :op2 288))
@@ -242,11 +244,11 @@
       :ARG1-of (p / predict-01
             :ARG0 (w / we)))
 
-# ::id wb.eng_0003.16
+# ::id wb.eng_0003.16 ::date 2012-09-13T09:22:46 ::annotator ISI-AMR-01 ::preferred
 # ::snt While the limited access highway might provide limited traffic relief for people driving back and forth between Chesterfield and Goochland counties , other people are making choices about where they live and work ,
-# ::save-date
+# ::save-date Tue Mar 26, 2013 ::file wb_eng_0003_16.txt
 # ::tok While the limited access highway might provide limited traffic relief for people driving back and forth between Chesterfield and Goochland counties , other people are making choices about where they live and work ,
-# ::alignments 22-23|1.1.1.1 14-15|1.1.2 18-19|1.1.2 31-32|1.1.2 32-33|1.1.2.1.1 30-31|1.1.2.2.1 4-5|1.2.1.1 3-4|1.2.1.1.1 8-9|1.2.1.2 16-17|1.2.1.3.1.1 17-18|1.2.1.3.1.1.1.1.1 19-20|1.2.1.3.1.1.2.1.1 14-15|1.2.1.3.1.2 18-19|1.2.1.3.1.2 31-32|1.2.1.3.1.2 13-14|1.2.1.3.1.2.1 15-16|1.2.1.3.1.2.2 * * * * *
+# ::alignments 19-21|0.1.0.2.0.0.1+0.1.0.2.0.0.1.0+0.1.0.2.0.0.1.0.0+0.1.0.2.0.0.1.0.1 22-23|0.0.0+0.0.0.0 14-15|0.0.1 30-31|0.0.1.1.0 32-33|0.0.1.0.0 4-5|0.1.0.0 3-4|0.1.0.0.0 2-3|0.1.0.0.0.0 8-9|0.1.0.1 12-13|0.1.0.2+0.1.0.2.0 18-19|0.1.0.2.0.1 15-16|0.1.0.2.0.1.1 13-14|0.1.0.2.0.1.0 16-17|0.1.0.2.0.0 17-18|0.1.0.2.0.0.0.0.0 9-10|0.1.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.920
 (c5 / contrast-01
       :ARG1 (c2 / choose-01
             :ARG0 (p / person
@@ -275,11 +277,11 @@
                                     :op1 (b2 / back)
                                     :op2 (f / forth)))))))
 
-# ::id wb.eng_0003.17
+# ::id wb.eng_0003.17 ::date 2012-09-13T09:34:53 ::annotator ISI-AMR-01 ::preferred
 # ::snt and they are creating traffic congestion in new places .
-# ::save-date
+# ::save-date Mon Sep 24, 2012 ::file wb_eng_0003_17.txt
 # ::tok and they are creating traffic congestion in new places .
-# ::alignments 0-1|1 1-2|1.1.1 4-5|1.1.2.1 7-8|1.1.2.2.1 * * * * *
+# ::alignments 0-1|0 3-4|0.0 4-5|0.0.1.0 8-9|0.0.1.1 7-8|0.0.1.1.0 1-2|0.0.0 5-6|0.0.1 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.930
 (a / and
   :op2 (c / create-01
          :ARG0 (t / they)
@@ -288,22 +290,22 @@
                  :location (p / place
                              :mod (n / new)))))
 
-# ::id wb.eng_0003.18
+# ::id wb.eng_0003.18 ::date 2012-09-13T13:20:46 ::annotator ISI-AMR-01 ::preferred
 # ::snt The only thing that surprises me is how rapidly this is happening .
-# ::save-date
+# ::save-date Mon Sep 17, 2012 ::file wb_eng_0003_18.txt
 # ::tok The only thing that surprises me is how rapidly this is happening .
-# ::alignments 9-10|1.1.1 1-2|1.1.2 * * * * *
+# ::alignments 4-5|0 9-10|0.0.0 1-2|0.0.1 8-9|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.939
 (s / surprise-01
   :ARG0 (r / rapid
           :manner-of (t / this)
           :mod (o / only))
   :ARG1 (i / i))
 
-# ::id wb.eng_0003.19
+# ::id wb.eng_0003.19 ::date 2012-09-13T13:23:55 ::annotator ISI-AMR-01 ::preferred
 # ::snt Even I thought there might be a lag of three or four years .
-# ::save-date
+# ::save-date Mon Sep 17, 2012 ::file wb_eng_0003_19.txt
 # ::tok Even I thought there might be a lag of three or four years .
-# ::alignments 1-2|1.1 0-1|1.1.1 7-8|1.2.1 10-11|1.2.1.1 * * * * *
+# ::alignments 2-3|0 7-8|0.1.0 10-11|0.1.0.0 11-12|0.1.0.0.1.0 12-13|0.1.0.0.1+0.1.0.0.1.1 9-10|0.1.0.0.0.0 1-2|0.0 0-1|0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.953
 (t2 / think-01
   :ARG0 (i / i
           :mod (e / even))
@@ -317,11 +319,11 @@
                                    :quant 4
                                    :unit (y2 / year))))))
 
-# ::id wb.eng_0003.20
+# ::id wb.eng_0003.20 ::date 2012-09-14T14:58:15 ::annotator ISI-AMR-01 ::preferred
 # ::snt If Route 288 has already created a $ 13 million road - construction in just this one exist , think of the liability it has created for all of its exits !
-# ::save-date
+# ::save-date Mon Mar 25, 2013 ::file wb_eng_0003_20.txt
 # ::tok If Route 288 has already created a $ 13 million road - construction in just this one exist , think of the liability it has created for all of its exits !
-# ::alignments 19-20|1 27-28|1.3.1.2.1 10-11|1.4.1.1 1-2|1.4.1.1.1.1 2-3|1.4.1.1.1.2 10-11|1.4.1.2.1 15-16|1.4.1.2.3.2 14-15|1.4.1.2.3.3 4-5|1.4.1.3 * * * * *
+# ::alignments 1-3|0.3.0.0+0.3.0.0.0+0.3.0.0.0.0+0.3.0.0.0.1 19-20|0 0-1|0.3 5-6|0.3.0 4-5|0.3.0.2 10-11|0.3.0.1.0 30-31|0.3.0.1.2 14-15|0.3.0.1.2.2 15-16|0.3.0.1.2.1 16-17|0.3.0.1.2.0 25-26|0.2.0 27-28|0.2.0.0.0 12-13|0.3.0.1 22-23|0.2 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.990
 (t / think-01 :mode imperative
       :ARG0 (y / you)
       :ARG1 (l / liable-41
@@ -344,20 +346,20 @@
                               :mod (j / just)))
                   :time (a2 / already))))
 
-# ::id wb.eng_0003.21
+# ::id wb.eng_0003.21 ::date 2012-09-13T17:00:52 ::annotator ISI-AMR-01 ::preferred
 # ::snt Here 's another prodiction :
-# ::save-date
+# ::save-date Mon Sep 17, 2012 ::file wb_eng_0003_21.txt
 # ::tok Here 's another prodiction :
-# ::alignments 2-3|1.2 * * * * *
+# ::alignments 2-3|0.1 ::annotator Aligner v.02 ::date 2014-09-27T13:32:45.997
 (t / thing
   :ARG1-of (p / predict-01)
   :mod (a / another))
 
-# ::id wb.eng_0003.22
+# ::id wb.eng_0003.22 ::date 2012-09-14T15:07:06 ::annotator ISI-AMR-01 ::preferred
 # ::snt After a few more years of scattered subdivision development and approval of mega-commercial projects at major 288 intersections , the need for new road improvements will soar .
-# ::save-date
+# ::save-date Wed Sep 18, 2013 ::file wb_eng_0003_22.txt
 # ::tok After a few more years of scattered subdivision development and approval of mega - commercial projects at major 288 intersections , the need for new road improvements will soar .
-# ::alignments 28-29|1 22-23|1.1 25-26|1.1.1.1 24-25|1.1.1.2 0-1|1.2 9-10|1.2.1 7-8|1.2.1.1.1 12-13|1.2.1.2.1.1.1 25-26|1.2.1.2.1.2.1 18-19|1.2.1.2.1.2.1.1.1 2-3|1.2.1.3 3-4|1.2.1.3.2 * * * * *
+# ::alignments 18-19|0.1.0.1.0.1.0.0+0.1.0.1.0.1.0.0.0 28-29|0 0-1|0.1 9-10|0.1.0 2-3|0.1.0.2 3-4|0.1.0.2.1 4-5|0.1.0.2.0+0.1.0.2.0.1 15-16|0.1.0.1.0 25-26|0.1.0.1.0.1.0 12-13|0.1.0.1.0.0.0 7-8|0.1.0.0.0 6-7|0.1.0.0.1 22-23|0.0 24-25|0.0.0.1 10-11|0.1.0.1 19-20|0.1.0.1.0.1 14-15|0.1.0.1.0.0 8-9|0.1.0.0 26-27|0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.028
 (s / soar-01
       :ARG1 (n / need-01
             :ARG1 (i / improve-01
@@ -380,11 +382,11 @@
                               :unit (y / year))
                         :mod (m / more)))))
 
-# ::id wb.eng_0003.23
+# ::id wb.eng_0003.23 ::date 2012-09-13T17:11:45 ::annotator ISI-AMR-01 ::preferred
 # ::snt Before the end of the decade , we may well see the unfunded liability zoom well past the original $ 400 million it took to build the original highway .
-# ::save-date
+# ::save-date Mon Jun 3, 2013 ::file wb_eng_0003_23.txt
 # ::tok Before the end of the decade , we may well see the unfunded liability zoom well past the original $ 400 million it took to build the original highway .
-# ::alignments 10-11|1.1 7-8|1.1.1 14-15|1.1.2 13-14|1.1.2.1 16-17|1.1.2.2 25-26|1.1.2.2.1.3.1 28-29|1.1.2.2.1.3.1.1 18-19|1.1.2.2.1.3.1.1.1 27-28|1.1.2.2.1.3.1.1.1 18-19|1.1.2.2.1.4 27-28|1.1.2.2.1.4 9-10|1.1.2.2.2 15-16|1.1.2.2.2 0-1|1.1.3 2-3|1.1.3.1 5-6|1.1.3.1.1 9-10|1.2 15-16|1.2 * * * * *
+# ::alignments 8-9|0 9-10|0.1 10-11|0.0 0-1|0.0.2 2-3|0.0.2.0 5-6|0.0.2.0.0 14-15|0.0.1 16-17|0.0.1.1 15-16|0.0.1.1.1 23-24|0.0.1.1.0.2 25-26|0.0.1.1.0.2.0 28-29|0.0.1.1.0.2.0.0 18-19|0.0.1.1.0.2.0.0.0 27-28|0.0.1.1.0.3 13-14|0.0.1.0 7-8|0.0.0 12-13|0.0.1.0.0+0.0.1.0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.061
 (p / possible
       :domain (s / see-01
             :ARG0 (w / we)
@@ -405,36 +407,21 @@
                         :op1 (d2 / decade))))
       :degree (w3 / well))
 
-# ::id wb.eng_0003.24
-# ::snt To the brainiacs who thought Route 288 was such a great idea :
-# ::save-date
-# ::tok To the brainiacs who thought Route 288 was such a great idea :
-# ::alignments 11-12|1.2.1.1 10-11|1.2.1.1.1 8-9|1.2.1.1.1.1 5-6|1.2.1.1.2.1.1 6-7|1.2.1.1.2.1.2 * * * * *
-(s / say-01
-      :ARG0 i
-      :ARG2 (b / brainiac
-            :ARG0-of (t / think-01
-                  :ARG1 (i / idea
-                        :mod (g / great
-                              :mod (s2 / such))
-                        :domain (r2 / road
-                              :name (r / name :op1 "Route" :op2 288))))))
-
-# ::id wb.eng_0003.25
+# ::id wb.eng_0003.25 ::date 2012-09-20T21:51:24 ::annotator ISI-AMR-01 ::preferred
 # ::snt Thanks for nothing .
-# ::save-date
+# ::save-date Mon Sep 24, 2012 ::file wb_eng_0003_25.txt
 # ::tok Thanks for nothing .
-# ::alignments 2-3|1.3 * * * * *
+# ::alignments 0-1|0 2-3|0.2 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.080
 (t / thank-01
   :ARG0 (i / i)
   :ARG1 (y / you)
   :ARG2 (n / nothing))
 
-# ::id wb.eng_0003.26
+# ::id wb.eng_0003.26 ::date 2012-09-20T21:52:05 ::annotator ISI-AMR-01 ::preferred
 # ::snt I think we could have spent the $ 400 million better elsewhere .
-# ::save-date
+# ::save-date Mon Sep 24, 2012 ::file wb_eng_0003_26.txt
 # ::tok I think we could have spent the $ 400 million better elsewhere .
-# ::alignments 1-2|1 0-1|1.1 2-3|1.2.1.1 11-12|1.2.1.2 * * * * *
+# ::alignments 1-2|0 3-4|0.1 5-6|0.1.0 10-11|0.1.0.3 11-12|0.1.0.1 2-3|0.1.0.0 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.090
 (t / think-01
   :ARG0 (i / i)
   :ARG1 (p / possible
@@ -447,28 +434,11 @@
                     :manner (g / good
                               :degree (m2 / more)))))
 
-# ::id wb.eng_0003.27
-# ::snt I do n't think you can blame 288 for creating those people .
-# ::save-date
-# ::tok I do n't think you can blame 288 for creating those people .
-# ::alignments 3-4|1 0-1|1.1 6-7|1.2.2 4-5|1.2.2.1 7-8|1.2.2.2.1.1 4-5|1.2.3 * * * * *
-(t / think-01
-      :ARG0 (i / i)
-      :ARG1 (r / recommend-01 :polarity -
-            :ARG1 (b / blame-01
-                  :ARG0 (y / you)
-                  :ARG1 (r2 / road
-                        :name (x / name :op1 288))
-                  :ARG2 (c / create-01
-                        :ARG1 (p / person
-                              :mod (t2 / that))))
-            :ARG2 (y2 / you)))
-
-# ::id wb.eng_0003.28
+# ::id wb.eng_0003.28 ::date 2012-09-20T21:56:09 ::annotator ISI-AMR-01 ::preferred
 # ::snt If there enough of them to create new traffic congestion in new places , then what is the alternative ?
-# ::save-date
+# ::save-date Tue Mar 26, 2013 ::file wb_eng_0003_28.txt
 # ::tok If there enough of them to create new traffic congestion in new places , then what is the alternative ?
-# ::alignments 18-19|1 2-3|1.2 6-7|1.2.2 8-9|1.2.2.1.1 7-8|1.2.2.1.2.1 11-12|1.2.2.1.2.1 7-8|1.2.2.1.3 11-12|1.2.2.1.3 * * * * *
+# ::alignments 18-19|0 2-3|0.1 6-7|0.1.1 8-9|0.1.1.0.0 12-13|0.1.1.0.1 7-8|0.1.1.0.1.0 11-12|0.1.1.0.2 9-10|0.1.1.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.113
 (a / alternative
       :domain (a2 / amr-unknown)
       :condition (e / enough
@@ -481,11 +451,11 @@
                               :mod (n2 / new))
                         :mod (n / new)))))
 
-# ::id wb.eng_0003.29
+# ::id wb.eng_0003.29 ::date 2012-09-20T21:58:53 ::annotator ISI-AMR-01 ::preferred
 # ::snt Additional traffic congestion in old places ?
-# ::save-date
+# ::save-date Mon Sep 24, 2012 ::file wb_eng_0003_29.txt
 # ::tok Additional traffic congestion in old places ?
-# ::alignments 1-2|1.1 4-5|1.2.1 0-1|1.4 * * * * *
+# ::alignments 1-2|0.0 5-6|0.1 4-5|0.1.0 0-1|0.3 2-3|0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.120
 (c / congest-01
   :ARG2 (t / traffic)
   :location (p / place
@@ -493,11 +463,11 @@
   :mode interrogative
   :mod (a2 / additional))
 
-# ::id wb.eng_0003.30
+# ::id wb.eng_0003.30 ::date 2012-09-20T11:48:46 ::annotator ISI-AMR-01 ::preferred
 # ::snt Now you understand how people like TMT in Fairfax feel .
-# ::save-date
+# ::save-date Wed Sep 26, 2012 ::file wb_eng_0003_30.txt
 # ::tok Now you understand how people like TMT in Fairfax feel .
-# ::alignments 2-3|1 1-2|1.1 9-10|1.2.1 6-7|1.2.1.1.1.1.1 8-9|1.2.1.1.1.2.1.1 0-1|1.3 * * * * *
+# ::alignments 6-7|0.1.0.0+0.1.0.0.0+0.1.0.0.0.0+0.1.0.0.0.0.0 8-9|0.1.0.0.0.1+0.1.0.0.0.1.0+0.1.0.0.0.1.0.0 2-3|0 0-1|0.2 9-10|0.1+0.1.0 1-2|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.132
 (u / understand-01
       :ARG0 (y / you)
       :ARG1 (t2 / thing
@@ -509,11 +479,11 @@
                                     :name (f / name :op1 "Fairfax"))))))
       :time (n / now))
 
-# ::id wb.eng_0003.31
+# ::id wb.eng_0003.31 ::date 2012-09-23T17:26:51 ::annotator ISI-AMR-01 ::preferred
 # ::snt I 'd usually take the pro-road position -
-# ::save-date
+# ::save-date Tue Jun 4, 2013 ::file wb_eng_0003_31.txt
 # ::tok I 'd usually take the pro - road position -
-# ::alignments 3-4|1 0-1|1.1 8-9|1.2 7-8|1.2.1.1 * * * * *
+# ::alignments 3-4|0 8-9|0.1 7-8|0.1.0.0 0-1|0.0 2-3|0.2 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.140
 (t / take-01
       :ARG0 (i / i)
       :ARG1 (p / position
@@ -521,11 +491,11 @@
                   :ARG1 (r / road)))
       :mod (u / usual))
 
-# ::id wb.eng_0003.32
+# ::id wb.eng_0003.32 ::date 2012-09-23T17:28:30 ::annotator ISI-AMR-01 ::preferred
 # ::snt but with the glaring needs in other parts of the state , 288 was definitely excess ...
-# ::save-date
+# ::save-date Fri May 9, 2014 ::file wb_eng_0003_32.txt
 # ::tok but with the glaring needs in other parts of the state , 288 was definitely excess ...
-# ::alignments 15-16|1.1 12-13|1.1.2.1.1 3-4|1.1.3.1 10-11|1.1.3.2.1 6-7|1.1.3.2.2 * * * * *
+# ::alignments 12-13|0.0.1+0.0.1.0+0.0.1.0.0 0-1|0 15-16|0.0 4-5|0.0.2 10-11|0.0.2.1+0.0.2.1.0 6-7|0.0.2.1.1 3-4|0.0.2.0 14-15|0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.153
 (c / contrast-01
       :ARG2 (e / excess
             :mod (d / definite)
@@ -536,11 +506,11 @@
                         :part-of (s / state)
                         :mod (o / other)))))
 
-# ::id wb.eng_0003.33
+# ::id wb.eng_0003.33 ::date 2012-09-23T17:31:53 ::annotator ISI-AMR-01 ::preferred
 # ::snt You have a city , Richmond , that has virtually no traffic .
-# ::save-date
+# ::save-date Thu Sep 27, 2012 ::file wb_eng_0003_33.txt
 # ::tok You have a city , Richmond , that has virtually no traffic .
-# ::alignments 1-2|1 3-4|1.1 5-6|1.1.1.1 11-12|1.2 * * * * *
+# ::alignments 5-6|0.0.0+0.0.0.0 1-2|0 11-12|0.1 3-4|0.0 9-10|0.1.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.162
 (h / have-03
       :ARG0 (c / city
             :name (r / name :op1 "Richmond"))
@@ -548,22 +518,22 @@
             :quant (v3 / virtual
                   :op1 (n2 / none))))
 
-# ::id wb.eng_0003.34
+# ::id wb.eng_0003.34 ::date 2012-09-23T17:33:25 ::annotator ISI-AMR-01 ::preferred
 # ::snt The rush hour is 30 minutes long ...
-# ::save-date
+# ::save-date Wed Sep 26, 2012 ::file wb_eng_0003_34.txt
 # ::tok The rush hour is 30 minutes long ...
-# ::alignments 2-3|1.1 1-2|1.1.1 4-5|1.2.1 * * * * *
+# ::alignments 2-3|0.0 1-2|0.0.0 4-5|0.1.0 5-6|0.1+0.1.1 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.168
 (l / last-01
       :ARG1 (h / hour
             :time-of (r / rush-01))
       :ARG2 (t / temporal-quantity :quant 30
             :unit (m / minute)))
 
-# ::id wb.eng_0003.35
+# ::id wb.eng_0003.35 ::date 2012-09-28T16:06:47 ::annotator ISI-AMR-01 ::preferred
 # ::snt And you give them a beltway through a largely rural area .
-# ::save-date
+# ::save-date Fri Sep 28, 2012 ::file wb_eng_0003_35.txt
 # ::tok And you give them a beltway through a largely rural area .
-# ::alignments 0-1|1 2-3|1.1 1-2|1.1.1 5-6|1.1.2 6-7|1.1.2.1 10-11|1.1.2.1.1 9-10|1.1.2.1.1.1 * * * * *
+# ::alignments 0-1|0 2-3|0.0 5-6|0.0.1 6-7|0.0.1.0 10-11|0.0.1.0.0 9-10|0.0.1.0.0.0 1-2|0.0.0 8-9|0.0.1.0.0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.178
 (a / and
       :op2 (g / give-01
             :ARG0 (y / you)
@@ -574,19 +544,19 @@
                                     :degree (l / large)))))
             :ARG2 (t / they)))
 
-# ::id wb.eng_0003.36
+# ::id wb.eng_0003.36 ::date 2012-09-28T16:10:07 ::annotator ISI-AMR-01 ::preferred
 # ::snt A road to no where ...
-# ::save-date
+# ::save-date Fri Sep 28, 2012 ::file wb_eng_0003_36.txt
 # ::tok A road to no where ...
-# ::alignments 1-2|1 * * * * *
+# ::alignments 1-2|0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.182
 (r / road
       :destination (n / nowhere))
 
-# ::id wb.eng_0003.37
+# ::id wb.eng_0003.37 ::date 2012-09-28T16:10:42 ::annotator ISI-AMR-01 ::preferred
 # ::snt Just think if this money had been spent on another potomac crossing or road improvements that are desperately needed in NOVA ?
-# ::save-date
+# ::save-date Mon Oct 1, 2012 ::file wb_eng_0003_37.txt
 # ::tok Just think if this money had been spent on another potomac crossing or road improvements that are desperately needed in NOVA ?
-# ::alignments 1-2|1 12-13|1.3.1.1 10-11|1.3.1.1.1.1.1.1.1 9-10|1.3.1.1.1.2 13-14|1.3.1.1.2.1 20-21|1.3.1.1.2.2.2.1.1 4-5|1.3.1.2 3-4|1.3.1.2.1 0-1|1.4 * * * * *
+# ::alignments 10-11|0.2.0.0.0.0.0+0.2.0.0.0.0.0.0+0.2.0.0.0.0.0.0.0 20-21|0.2.0.0.1.1.1+0.2.0.0.1.1.1.0+0.2.0.0.1.1.1.0.0 1-2|0 0-1|0.3 7-8|0.2.0 4-5|0.2.0.1 3-4|0.2.0.1.0 12-13|0.2.0.0 13-14|0.2.0.0.1.0 18-19|0.2.0.0.1.1 11-12|0.2.0.0.0.0 9-10|0.2.0.0.0.1 14-15|0.2.0.0.1 17-18|0.2.0.0.1.1.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.202
 (t / think-01 :mode imperative
       :ARG0 (y / you)
       :ARG1 (p2 / possible
@@ -607,70 +577,42 @@
                         :mod (t2 / this))))
       :mod (j / just))
 
-# ::id wb.eng_0003.38
-# ::snt Virginia Centrist , To add insult to injury , the rest of the state helped pay for 288 in last year 's budget deal -- wiped the slate clean of debt .
-# ::save-date
-# ::tok Virginia Centrist , To add insult to injury , the rest of the state helped pay for 288 in last year 's budget deal -- wiped the slate clean of debt .
-# ::alignments 10-11|1.2.1.1 13-14|1.2.1.1.1 15-16|1.2.1.2 17-18|1.2.1.2.1.1.1 23-24|1.2.1.2.2 22-23|1.2.1.2.2.1 20-21|1.2.1.2.2.2 19-20|1.2.1.2.2.2.1 4-5|1.2.1.3 5-6|1.2.1.3.1 30-31|1.2.2.1 0-1|1.3.1.1 1-2|1.3.1.2 * * * * *
-(s2 / say-01
-      :ARG0 i
-      :ARG1 (c / cause-01
-            :ARG0 (h / help-01
-                  :ARG0 (r / rest
-                        :part-of (s / state))
-                  :ARG1 (p2 / pay-01
-                        :ARG0 r
-                        :ARG3 (r2 / road
-                              :name (x / name :op1 288))
-                        :time (d / deal-01
-                              :ARG1 (b / budget)
-                              :time (y / year
-                                    :mod (l / last))))
-                  :ARG0-of (a / add-02
-                        :ARG1 (i / insult-01)
-                        :ARG2 (i2 / injure-01)))
-            :ARG1 (w / wipe-02
-                  :ARG0 p2
-                  :ARG1 (d2 / debt)))
-      :ARG2 (p / person
-            :name (v / name :op1 "Virginia" :op2 "Centrist")))
-
-# ::id wb.eng_0003.39
+# ::id wb.eng_0003.39 ::date 2012-09-28T08:54:05 ::annotator ISI-AMR-01 ::preferred
 # ::snt It was very nice of y'all to oblige us .
-# ::save-date
+# ::save-date Wed Oct 3, 2012 ::file wb_eng_0003_39.txt
 # ::tok It was very nice of y'all to oblige us .
-# ::alignments 3-4|1 7-8|1.1 5-6|1.1.1 2-3|1.2 * * * * *
+# ::alignments 3-4|0 2-3|0.1 7-8|0.0 5-6|0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.238
 (n / nice-42
   :ARG1 (o / oblige-01
           :ARG0 (x / y'all)
           :ARG1 (w / we))
   :degree (v / very))
 
-# ::id wb.eng_0003.40
+# ::id wb.eng_0003.40 ::date 2012-09-28T08:55:10 ::annotator ISI-AMR-01 ::preferred
 # ::snt Did n't make much sense , though .
-# ::save-date
+# ::save-date Tue Mar 26, 2013 ::file wb_eng_0003_40.txt
 # ::tok Did n't make much sense , though .
-# ::alignments 2-3|1.1 4-5|1.1.1 3-4|1.1.1.1 * * * * *
+# ::alignments 2-3|0.0 4-5|0.0.0 3-4|0.0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.244
 (h / have-concession-91
       :ARG1 (m / make-01
             :ARG1 (s / sense
                   :degree (m2 / much :polarity -))))
 
-# ::id wb.eng_0003.41
+# ::id wb.eng_0003.41 ::date 2012-09-28T08:59:17 ::annotator ISI-AMR-01 ::preferred
 # ::snt It 's the same old problem .
-# ::save-date
+# ::save-date Wed Oct 3, 2012 ::file wb_eng_0003_41.txt
 # ::tok It 's the same old problem .
-# ::alignments 5-6|1 3-4|1.1 0-1|1.1.1 4-5|1.2 * * * * *
+# ::alignments 5-6|0 4-5|0.1 3-4|0.0 0-1|0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.249
 (p / problem
   :ARG1-of (s / same-41
              :ARG2 (i / it))
   :mod (o / old))
 
-# ::id wb.eng_0003.42
+# ::id wb.eng_0003.42 ::date 2012-09-28T09:00:00 ::annotator ISI-AMR-01 ::preferred
 # ::snt If you get out ahead of the need you are accused of causing sprawl .
-# ::save-date
+# ::save-date Wed Oct 3, 2012 ::file wb_eng_0003_42.txt
 # ::tok If you get out ahead of the need you are accused of causing sprawl .
-# ::alignments 1-2|1.1 8-9|1.1 13-14|1.2.1 2-3|1.3 4-5|1.3.1 7-8|1.3.1.1 * * * * *
+# ::alignments 10-11|0 2-3|0.2 4-5|0.2.0 7-8|0.2.0.0 0-1|0.1 13-14|0.1.0 1-2|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.262
 (a / accuse-01
   :ARG1 (y / you)
   :ARG2 (c / cause-01
@@ -681,11 +623,11 @@
                :ARG2 (a2 / ahead
                        :op1 (n2 / need-01))))
 
-# ::id wb.eng_0003.43
+# ::id wb.eng_0003.43 ::date 2012-09-28T09:01:33 ::annotator ISI-AMR-01 ::preferred
 # ::snt If you build where the need is already acute , then the claim is you ca n't pave your way out of congestion .
-# ::save-date
+# ::save-date Tue Mar 26, 2013 ::file wb_eng_0003_43.txt
 # ::tok If you build where the need is already acute , then the claim is you ca n't pave your way out of congestion .
-# ::alignments 12-13|1 17-18|1.1.2 1-2|1.1.2.1 14-15|1.1.2.1 19-20|1.1.2.2 2-3|1.2 5-6|1.2.1.1 8-9|1.2.1.1.1 7-8|1.2.1.1.1.1 * * * * *
+# ::alignments 12-13|0 2-3|0.1 5-6|0.1.0.0 8-9|0.1.0.0.0 7-8|0.1.0.0.0.0 17-18|0.0.1 19-20|0.0.1.1 1-2|0.0.1.0 22-23|0.0.1.2.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.282
 (c / claim-01
       :ARG1 (p / possible :polarity -
             :domain (p2 / pave-02
@@ -701,38 +643,38 @@
                         :mod (a / acute
                               :time (a2 / already))))))
 
-# ::id wb.eng_0003.44
+# ::id wb.eng_0003.44 ::date 2012-09-28T09:05:25 ::annotator ISI-AMR-01 ::preferred
 # ::snt Anonymous -
-# ::save-date
+# ::save-date Fri Sep 28, 2012 ::file wb_eng_0003_44.txt
 # ::tok Anonymous -
-# ::alignments 0-1|1.1.1 * * * * *
+# ::alignments 0-1|0+0.0+0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.286
 (p / person
       :name (a / name :op1 "Anonymous"))
 
-# ::id wb.eng_0003.45
+# ::id wb.eng_0003.45 ::date 2012-09-28T09:05:41 ::annotator ISI-AMR-01 ::preferred
 # ::snt That 's a fair point .
-# ::save-date
+# ::save-date Fri Sep 28, 2012 ::file wb_eng_0003_45.txt
 # ::tok That 's a fair point .
-# ::alignments 4-5|1 0-1|1.1 3-4|1.2 * * * * *
+# ::alignments 4-5|0 3-4|0.1 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.292
 (p / point
   :domain (t / that)
   :mod (f / fair))
 
-# ::id wb.eng_0003.46
+# ::id wb.eng_0003.46 ::date 2012-09-28T09:05:57 ::annotator ISI-AMR-01 ::preferred
 # ::snt 5:26 makes a good point .
-# ::save-date
+# ::save-date Thu Mar 13, 2014 ::file wb_eng_0003_46.txt
 # ::tok 5:26 makes a good point .
-# ::alignments 0-1|1.1.1.1 4-5|1.2 3-4|1.2.1 * * * * *
+# ::alignments 0-1|0.0+0.0.0+0.0.0.0 1-2|0 4-5|0.1 3-4|0.1.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.300
 (m / make-01
       :ARG0 (p3 / person :name (n / name :op1 "5:26"))
       :ARG1 (p2 / point
             :mod (g / good)))
 
-# ::id wb.eng_0003.47
+# ::id wb.eng_0003.47 ::date 2012-09-28T09:08:11 ::annotator ISI-AMR-01 ::preferred
 # ::snt However , this situation hammers home the validity of the state auditor 's report finding that the CTB and VDOT fail to fund transportation projects based on a comprehensive state transportation plan , but rather , based on whoever does the best job of lobbying .
-# ::save-date
+# ::save-date Tue Sep 24, 2013 ::file wb_eng_0003_47.txt
 # ::tok However , this situation hammers home the validity of the state auditor 's report finding that the CTB and VDOT fail to fund transportation projects based on a comprehensive state transportation plan , but rather , based on whoever does the best job of lobbying .
-# ::alignments 3-4|1.1.1 2-3|1.1.1.1 13-14|1.1.2.1.1 10-11|1.1.2.1.1.1.1.1 29-30|1.1.2.1.1.1.1.1 22-23|1.1.2.1.2.1 18-19|1.1.2.1.2.1.1 17-18|1.1.2.1.2.1.1.1.1.1 19-20|1.1.2.1.2.1.1.2.1.1 31-32|1.1.2.1.2.1.3.2 10-11|1.1.2.1.2.1.3.2.1.1 29-30|1.1.2.1.2.1.3.2.1.1 28-29|1.1.2.1.2.1.3.2.2 5-6|1.1.3 * * * * *
+# ::alignments 17-18|0.0.1.0.1.0.0.0+0.0.1.0.1.0.0.0.0+0.0.1.0.1.0.0.0.0.0 19-20|0.0.1.0.1.0.0.1+0.0.1.0.1.0.0.1.0+0.0.1.0.1.0.0.1.0.0 33-34|0 4-5|0.0 5-6|0.0.2 13-14|0.0.1.0+0.0.1.0.0 10-11|0.0.1.0.0.0.0.0 14-15|0.0.1.0.1 22-23|0.0.1.0.1.0 25-26|0.0.1.0.1.0.3 44-45|0.0.1.0.1.0.3.0+0.0.1.0.1.0.3.0.0 41-42|0.0.1.0.1.0.3.0.0.0+0.0.1.0.1.0.3.0.0.0.0 36-37|0.0.1.0.1.0.2 31-32|0.0.1.0.1.0.2.1 28-29|0.0.1.0.1.0.2.1.1 29-30|0.0.1.0.1.0.2.1.0.0 24-25|0.0.1.0.1.0.1 18-19|0.0.1.0.1.0.0 3-4|0.0.0 2-3|0.0.0.0 7-8|0.0.1 11-12|0.0.1.0.0.0.0.1 23-24|0.0.1.0.1.0.2.1.0 30-31|0.0.1.0.1.0.1.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.343
 (c3 / contrast-01
       :ARG2 (h / hammer-02
             :ARG0 (s / situation
@@ -766,11 +708,11 @@
                                                             :degree (m / most)))))))))
             :destination (h2 / home)))
 
-# ::id wb.eng_0003.48
+# ::id wb.eng_0003.48 ::date 2012-09-28T09:23:40 ::annotator ISI-AMR-01 ::preferred
 # ::snt I submit that this is a disgraceful situation that should not be tolerated .
-# ::save-date
+# ::save-date Wed Oct 10, 2012 ::file wb_eng_0003_48.txt
 # ::tok I submit that this is a disgraceful situation that should not be tolerated .
-# ::alignments 1-2|1 0-1|1.1 7-8|1.2 3-4|1.2.1 * * * * *
+# ::alignments  1-2|0 7-8|0.1 12-13|0.1.1 9-10|0.1.1.1 3-4|0.1.0 0-1|0.0 6-7|0.1.2 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.357
 (s / submit-01
   :ARG0 (i / i)
   :ARG1 (s2 / situation
@@ -780,11 +722,11 @@
                      :ARG1-of (r / recommend-01))
           :ARG0-of (d2 / disgrace-01)))
 
-# ::id wb.eng_0003.49
+# ::id wb.eng_0003.49 ::date 2012-09-28T09:26:20 ::annotator ISI-AMR-01 ::preferred
 # ::snt Moreover , Senator Chichester and his toadies would make this worse by pouring more money into this flawed institution .
-# ::save-date
+# ::save-date Thu Feb 27, 2014 ::file wb_eng_0003_49.txt
 # ::tok Moreover , Senator Chichester and his toadies would make this worse by pouring more money into this flawed institution .
-# ::alignments 4-5|1 4-5|1.1.1 3-4|1.1.1.1.1.1 14-15|1.1.2 13-14|1.1.2.1 18-19|1.1.3 9-10|1.1.3.1 16-17|1.1.3.1 9-10|1.1.4.1.1 16-17|1.1.4.1.1 * * * * *
+# ::alignments 3-4|0.0.0.0+0.0.0.0.0+0.0.0.0.0.0 2-3|0.0.0.0.1.0+0.0.0.0.1.0.0+0.0.0.0.1.0.0.0 4-5|0 12-13|0.0 9-10|0.0.3.0.0 18-19|0.0.2 17-18|0.0.2.1 16-17|0.0.2.0 14-15|0.0.1 13-14|0.0.1.0 6-7|0.0.0.1 10-11|0.0.3.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.374
 (a / and
       :op2 (p2 / pour-01
             :ARG0 (a2 / and
@@ -802,22 +744,22 @@
                   :ARG1 (w / worsen-01
                         :ARG1 (t4 / this)))))
 
-# ::id wb.eng_0003.50
+# ::id wb.eng_0003.50 ::date 2012-09-28T09:29:27 ::annotator ISI-AMR-01 ::preferred
 # ::snt What is the purpose of transportation - related expenditures ?
-# ::save-date
+# ::save-date Tue Mar 26, 2013 ::file wb_eng_0003_50.txt
 # ::tok What is the purpose of transportation - related expenditures ?
-# ::alignments * * * * *
+# ::alignments 8-9|0.0+0.0.0 5-6|0.0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.380
 (h / have-purpose-91
       :ARG1 (t / thing
             :ARG1-of (e / expend-01
                   :ARG2 (t2 / transport-01)))
       :ARG2 (a / amr-unknown))
 
-# ::id wb.eng_0003.51
+# ::id wb.eng_0003.51 ::date 2012-09-28T09:31:27 ::annotator ISI-AMR-01 ::preferred
 # ::snt In Virginia , it 's to benefit private business plans and not to serve the public interest .
-# ::save-date
+# ::save-date Mon Oct 15, 2012 ::file wb_eng_0003_51.txt
 # ::tok In Virginia , it 's to benefit private business plans and not to serve the public interest .
-# ::alignments 10-11|1 3-4|1.1.1 6-7|1.1.2 8-9|1.1.2.1.1 7-8|1.1.2.1.1.1 13-14|1.2.2 16-17|1.2.2.1 15-16|1.2.2.1.1 1-2|1.3.1.1 * * * * *
+# ::alignments 1-2|0.2+0.2.0+0.2.0.0  10-11|0 13-14|0.1.1 16-17|0.1.1.0 15-16|0.1.1.0.0 3-4|0.0.0 6-7|0.0.1 9-10|0.0.1.0 8-9|0.0.1.0.0 7-8|0.0.1.0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.391
 (a / and
       :op1 (h / have-purpose-91
             :ARG1 (i / it)
@@ -833,20 +775,20 @@
       :location (s / state
             :name (v / name :op1 "Virginia")))
 
-# ::id wb.eng_0003.52
+# ::id wb.eng_0003.52 ::date 2012-09-28T09:33:32 ::annotator ISI-AMR-01 ::preferred
 # ::snt You all are dead wrong .
-# ::save-date
+# ::save-date Mon Oct 15, 2012 ::file wb_eng_0003_52.txt
 # ::tok You all are dead wrong .
-# ::alignments 4-5|1 3-4|1.2 * * * * *
+# ::alignments 4-5|0 3-4|0.1 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.394
 (w / wrong-41
   :ARG1 (y / y'all)
   :degree (d / dead))
 
-# ::id wb.eng_0003.53
+# ::id wb.eng_0003.53 ::date 2012-09-28T09:35:20 ::annotator ISI-AMR-01 ::preferred
 # ::snt No less than Walter Stoch stated that 288 money was intended to be paid from economic development money .
-# ::save-date
+# ::save-date Mon Oct 15, 2012 ::file wb_eng_0003_53.txt
 # ::tok No less than Walter Stoch stated that 288 money was intended to be paid from economic development money .
-# ::alignments 3-4|1.1.1.1 4-5|1.1.1.2 1-2|1.1.2 8-9|1.2.1.1 17-18|1.2.1.1 7-8|1.2.1.2.1.1 * * * * *
+# ::alignments 3-5|0.0+0.0.0+0.0.0.0+0.0.0.1 7-8|0.1.0.1+0.1.0.1.0+0.1.0.1.0.0 5-6|0 10-11|0.1 13-14|0.1.0 8-9|0.1.0.0 1-2|0.0.1 16-17|0.1.0.0.0 15-16|0.1.0.0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.406
 (s / state-01
       :ARG0 (p / person
             :name (w / name :op1 "Walter" :op2 "Stoch")
@@ -859,20 +801,20 @@
                   :ARG3 (r / road
                         :name (x / name :op1 288)))))
 
-# ::id wb.eng_0003.54
+# ::id wb.eng_0003.54 ::date 2012-09-28T09:40:15 ::annotator ISI-AMR-01 ::preferred
 # ::snt Come on folks !!
-# ::save-date
+# ::save-date Mon Oct 15, 2012 ::file wb_eng_0003_54.txt
 # ::tok Come on folks !!
-# ::alignments 0-1|1 * * * * *
+# ::alignments 0-1|0 2-3|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.409
 (c / come-25
   :ARG1 (f / folk)
   :mode imperative)
 
-# ::id wb.eng_0003.55
+# ::id wb.eng_0003.55 ::date 2012-09-28T09:41:20 ::annotator ISI-AMR-01 ::preferred
 # ::snt TMT : I do n't understand your point .
-# ::save-date
+# ::save-date Fri Oct 5, 2012 ::file wb_eng_0003_55.txt
 # ::tok TMT : I do n't understand your point .
-# ::alignments 2-3|1.1 5-6|1.2 7-8|1.2.2 0-1|1.3.1.1 * * * * *
+# ::alignments 0-1|0.2+0.2.0+0.2.0.0 2-3|0.0 5-6|0.1+0.1.0 7-8|0.1.1 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.414
 (s / say-01
       :ARG0 (i / i)
       :ARG1 (u / understand-01 :polarity -
@@ -882,11 +824,11 @@
       :ARG2 (p / person
             :name (t / name :op1 "TMT")))
 
-# ::id wb.eng_0003.56
+# ::id wb.eng_0003.56 ::date 2012-09-28T09:42:09 ::annotator ISI-AMR-01 ::preferred
 # ::snt when was the last time you were stuck in traffic that you were n't on your way to or from some sort of business ?
-# ::save-date
+# ::save-date Mon Oct 15, 2012 ::file wb_eng_0003_56.txt
 # ::tok when was the last time you were stuck in traffic that you were n't on your way to or from some sort of business ?
-# ::alignments 5-6|1.1 11-12|1.1 9-10|1.2 3-4|1.3.1 18-19|1.3.2 23-24|1.3.2.1.1 21-22|1.3.2.1.1.1 20-21|1.3.2.1.1.1.1 * * * * *
+# ::alignments 7-8|0 3-4|0.2.0 18-19|0.2.1 23-24|0.2.1.0.0 21-22|0.2.1.0.0.0 20-21|0.2.1.0.0.0.0 9-10|0.1 5-6|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.426
 (s / stick-01
   :ARG1 (y / you)
   :ARG2 (t / traffic)
@@ -903,11 +845,11 @@
                             :ARG2 b)
                      :polarity -)))
 
-# ::id wb.eng_0003.57
+# ::id wb.eng_0003.57 ::date 2012-09-28T09:44:16 ::annotator ISI-AMR-01 ::preferred
 # ::snt It seems to me that the whole point of roads is to facilitate the public interest in getting to and from private businesses .
-# ::save-date
+# ::save-date Wed Oct 17, 2012 ::file wb_eng_0003_57.txt
 # ::tok It seems to me that the whole point of roads is to facilitate the public interest in getting to and from private businesses .
-# ::alignments 12-13|1.1.2 15-16|1.1.2.1 14-15|1.1.2.1.1 19-20|1.1.2.1.2 21-22|1.1.2.1.2.1.1.1 6-7|1.1.3 * * * * *
+# ::alignments 1-2|0 9-10|0.0.0 12-13|0.0.1 15-16|0.0.1.0 19-20|0.0.1.0.1 17-18|0.0.1.0.1.1 22-23|0.0.1.0.1.0.0 21-22|0.0.1.0.1.0.0.0 14-15|0.0.1.0.0 6-7|0.0.2 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.440
 (s / seem-01
       :ARG1 (h / have-purpose-91
             :ARG1 (r / road)
@@ -926,11 +868,11 @@
             :mod (w / whole))
       :ARG2 (i / i))
 
-# ::id wb.eng_0003.58
+# ::id wb.eng_0003.58 ::date 2012-09-30T16:24:55 ::annotator ISI-AMR-01 ::preferred
 # ::snt Then , of course there is the sunday drive , the trip to grandma 's , and the soccer games , but still , the overwhelming need is to support business .
-# ::save-date
+# ::save-date Wed Apr 16, 2014 ::file wb_eng_0003_58.txt
 # ::tok Then , of course there is the sunday drive , the trip to grandma 's , and the soccer games , but still , the overwhelming need is to support business .
-# ::alignments 26-27|1 29-30|1.1 30-31|1.1.1 16-17|1.3 8-9|1.3.1 7-8|1.3.1.1.1 11-12|1.3.2 18-19|1.3.3.1 * * * * *
+# ::alignments 26-27|0 16-17|0.2 19-20|0.2.2 18-19|0.2.2.0 11-12|0.2.1 8-9|0.2.0 7-8|0.2.0.0.0 25-26|0.1 29-30|0.0 30-31|0.0.0 13-14|0.2.1.0.0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.458
 (n / need-01
       :ARG1 (s3 / support-01
             :ARG1 (b / business))
@@ -948,11 +890,11 @@
                   :mod (s2 / soccer))
             :mod (o2 / of-course)))
 
-# ::id wb.eng_0003.59
+# ::id wb.eng_0003.59 ::date 2012-10-05T10:00:40 ::annotator ISI-AMR-01 ::preferred
 # ::snt Since our road expenditures nowhere near match the increase in business or state domestic product , it is no wonder we suffer congestion problems .
-# ::save-date
+# ::save-date Wed Oct 24, 2012 ::file wb_eng_0003_59.txt
 # ::tok Since our road expenditures nowhere near match the increase in business or state domestic product , it is no wonder we suffer congestion problems .
-# ::alignments 19-20|1 21-22|1.1 20-21|1.1.1 6-7|1.3.1 2-3|1.3.1.1.1.1 8-9|1.3.1.3.1 11-12|1.3.1.3.1.1 10-11|1.3.1.3.1.1.1 14-15|1.3.1.3.1.1.2 13-14|1.3.1.3.1.1.2.1 12-13|1.3.1.3.1.1.2.2 * * * * *
+# ::alignments 18-19|0.1 19-20|0 6-7|0.2.0 8-9|0.2.0.2+0.2.0.2.0 11-12|0.2.0.2.0.0 14-15|0.2.0.2.0.0.1 12-13|0.2.0.2.0.0.1.1 13-14|0.2.0.2.0.0.1.0 10-11|0.2.0.2.0.0.0 2-3|0.2.0.0.0.0 21-22|0.0 23-24|0.0.1 20-21|0.0.0 3-4|0.2.0.0+0.2.0.0.0 22-23|0.0.1.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.476
 (w2 / wonder-02
   :ARG1 (s / suffer-01
           :ARG0 (w / we)
@@ -974,11 +916,11 @@
                                                        :mod (d / domestic)
                                                        :mod (s2 / state))))))))
 
-# ::id wb.eng_0003.60
+# ::id wb.eng_0003.60 ::date 2012-10-17T07:13:49 ::annotator ISI-AMR-01 ::preferred
 # ::snt If we recognize that roads primaarily benefit businesses then we should do two things :
-# ::save-date
+# ::save-date Wed Oct 24, 2012 ::file wb_eng_0003_60.txt
 # ::tok If we recognize that roads primaarily benefit businesses then we should do two things :
-# ::alignments 11-12|1.1 2-3|1.2 1-2|1.2.1 9-10|1.2.1 6-7|1.2.2 * * * * *
+# ::alignments 10-11|0 2-3|0.1 6-7|0.1.1 7-8|0.1.1.1 4-5|0.1.1.0 1-2|0.1.0 11-12|0.0 13-14|0.0.0 12-13|0.0.0.0 5-6|0.1.1.2 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.484
 (r2 / recommend-01
   :ARG1 (d / do-02
           :ARG0 w
@@ -991,11 +933,11 @@
                        :ARG1 (b2 / business)
                        :mod (p / primary))))
 
-# ::id wb.eng_0003.61
+# ::id wb.eng_0003.61 ::date 2012-10-17T07:15:55 ::annotator ISI-AMR-01 ::preferred
 # ::snt let business pay for more of our transportation bill , ( which they will pass to us , of course ) and incentivize them to locate where they put the least stress on the system , even if that means more overall travel .
-# ::save-date
+# ::save-date Wed Apr 24, 2013 ::file wb_eng_0003_61.txt
 # ::tok let business pay for more of our transportation bill , ( which they will pass to us , of course ) and incentivize them to locate where they put the least stress on the system , even if that means more overall travel .
-# ::alignments 21-22|1 2-3|1.1 1-2|1.1.2 14-15|1.1.3.1 8-9|1.1.4.1 4-5|1.1.4.2 40-41|1.1.4.2 22-23|1.2 25-26|1.2.2 28-29|1.2.2.1 31-32|1.2.2.1.1 30-31|1.2.2.1.1.1 34-35|1.2.2.1.2 42-43|1.2.3.1.1 4-5|1.2.3.1.1.1 40-41|1.2.3.1.1.1 41-42|1.2.3.1.1.2 * * * * *
+# ::alignments 21-22|0 22-23|0.1 39-40|0.1.2.0 42-43|0.1.2.0.0 41-42|0.1.2.0.0.1 4-5|0.1.2.0.0.0 25-26|0.1.1 28-29|0.1.1.0 34-35|0.1.1.0.1 31-32|0.1.1.0.0 30-31|0.1.1.0.0.0 2-3|0.0 8-9|0.0.3+0.0.3.0 40-41|0.0.3.1 14-15|0.0.2+0.0.2.0 1-2|0.0.1 36-37|0.1.2 7-8|0.0.3.0.1 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.507
 (a / and
       :op1 (p / pay-01 :mode imperative
             :ARG0 (b / business)
@@ -1027,22 +969,22 @@
                               :mod (m3 / more)
                               :mod (o / overall))))))
 
-# ::id wb.eng_0003.62
+# ::id wb.eng_0003.62 ::date 2012-10-17T07:25:25 ::annotator ISI-AMR-01 ::preferred
 # ::snt Why is it so hard to understand ?
-# ::save-date
+# ::save-date Wed Oct 17, 2012 ::file wb_eng_0003_62.txt
 # ::tok Why is it so hard to understand ?
-# ::alignments 4-5|1 6-7|1.1 2-3|1.1.1 * * * * *
+# ::alignments 4-5|0 6-7|0.0 2-3|0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.515
 (h / hard
   :domain (u / understand-01
             :ARG1 (i / it))
   :ARG1-of (c / cause-01
              :ARG0 (a / amr-unknown)))
 
-# ::id wb.eng_0003.63
+# ::id wb.eng_0003.63 ::date 2012-10-17T07:30:43 ::annotator ISI-AMR-01 ::preferred
 # ::snt The solution is functional human settlement patterns and a balance between transport system capacity and land use generated travel deman .
-# ::save-date
+# ::save-date Mon Nov 5, 2012 ::file wb_eng_0003_63.txt
 # ::tok The solution is functional human settlement patterns and a balance between transport system capacity and land use generated travel deman .
-# ::alignments 7-8|1.1 14-15|1.1 4-5|1.1.1.1.1 9-10|1.1.2 13-14|1.1.2.1 12-13|1.1.2.1.1 11-12|1.1.2.1.1.1 18-19|1.1.2.2.1 16-17|1.1.2.2.2.1 15-16|1.1.2.2.2.1.1 * * * * *
+# ::alignments 7-8|0.0 9-10|0.0.1 18-19|0.0.1.1.0 17-18|0.0.1.1.1 16-17|0.0.1.1.1.0 15-16|0.0.1.1.1.0.0 13-14|0.0.1.0 12-13|0.0.1.0.0 11-12|0.0.1.0.0.0 6-7|0.0.0 4-5|0.0.0.0.0 19-20|0.0.1.1 3-4|0.0.0.1 5-6|0.0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.531
 (s4 / solve-01
   :ARG2 (a / and
           :op1 (p / pattern
@@ -1059,28 +1001,28 @@
                                     :ARG0 (u / use-01
                                             :ARG1 (l / land)))))))
 
-# ::id wb.eng_0003.64
+# ::id wb.eng_0003.64 ::date 2012-10-17T07:35:31 ::annotator ISI-AMR-01 ::preferred
 # ::snt All else is spin .
-# ::save-date
+# ::save-date Mon Nov 5, 2012 ::file wb_eng_0003_64.txt
 # ::tok All else is spin .
-# ::alignments 3-4|1 1-2|1.1 0-1|1.1.1 * * * * *
+# ::alignments 3-4|0 1-2|0.0 0-1|0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.534
 (s / spin-03
   :ARG1 (e / else
           :mod (a / all)))
 
-# ::id wb.eng_0003.65
+# ::id wb.eng_0003.65 ::date 2012-10-17T07:35:50 ::annotator ISI-AMR-01 ::preferred
 # ::snt EMR
-# ::save-date
+# ::save-date Wed Oct 17, 2012 ::file wb_eng_0003_65.txt
 # ::tok EMR
-# ::alignments 0-1|1.1.1 * * * * *
+# ::alignments 0-1|0+0.0+0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.536
 (p / person
       :name (n / name :op1 "EMR"))
 
-# ::id wb.eng_0003.66
+# ::id wb.eng_0003.66 ::date 2012-10-17T07:36:42 ::annotator ISI-AMR-01 ::preferred
 # ::snt TMT said `` In Virginia , it 's to benefit private business plans and not to serve the public interest . ''
-# ::save-date
+# ::save-date Mon Nov 5, 2012 ::file wb_eng_0003_66.txt
 # ::tok TMT said " In Virginia , it 's to benefit private business plans and not to serve the public interest . "
-# ::alignments 0-1|1.1.1.1 13-14|1.2 6-7|1.2.1.1 9-10|1.2.1.2 11-12|1.2.1.2.1.1 10-11|1.2.1.2.1.1.1 16-17|1.2.2.2 19-20|1.2.2.2.1 18-19|1.2.2.2.1.1 4-5|1.2.3.1.1 * * * * *
+# ::alignments 0-1|0.0+0.0.0+0.0.0.0 4-5|0.1.2+0.1.2.0+0.1.2.0.0  1-2|0 13-14|0.1 16-17|0.1.1.1 19-20|0.1.1.1.0 18-19|0.1.1.1.0.0 6-7|0.1.0.0 9-10|0.1.0.1 12-13|0.1.0.1.0 11-12|0.1.0.1.0.0 10-11|0.1.0.1.0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.548
 (s2 / say-01
       :ARG0 (p2 / person
             :name (n / name :op1 "TMT"))
@@ -1099,11 +1041,11 @@
             :location (s3 / state
                   :name (n2 / name :op1 "Virginia"))))
 
-# ::id wb.eng_0003.67
+# ::id wb.eng_0003.67 ::date 2012-11-05T09:04:12 ::annotator ISI-AMR-01 ::preferred
 # ::snt I do n't see the point of this statement because it appears to demonize private business plans and put the public interest above all else .
-# ::save-date
+# ::save-date Mon Nov 5, 2012 ::file wb_eng_0003_67.txt
 # ::tok I do n't see the point of this statement because it appears to demonize private business plans and put the public interest above all else .
-# ::alignments 3-4|1 0-1|1.1 5-6|1.2 7-8|1.2.1.2 17-18|1.4.1.1 13-14|1.4.1.1.1 15-16|1.4.1.1.1.1.1 14-15|1.4.1.1.1.1.1.1 18-19|1.4.1.1.2 21-22|1.4.1.1.2.1 20-21|1.4.1.1.2.1.1 22-23|1.4.1.1.2.2 24-25|1.4.1.1.2.2.1 23-24|1.4.1.1.2.2.1.1 * * * * *
+# ::alignments 3-4|0 9-10|0.3 11-12|0.3.0 17-18|0.3.0.0 18-19|0.3.0.0.1 22-23|0.3.0.0.1.1 24-25|0.3.0.0.1.1.0 23-24|0.3.0.0.1.1.0.0 21-22|0.3.0.0.1.0 20-21|0.3.0.0.1.0.0 13-14|0.3.0.0.0 16-17|0.3.0.0.0.0 15-16|0.3.0.0.0.0.0 14-15|0.3.0.0.0.0.0.0 5-6|0.1 8-9|0.1.0+0.1.0.0 7-8|0.1.0.1 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.563
 (s / see-01
   :ARG0 (i / i)
   :ARG1 (p / point
@@ -1127,11 +1069,11 @@
                                             :op1 (e2 / else
                                                    :mod (a4 / all))))))))
 
-# ::id wb.eng_0003.68
+# ::id wb.eng_0003.68 ::date 2012-11-05T09:05:59 ::annotator ISI-AMR-01 ::preferred
 # ::snt I think they are so tightly intertwined that they are virtually one and the same .
-# ::save-date
+# ::save-date Mon Nov 12, 2012 ::file wb_eng_0003_68.txt
 # ::tok I think they are so tightly intertwined that they are virtually one and the same .
-# ::alignments 1-2|1 0-1|1.1 2-3|1.2.1 8-9|1.2.1 14-15|1.2.2.1 * * * * *
+# ::alignments 1-2|0 6-7|0.1 14-15|0.1.1.0 2-3|0.1.0 0-1|0.0 5-6|0.1.2 10-11|0.1.1.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.570
 (t / think-01
       :ARG0 (i / i)
       :ARG1 (i2 / intertwine-01
@@ -1142,11 +1084,11 @@
                         :mod (v / virtual)))
             :manner (t3 / tight)))
 
-# ::id wb.eng_0003.69
+# ::id wb.eng_0003.69 ::date 2012-11-11T20:00:04 ::annotator ISI-AMR-01 ::preferred
 # ::snt Obviously there are local problems because this cookie dough is lumpy ,
-# ::save-date
+# ::save-date Mon Nov 12, 2012 ::file wb_eng_0003_69.txt
 # ::tok Obviously there are local problems because this cookie dough is lumpy ,
-# ::alignments 3-4|1.1.1 10-11|1.2.1 8-9|1.2.1.1 7-8|1.2.1.1.1 6-7|1.2.1.1.2 * * * * *
+# ::alignments 4-5|0.0 3-4|0.0.0 5-6|0.1 10-11|0.1.0 8-9|0.1.0.0 6-7|0.1.0.0.1 7-8|0.1.0.0.0 0-1|0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.577
 (o / obvious-41
       :ARG1 (p / problem
             :mod (l / local))
@@ -1156,11 +1098,11 @@
                         :mod (c2 / cookie)
                         :mod (t / this)))))
 
-# ::id wb.eng_0003.70
+# ::id wb.eng_0003.70 ::date 2012-11-11T20:02:52 ::annotator ISI-AMR-01 ::preferred
 # ::snt but in the aggregate if we demonize business long enough we will eventually find out we all work for the Devil .
-# ::save-date
+# ::save-date Thu Mar 13, 2014 ::file wb_eng_0003_70.txt
 # ::tok but in the aggregate if we demonize business long enough we will eventually find out we all work for the Devil .
-# ::alignments 13-14|1.1 5-6|1.1.1 10-11|1.1.1 15-16|1.1.1 17-18|1.1.2 5-6|1.1.2.1 10-11|1.1.2.1 15-16|1.1.2.1 16-17|1.1.2.1.1 20-21|1.1.2.2 3-4|1.1.4 6-7|1.1.5 7-8|1.1.5.1 8-9|1.1.5.2 9-10|1.1.5.2.1 * * * * *
+# ::alignments 0-1|0 13-14|0.0 6-7|0.0.4 8-9|0.0.4.1 9-10|0.0.4.1.0 7-8|0.0.4.0 3-4|0.0.3 17-18|0.0.1 20-21|0.0.1.1 5-6|0.0.1.0 16-17|0.0.1.0.0 10-11|0.0.0 12-13|0.0.2 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.588
 (c / contrast-01
       :ARG2 (f / find-01
             :ARG0 (w / we)
@@ -1176,11 +1118,11 @@
                   :duration (l / long
                         :mod (e2 / enough)))))
 
-# ::id wb.eng_0003.71
+# ::id wb.eng_0003.71 ::date 2012-11-11T20:10:18 ::annotator ISI-AMR-01 ::preferred
 # ::snt I do n't see there is any point in claiming as `` a solution '' a balance that is dynamic and ever changing in nature .
-# ::save-date
+# ::save-date Wed Nov 14, 2012 ::file wb_eng_0003_71.txt
 # ::tok I do n't see there is any point in claiming as " a solution " a balance that is dynamic and ever changing in nature .
-# ::alignments 3-4|1 0-1|1.2 16-17|1.3.1.1.1 24-25|1.3.1.1.1.1 19-20|1.3.1.1.1.1.1 21-22|1.3.1.1.1.1.2.1 * * * * *
+# ::alignments 3-4|0 9-10|0.2.0 16-17|0.2.0.0.0 24-25|0.2.0.0.0.0 22-23|0.2.0.0.0.0.1 21-22|0.2.0.0.0.0.1.0 19-20|0.2.0.0.0.0.0 0-1|0.1 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.600
 (s3 / see-01 :polarity -
       :ARG0 (i / i)
       :ARG1 (h / have-purpose-91
@@ -1192,11 +1134,11 @@
                                     :ARG1-of (c2 / change-01
                                           :time (e / ever))))))))
 
-# ::id wb.eng_0003.72
+# ::id wb.eng_0003.72 ::date 2012-11-11T20:20:40 ::annotator ISI-AMR-01 ::preferred
 # ::snt Even you see rail to Dulles as a positive because Dulles is a job center that promotes bi-directional demand on the rail .
-# ::save-date
+# ::save-date Wed Nov 14, 2012 ::file wb_eng_0003_72.txt
 # ::tok Even you see rail to Dulles as a positive because Dulles is a job center that promotes bi - directional demand on the rail .
-# ::alignments 2-3|1 1-2|1.1 0-1|1.1.1 3-4|1.2 23-24|1.2 5-6|1.2.1.1.1 10-11|1.2.1.1.1 8-9|1.3 14-15|1.4.1 13-14|1.4.1.1 20-21|1.4.1.2.1 3-4|1.4.1.2.1.1 23-24|1.4.1.2.1.1 * * * * *
+# ::alignments 5-6|0.1.0+0.1.0.0+0.1.0.0.0 2-3|0 9-10|0.3 14-15|0.3.0 16-17|0.3.0.1 20-21|0.3.0.1.0 3-4|0.3.0.1.0.0 13-14|0.3.0.0 8-9|0.2 23-24|0.1 1-2|0.0 0-1|0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.619
 (s / see-01
       :ARG0 (y / you
             :mod (e / even))
@@ -1213,19 +1155,19 @@
                               :ARG1 (r2 / rail)
                               :mod (b / bi-directional))))))
 
-# ::id wb.eng_0003.73
+# ::id wb.eng_0003.73 ::date 2012-11-11T20:21:00 ::annotator ISI-AMR-01 ::preferred
 # ::snt I agree .
-# ::save-date
+# ::save-date Sun Nov 11, 2012 ::file wb_eng_0003_73.txt
 # ::tok I agree .
-# ::alignments 1-2|1 0-1|1.1 * * * * *
+# ::alignments 1-2|0 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.623
 (a / agree-01
       :ARG0 (i / i))
 
-# ::id wb.eng_0003.74
+# ::id wb.eng_0003.74 ::date 2012-11-12T18:31:47 ::annotator ISI-AMR-01 ::preferred
 # ::snt In fact that may be sufficient reason to build it , all by itself .
-# ::save-date
+# ::save-date Fri Apr 19, 2013 ::file wb_eng_0003_74.txt
 # ::tok In fact that may be sufficient reason to build it , all by itself .
-# ::alignments 6-7|1.2.1 8-9|1.2.1.1 9-10|1.2.1.1.1 2-3|1.2.1.2 9-10|1.2.1.2.1 11-12|1.2.1.2.1.1 * * * * *
+# ::alignments 3-4|0 6-7|0.1.0 2-3|0.1.0.1 9-10|0.1.0.1.0 11-12|0.1.0.1.0.0 8-9|0.1.0.0 5-6|0.1 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.634
 (p / possible
       :mod (i2 / in-fact)
       :domain (s / suffice-01
@@ -1236,11 +1178,11 @@
                         :prep-by (i3 / it
                               :mod (a2 / all))))))
 
-# ::id wb.eng_0003.75
+# ::id wb.eng_0003.75 ::date 2012-11-12T18:40:31 ::annotator ISI-AMR-01 ::preferred
 # ::snt All I 'm saying is that the exact same logic should apply to roads :
-# ::save-date
+# ::save-date Wed Nov 14, 2012 ::file wb_eng_0003_75.txt
 # ::tok All I 'm saying is that the exact same logic should apply to roads :
-# ::alignments 1-2|1.1 11-12|1.2.1 9-10|1.2.1.1 8-9|1.2.1.1.1 7-8|1.2.1.1.1.1 0-1|1.3 * * * * *
+# ::alignments 3-4|0 0-1|0.2 10-11|0.1 11-12|0.1.0 13-14|0.1.0.1 9-10|0.1.0.0 8-9|0.1.0.0.0 7-8|0.1.0.0.0.0 1-2|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.645
 (s / say-01
       :ARG0 (i / i)
       :ARG1 (r / recommend-01
@@ -1252,11 +1194,11 @@
                   :ARG2 (r2 / road)))
       :mod (a2 / all))
 
-# ::id wb.eng_0003.76
+# ::id wb.eng_0003.76 ::date 2012-11-12T18:44:41 ::annotator ISI-AMR-01 ::preferred
 # ::snt they should have destinations at both ends in order that we get maximum use out of our investment :
-# ::save-date
+# ::save-date Wed Nov 14, 2012 ::file wb_eng_0003_76.txt
 # ::tok they should have destinations at both ends in order that we get maximum use out of our investment :
-# ::alignments 2-3|1.1 0-1|1.1.1 5-6|1.1.2.1.1 13-14|1.2 10-11|1.2.1 12-13|1.2.3 * * * * *
+# ::alignments 1-2|0 13-14|0.1 12-13|0.1.2 10-11|0.1.0 2-3|0.0 3-4|0.0.1 6-7|0.0.1.0 5-6|0.0.1.0.0 0-1|0.0.0 17-18|0.1.1+0.1.1.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.661
 (r / recommend-01
       :ARG1 (h / have-03
             :ARG0 (t / they)
@@ -1270,11 +1212,11 @@
                         :ARG0 w))
             :degree (m / maximum)))
 
-# ::id wb.eng_0003.77
+# ::id wb.eng_0003.77 ::date 2012-11-12T18:48:53 ::annotator ISI-AMR-01 ::preferred
 # ::snt we need more places in order to get closer to the balance you say we need .
-# ::save-date
+# ::save-date Wed Apr 24, 2013 ::file wb_eng_0003_77.txt
 # ::tok we need more places in order to get closer to the balance you say we need .
-# ::alignments 1-2|1 15-16|1 0-1|1.1 14-15|1.1 2-3|1.2.1 7-8|1.3 11-12|1.3.1.1 1-2|1.3.1.1.1 15-16|1.3.1.1.1 13-14|1.3.1.1.1.1 12-13|1.3.1.1.1.1.1 2-3|1.3.1.2 * * * * *
+# ::alignments 1-2|0 7-8|0.2 8-9|0.2.0 2-3|0.2.0.1 11-12|0.2.0.0 15-16|0.2.0.0.0 13-14|0.2.0.0.0.0 12-13|0.2.0.0.0.0.0 3-4|0.1 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.674
 (n / need-01
       :ARG0 (w / we)
       :ARG1 (p / place
@@ -1290,20 +1232,20 @@
                                     :ARG0 (y / you))))
                   :degree (m2 / more))))
 
-# ::id wb.eng_0003.78
+# ::id wb.eng_0003.78 ::date 2012-11-13T13:38:04 ::annotator ISI-AMR-01 ::preferred
 # ::snt Reality check here -
-# ::save-date
+# ::save-date Mon Dec 3, 2012 ::file wb_eng_0003_78.txt
 # ::tok Reality check here -
-# ::alignments 1-2|1 0-1|1.1 2-3|1.2 * * * * *
+# ::alignments 1-2|0 2-3|0.1 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.678
 (c / check-01
       :ARG2 (r / reality)
       :location (h / here))
 
-# ::id wb.eng_0003.79
+# ::id wb.eng_0003.79 ::date 2012-11-25T17:15:01 ::annotator ISI-AMR-01 ::preferred
 # ::snt I drive past Watkins Landing every morning and evening .
-# ::save-date
+# ::save-date Mon Sep 9, 2013 ::file wb_eng_0003_79.txt
 # ::tok I drive past Watkins Landing every morning and evening .
-# ::alignments 1-2|1 0-1|1.1 2-3|1.2 3-4|1.2.1.1.1 4-5|1.2.1.1.2 7-8|1.3.1 6-7|1.3.1.1.1 8-9|1.3.1.2.1 * * * * *
+# ::alignments 3-5|0.1.0+0.1.0.0+0.1.0.0.0+0.1.0.0.1 1-2|0 7-8|0.2.0 8-9|0.2.0.1.0 6-7|0.2.0.0.0 2-3|0.1 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.690
 (d / drive-01
       :ARG0 (i / i)
       :path (p / past
@@ -1316,11 +1258,11 @@
                   :op2 (d3 / date-entity
                         :dayperiod (e / evening)))))
 
-# ::id wb.eng_0003.80
+# ::id wb.eng_0003.80 ::date 2012-11-25T17:19:40 ::annotator ISI-AMR-01 ::preferred
 # ::snt I commute back and forth to work on the Huguenot Trail .
-# ::save-date
+# ::save-date Wed Dec 5, 2012 ::file wb_eng_0003_80.txt
 # ::tok I commute back and forth to work on the Huguenot Trail .
-# ::alignments 1-2|1 0-1|1.1 6-7|1.2 3-4|1.3 2-3|1.3.1 4-5|1.3.2 9-10|1.4.1.1 10-11|1.4.1.2 * * * * *
+# ::alignments 9-11|0.3+0.3.0+0.3.0.0+0.3.0.1 1-2|0 3-4|0.2 4-5|0.2.1 2-3|0.2.0 6-7|0.1 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.700
 (c / commute-01
       :ARG0 (i / i)
       :ARG2 (w / work)
@@ -1330,11 +1272,11 @@
       :path (r / road
             :name (h / name :op1 "Huguenot" :op2 "Trail")))
 
-# ::id wb.eng_0003.81
+# ::id wb.eng_0003.81 ::date 2012-11-25T17:27:41 ::annotator ISI-AMR-01 ::preferred
 # ::snt I 've never seen anything remotely resembling a `` flood '' of traffic .
-# ::save-date
+# ::save-date Wed Dec 5, 2012 ::file wb_eng_0003_81.txt
 # ::tok I 've never seen anything remotely resembling a " flood " of traffic .
-# ::alignments 0-1|1.2 4-5|1.3 9-10|1.3.1.1 12-13|1.3.1.1.1 * * * * *
+# ::alignments 3-4|0 4-5|0.2 6-7|0.2.0 9-10|0.2.0.0 12-13|0.2.0.0.0 0-1|0.1 5-6|0.2.0.1 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.711
 (s / see-01 :polarity -
       :ARG0 (i / i)
       :ARG1 (a / anything
@@ -1344,11 +1286,11 @@
                   :degree (r2 / remote)))
       :time (e / ever))
 
-# ::id wb.eng_0003.82
+# ::id wb.eng_0003.82 ::date 2012-12-10T08:20:45 ::annotator ISI-AMR-01 ::preferred
 # ::snt It 's a 55 mph zone - 75 to 100 cars in `` a morning '' - over how much time ?
-# ::save-date
+# ::save-date Fri Sep 13, 2013 ::file wb_eng_0003_82.txt
 # ::tok It 's a 55 mph zone - 75 to 100 cars in " a morning " - over how much time ?
-# ::alignments 5-6|1 0-1|1.1 3-4|1.2.1 4-5|1.2.2 7-8|1.3.1.1.1 9-10|1.3.1.1.2 14-15|1.3.1.2 * * * * *
+# ::alignments 5-6|0 10-11|0.2 7-8|0.2.0.0.0 9-10|0.2.0.0.1 14-15|0.2.0.1 3-4|0.1.0 4-5|0.1+0.1.1 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.724
 (z / zone-01
       :ARG1 (i / it)
       :ARG2 (s / speed-quantity :quant 55
@@ -1359,11 +1301,11 @@
                   :ARG2 (m2 / morning
                         :duration (a3 / amr-unknown)))))
 
-# ::id wb.eng_0003.83
+# ::id wb.eng_0003.83 ::date 2012-12-10T08:23:33 ::annotator ISI-AMR-01 ::preferred
 # ::snt The Huguenot Trail road widening was already planned , due to the heavy demands of development on the Chesterfield side , the new schools , and a whole bunch of existing developments that were zoned years ago and at that time funneled through Robious Road .
-# ::save-date
+# ::save-date Tue Sep 24, 2013 ::file wb_eng_0003_83.txt
 # ::tok The Huguenot Trail road widening was already planned , due to the heavy demands of development on the Chesterfield side , the new schools , and a whole bunch of existing developments that were zoned years ago and at that time funneled through Robious Road .
-# ::alignments 3-4|1.1.1 44-45|1.1.1 1-2|1.1.1.1.1 2-3|1.1.1.1.2 6-7|1.2 25-26|1.3.1 37-38|1.3.1 19-20|1.3.1.1.1.1 18-19|1.3.1.1.1.1.1.1.1 12-13|1.3.1.1.2 22-23|1.3.1.2.1 28-29|1.3.1.3.2 27-28|1.3.1.3.2.1 3-4|1.3.1.3.5.1 44-45|1.3.1.3.5.1 43-44|1.3.1.3.5.1.1.1 3-4|1.3.1.3.5.1.1.2 44-45|1.3.1.3.5.1.1.2 * * * * *
+# ::alignments 1-3|0.0.0+0.0.0.0+0.0.0.0.0+0.0.0.0.1 18-19|0.2.0.0.0.0.0+0.2.0.0.0.0.0.0+0.2.0.0.0.0.0.0.0 43-45|0.2.0.2.4.0.0+0.2.0.2.4.0.0.0+0.2.0.2.4.0.0.1 7-8|0 25-26|0.2.0 28-29|0.2.0.2.1 27-28|0.2.0.2.1.0 30-31|0.2.0.2.2 34-35|0.2.0.2.3 35-36|0.2.0.2.3.0.1.0+0.2.0.2.3.0.1.0.1 41-42|0.2.0.2.4 3-4|0.2.0.2.4.0 23-24|0.2.0.1 22-23|0.2.0.1.0 13-14|0.2.0.0 12-13|0.2.0.0.1 19-20|0.2.0.0.0.0 6-7|0.1 4-5|0.0 15-16|0.2.0.2+0.2.0.2.0 31-32|0.2.0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.765
 (p / plan-01
       :ARG1 (w / widen-01
             :ARG1 (r2 / road
@@ -1395,34 +1337,11 @@
                                     :name (n3 / name :op1 "Robious" :op2 "Road"))
                               :time b2)))))
 
-# ::id wb.eng_0003.84
-# ::snt 288 , for those of us that actually use it , is wonderful - instead of Powhatan and Western Chesterfield being bottlenecked by lack of roads ,
-# ::save-date
-# ::tok 288 , for those of us that actually use it , is wonderful - instead of Powhatan and Western Chesterfield being bottlenecked by lack of roads ,
-# ::alignments 12-13|1 0-1|1.1.1.1 23-24|1.2.1 17-18|1.2.2 16-17|1.2.2.1.1.1 19-20|1.2.2.2.1.1.1 8-9|1.3.1 * * * * *
-(w2 / wonderful
-      :domain (r / road
-            :name (x / name :op1 288))
-      :prep-instead-of (b / bottleneck-01
-            :ARG0 (l / lack-01
-                  :ARG0 a
-                  :ARG1 (r2 / road))
-            :ARG1 (a / and
-                  :op1 (c / county
-                        :name (p / name :op1 "Powhatan"))
-                  :op2 (w4 / west
-                        :part-of (c2 / county
-                              :name (w / name :op1 "Chesterfield")))))
-      :beneficiary (w3 / we
-            :ARG0-of (u / use-01
-                  :ARG1 r
-                  :mod (a2 / actual))))
-
-# ::id wb.eng_0003.85
+# ::id wb.eng_0003.85 ::date 2012-12-10T09:53:43 ::annotator ISI-AMR-01 ::preferred
 # ::snt we can actually get some commercial development and have the ability to work closer to where we live .
-# ::save-date
+# ::save-date Mon Mar 25, 2013 ::file wb_eng_0003_85.txt
 # ::tok we can actually get some commercial development and have the ability to work closer to where we live .
-# ::alignments 7-8|1 0-1|1.1.1.1 16-17|1.1.1.1 12-13|1.2.1 17-18|1.2.1.1.1 * * * * *
+# ::alignments 7-8|0 1-2|0.1 12-13|0.1.0 13-14|0.1.0.0 17-18|0.1.0.0.0 0-1|0.0.0.0 6-7|0.0.0 5-6|0.0.0.1 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.787
 (a / and
       :op1 (p / possible
             :domain (d / develop-02
@@ -1436,11 +1355,11 @@
                               :ARG0 w2)
                         :degree (m / more)))))
 
-# ::id wb.eng_0003.86
+# ::id wb.eng_0003.86 ::date 2012-11-28 ::annotator ISI-AMR-01 ::preferred
 # ::snt You may think that 's not rational land use .
-# ::save-date
+# ::save-date Wed Dec 12, 2012 ::file wb_eng_0003_86.txt
 # ::tok You may think that 's not rational land use .
-# ::alignments 2-3|1.1 0-1|1.1.1 8-9|1.1.2 7-8|1.1.2.1 6-7|1.1.2.2 3-4|1.1.2.3 * * * * *
+# ::alignments  1-2|0 2-3|0.0 8-9|0.0.1 3-4|0.0.1.2 6-7|0.0.1.1 7-8|0.0.1.0 0-1|0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.792
 (p / possible
       :domain (x4 / think-01
             :ARG0 (x5 / you)
@@ -1449,11 +1368,11 @@
                   :manner (r / rational :polarity -)
                   :domain (t / that))))
 
-# ::id wb.eng_0003.87
+# ::id wb.eng_0003.87 ::date 2012-12-10T08:39:06 ::annotator ISI-AMR-01 ::preferred
 # ::snt I have no desire to live in any city ,
-# ::save-date
+# ::save-date Wed Dec 19, 2012 ::file wb_eng_0003_87.txt
 # ::tok I have no desire to live in any city ,
-# ::alignments 3-4|1 0-1|1.1 5-6|1.2 8-9|1.2.1 7-8|1.2.1.1 * * * * *
+# ::alignments 2-3|0.2 3-4|0 5-6|0.1 8-9|0.1.0 7-8|0.1.0.0 0-1|0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.797
 (d / desire-01
   :ARG0 (i / i)
   :ARG1 (l / live-01
@@ -1462,11 +1381,11 @@
                       :mod (a / any)))
   :polarity -)
 
-# ::id wb.eng_0003.88
+# ::id wb.eng_0003.88 ::date 2012-12-10T08:39:48 ::annotator ISI-AMR-01 ::preferred
 # ::snt I will not work in a downtown area ,
-# ::save-date
+# ::save-date Wed Dec 19, 2012 ::file wb_eng_0003_88.txt
 # ::tok I will not work in a downtown area ,
-# ::alignments 0-1|1.1 3-4|1.2 0-1|1.2.1 7-8|1.2.2 6-7|1.2.2.1 * * * * *
+# ::alignments 3-4|0.0 7-8|0.0.1 6-7|0.0.1.0 0-1|0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.803
 (r / refuse-01
   :ARG0 i
   :ARG1 (w / work-01
@@ -1474,32 +1393,11 @@
           :location (a / area
                       :mod (d / downtown))))
 
-# ::id wb.eng_0003.89
-# ::snt I will not use mass transit , which is not safe for female commuters that work long and irregular hours ,
-# ::save-date
-# ::tok I will not use mass transit , which is not safe for female commuters that work long and irregular hours ,
-# ::alignments 0-1|1.1 3-4|1.2 0-1|1.2.1 5-6|1.2.2 4-5|1.2.2.1 10-11|1.2.2.2 12-13|1.2.2.2.1 15-16|1.2.2.2.1.2 16-17|1.2.2.2.1.2.2 * * * * *
-(r2 / refuse-01
-  :ARG0 i
-  :ARG1 (u / use-01
-          :ARG0 (i / i)
-          :ARG1 (t / transit
-                  :mod (m / mass)
-                  :ARG3-of (s / safe-41
-                             :ARG1 (f / female
-                                     :ARG0-of (c / commute-01)
-                                     :ARG0-of (w / work-01
-                                                :time (h / hour
-                                                        :mod (r / regular
-                                                               :polarity -))
-                                                :duration (l / long)))
-                             :polarity -))))
-
-# ::id wb.eng_0003.90
+# ::id wb.eng_0003.90 ::date 2012-12-10T08:43:30 ::annotator ISI-AMR-01 ::preferred
 # ::snt and I happen to LIKE large lot development .
-# ::save-date
+# ::save-date Wed Dec 19, 2012 ::file wb_eng_0003_90.txt
 # ::tok and I happen to LIKE large lot development .
-# ::alignments 0-1|1 2-3|1.1 4-5|1.1.1 1-2|1.1.1.1 6-7|1.1.1.2.1 5-6|1.1.1.2.1.1 * * * * *
+# ::alignments 0-1|0 2-3|0.0 4-5|0.0.0 6-7|0.0.0.1.0 5-6|0.0.0.1.0.0 1-2|0.0.0.0 7-8|0.0.0.1 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.820
 (a / and
   :op2 (h / happen-02
          :ARG1 (l / like-01
@@ -1508,31 +1406,11 @@
                          :ARG1 (l2 / lot
                                  :mod (l3 / large))))))
 
-# ::id wb.eng_0003.91
-# ::snt How exactly I 'm supposed to keep horses on a 1/4 acre lot is beyond me .
-# ::save-date
-# ::tok How exactly I 'm supposed to keep horses on a 1/4 acre lot is beyond me .
-# ::alignments 2-3|1.1 6-7|1.2.1 2-3|1.2.1.1 12-13|1.2.1.3 11-12|1.2.1.3.1.1 * * * * *
-(u / understand-01
-  :ARG0 i
-  :ARG1 (t / thing
-          :manner-of (k / keep-01
-                       :ARG0 (i / i)
-                       :ARG1 (h / horse)
-                       :location (l / lot
-                                   :mod (a / area-quantity
-                                          :unit (a2 / acre)
-                                          :quant 0.25))
-                       :ARG2-of (s / suppose-02
-                                  :ARG1 i))
-          :mod (e / exact))
-  :polarity -)
-
-# ::id wb.eng_0003.92
+# ::id wb.eng_0003.92 ::date 2012-12-19T09:10:18 ::annotator ISI-AMR-01 ::preferred
 # ::snt Gas could go to $ 10 a gallon
-# ::save-date
+# ::save-date Tue Mar 26, 2013 ::file wb_eng_0003_92.txt
 # ::tok Gas could go to $ 10 a gallon
-# ::alignments 2-3|1.1 0-1|1.1.1.1.1 7-8|1.1.1.1.1.1.2 5-6|1.1.2.1 * * * * *
+# ::alignments 1-2|0 2-3|0.0 5-6|0.0.1.0 0-1|0.0.0.0.0 7-8|0.0.0.0.0.0+0.0.0.0.0.0.1 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.836
 (p / possible
       :domain (g / go-01
             :ARG1 (t / thing
@@ -1543,11 +1421,11 @@
             :ARG4 (m2 / monetary-quantity :quant 10
                   :unit (d2 / dollar))))
 
-# ::id wb.eng_0003.93
+# ::id wb.eng_0003.93 ::date 2012-12-16T21:01:57 ::annotator ISI-AMR-01 ::preferred
 # ::snt and I 'd still pay to live in the country .
-# ::save-date
+# ::save-date Sun Dec 16, 2012 ::file wb_eng_0003_93.txt
 # ::tok and I 'd still pay to live in the country .
-# ::alignments 0-1|1 4-5|1.1 1-2|1.1.1 6-7|1.1.2 9-10|1.1.2.1 3-4|1.1.3 * * * * *
+# ::alignments 0-1|0 4-5|0.0 3-4|0.0.2 6-7|0.0.1 9-10|0.0.1.0 1-2|0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.842
 (a / and
       :op2 (p / pay-01
             :ARG0 (i / i)
@@ -1556,11 +1434,11 @@
                   :location (c / country))
             :mod (s / still)))
 
-# ::id wb.eng_0003.94
+# ::id wb.eng_0003.94 ::date 2012-09-27T07:43:12 ::annotator ISI-AMR-01 ::preferred
 # ::snt Many people have legitimate preferences - horses , hunting , gardening , certain types of small business - that makes them NOT want to live in an urban core .
-# ::save-date
+# ::save-date Mon Mar 25, 2013 ::file wb_eng_0003_94.txt
 # ::tok Many people have legitimate preferences - horses , hunting , gardening , certain types of small business - that makes them NOT want to live in an urban core .
-# ::alignments 0-1|1.1.1 16-17|1.2.4 15-16|1.2.4.1 12-13|1.2.4.2.1 3-4|1.3 22-23|1.4.1 5-6|1.4.1.1 17-18|1.4.1.1 24-25|1.4.1.2 28-29|1.4.1.2.1 27-28|1.4.1.2.1.1 * * * * *
+# ::alignments 0-1|0.0+0.0.0 6-7|0.1.0 8-9|0.1.1 10-11|0.1.2 16-17|0.1.3 13-14|0.1.3.1 12-13|0.1.3.1.0 15-16|0.1.3.0 3-4|0.2 19-20|0.3 22-23|0.3.0 24-25|0.3.0.1 28-29|0.3.0.1.0 27-28|0.3.0.1.0.0 4-5|0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.859
 (p / prefer-01
       :ARG0 (p2 / person
             :quant (m / many))
@@ -1580,11 +1458,11 @@
                         :location (c3 / core
                               :mod (u / urban))))))
 
-# ::id wb.eng_0003.95
+# ::id wb.eng_0003.95 ::date 2012-12-07T21:50:19 ::annotator ISI-AMR-01 ::preferred
 # ::snt This infatuation with city living truly baffles me .
-# ::save-date
+# ::save-date Mon Mar 25, 2013 ::file wb_eng_0003_95.txt
 # ::tok This infatuation with city living truly baffles me .
-# ::alignments 1-2|1.1 3-4|1.1.1.1 0-1|1.1.2 * * * * *
+# ::alignments 6-7|0 1-2|0.0 0-1|0.0.1 4-5|0.0.0 3-4|0.0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.863
 (b / baffle-01
       :ARG0 (i / infatuation
             :topic (l / live-01
@@ -1593,11 +1471,11 @@
       :ARG1 (i2 / i)
       :mod (t2 / true))
 
-# ::id wb.eng_0003.96
+# ::id wb.eng_0003.96 ::date 2012-09-27T08:17:46 ::annotator ISI-AMR-01 ::preferred
 # ::snt Anonymous 6:37 , You have every right to live in the country if that 's where you wish to live .
-# ::save-date
+# ::save-date Mon Mar 25, 2013 ::file wb_eng_0003_96.txt
 # ::tok Anonymous 6:37 , You have every right to live in the country if that 's where you wish to live .
-# ::alignments 8-9|1.1.1 19-20|1.1.1 11-12|1.1.1.2 5-6|1.1.3 17-18|1.1.4 0-1|1.2.1.1 1-2|1.2.1.2 * * * * *
+# ::alignments 0-2|0.1+0.1.0+0.1.0.0+0.1.0.1 8-9|0.0.0 11-12|0.0.0.0 5-6|0.0.1 17-18|0.0.2 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.870
 (s / say-01
       :ARG1 (e / entitle-01
             :ARG1 (l / live-01
@@ -1611,11 +1489,11 @@
       :ARG2 (p / person
             :name (n / name :op1 "Anonymous" :op2 "6:37")))
 
-# ::id wb.eng_0003.97
+# ::id wb.eng_0003.97 ::date 2012-09-27T08:26:08 ::annotator ISI-AMR-01 ::preferred
 # ::snt But you do n't have a right to have the rest of the state to underwrite construction of a $ 400 million highway to make it easier to shop and get to work .
-# ::save-date
+# ::save-date Tue Mar 26, 2013 ::file wb_eng_0003_97.txt
 # ::tok But you do n't have a right to have the rest of the state to underwrite construction of a $ 400 million highway to make it easier to shop and get to work .
-# ::alignments 15-16|1.1.2 10-11|1.1.2.1 13-14|1.1.2.1.1 22-23|1.1.2.2.1 29-30|1.1.2.2.2.1 28-29|1.1.2.2.2.1.1 30-31|1.1.2.2.2.1.2 32-33|1.1.2.2.2.1.2.1 1-2|1.1.3 * * * * *
+# ::alignments 0-1|0 15-16|0.0.1 22-23|0.0.1.1.0 29-30|0.0.1.1.1.0 30-31|0.0.1.1.1.0.1 32-33|0.0.1.1.1.0.1.0 28-29|0.0.1.1.1.0.0 10-11|0.0.1.0 13-14|0.0.1.0.0 1-2|0.0.2 16-17|0.0.1.1 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.881
 (c2 / contrast-01
       :ARG2 (e2 / entitle-01 :polarity -
             :ARG1 (u / underwrite-01
@@ -1633,11 +1511,11 @@
                                           :ARG2 (w / work))))))
             :ARG2 (y / you)))
 
-# ::id wb.eng_0003.98
+# ::id wb.eng_0003.98 ::date 2012-10-01T10:41:27 ::annotator ISI-AMR-01 ::preferred
 # ::snt What 's consistently overlooked in the debate ovre 288 is what else that $ 400 million could have been spent on .
-# ::save-date
+# ::save-date Mon Mar 25, 2013 ::file wb_eng_0003_98.txt
 # ::tok What 's consistently overlooked in the debate ovre 288 is what else that $ 400 million could have been spent on .
-# ::alignments 6-7|1.3 8-9|1.3.1.1.1 * * * * *
+# ::alignments 8-9|0.2.0+0.2.0.0+0.2.0.0.0 3-4|0 6-7|0.2 19-20|0.0+0.0.1 16-17|0.0.1.1 2-3|0.1 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.889
 (o / overlook-01
       :ARG1 (t / thing
             :mod (o2 / other)
@@ -1650,11 +1528,11 @@
             :ARG1 (r / road
                   :name (n / name :op1 288))))
 
-# ::id wb.eng_0003.99
+# ::id wb.eng_0003.99 ::date 2012-10-01T11:29:44 ::annotator ISI-AMR-01 ::preferred
 # ::snt How much traffic congestion could have been alleviated had the money been applied to other pressing road projects or , god forbid , even non-road projects .
-# ::save-date
+# ::save-date Mon Mar 25, 2013 ::file wb_eng_0003_99.txt
 # ::tok How much traffic congestion could have been alleviated had the money been applied to other pressing road projects or , god forbid , even non - road projects .
-# ::alignments 2-3|1.1.1.1 1-2|1.1.1.2 10-11|1.2.1 18-19|1.2.2 16-17|1.2.2.1.1 26-27|1.2.2.1.1 14-15|1.2.2.1.3 16-17|1.2.2.2.1 26-27|1.2.2.2.1 25-26|1.2.2.2.1.1 23-24|1.2.2.2.2 21-22|1.2.2.2.3 20-21|1.2.2.2.3.2 * * * * *
+# ::alignments  4-5|0 12-13|0.1 18-19|0.1.1 17-18|0.1.1.1 21-22|0.1.1.1.2 20-21|0.1.1.1.2.1 23-24|0.1.1.1.1 16-17|0.1.1.1.0 27-28|0.1.1.0 14-15|0.1.1.0.2 15-16|0.1.1.0.1 26-27|0.1.1.0.0 10-11|0.1.0 7-8|0.0 2-3|0.0.0.0 1-2|0.0.0.1 3-4|0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.899
 (p / possible
       :domain (a / alleviate-01
             :ARG1 (c / congest-01
@@ -1673,42 +1551,4 @@
                         :ARG1-of (f / forbid-01 :mode imperative
                               :ARG0 (g / god))))))
 
-# ::id wb.eng_0003.100
-# ::snt Ray Hyde - My comments were directed at investors who lobby to place roads near where they own property and the incompetent system that funds these requests without regard to their link or lack thereof to a master transportation plan .
-# ::save-date
-# ::tok Ray Hyde - My comments were directed at investors who lobby to place roads near where they own property and the incompetent system that funds these requests without regard to their link or lack thereof to a master transportation plan .
-# ::alignments 19-20|1.2.2 10-11|1.2.2.1.2 12-13|1.2.2.1.2.1 14-15|1.2.2.1.2.1.2 17-18|1.2.2.1.2.1.2.1 18-19|1.2.2.1.2.1.2.1.1 22-23|1.2.2.2 2-3|1.2.2.2.1.1 28-29|1.2.2.2.2.2 2-3|1.2.2.2.2.2.1 32-33|1.2.2.2.2.2.2 31-32|1.2.2.2.2.2.2.1 39-40|1.2.2.2.2.2.2.1.1 37-38|1.2.2.2.2.2.2.1.1.2 33-34|1.2.2.2.2.2.2.2 0-1|1.3.1.1 1-2|1.3.1.2 * * * * *
-(s2 / say-01
-      :ARG0 i2
-      :ARG1 (d / direct-01
-            :ARG1 (t3 / thing
-                  :ARG1-of (c / comment-02
-                        :ARG0 (i2 / i)))
-            :ARG2 (a / and
-                  :op1 (p2 / person
-                        :ARG0-of (i / invest-01)
-                        :ARG0-of (l / lobby-01
-                              :ARG1 (p3 / place-01
-                                    :ARG1 (r / road)
-                                    :ARG2 (n2 / near
-                                          :op1 (o / own-01
-                                                :ARG0 p2
-                                                :ARG1 (p4 / property))))))
-                  :op2 (s / system
-                        :ARG1-of (c2 / competent-41 :polarity -)
-                        :ARG0-of (f / fund-01
-                              :ARG1 (t5 / thing
-                                    :ARG1-of (r2 / request-01)
-                                    :mod (t / this))
-                              :manner (r3 / regard-01 :polarity -
-                                    :ARG1 (o2 / or
-                                          :op1 (l2 / link-01
-                                                :ARG1 t5
-                                                :ARG1 (p5 / plan-01
-                                                      :ARG1 (t2 / transport-01)
-                                                      :mod (m / master)))
-                                          :op2 (l3 / lack-01
-                                                :ARG1 l2)))))))
-      :ARG2 (p / person
-            :name (n / name :op1 "Ray" :op2 "Hyde")))
 

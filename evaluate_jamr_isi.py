@@ -1,10 +1,11 @@
 #!/usr/bin/python
 
-from my_amr_parser import parse_amr
-from my_amr_parser import get_node_by_address
-from my_amr_parser import printStuff
-from my_amr_parser import print_amr
-from my_amr_parser import isReent
+#from Node_class import parse_amr
+#from Node_class import get_node_by_address
+#from Node_class import printStuff
+#from Node_class import print_amr
+#from Node_class import isReent
+from AMR_class import read_corpus_file
 import numpy as np;
 import operator;
 import os;
@@ -20,11 +21,16 @@ FP_dict = {};
 FN_dict = {};
 Aligned_reentrancies = 0;
 reent_aligned_tokens = []
+FP_ordering = 0;
 
 def get_concept_name(c):
-	c1 = c.split('/');
-	if len(c1) > 1: return c1[1][1:];
-	return c
+	cl = c.split('/');
+	if len(cl) > 1: c = cl[1][1:];
+	else: c = cl[0];
+	if c[0] == '"': c = c[1:-1];
+	c = re.sub('\-[0-9]+$','',c);
+	
+	return c.lower();
 
 def count_dict_insert(d,k):
 	if k in d:
@@ -51,28 +57,42 @@ def remove_leading_spaces(s):
 def preprocess(corp,true):
 	
 	#Extract '::tok','::alignments' and the AMR from corp file into tuples
+
+	AMR_objects = read_corpus_file(corp);
+	#print len(AMR_objects);
 	newcorp = [];
-	snt = []
-	amr_lines = False;
-	amr = '';
-	for line in corp:
-		if amr_lines == True:
-			if line == "\n": #End of AMR
-				snt.append(amr[1:]);		#Add the AMR string to current tuple
-				newcorp.append(snt);	#Add the current tuple to list
-				snt = [];
-				amr = '';
-				amr_lines = False;
-				continue;
-			else: amr = amr + ' ' + remove_leading_spaces(line[:-1]);		
-		else:
-			if re.match('# ::tok.*',line):	#Tokens 
-				line = line.split();
-				snt.append(line[2:]);	
-			elif re.match('# ::align.*',line):	#Alignment
-				line = line.split();
-				snt.append(line[2:-5]);		
-				amr_lines = True;				#Next line is an AMR line
+
+	for obj in AMR_objects:
+		tok = obj.getTokens();		#list of tokens
+		#print tok
+		alignments = obj.getAlignments();	#Alignment string
+		alignments = alignments.split();
+		#print alignments
+		#print
+		amr = obj;		#AMR class object
+		newcorp.append((tok,alignments,amr));
+
+#	snt = []
+#	amr_lines = False;
+#	amr = '';
+#	for line in corp:
+#		if amr_lines == True:
+#			if line == "\n": #End of AMR
+#				snt.append(amr[1:]);		#Add the AMR string to current tuple
+#				newcorp.append(snt);	#Add the current tuple to list
+#				snt = [];
+#				amr = '';
+#				amr_lines = False;
+#				continue;
+#			else: amr = amr + ' ' + remove_leading_spaces(line[:-1]);		
+#		else:
+#			if re.match('# ::tok.*',line):	#Tokens 
+#				line = line.split();
+#				snt.append(line[2:]);	
+#			elif re.match('# ::align.*',line):	#Alignment
+#				line = line.split();
+#				snt.append(line[2:-5]);		
+#				amr_lines = True;				#Next line is an AMR line
 		
 
 	#Extract '::alignments' from true file
@@ -82,7 +102,8 @@ def preprocess(corp,true):
 		line = line[:-1].split();
 		line = line[2:];
 		newtrue.append(line);
-
+	
+	#print len(newcorp), len(newtrue);
 	return (newcorp,newtrue);
 
 def correct_node_indices(s):
@@ -95,7 +116,7 @@ def correct_node_indices(s):
 	
 	return news;
 
-def isAlignmentCorrect(jamr_nodes,true_nodes,token,amr): 	
+def isAlignmentCorrect(jamr_nodes,true_nodes,token,amr_obj): 
 	
 	#print jamr_nodes;
 	#for nodes in true_nodes:
@@ -108,19 +129,23 @@ def isAlignmentCorrect(jamr_nodes,true_nodes,token,amr):
 	global reent_aligned_tokens
 	for truenode in true_nodes:
 		for jamrnode in jamr_nodes:
-			#print truenode, jamrnode
-			if truenode == jamrnode: 
+			#print truenode, jamrnode;
+			newtruenode = amr_obj.convertISItoJAMR(truenode);
+			#print newtruenode;
+			#print
+			if truenode == jamrnode or newtruenode == jamrnode: 
+			#if truenode == jamrnode: 
 				correct = correct + 1;
 				#print "True"
 			else:
 				incorrect = incorrect + 1;
 				#print amr;
-				#print jamrnode;
-				cj =  get_node_by_address(amr,jamrnode,1);
-				#print cj;
+				#print jamrnode,
+				cj =  amr_obj.getNodeByAddress(jamrnode,1);
 				#print truenode;
-				ct =  get_node_by_address(amr,truenode,0);
-				
+				ct =  amr_obj.getNodeByAddress(truenode,0);
+				global FP_ordering;
+				if get_concept_name(cj) == get_concept_name(ct): FP_ordering = FP_ordering + 1;
 			#	r = isReent(amr,truenode);
 			#	if r!= False:
 			#		reent_aligned_tokens.append((token,r));
@@ -128,14 +153,14 @@ def isAlignmentCorrect(jamr_nodes,true_nodes,token,amr):
 					
 				#print ct;
 			#	print
-			#	#print
+				print
 				jamr_concept = get_concept_name(cj)
 				true_concept = get_concept_name(ct)
 				FP_examples.append((token,jamr_concept,true_concept));
 				FP_dict = count_dict_insert(FP_dict,jamr_concept);
-				if jamr_concept in FP_dict:
-					FP_dict[jamr_concept] = FP_dict[jamr_concept] + 1;
-				else: FP_dict[jamr_concept] = 1;
+			#	if jamr_concept in FP_dict:
+			#		FP_dict[jamr_concept] = FP_dict[jamr_concept] + 1;
+			#	else: FP_dict[jamr_concept] = 1;
 			#	#print "False"
 	
 	return (correct,incorrect);
@@ -154,12 +179,12 @@ def populate_bin_arrays(jamr_alignment,true_alignment,toklist):
 	one_to_many = 0;
 	total_alignments_jamr = len(jamr_alignment);
 	many_to_many = 0;
-
 	for alignment in true_alignment:
 		t = alignment.split('-');	
 		tok = int(t[0]);				#token number
 		node = t[1];					#aligned to
 		true[tok] = 1;					#mark gold token as aligned
+		#print tok
 		#print t[1]+"___";
 		global roletoknum;
 		if node[-1] == 'r':			#if role token, mark as role but don't count in score. Instead add token and it's alignment to a dictionary used to keep track
@@ -180,8 +205,9 @@ def populate_bin_arrays(jamr_alignment,true_alignment,toklist):
 	for elt in true_nodes:
 		if len(elt) > 0: total_aligned_tokens_isi += 1;
 		if len(elt) > 1: one_to_many += 1;	
-
+	
 	for alignment in jamr_alignment:
+		#print alignment
 		t = alignment.split('|');
 		#nodes = correct_node_indices(t[1]);
 		nodes = t[1];
@@ -196,7 +222,7 @@ def populate_bin_arrays(jamr_alignment,true_alignment,toklist):
 
 	return (jamr, true, jamr_nodes,true_nodes, (total_aligned_tokens_isi, one_to_many, total_alignments_jamr, many_to_many));	
 
-def evaluate(bin_arrays,toklist,amr):
+def evaluate(bin_arrays,toklist,amr_obj):
 
 	jamr = bin_arrays[0];
 	true = bin_arrays[1];
@@ -215,43 +241,46 @@ def evaluate(bin_arrays,toklist,amr):
 	FP = 0;
 	
 	#print amr;
-	amr_obj = parse_amr(amr);
+	#amr_obj = parse_amr(amr);
 	#print_amr(amr_obj);
 	#print;
 	#print "######";
 	#amr_obj = [];
 	#printStuff(amr_obj);
-
+	#print amr_obj.AMR_string_printable;
+	#print
 	for i in range(0,len(aligned_and_shouldve)):
 		if aligned_and_shouldve[i]:
 			#print toklist[i], jamr_nodes[i]
 			(correct,incorrect) = isAlignmentCorrect(jamr_nodes[i],true_nodes[i],toklist[i],amr_obj);  
 			TP = TP + correct;
 			FP = FP + incorrect;
-	#print
+	print
 	not_aligned_but_shouldve = np.logical_not(jamr) & true; #True Negative
 	not_aligned_and_shouldntve = np.logical_not(jamr | true); #False negative
 
 	global FN_dict;
 	global FN_examples;
 
-#	for i in range(0,len(not_aligned_but_shouldve)):
-#		if not_aligned_but_shouldve[i]:	
-#			token = toklist[i];
-#			for addr in true_nodes[i]:
-#				tconcept = get_node_by_address(amr_obj,addr,0);
-#				t = tconcept.split('/');
-#				if len(t) > 1: tconcept = t[1][1:];
-#			
-#				if tconcept in FN_examples:
-#					if token in FN_examples[tconcept]:
-#						FN_examples[tconcept][token] = FN_examples[tconcept][token] + 1;
-#					else: FN_examples[tconcept][token] = 1;
-#				else: FN_examples[tconcept] = {};
-#
-#				if tconcept in FN_dict:
-#					FN_dict[tconcept] = FN_dict[tconcept] + 1;
-#				else: FN_dict[tconcept] = 1;
+	for i in range(0,len(not_aligned_but_shouldve)):
+		if not_aligned_but_shouldve[i]:	
+			token = toklist[i];
+			for addr in true_nodes[i]:
+				tconcept = amr_obj.getNodeByAddress(addr,0);
+				#t = tconcept.split('/');
+				#if len(t) > 1: tconcept = t[1][1:];
+				tconcept = get_concept_name(tconcept);
+			
+				if tconcept in FN_examples:
+					if token in FN_examples[tconcept]:
+						FN_examples[tconcept][token] = FN_examples[tconcept][token] + 1;
+					else: FN_examples[tconcept][token] = 1;
+				else: FN_examples[tconcept] = {};
+				
+				FN_dict = count_dict_insert(FN_dict,tconcept);
+			#	if tconcept in FN_dict:
+			#		FN_dict[tconcept] = FN_dict[tconcept] + 1;
+			#	else: FN_dict[tconcept] = 1;
 
 	TN = sum(not_aligned_but_shouldve);
 	FN = sum(not_aligned_and_shouldntve);
@@ -272,18 +301,18 @@ def main():
 	FN = 0;
 
 	#Read JAMR output file
-	f=open(sys.argv[1]);
-	dir=os.path.basename(sys.argv[1]);
-	clines = f.readlines();
-	f.close();
+#	f=open(sys.argv[1]);
+#	dir=os.path.basename(sys.argv[1]);
+#	clines = f.readlines();
+#	f.close();
 
 	#Read true alignment file
 	f=open(sys.argv[2]);
 	tlines = f.readlines();
 	f.close();
 
-	t = preprocess(clines,tlines);	
-	corp = t[0];	#List of (tokens,alignments,amr) triplets for each sentence
+	t = preprocess(sys.argv[1],tlines);	
+	corp = t[0];	#List of (tokens,alignments,amr_obj) triplets for each sentence
 	true = t[1];	#List of true alignments for each sentence
 	N = len(t[0]);  #Number of sentences
 	total_tokens = 0;
@@ -297,13 +326,13 @@ def main():
 	for i in range(0,N):
 	
 		toklist = corp[i][0];
-		amr = corp[i][2];
+		amr_obj = corp[i][2];
 		#if len(amr) == 0: print toklist
 		total_tokens = total_tokens + len(toklist);
 		jamr_alignments = corp[i][1];
 		true_alignments = true[i];
 		bin_arrays = populate_bin_arrays(jamr_alignments,true_alignments,toklist);
-		stats = evaluate(bin_arrays,toklist,amr);
+		stats = evaluate(bin_arrays,toklist,amr_obj);
 		many_stats = bin_arrays[4];		
 #		tot_isi += many_stats[0];
 #		one_to_many += many_stats[1];
@@ -334,13 +363,17 @@ def main():
 #	print Aligned_reentrancies	
 #	print reent_aligned_tokens
 #	print;
-	for ex in FP_examples:
-		print ex[0],"	",ex[1],"	",ex[2]
+#	for ex in FP_examples:
+#		print ex[0],"	",ex[1],"	",ex[2]
 	
 
 	
 main();
-#FN_d = threshold_dict(FN_dict,3);
+#FP_d = threshold_dict(FP_dict,1);
+#print len(FP_examples), FP_ordering;
+#print len(FP_d);
+#for item in FP_d:
+#	print item[0], item[1]
 #print "Token	JAMR alignment	ISI alignment";
 #for elt in FP_examples:
 #	print "#####"
@@ -350,8 +383,10 @@ main();
 #	for item in d:
 #		print item[1],item[0]
 #	print
-#print FN_d
-#for item in FN_d:
+FN_d = threshold_dict(FN_dict,1);
+for item in FN_d:
+	print item[1], item[0];
+#for item in FN_examples:
 #	print "#####";
 #	print item[0];
 #	print item[1];
