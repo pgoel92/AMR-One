@@ -1,9 +1,10 @@
 class node():
 
-	def __init__(self, val, edge_ptrs,edge_ptrs_nr,edge_names):
+	def __init__(self, val, edge_ptrs,edge_ptrs_nr,edge_name):
 		self.value = val;				#value of current node
+		self.edge_name = edge_name;		#name of the edge pointing to this node
 		self.edge_ptrs = edge_ptrs;		#list of child node objects
-		self.edge_names = edge_names;	#list of edge names for each child node edge
+		#self.edge_names = edge_names;	#list of edge names for each child node edge
 		self.reent = [];				#binary list indicating whether edge is a re-entrancy
 		self.edge_ptrs_nr = edge_ptrs_nr;		#list of child node objects excluding ones that are re-entrancies
 		self.aligned_to = -1;			#token number of the token this node is aligned to. -1 if the node is unaligned.
@@ -11,8 +12,8 @@ class node():
 	def setValue(self,val):
 		self.value = val;
 
-	def addEdge(self,name,ptr,reent):
-		self.edge_names.append(name);
+	def addEdge(self,ptr,reent):
+		#self.edge_names.append(name);
 		self.edge_ptrs.append(ptr);
 		self.edge_ptrs_nr.append(ptr);
 		self.reent.append(reent);
@@ -51,7 +52,7 @@ class node():
 		for i in range(0,len(self.edge_ptrs)):
 			child = self.edge_ptrs[i];
 			#print self.edge_names[i],child.value
-			s = s + '\n' + tabs + ':' + self.edge_names[i] + ' ';
+			s = s + '\n' + tabs + ':' + child.edge_name + ' ';
 			#print s;
 			if self.reent[i] == 0:
 				s = child.generatePrintableAMR(s,tabs + '\t');
@@ -101,7 +102,7 @@ class node():
 				if jamr_addr == 1: return self.edge_ptrs_nr[childnum].getValue();
 				#print childnum;
 				return self.edge_ptrs[childnum].getValue();
-			else: return self.edge_names[childnum-1];
+			else: return self.edge_ptrs[childnum-1].edge_name;
 		else:					
 			if len(self.edge_ptrs) == 0: return "Node does not exist";
 			elif childnum > len(self.edge_ptrs): return "Node does not exist";	
@@ -120,7 +121,7 @@ class node():
 				#print childnum;
 				if jamr_addr == 1: return self.edge_ptrs_nr[childnum];
 				return self.edge_ptrs[childnum];
-			else: return self.edge_names[childnum-1];
+			else: return self.edge_ptrs[childnum-1].edge_name;
 		else:					
 			if len(self.edge_ptrs) == 0: return "Node does not exist";
 			elif childnum > len(self.edge_ptrs): return "Node does not exist";	
@@ -161,9 +162,9 @@ def increment(amrstr,i):
 	if i==len(amrstr)-1: return ('EOF',i);
 	return (amrstr[i+1],i+1);
 
-def parse(amrstr,i,varlist):
+def parse(amrstr,i,varlist,edgename):
 
-	root = node("",[],[],[]);				#Create root node
+	root = node("",[],[],edgename);				#Create root node
 	#print len(amrstr),i	
 	cur = amrstr[i];					
 	nodeval = '';
@@ -202,7 +203,7 @@ def parse(amrstr,i,varlist):
 		i = i+1;						#Read space after edge name
 		cur = amrstr[i];	
 		if cur == '(':					#If edge points another AMR i.e subtree
-			(edgeptr,i) = parse(amrstr,i+1,varlist);	#Recurse on the nested AMR and save a pointer to it in my current root
+			(edgeptr,i) = parse(amrstr,i+1,varlist,edgename);	#Recurse on the nested AMR and save a pointer to it in my current root
 			reent = 0;
 			cur = amrstr[i];
 		else:							#If edge points to a leaf node
@@ -216,8 +217,8 @@ def parse(amrstr,i,varlist):
 				reent = 1;
 				edgeptr = varlist[leafnodeval];	#Re route re-entrancy to the original node
 
-			else: edgeptr = node(leafnodeval,[],[],[]);	#Store pointer to leaf node
-		root.addEdge(edgename,edgeptr,reent);		#Add new edge to current root
+			else: edgeptr = node(leafnodeval,[],[],edgename);	#Store pointer to leaf node
+		root.addEdge(edgeptr,reent);		#Add new edge to current root
 		#print "New edge added"
 		#(cur,i) = increment(amrstr,i);
 		if cur == ' ': 					#Current root has another child node
@@ -235,7 +236,7 @@ def parse(amrstr,i,varlist):
 def parse_amr(amr):
 
 		
-	(r,i) = parse(amr,1,{});
+	(r,i) = parse(amr,1,{},'');
 	r.adjustIndices();
 	return r;
 

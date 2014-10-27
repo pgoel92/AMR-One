@@ -41,7 +41,7 @@ class AMR:
 				self.date = ID_line[i];
 			if(prev_token == '::annotator'):
 				self.annotator = ID_line[i];
-
+	
 		self.AMR_tree = parse_amr(self.AMR_string_parsable);		
 		self.AMR_tree_aligned = self.AMR_tree;
 		self.AMR_dict[self.ID] = [self.AMR_string_printable, self.AMR_tree];	#Ideally, we should be able to generate the printable string from the tree. 
@@ -82,7 +82,7 @@ class AMR:
 			s = s + ' ' + str(i) + '-' + self.tokens[i];
 		s = s + '\n';
 		s = s + '# ::alignments ' + ' '.join(self.alignments) + ' * * * * *\n';
-		s = s + self.AMR_string_printable;
+		s = s + self.AMR_aligned_string_printable;
 		s = s + '\n';
 		
 		return s;
