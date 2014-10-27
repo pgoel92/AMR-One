@@ -113,51 +113,84 @@ def correct_node_indices(s):
 
 def isAlignmentCorrect(jamr_nodes,true_nodes,token,amr_obj): 
 	
-	#print jamr_nodes;
-	#for nodes in true_nodes:
-	#	if len(nodes) > 1: print nodes;
 	correct = 0;
 	incorrect = 0;
 	global FP_dict;
 	global FP_examples;
-	global Aligned_reentrancies
-	global reent_aligned_tokens
-	for truenode in true_nodes:
-		for jamrnode in jamr_nodes:
-			#print truenode, jamrnode;
+#	global Aligned_reentrancies
+#	global reent_aligned_tokens
+
+#	newtruenodes = [];
+#	for truenode in true_nodes:
+#		newtruenode = amr_obj.convertISItoJAMR(truenode);
+#		newtruenodes.append(newtruenode);	
+
+	for jamrnode in jamr_nodes:
+		#if jamrnode in newtruenodes: 
+		for truenode in true_nodes:
 			newtruenode = amr_obj.convertISItoJAMR(truenode);
-			#print newtruenode;
-			#print
-			if truenode == jamrnode or newtruenode == jamrnode: 
-			#if truenode == jamrnode: 
-				correct = correct + 1;
-				#print "True"
+			if truenode == jamrnode or jamrnode == newtruenode: correct = correct + 1
 			else:
 				incorrect = incorrect + 1;
-				#print amr;
-				#print jamrnode,
 				cj =  amr_obj.getNodeByAddress(jamrnode,1);
-				#print truenode;
 				ct =  amr_obj.getNodeByAddress(truenode,0);
-				global FP_ordering;
-				if get_concept_name(cj) == get_concept_name(ct): FP_ordering = FP_ordering + 1;
+				#global FP_ordering;
+				#if get_concept_name(cj) == get_concept_name(ct): FP_ordering = FP_ordering + 1;
 			#	r = isReent(amr,truenode);
 			#	if r!= False:
 			#		reent_aligned_tokens.append((token,r));
 			#		Aligned_reentrancies = Aligned_reentrancies + 1;
 					
-				#print ct;
-			#	print
-				#print
 				jamr_concept = get_concept_name(cj)
 				true_concept = get_concept_name(ct)
-				FP_examples.append((token,jamr_concept,true_concept));
+				#FP_examples.append((token,jamr_concept,true_concept));
+				#print "#######"
+				#print token, jamr_concept
+				#print jamr_nodes, newtruenodes
 				FP_dict = count_dict_insert(FP_dict,jamr_concept);
 			#	if jamr_concept in FP_dict:
 			#		FP_dict[jamr_concept] = FP_dict[jamr_concept] + 1;
 			#	else: FP_dict[jamr_concept] = 1;
-			#	#print "False"
 	
+	return (correct,incorrect);
+
+def isAlignmentCorrect2(jamr_nodes,true_nodes,token,amr_obj): 
+	
+	correct = 0;
+	incorrect = 0;
+	global FP_dict;
+	global FP_examples;
+
+	newtruenodes = [];
+	for truenode in true_nodes:
+		newtruenode = amr_obj.convertISItoJAMR(truenode);
+		newtruenodes.append(newtruenode);	
+
+	for jamrnode in jamr_nodes:
+		if jamrnode in newtruenodes: 
+		#for truenode in true_nodes:
+			#newtruenode = amr_obj.convertISItoJAMR(truenode);
+			#if truenode == jamrnode or jamrnode == newtruenode: correct = correct + 1
+			correct = correct + 1;
+		else:
+			incorrect = incorrect + 1;
+			cj =  amr_obj.getNodeByAddress(jamrnode,1);
+			jamr_concept = get_concept_name(cj)
+			#FP_examples.append((token,jamr_concept,true_concept));
+			#print "#######"
+			#print token, jamr_concept
+			#print jamr_nodes, newtruenodes
+			FP_dict = count_dict_insert(FP_dict,jamr_concept);
+		#	if jamr_concept in FP_dict:
+		#		FP_dict[jamr_concept] = FP_dict[jamr_concept] + 1;
+		#	else: FP_dict[jamr_concept] = 1;
+
+#	FN = 0;
+#	if len(newtruenodes) > 1:			#If one-to-many alignment, count FNs
+#		for truenode in newtruenodes:
+#			if truenode not in jamr_nodes:
+#				FN = FN + 1;	
+
 	return (correct,incorrect);
 
 def populate_bin_arrays(jamr_alignment,true_alignment,toklist):		
@@ -178,7 +211,7 @@ def populate_bin_arrays(jamr_alignment,true_alignment,toklist):
 		t = alignment.split('-');	
 		tok = int(t[0]);				#token number
 		node = t[1];					#aligned to
-		true[tok] = 1;					#mark gold token as aligned
+		#true[tok] = 1;					#mark gold token as aligned
 		#print tok
 		#print t[1]+"___";
 		global roletoknum;
@@ -195,7 +228,9 @@ def populate_bin_arrays(jamr_alignment,true_alignment,toklist):
 			#else:
 				#role_dict[token].append(role);
 
-		else: true_nodes[tok].append(node);
+		else: 
+			true[tok] = 1;
+			true_nodes[tok].append(node);
 	
 	for elt in true_nodes:
 		if len(elt) > 0: total_aligned_tokens_isi += 1;
@@ -234,18 +269,18 @@ def evaluate(bin_arrays,toklist,amr_obj):
 	
 	TP = 0;
 	FP = 0;
-	
-	#print amr;
-	#amr_obj = parse_amr(amr);
-	#print_amr(amr_obj);
-	#print;
-	#print "######";
-	#amr_obj = [];
-	#printStuff(amr_obj);
+	FN = 0;
+
+#	print amr_obj.ID;
+#	print amr_obj.tokens;	
+#	print amr_obj.alignments;
+#	print amr_obj.AMR_string_printable;
+#	print;
+
 	for i in range(0,len(aligned_and_shouldve)):
 		if aligned_and_shouldve[i]:
 			#print toklist[i], jamr_nodes[i]
-			(correct,incorrect) = isAlignmentCorrect(jamr_nodes[i],true_nodes[i],toklist[i],amr_obj);  
+			(correct,incorrect) = isAlignmentCorrect2(jamr_nodes[i],true_nodes[i],toklist[i],amr_obj);  
 			TP = TP + correct;
 			FP = FP + incorrect;
 	#print
@@ -258,6 +293,7 @@ def evaluate(bin_arrays,toklist,amr_obj):
 	for i in range(0,len(not_aligned_but_shouldve)):
 		if not_aligned_but_shouldve[i]:	
 			token = toklist[i];
+			#if len(true_nodes[i]) == 0: print true_nodes[i];
 			for addr in true_nodes[i]:
 				tconcept = amr_obj.getNodeByAddress(addr,0);
 				#t = tconcept.split('/');
@@ -271,12 +307,14 @@ def evaluate(bin_arrays,toklist,amr_obj):
 				else: FN_examples[tconcept] = {};
 				
 				FN_dict = count_dict_insert(FN_dict,tconcept);
+			#	print "##"
+			#	print token, tconcept
 			#	if tconcept in FN_dict:
 			#		FN_dict[tconcept] = FN_dict[tconcept] + 1;
 			#	else: FN_dict[tconcept] = 1;
 
-	TN = sum(not_aligned_but_shouldve);
-	FN = sum(not_aligned_and_shouldntve);
+	FN = sum(not_aligned_but_shouldve);
+	TN = sum(not_aligned_and_shouldntve);
 
 	#print TP,FP,TN,FN	
 	#print true & jamr & correct;
@@ -342,11 +380,13 @@ def main():
 	#r = threshold_dict(roledic,0);	
 	#nr = threshold_dict(nonroledic,0);
 	Precision = float(TP*100)/(TP+FP);	
-	Recall = float(TP*100)/(TP+TN);
+	Recall = float(TP*100)/(TP+FN);
 	print "Precision : ",Precision;
 	print "Recall : ",Recall;
-	print "False Positivs : ",FP;
+	print
+	print "False Positives : ",FP;
 	print "False Negatives : ",FN;
+	print
 #	print
 #	print "One to many alignments : ",(one_to_many/float(tot_isi))*100,"percent";
 #	print "Many to many alignments : ",(many_to_many/float(tot_jamr))*100,"percent";
@@ -371,15 +411,15 @@ main();
 #	print item[0], item[1]
 #print "Token	JAMR alignment	ISI alignment";
 #for elt in FP_examples:
-#	print "#####"
-#	print "(",elt[0],",",elt[1],",",elt[2],")"
-#	print
+	#print "#####"
+	#print "(",elt[0],",",elt[1],",",elt[2],")"
+	#print
 #	d=threshold_dict(FN_examples[elt[0]],0);
 #	for item in d:
 #		print item[1],item[0]
 #	print
-FN_d = threshold_dict(FN_dict,1);
-for item in FN_d:
+d = threshold_dict(FN_dict,1);
+for item in d:
 	print item[1], item[0];
 #for item in FN_examples:
 #	print "#####";

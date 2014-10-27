@@ -178,7 +178,7 @@ def populate_bin_arrays(jamr_alignment,true_alignment,toklist):
 		t = alignment.split('-');	
 		tok = int(t[0]);				#token number
 		node = t[1];					#aligned to
-		true[tok] = 1;					#mark gold token as aligned
+		#true[tok] = 1;					#mark gold token as aligned
 		#print tok
 		#print t[1]+"___";
 		global roletoknum;
@@ -195,7 +195,9 @@ def populate_bin_arrays(jamr_alignment,true_alignment,toklist):
 			#else:
 				#role_dict[token].append(role);
 
-		else: true_nodes[tok].append(node);
+		else: 
+			true[tok] = 1;
+			true_nodes[tok].append(node);
 	
 	for elt in true_nodes:
 		if len(elt) > 0: total_aligned_tokens_isi += 1;
@@ -258,6 +260,7 @@ def evaluate(bin_arrays,toklist,amr_obj):
 	for i in range(0,len(not_aligned_but_shouldve)):
 		if not_aligned_but_shouldve[i]:	
 			token = toklist[i];
+			#if len(true_nodes[i]) == 0: print true_nodes[i];
 			for addr in true_nodes[i]:
 				tconcept = amr_obj.getNodeByAddress(addr,0);
 				#t = tconcept.split('/');
@@ -275,8 +278,8 @@ def evaluate(bin_arrays,toklist,amr_obj):
 			#		FN_dict[tconcept] = FN_dict[tconcept] + 1;
 			#	else: FN_dict[tconcept] = 1;
 
-	TN = sum(not_aligned_but_shouldve);
-	FN = sum(not_aligned_and_shouldntve);
+	FN = sum(not_aligned_but_shouldve);
+	TN = sum(not_aligned_and_shouldntve);
 
 	#print TP,FP,TN,FN	
 	#print true & jamr & correct;
@@ -342,10 +345,10 @@ def main():
 	#r = threshold_dict(roledic,0);	
 	#nr = threshold_dict(nonroledic,0);
 	Precision = float(TP*100)/(TP+FP);	
-	Recall = float(TP*100)/(TP+TN);
+	Recall = float(TP*100)/(TP+FN);
 	print "Precision : ",Precision;
 	print "Recall : ",Recall;
-	print "False Positivs : ",FP;
+	print "False Positives : ",FP;
 	print "False Negatives : ",FN;
 #	print
 #	print "One to many alignments : ",(one_to_many/float(tot_isi))*100,"percent";

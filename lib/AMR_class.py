@@ -115,8 +115,7 @@ class AMR:
 
 	def convertISItoJAMR(self,address):
 		
-		if address == '1':
-			return (self.AMR_tree).getValue();
+		if address == '1': return '1';
 		return (self.AMR_tree).ISItoJAMR(address[2:],'1');
 		
 	def getConcepts(self):

@@ -5,7 +5,8 @@ class node():
 		self.edge_ptrs = edge_ptrs;		#list of child node objects
 		self.edge_names = edge_names;	#list of edge names for each child node edge
 		self.reent = [];				#binary list indicating whether edge is a re-entrancy
-		self.edge_ptrs_nr = edge_ptrs_nr;#list of child node objects excluding ones that are re-entrancies
+		self.edge_ptrs_nr = edge_ptrs_nr;		#list of child node objects excluding ones that are re-entrancies
+		self.aligned_to = -1;			#token number of the token this node is aligned to. -1 if the node is unaligned.
 
 	def setValue(self,val):
 		self.value = val;
@@ -30,8 +31,8 @@ class node():
 		if len(v) > 1: c = v[1][1:];
 		else: 
 			c = v[0];
-			if c[0] == '"':
-				c = c[1:-1];
+			#if c[0] == '"':
+			#	c = c[1:-1];
 		concepts.append((c,index));	
 		
 		if len(self.edge_ptrs) == 0: return concepts;

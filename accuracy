@@ -1,7 +1,0 @@
-				Precision	Recall
-dev	 role 		73.3 		25.8
-dev	 non-role 	84.0 		83.1
-dev	 all		82.9 		68.9
-test role 		68.5 		9.5
-test non-role 	78.8 		77.3
-test all 		78.4 		61.3
