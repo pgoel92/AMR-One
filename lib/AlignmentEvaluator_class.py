@@ -115,6 +115,29 @@ class AlignmentEvaluator:
 		#if len(true_alignments) != (len(self.true_tokens) + self.role_count): print "Error";
 		#if len(true_alignments) != (len(self.true_addr) + self.role_count): print "Error";
 
+	def evaluate(self):
+	
+		test_alignments = [];	
+		true_alignments = [];	
+		for i in range(0,len(self.test_tokens)):
+			test_alignments.append((self.test_tokens)[i] + '-' + (self.test_addr)[i]);
+		for i in range(0,len(self.true_tokens)):
+			true_alignments.append((self.true_tokens)[i] + '-' + (self.true_addr)[i]);
+	
+		for elt in test_alignments:
+			if elt in true_alignments:			#True Positive
+				self.TP += 1;	
+			else: 								#False Positive
+				self.FP += 1;
+		
+		for elt in true_alignments:
+			if elt not in test_alignments:		#False Negative
+				self.FN += 1;	
+
+	def getStatistics(self):
+			
+		return (self.TP, self.FP, self.FN);
+
 	def print_alignments(self):
 	
 		for i in range(0,len(self.test_tokens)):

@@ -73,8 +73,9 @@ class AMR:
 	
 	def evaluate_alignments(self, true_str):
 	
-		print self.ID;
 		self.Evaluator.read(self.alignments, true_str, 0, self.AMR_tree);
+		self.Evaluator.evaluate();
+		return self.Evaluator.getStatistics();
 
 	def print_alignments(self):
 		

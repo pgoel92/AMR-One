@@ -30,14 +30,24 @@ def main():
 	if(len(AMR_objects) != len(true_alignments)): 
 		print "Error : Unequal number of Test and True alignments";
 		sys.exit(0);
-	
+
+	TP = 0;	
+	FP = 0;
+	FN = 0;
+
 	for i in range(0,len(AMR_objects)):
+
 		amrobj = AMR_objects[i];
 		true = true_alignments[i];
 		
-		amrobj.evaluate_alignments(true);
-		amrobj.print_alignments();
-		print;
+		(tp, fp, fn) = amrobj.evaluate_alignments(true);
+		TP = TP + tp;
+		FP = FP + fp;
+		FN = FN + fn;
+
+	Precision = (TP/float(TP+FP))*100;
+	Recall = (TP/float(TP+FN))*100;
+	print "Precision : ", Precision;
+	print "Recall : ", Recall;
 
 main();
-	
