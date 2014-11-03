@@ -60,7 +60,7 @@
 # ::snt A form of asbestos once used to make Kent cigarette filters has caused a high percentage of cancer deaths among a group of workers exposed to it more than 30 years ago , researchers reported .
 # ::save-date
 # ::tok 0-A 1-form 2-of 3-asbestos 4-once 5-used 6-to 7-make 8-Kent 9-cigarette 10-filters 11-has 12-caused 13-a 14-high 15-percentage 16-of 17-cancer 18-deaths 19-among 20-a 21-group 22-of 23-workers 24-exposed 25-to 26-it 27-more 28-than 29-30 30-years 31-ago 32-, 33-researchers 34-reported 35-.
-# ::alignments 34-35|1 33-34|1.1.1 33-34|1.1 12-13|1.2 3-4|1.2.1 1-2|1.2.1.1 5-6|1.2.1.2 7-8|1.2.1.2.1 10-11|1.2.1.2.1.1.1 9-10|1.2.1.2.1.1.2 8-9|1.2.1.2.1.1.2.1.1 4-5|1.2.1.2.2 14-15|1.2.2 15-16|1.2.2.1 17-18|1.2.2.1.1.1.1.1.1 24-25|1.2.2.1.1.2.2 29-30|1.2.2.1.1.2.2.1.2.1.1 30-31|1.2.2.1.1.2.2.1.2.1.2 * * * * *
+# ::alignments 34-35|1 33-34|1.1.1 33-34|1.1 12-13|1.2 3-4|1.2.1 1-2|1.2.1.1 5-6|1.2.1.2 7-8|1.2.1.2.1 10-11|1.2.1.2.1.1.1 9-10|1.2.1.2.1.1.2 8-9|1.2.1.2.1.1.2.1.1 4-5|1.2.1.2.2 14-15|1.2.2 15-16|1.2.2.1 17-18|1.2.2.1.1.1.1.1.1 23-24|1.2.2.1.1.2.1 24-25|1.2.2.1.1.2.2 29-30|1.2.2.1.1.2.2.1.2.1.1 30-31|1.2.2.1.1.2.2.1.2.1.2 23-24|1.2.2.1.1.2 * * * * *
 (r / report-01
       :ARG0 (p4 / person
             :ARG0-of (r2 / research-01))
@@ -95,7 +95,7 @@
 # ::snt The asbestos fiber , crocidolite , is unusually resilient once it enters the lungs , with even brief exposures to it causing symptoms that show up decades later , researchers said .
 # ::save-date
 # ::tok 0-The 1-asbestos 2-fiber 3-, 4-crocidolite 5-, 6-is 7-unusually 8-resilient 9-once 10-it 11-enters 12-the 13-lungs 14-, 15-with 16-even 17-brief 18-exposures 19-to 20-it 21-causing 22-symptoms 23-that 24-show 25-up 26-decades 27-later 28-, 29-researchers 30-said 31-.
-# ::alignments 29-30|1.1.1 29-30|1.1 8-9|1.2.1 4-5|1.2.1.2 2-3|1.2.1.2.1 1-2|1.2.1.2.1.1 11-12|1.2.1.3 13-14|1.2.1.3.1 21-22|1.2.2 17-18|1.2.2.1.1 16-17|1.2.2.1.1.1 22-23|1.2.2.2 24-25|1.2.2.2.1 26-27|1.2.2.2.1.1.1.1.1.2 * * * * *
+# ::alignments 30-31|1 29-30|1.1.1 29-30|1.1 8-9|1.2.1 4-5|1.2.1.2 2-3|1.2.1.2.1 1-2|1.2.1.2.1.1 11-12|1.2.1.3 13-14|1.2.1.3.1 21-22|1.2.2 17-18|1.2.2.1.1 16-17|1.2.2.1.1.1 22-23|1.2.2.2 24-25|1.2.2.2.1 27-28|1.2.2.2.1.1 26-27|1.2.2.2.1.1.1.1.1.2 * * * * *
 (s / say-01
       :ARG0 (p / person
             :ARG0-of (r / research-01))
@@ -151,7 +151,7 @@
 # ::snt Although preliminary findings were reported more than a year ago , the latest results appear in today 's New England Journal of Medicine , a forum likely to bring new attention to the problem .
 # ::save-date
 # ::tok 0-Although 1-preliminary 2-findings 3-were 4-reported 5-more 6-than 7-a 8-year 9-ago 10-, 11-the 12-latest 13-results 14-appear 15-in 16-today 17-'s 18-New 19-England 20-Journal 21-of 22-Medicine 23-, 24-a 25-forum 26-likely 27-to 28-bring 29-new 30-attention 31-to 32-the 33-problem 34-.
-# ::alignments 14-15|1 13-14|1.1.1 13-14|1.1 20-21|1.2 18-19|1.2.1.1 19-20|1.2.1.2 21-22|1.2.1.4 22-23|1.2.1.5 16-17|1.2.2 25-26|1.2.3 28-29|1.2.3.1 30-31|1.2.3.1.1 29-30|1.2.3.1.1.1 33-34|1.2.3.1.2 26-27|1.2.3.1.3 4-5|1.3 2-3|1.3.1.1 1-2|1.3.1.2 2-3|1.3.1 8-9|1.3.2.2.1.2 * * * * *
+# ::alignments 14-15|1 13-14|1.1.1 12-13|1.1.1.1 13-14|1.1 20-21|1.2 18-19|1.2.1.1 19-20|1.2.1.2 21-22|1.2.1.4 22-23|1.2.1.5 16-17|1.2.2 25-26|1.2.3 28-29|1.2.3.1 30-31|1.2.3.1.1 29-30|1.2.3.1.1.1 33-34|1.2.3.1.2 26-27|1.2.3.1.3 4-5|1.3 2-3|1.3.1.1 1-2|1.3.1.2 2-3|1.3.1 8-9|1.3.2.2.1.2 * * * * *
 (a / appear-01
       :ARG1 (t4 / thing
             :ARG2-of (r3 / result-01
@@ -180,7 +180,7 @@
 # ::snt A Lorillard spokewoman said , `` This is an old story .
 # ::save-date
 # ::tok 0-A 1-Lorillard 2-spokewoman 3-said 4-, 5-" 6-This 7-is 8-an 9-old 10-story 11-.
-# ::alignments 1-2|1.1.1.1.1.1 10-11|1.2 6-7|1.2.1 9-10|1.2.2 * * * * *
+# ::alignments 3-4|1 1-2|1.1.1.1.1.1 10-11|1.2 6-7|1.2.1 9-10|1.2.2 * * * * *
 (s / say-01
       :ARG0 (p / person
             :ARG0-of (h / have-org-role-91
@@ -228,7 +228,7 @@
 # ::snt `` We have no useful information on whether users are at risk , '' said James A. Talcott of Boston 's Dana - Farber Cancer Institute .
 # ::save-date
 # ::tok 0-" 1-We 2-have 3-no 4-useful 5-information 6-on 7-whether 8-users 9-are 10-at 11-risk 12-, 13-" 14-said 15-James 16-A. 17-Talcott 18-of 19-Boston 20-'s 21-Dana 22-- 23-Farber 24-Cancer 25-Institute 26-.
-# ::alignments 15-16|1.1.1.1 16-17|1.1.1.2 17-18|1.1.1.3 24-25|1.1.2.1.1.2 25-26|1.1.2.1.1.3 19-20|1.1.2.1.2.1.1 2-3|1.2 3-4|1.2.1 1-2|1.2.2 5-6|1.2.3 4-5|1.2.3.1.2.1 4-5|1.2.3.1.2 * * * * *
+# ::alignments 14-15|1 15-16|1.1.1.1 16-17|1.1.1.2 17-18|1.1.1.3 24-25|1.1.2.1.1.2 25-26|1.1.2.1.1.3 19-20|1.1.2.1.2.1.1 2-3|1.2 3-4|1.2.1 1-2|1.2.2 5-6|1.2.3 4-5|1.2.3.1.2.1 4-5|1.2.3.1.2 8-9|1.2.3.2 * * * * *
 (s / say-01
       :ARG0 (p / person
             :name (j / name :op1 "James" :op2 "A." :op3 "Talcott")
@@ -249,7 +249,7 @@
 # ::snt Dr. Talcott led a team of researchers from the National Cancer Institute and the medical schools of Harvard University and Boston University .
 # ::save-date
 # ::tok 0-Dr. 1-Talcott 2-led 3-a 4-team 5-of 6-researchers 7-from 8-the 9-National 10-Cancer 11-Institute 12-and 13-the 14-medical 15-schools 16-of 17-Harvard 18-University 19-and 20-Boston 21-University 22-.
-# ::alignments 1-2|1.1.1.1 4-5|1.2 6-7|1.2.1.1 6-7|1.2.1 12-13|1.2.2 9-10|1.2.2.1.1.1 10-11|1.2.2.1.1.2 11-12|1.2.2.1.1.3 15-16|1.2.2.2 18-19|1.2.2.2.2 17-18|1.2.2.2.2.1.1 21-22|1.2.2.2.2.1.2 20-21|1.2.2.3.2.1.1 * * * * *
+# ::alignments 2-3|1 1-2|1.1.1.1 4-5|1.2 6-7|1.2.1.1 6-7|1.2.1 12-13|1.2.2 9-10|1.2.2.1.1.1 10-11|1.2.2.1.1.2 11-12|1.2.2.1.1.3 15-16|1.2.2.2 18-19|1.2.2.2.2 17-18|1.2.2.2.2.1.1 21-22|1.2.2.2.2.1.2 20-21|1.2.2.3.2.1.1 * * * * *
 (l / lead-02
       :ARG0 (d / doctor
             :name (t / name :op1 "Talcott"))
@@ -272,7 +272,7 @@
 # ::snt The Lorillard spokeswoman said asbestos was used in `` very modest amounts '' in making paper for the filters in the early 1950s and replaced with a different type of filter in 1956 .
 # ::save-date
 # ::tok 0-The 1-Lorillard 2-spokeswoman 3-said 4-asbestos 5-was 6-used 7-in 8-" 9-very 10-modest 11-amounts 12-" 13-in 14-making 15-paper 16-for 17-the 18-filters 19-in 20-the 21-early 22-1950s 23-and 24-replaced 25-with 26-a 27-different 28-type 29-of 30-filter 31-in 32-1956 33-.
-# ::alignments 1-2|1.1.1.1.1.1 2-3|1.1.1.2 23-24|1.2 6-7|1.2.1 4-5|1.2.1.1 11-12|1.2.1.1.1 10-11|1.2.1.1.1.1 9-10|1.2.1.1.1.1.1 14-15|1.2.1.2 15-16|1.2.1.2.1 21-22|1.2.1.2.2 22-23|1.2.1.2.2.1.1 18-19|1.2.1.2.3.1 24-25|1.2.2 30-31|1.2.2.1.1 28-29|1.2.2.1.1.1 27-28|1.2.2.1.1.1.1 32-33|1.2.2.2.1 * * * * *
+# ::alignments 3-4|1 1-2|1.1.1.1.1.1 2-3|1.1.1.2 23-24|1.2 6-7|1.2.1 4-5|1.2.1.1 11-12|1.2.1.1.1 10-11|1.2.1.1.1.1 9-10|1.2.1.1.1.1.1 14-15|1.2.1.2 15-16|1.2.1.2.1 21-22|1.2.1.2.2 22-23|1.2.1.2.2.1.1 18-19|1.2.1.2.3.1 24-25|1.2.2 30-31|1.2.2.1.1 28-29|1.2.2.1.1.1 27-28|1.2.2.1.1.1.1 32-33|1.2.2.2.1 * * * * *
 (s / say-01
       :ARG0 (p4 / person
             :ARG0-of (h / have-org-role-91
@@ -303,7 +303,7 @@
 # ::snt From 1953 to 1955 , 9.8 billion Kent cigarettes with the filters were sold , the company said .
 # ::save-date
 # ::tok 0-From 1-1953 2-to 3-1955 4-, 5-9.8 6-billion 7-Kent 8-cigarettes 9-with 10-the 11-filters 12-were 13-sold 14-, 15-the 16-company 17-said 18-.
-# ::alignments 16-17|1.1 8-9|1.2.1 7-8|1.2.1.2.1 11-12|1.2.1.3.1 1-2|1.2.2.1.1 3-4|1.2.2.2.1 * * * * *
+# ::alignments 17-18|1 16-17|1.1 13-14|1.2 8-9|1.2.1 7-8|1.2.1.2.1 11-12|1.2.1.3.1 1-2|1.2.2.1.1 3-4|1.2.2.2.1 * * * * *
 (s / say-01
       :ARG0 (c / company)
       :ARG1 (s2 / sell-01
@@ -336,7 +336,7 @@
 # ::snt Four of the five surviving workers have asbestos - related diseases , including three with recently diagnosed cancer .
 # ::save-date
 # ::tok 0-Four 1-of 2-the 3-five 4-surviving 5-workers 6-have 7-asbestos 8-- 9-related 10-diseases 11-, 12-including 13-three 14-with 15-recently 16-diagnosed 17-cancer 18-.
-# ::alignments 6-7|1 12-13|1.1.2 4-5|1.1.2.1.3 16-17|1.1.3.1.2 17-18|1.1.3.1.2.1 15-16|1.1.3.1.2.2 16-17|1.1.3.1 12-13|1.1 10-11|1.2 9-10|1.2.1 7-8|1.2.1.1 * * * * *
+# ::alignments 6-7|1 12-13|1.1.2 5-6|1.1.2.1.2 4-5|1.1.2.1.3 5-6|1.1.2.1 16-17|1.1.3.1.2 17-18|1.1.3.1.2.1 15-16|1.1.3.1.2.2 16-17|1.1.3.1 12-13|1.1 10-11|1.2 9-10|1.2.1 7-8|1.2.1.1 * * * * *
 (h / have-03
       :ARG0 (p4 / person :quant 4
             :ARG1-of (i / include-91
@@ -356,7 +356,7 @@
 # ::snt The total of 18 deaths from malignant mesothelioma , lung cancer and asbestosis was far higher than expected , the researchers said .
 # ::save-date
 # ::tok 0-The 1-total 2-of 3-18 4-deaths 5-from 6-malignant 7-mesothelioma 8-, 9-lung 10-cancer 11-and 12-asbestosis 13-was 14-far 15-higher 16-than 17-expected 18-, 19-the 20-researchers 21-said 22-.
-# ::alignments 20-21|1.1.1 20-21|1.1 17-18|1.2.1.1 17-18|1.2.1 14-15|1.2.2.1 1-2|1.2.3 3-4|1.2.3.1.1 11-12|1.2.3.1.2.1.1 7-8|1.2.3.1.2.1.1.1 6-7|1.2.3.1.2.1.1.1.1 10-11|1.2.3.1.2.1.1.2 9-10|1.2.3.1.2.1.1.2.1 12-13|1.2.3.1.2.1.1.3 * * * * *
+# ::alignments 21-22|1 20-21|1.1.1 20-21|1.1 15-16|1.2 17-18|1.2.1.1 17-18|1.2.1 14-15|1.2.2.1 1-2|1.2.3 3-4|1.2.3.1.1 11-12|1.2.3.1.2.1.1 7-8|1.2.3.1.2.1.1.1 6-7|1.2.3.1.2.1.1.1.1 10-11|1.2.3.1.2.1.1.2 9-10|1.2.3.1.2.1.1.2.1 12-13|1.2.3.1.2.1.1.3 * * * * *
 (s / say-01
       :ARG0 (p / person
             :ARG0-of (r / research-01))
@@ -380,7 +380,7 @@
 # ::snt `` The morbidity rate is a striking finding among those of us who study asbestos - related diseases , '' said Dr. Talcott .
 # ::save-date
 # ::tok 0-" 1-The 2-morbidity 3-rate 4-is 5-a 6-striking 7-finding 8-among 9-those 10-of 11-us 12-who 13-study 14-asbestos 15-- 16-related 17-diseases 18-, 19-" 20-said 21-Dr. 22-Talcott 23-.
-# ::alignments 22-23|1.1.1.1 3-4|1.2 7-8|1.2.2 6-7|1.2.3 13-14|1.2.3.1.1 17-18|1.2.3.1.1.1 16-17|1.2.3.1.1.1.1 14-15|1.2.3.1.1.1.1.1 13-14|1.2.3.1 * * * * *
+# ::alignments 20-21|1 22-23|1.1.1.1 3-4|1.2 7-8|1.2.2 6-7|1.2.3 13-14|1.2.3.1.1 17-18|1.2.3.1.1.1 16-17|1.2.3.1.1.1.1 14-15|1.2.3.1.1.1.1.1 13-14|1.2.3.1 * * * * *
 (s / say-01
       :ARG0 (d2 / doctor
             :name (t / name :op1 "Talcott"))
@@ -400,7 +400,7 @@
 # ::snt The percentage of lung cancer deaths among the workers at the West Groton , Mass. , paper factory appears to be the highest for any asbestos workers studied in Western industrialized countries , he said .
 # ::save-date
 # ::tok 0-The 1-percentage 2-of 3-lung 4-cancer 5-deaths 6-among 7-the 8-workers 9-at 10-the 11-West 12-Groton 13-, 14-Mass. 15-, 16-paper 17-factory 18-appears 19-to 20-be 21-the 22-highest 23-for 24-any 25-asbestos 26-workers 27-studied 28-in 29-Western 30-industrialized 31-countries 32-, 33-he 34-said 35-.
-# ::alignments 33-34|1.1 18-19|1.2 25-26|1.2.1.2.1.1 27-28|1.2.1.2.2 31-32|1.2.1.2.3 30-31|1.2.1.2.3.1 11-12|1.2.1.2.3.2.1.1 24-25|1.2.1.2.4 1-2|1.2.1.3 4-5|1.2.1.3.1.1.1.1 3-4|1.2.1.3.1.1.1.1.1 17-18|1.2.1.3.1.2.1.1.1 16-17|1.2.1.3.1.2.1.1.1.1 12-13|1.2.1.3.1.2.1.1.1.2.1.2 * * * * *
+# ::alignments 34-35|1 33-34|1.1 18-19|1.2 22-23|1.2.1 8-9|1.2.1.2.1 25-26|1.2.1.2.1.1 27-28|1.2.1.2.2 31-32|1.2.1.2.3 30-31|1.2.1.2.3.1 11-12|1.2.1.2.3.2.1.1 24-25|1.2.1.2.4 8-9|1.2.1.2 1-2|1.2.1.3 4-5|1.2.1.3.1.1.1.1 3-4|1.2.1.3.1.1.1.1.1 26-27|1.2.1.3.1.2.1.1 17-18|1.2.1.3.1.2.1.1.1 16-17|1.2.1.3.1.2.1.1.1.1 12-13|1.2.1.3.1.2.1.1.1.2.1.2 26-27|1.2.1.3.1.2.1 * * * * *
 (s3 / say-01
       :ARG0 (h2 / he)
       :ARG1 (a3 / appear-02
@@ -453,7 +453,7 @@
 # ::snt The finding probably will support those who argue that the U.S. should regulate the class of asbestos including crocidolite more stringently than the common kind of asbestos , chrysotile , found in most schools and other buildings , Dr. Talcott said .
 # ::save-date
 # ::tok 0-The 1-finding 2-probably 3-will 4-support 5-those 6-who 7-argue 8-that 9-the 10-U.S. 11-should 12-regulate 13-the 14-class 15-of 16-asbestos 17-including 18-crocidolite 19-more 20-stringently 21-than 22-the 23-common 24-kind 25-of 26-asbestos 27-, 28-chrysotile 29-, 30-found 31-in 32-most 33-schools 34-and 35-other 36-buildings 37-, 38-Dr. 39-Talcott 40-said 41-.
-# ::alignments 39-40|1.1.1.1 2-3|1.2 4-5|1.2.1 1-2|1.2.1.1.1 1-2|1.2.1.1 7-8|1.2.1.2.1 12-13|1.2.1.2.1.1.1 10-11|1.2.1.2.1.1.1.1.1.1 16-17|1.2.1.2.1.1.1.2 17-18|1.2.1.2.1.1.1.2.1 18-19|1.2.1.2.1.1.1.2.1.1 14-15|1.2.1.2.1.1.1.2.2 20-21|1.2.1.2.1.1.1.3 19-20|1.2.1.2.1.1.1.3.1 28-29|1.2.1.2.1.1.1.3.2 34-35|1.2.1.2.1.1.1.3.2.1.1 33-34|1.2.1.2.1.1.1.3.2.1.1.1 32-33|1.2.1.2.1.1.1.3.2.1.1.1.1 36-37|1.2.1.2.1.1.1.3.2.1.1.2 35-36|1.2.1.2.1.1.1.3.2.1.1.2.1 26-27|1.2.1.2.1.1.1.3.2.2 23-24|1.2.1.2.1.1.1.3.2.2.1 24-25|1.2.1.2.1.1.1.3.2.2.2 7-8|1.2.1.2 * * * * *
+# ::alignments 40-41|1 39-40|1.1.1.1 2-3|1.2 4-5|1.2.1 1-2|1.2.1.1.1 1-2|1.2.1.1 7-8|1.2.1.2.1 12-13|1.2.1.2.1.1.1 10-11|1.2.1.2.1.1.1.1.1.1 16-17|1.2.1.2.1.1.1.2 17-18|1.2.1.2.1.1.1.2.1 18-19|1.2.1.2.1.1.1.2.1.1 14-15|1.2.1.2.1.1.1.2.2 20-21|1.2.1.2.1.1.1.3 19-20|1.2.1.2.1.1.1.3.1 28-29|1.2.1.2.1.1.1.3.2 30-31|1.2.1.2.1.1.1.3.2.1 34-35|1.2.1.2.1.1.1.3.2.1.1 33-34|1.2.1.2.1.1.1.3.2.1.1.1 32-33|1.2.1.2.1.1.1.3.2.1.1.1.1 36-37|1.2.1.2.1.1.1.3.2.1.1.2 35-36|1.2.1.2.1.1.1.3.2.1.1.2.1 26-27|1.2.1.2.1.1.1.3.2.2 23-24|1.2.1.2.1.1.1.3.2.2.1 24-25|1.2.1.2.1.1.1.3.2.2.2 7-8|1.2.1.2 * * * * *
 (s / say-01
       :ARG0 (d / doctor
             :name (t / name :op1 "Talcott"))
@@ -488,7 +488,7 @@
 # ::snt The U.S. is one of the few industrialized nations that does n't have a higher standard of regulation for the smooth , needle - like fibers such as crocidolite that are classified as amphobiles , according to Brooke T. Mossman , a professor of pathlogy at the University of Vermont College of Medicine .
 # ::save-date
 # ::tok 0-The 1-U.S. 2-is 3-one 4-of 5-the 6-few 7-industrialized 8-nations 9-that 10-does 11-n't 12-have 13-a 14-higher 15-standard 16-of 17-regulation 18-for 19-the 20-smooth 21-, 22-needle 23-- 24-like 25-fibers 26-such 27-as 28-crocidolite 29-that 30-are 31-classified 32-as 33-amphobiles 34-, 35-according 36-to 37-Brooke 38-T. 39-Mossman 40-, 41-a 42-professor 43-of 44-pathlogy 45-at 46-the 47-University 48-of 49-Vermont 50-College 51-of 52-Medicine 53-.
-# ::alignments 37-38|1.1.1.1 38-39|1.1.1.2 39-40|1.1.1.3 50-51|1.1.2.1 52-53|1.1.2.1.1 47-48|1.1.2.1.2 4-5|1.1.2.1.2.1.2 49-50|1.1.2.1.2.1.3 42-43|1.1.2.2 1-2|1.2.1.1.1 8-9|1.2.2 12-13|1.2.2.1 11-12|1.2.2.1.1 15-16|1.2.2.1.2 17-18|1.2.2.1.2.2 25-26|1.2.2.1.2.2.1 20-21|1.2.2.1.2.2.1.1 22-23|1.2.2.1.2.2.1.2.1 31-32|1.2.2.1.2.2.1.3 33-34|1.2.2.1.2.2.1.3.1 28-29|1.2.2.1.2.2.1.4 7-8|1.2.2.2.1.1 6-7|1.2.2.2.2 * * * * *
+# ::alignments 37-38|1.1.1.1 38-39|1.1.1.2 39-40|1.1.1.3 50-51|1.1.2.1 52-53|1.1.2.1.1 47-48|1.1.2.1.2 4-5|1.1.2.1.2.1.2 49-50|1.1.2.1.2.1.3 42-43|1.1.2.2 1-2|1.2.1.1.1 8-9|1.2.2 12-13|1.2.2.1 11-12|1.2.2.1.1 15-16|1.2.2.1.2 14-15|1.2.2.1.2.1 17-18|1.2.2.1.2.2 25-26|1.2.2.1.2.2.1 20-21|1.2.2.1.2.2.1.1 22-23|1.2.2.1.2.2.1.2.1 31-32|1.2.2.1.2.2.1.3 33-34|1.2.2.1.2.2.1.3.1 28-29|1.2.2.1.2.2.1.4 7-8|1.2.2.2.1.1 6-7|1.2.2.2.2 * * * * *
 (s / say-01
       :ARG0 (p2 / person
             :name (b / name :op1 "Brooke" :op2 "T." :op3 "Mossman")
@@ -544,7 +544,7 @@
 # ::snt In July , the Environmental Protection Agency imposed a gradual ban on virtually all uses of asbestos .
 # ::save-date
 # ::tok 0-In 1-July 2-, 3-the 4-Environmental 5-Protection 6-Agency 7-imposed 8-a 9-gradual 10-ban 11-on 12-virtually 13-all 14-uses 15-of 16-asbestos 17-.
-# ::alignments 7-8|1 4-5|1.1.1.1 5-6|1.1.1.2 6-7|1.1.1.3 10-11|1.2 14-15|1.2.1 16-17|1.2.1.1 13-14|1.2.1.2.1 12-13|1.2.1.2.1.1 9-10|1.2.2 1-2|1.3.1 * * * * *
+# ::alignments 7-8|1 4-5|1.1.1.1 5-6|1.1.1.2 6-7|1.1.1.3 10-11|1.2 16-17|1.2.1.1 13-14|1.2.1.2.1 12-13|1.2.1.2.1.1 9-10|1.2.2 1-2|1.3.1 * * * * *
 (i / impose-01
       :ARG0 (g2 / government-organization :name (e / name :op1 "Environmental" :op2 "Protection" :op3 "Agency"))
       :ARG1 (b2 / ban-01
@@ -560,7 +560,7 @@
 # ::snt By 1997 , almost all remaining uses of cancer - causing asbestos will be outlawed .
 # ::save-date
 # ::tok 0-By 1-1997 2-, 3-almost 4-all 5-remaining 6-uses 7-of 8-cancer 9-- 10-causing 11-asbestos 12-will 13-be 14-outlawed 15-.
-# ::alignments 14-15|1 6-7|1.1 11-12|1.1.1 10-11|1.1.1.1 8-9|1.1.1.1.1 5-6|1.1.2.1 4-5|1.1.2.2 3-4|1.1.2.2.1 5-6|1.1.2 0-1|1.2 1-2|1.2.1.1 * * * * *
+# ::alignments 14-15|1 11-12|1.1.1 10-11|1.1.1.1 8-9|1.1.1.1.1 5-6|1.1.2.1 4-5|1.1.2.2 3-4|1.1.2.2.1 5-6|1.1.2 0-1|1.2 1-2|1.2.1.1 * * * * *
 (o / outlaw-01
       :ARG1 (u / use-01
             :ARG1 (a / asbestos
@@ -577,7 +577,7 @@
 # ::snt About 160 workers at a factory that made paper for the Kent filters were exposed to asbestos in the 1950s .
 # ::save-date
 # ::tok 0-About 1-160 2-workers 3-at 4-a 5-factory 6-that 7-made 8-paper 9-for 10-the 11-Kent 12-filters 13-were 14-exposed 15-to 16-asbestos 17-in 18-the 19-1950s 20-.
-# ::alignments 14-15|1 5-6|1.1.1.1 8-9|1.1.1.1.1.1 11-12|1.1.1.1.1.1.1.1.1 12-13|1.1.1.1.1.1.1.2 0-1|1.1.2 1-2|1.1.2.1 16-17|1.2 19-20|1.3.1 * * * * *
+# ::alignments 14-15|1 2-3|1.1.1 5-6|1.1.1.1 7-8|1.1.1.1.1 8-9|1.1.1.1.1.1 11-12|1.1.1.1.1.1.1.1.1 12-13|1.1.1.1.1.1.1.2 0-1|1.1.2 1-2|1.1.2.1 2-3|1.1 16-17|1.2 19-20|1.3.1 * * * * *
 (e / expose-01
       :ARG1 (p2 / person
             :ARG0-of (w / work-01
@@ -607,7 +607,7 @@
 # ::snt Workers dumped large burlap sacks of the imported material into a huge bin , poured in cotton and acetate fibers and mechanically mixed the dry fibers in a process used to make filters .
 # ::save-date
 # ::tok 0-Workers 1-dumped 2-large 3-burlap 4-sacks 5-of 6-the 7-imported 8-material 9-into 10-a 11-huge 12-bin 13-, 14-poured 15-in 16-cotton 17-and 18-acetate 19-fibers 20-and 21-mechanically 22-mixed 23-the 24-dry 25-fibers 26-in 27-a 28-process 29-used 30-to 31-make 32-filters 33-.
-# ::alignments 17-18|1 1-2|1.1 8-9|1.1.2 7-8|1.1.2.1 4-5|1.1.2.2 3-4|1.1.2.2.1 2-3|1.1.2.2.2 12-13|1.1.3 11-12|1.1.3.1 14-15|1.2 20-21|1.2.1 19-20|1.2.1.1 16-17|1.2.1.1.1 25-26|1.2.1.2 18-19|1.2.1.2.1 22-23|1.3 24-25|1.3.1.1 21-22|1.3.2 28-29|1.4 29-30|1.4.1 31-32|1.4.1.1 32-33|1.4.1.1.1.1 * * * * *
+# ::alignments 17-18|1 1-2|1.1 0-1|1.1.1.1 0-1|1.1.1 8-9|1.1.2 7-8|1.1.2.1 4-5|1.1.2.2 3-4|1.1.2.2.1 2-3|1.1.2.2.2 12-13|1.1.3 11-12|1.1.3.1 14-15|1.2 20-21|1.2.1 19-20|1.2.1.1 16-17|1.2.1.1.1 25-26|1.2.1.2 18-19|1.2.1.2.1 22-23|1.3 24-25|1.3.1.1 21-22|1.3.2 28-29|1.4 29-30|1.4.1 31-32|1.4.1.1 32-33|1.4.1.1.1.1 * * * * *
 (a / and
       :op1 (d / dump-01
             :ARG0 (p2 / person
@@ -642,7 +642,7 @@
 # ::snt Workers described `` clouds of blue dust '' that hung over parts of the factory , even though exhaust fans ventilated the area .
 # ::save-date
 # ::tok 0-Workers 1-described 2-" 3-clouds 4-of 5-blue 6-dust 7-" 8-that 9-hung 10-over 11-parts 12-of 13-the 14-factory 15-, 16-even 17-though 18-exhaust 19-fans 20-ventilated 21-the 22-area 23-.
-# ::alignments 1-2|1 3-4|1.2 6-7|1.2.1 5-6|1.2.1.1 10-11|1.2.2.1 14-15|1.2.2.1.1.1 14-15|1.2.2.1.1 20-21|1.2.2.2 19-20|1.2.2.2.1 18-19|1.2.2.2.1.1 22-23|1.2.2.2.2 * * * * *
+# ::alignments 1-2|1 0-1|1.1.1 0-1|1.1 3-4|1.2 6-7|1.2.1 5-6|1.2.1.1 10-11|1.2.2.1 14-15|1.2.2.1.1.1 14-15|1.2.2.1.1 20-21|1.2.2.2 19-20|1.2.2.2.1 18-19|1.2.2.2.1.1 22-23|1.2.2.2.2 * * * * *
 (d / describe-01
       :ARG0 (p / person
             :ARG0-of (w / work-01))
@@ -662,7 +662,7 @@
 # ::snt `` There 's no question that some of those workers and managers contracted asbestos - related diseases , '' said Darrell Phillips , vice president of human resources for Hollingsworth & Vose .
 # ::save-date
 # ::tok 0-" 1-There 2-'s 3-no 4-question 5-that 6-some 7-of 8-those 9-workers 10-and 11-managers 12-contracted 13-asbestos 14-- 15-related 16-diseases 17-, 18-" 19-said 20-Darrell 21-Phillips 22-, 23-vice 24-president 25-of 26-human 27-resources 28-for 29-Hollingsworth 30-& 31-Vose 32-.
-# ::alignments 20-21|1.1.1.1 21-22|1.1.1.2 29-30|1.1.2.1.1.1 30-31|1.1.2.1.1.2 31-32|1.1.2.1.1.3 24-25|1.1.2.2 23-24|1.1.2.2.1 27-28|1.1.2.2.2 26-27|1.1.2.2.2.1 4-5|1.2 3-4|1.2.1 12-13|1.2.2 10-11|1.2.2.1.1.1 11-12|1.2.2.1.1.1.2.1 11-12|1.2.2.1.1.1.2 5-6|1.2.2.1.1.1.3 16-17|1.2.2.2 15-16|1.2.2.2.1 13-14|1.2.2.2.1.1 * * * * *
+# ::alignments 19-20|1 20-21|1.1.1.1 21-22|1.1.1.2 29-30|1.1.2.1.1.1 30-31|1.1.2.1.1.2 31-32|1.1.2.1.1.3 24-25|1.1.2.2 23-24|1.1.2.2.1 27-28|1.1.2.2.2 26-27|1.1.2.2.2.1 4-5|1.2 3-4|1.2.1 12-13|1.2.2 10-11|1.2.2.1.1.1 9-10|1.2.2.1.1.1.1.1 9-10|1.2.2.1.1.1.1 11-12|1.2.2.1.1.1.2.1 11-12|1.2.2.1.1.1.2 5-6|1.2.2.1.1.1.3 16-17|1.2.2.2 15-16|1.2.2.2.1 13-14|1.2.2.2.1.1 * * * * *
 (s / say-01
       :ARG0 (p / person
             :name (d / name :op1 "Darrell" :op2 "Phillips")
@@ -726,7 +726,7 @@
 # ::snt The average seven - day compound yield of the 400 taxable funds tracked by IBC 's Money Fund Report eased a fraction of a percentage point to 8.45 % from 8.47 % for the week ended Tuesday .
 # ::save-date
 # ::tok 0-The 1-average 2-seven 3-- 4-day 5-compound 6-yield 7-of 8-the 9-400 10-taxable 11-funds 12-tracked 13-by 14-IBC 15-'s 16-Money 17-Fund 18-Report 19-eased 20-a 21-fraction 22-of 23-a 24-percentage 25-point 26-to 27-8.45 28-% 29-from 30-8.47 31-% 32-for 33-the 34-week 35-ended 36-Tuesday 37-.
-# ::alignments 19-20|1 6-7|1.1.1 11-12|1.1.1.1 9-10|1.1.1.1.1 12-13|1.1.1.1.3 16-17|1.1.1.1.3.1.1.1 17-18|1.1.1.1.3.1.1.2 18-19|1.1.1.1.3.1.1.3 14-15|1.1.1.1.3.1.2.1.1 4-5|1.1.1.2.2 5-6|1.1.1.3 1-2|1.1.2 6-7|1.1 21-22|1.2 30-31|1.3.1 27-28|1.4.1 34-35|1.5 35-36|1.5.1 36-37|1.5.1.1.1 * * * * *
+# ::alignments 19-20|1 6-7|1.1.1 11-12|1.1.1.1 9-10|1.1.1.1.1 12-13|1.1.1.1.3 16-17|1.1.1.1.3.1.1.1 17-18|1.1.1.1.3.1.1.2 18-19|1.1.1.1.3.1.1.3 14-15|1.1.1.1.3.1.2.1.1 4-5|1.1.1.2.2 5-6|1.1.1.3 1-2|1.1.2 6-7|1.1 21-22|1.2 28-29|1.2.1 31-32|1.3 30-31|1.3.1 27-28|1.4.1 34-35|1.5 35-36|1.5.1 36-37|1.5.1.1.1 * * * * *
 (e / ease-01
       :ARG1 (t5 / thing
             :ARG1-of (y / yield-03
@@ -799,7 +799,7 @@
 # ::snt Longer maturities are thought to indicate declining interest rates because they permit portfolio managers to retain relatively higher rates for a longer period .
 # ::save-date
 # ::tok 0-Longer 1-maturities 2-are 3-thought 4-to 5-indicate 6-declining 7-interest 8-rates 9-because 10-they 11-permit 12-portfolio 13-managers 14-to 15-retain 16-relatively 17-higher 18-rates 19-for 20-a 21-longer 22-period 23-.
-# ::alignments 5-6|1.1 1-2|1.1.1 6-7|1.1.2 8-9|1.1.2.1 7-8|1.1.2.1.1 11-12|1.1.3.1 15-16|1.1.3.1.1 13-14|1.1.3.1.1.1.1 12-13|1.1.3.1.1.1.1.1 13-14|1.1.3.1.1.1 18-19|1.1.3.1.1.2 16-17|1.1.3.1.1.2.1.2 22-23|1.1.3.1.1.3 * * * * *
+# ::alignments 3-4|1 5-6|1.1 1-2|1.1.1 0-1|1.1.1.1 6-7|1.1.2 8-9|1.1.2.1 7-8|1.1.2.1.1 11-12|1.1.3.1 15-16|1.1.3.1.1 13-14|1.1.3.1.1.1.1 12-13|1.1.3.1.1.1.1.1 13-14|1.1.3.1.1.1 18-19|1.1.3.1.1.2 17-18|1.1.3.1.1.2.1 16-17|1.1.3.1.1.2.1.2 22-23|1.1.3.1.1.3 21-22|1.1.3.1.1.3.1 * * * * *
 (t / think-01
       :ARG1 (i / indicate-01
             :ARG0 (m / maturity
@@ -827,7 +827,7 @@
 # ::snt Shorter maturities are considered a sign of rising rates because portfolio managers can capture higher rates sooner .
 # ::save-date
 # ::tok 0-Shorter 1-maturities 2-are 3-considered 4-a 5-sign 6-of 7-rising 8-rates 9-because 10-portfolio 11-managers 12-can 13-capture 14-higher 15-rates 16-sooner 17-.
-# ::alignments 3-4|1 1-2|1.1.1 7-8|1.1.2 8-9|1.1.2.1 13-14|1.2.1.1 11-12|1.2.1.1.1.1 10-11|1.2.1.1.1.1.1 11-12|1.2.1.1.1 15-16|1.2.1.1.2 * * * * *
+# ::alignments 3-4|1 1-2|1.1.1 0-1|1.1.1.1 7-8|1.1.2 8-9|1.1.2.1 13-14|1.2.1.1 11-12|1.2.1.1.1.1 10-11|1.2.1.1.1.1.1 11-12|1.2.1.1.1 15-16|1.2.1.1.2 14-15|1.2.1.1.2.1 16-17|1.2.1.1.3 * * * * *
 (c / consider-01
       :ARG1 (s / signal-01
             :ARG0 (m / maturity
@@ -851,7 +851,7 @@
 # ::snt The average maturity for funds open only to institutions , considered by some to be a stronger indicator because those managers watch the market closely , reached a high point for the year -- 33 days .
 # ::save-date
 # ::tok 0-The 1-average 2-maturity 3-for 4-funds 5-open 6-only 7-to 8-institutions 9-, 10-considered 11-by 12-some 13-to 14-be 15-a 16-stronger 17-indicator 18-because 19-those 20-managers 21-watch 22-the 23-market 24-closely 25-, 26-reached 27-a 28-high 29-point 30-for 31-the 32-year 33--- 34-33 35-days 36-.
-# ::alignments 26-27|1 2-3|1.1 4-5|1.1.1 5-6|1.1.1.1 8-9|1.1.1.1.1 6-7|1.1.1.1.2 1-2|1.1.2 17-18|1.1.3 10-11|1.1.3.1 12-13|1.1.3.1.1 21-22|1.1.3.1.2.1 20-21|1.1.3.1.2.1.1.1 20-21|1.1.3.1.2.1.1 23-24|1.1.3.1.2.1.2 24-25|1.1.3.1.2.1.3 34-35|1.2.1 35-36|1.2.2 29-30|1.2.3 28-29|1.2.3.1 32-33|1.2.3.2 * * * * *
+# ::alignments 26-27|1 2-3|1.1 4-5|1.1.1 5-6|1.1.1.1 8-9|1.1.1.1.1 6-7|1.1.1.1.2 1-2|1.1.2 17-18|1.1.3 10-11|1.1.3.1 12-13|1.1.3.1.1 21-22|1.1.3.1.2.1 20-21|1.1.3.1.2.1.1.1 20-21|1.1.3.1.2.1.1 23-24|1.1.3.1.2.1.2 24-25|1.1.3.1.2.1.3 16-17|1.1.3.2 34-35|1.2.1 35-36|1.2.2 29-30|1.2.3 28-29|1.2.3.1 32-33|1.2.3.2 * * * * *
 (r / reach-01
       :ARG0 (m / maturity
             :poss (f / fund
@@ -881,7 +881,7 @@
 # ::snt Nevertheless , said Brenda Malizia Negus , editor of Money Fund Report , yields `` may blip up again before they blip down '' because of recent rises in short - term interest rates .
 # ::save-date
 # ::tok 0-Nevertheless 1-, 2-said 3-Brenda 4-Malizia 5-Negus 6-, 7-editor 8-of 9-Money 10-Fund 11-Report 12-, 13-yields 14-" 15-may 16-blip 17-up 18-again 19-before 20-they 21-blip 22-down 23-" 24-because 25-of 26-recent 27-rises 28-in 29-short 30-- 31-term 32-interest 33-rates 34-.
-# ::alignments 3-4|1.1.1.1 4-5|1.1.1.2 5-6|1.1.1.3 9-10|1.1.2.1.1.1 10-11|1.1.2.1.1.2 11-12|1.1.2.1.1.3 7-8|1.1.2.2 16-17|1.2.1 13-14|1.2.1.1.1 13-14|1.2.1.1 18-19|1.2.1.2 19-20|1.2.1.3 21-22|1.2.1.3.1 22-23|1.2.1.3.1.1 17-18|1.2.1.4 27-28|1.2.1.5.1 33-34|1.2.1.5.1.1 32-33|1.2.1.5.1.1.1 29-30|1.2.1.5.1.1.2 26-27|1.2.1.5.1.2 * * * * *
+# ::alignments 2-3|1 3-4|1.1.1.1 4-5|1.1.1.2 5-6|1.1.1.3 9-10|1.1.2.1.1.1 10-11|1.1.2.1.1.2 11-12|1.1.2.1.1.3 7-8|1.1.2.2 16-17|1.2.1 13-14|1.2.1.1.1 13-14|1.2.1.1 18-19|1.2.1.2 19-20|1.2.1.3 21-22|1.2.1.3.1 22-23|1.2.1.3.1.1 17-18|1.2.1.4 27-28|1.2.1.5.1 33-34|1.2.1.5.1.1 32-33|1.2.1.5.1.1.1 29-30|1.2.1.5.1.1.2 26-27|1.2.1.5.1.2 * * * * *
 (s / say-01
       :ARG0 (p3 / person
             :name (b / name :op1 "Brenda" :op2 "Malizia" :op3 "Negus")
@@ -911,7 +911,7 @@
 # ::snt The yield on six - month Treasury bills sold at Monday 's auction , for example , rose to 8.04 % from 7.90 % .
 # ::save-date
 # ::tok 0-The 1-yield 2-on 3-six 4-- 5-month 6-Treasury 7-bills 8-sold 9-at 10-Monday 11-'s 12-auction 13-, 14-for 15-example 16-, 17-rose 18-to 19-8.04 20-% 21-from 22-7.90 23-% 24-.
-# ::alignments 1-2|1.1.1 7-8|1.1.1.1 6-7|1.1.1.1.1.1.1 5-6|1.1.1.1.2.2 12-13|1.1.1.1.3 10-11|1.1.1.1.3.1.1 1-2|1.1 22-23|1.2.1 19-20|1.3.1 * * * * *
+# ::alignments 17-18|1 1-2|1.1.1 7-8|1.1.1.1 6-7|1.1.1.1.1.1.1 5-6|1.1.1.1.2.2 12-13|1.1.1.1.3 10-11|1.1.1.1.3.1.1 1-2|1.1 20-21|1.2 22-23|1.2.1 23-24|1.3 19-20|1.3.1 * * * * *
 (r / rise-01
       :ARG1 (t3 / thing
             :ARG1-of (y2 / yield-03
@@ -949,7 +949,7 @@
 # ::snt Assets of the 400 taxable funds grew by $ 1.5 billion during the latest week , to $ 352.7 billion .
 # ::save-date
 # ::tok 0-Assets 1-of 2-the 3-400 4-taxable 5-funds 6-grew 7-by 8-$ 9-1.5 10-billion 11-during 12-the 13-latest 14-week 15-, 16-to 17-$ 18-352.7 19-billion 20-.
-# ::alignments 0-1|1.1 5-6|1.1.1 3-4|1.1.1.1 14-15|1.4 * * * * *
+# ::alignments 6-7|1 0-1|1.1 5-6|1.1.1 3-4|1.1.1.1 8-9|1.2.2 17-18|1.3.2 14-15|1.4 13-14|1.4.1 * * * * *
 (g / grow-01
       :ARG1 (a / asset
             :poss (f / fund :quant 400
@@ -966,7 +966,7 @@
 # ::snt Typically , money - fund yields beat comparable short - term investments because portfolio managers can vary maturities and go after the highest rates .
 # ::save-date
 # ::tok 0-Typically 1-, 2-money 3-- 4-fund 5-yields 6-beat 7-comparable 8-short 9-- 10-term 11-investments 12-because 13-portfolio 14-managers 15-can 16-vary 17-maturities 18-and 19-go 20-after 21-the 22-highest 23-rates 24-.
-# ::alignments 6-7|1 5-6|1.1.1 4-5|1.1.1.1 2-3|1.1.1.1.1 5-6|1.1 11-12|1.2.1 8-9|1.2.1.1 7-8|1.2.2 11-12|1.2 0-1|1.3 18-19|1.4.1.1 16-17|1.4.1.1.1 14-15|1.4.1.1.1.1.1 13-14|1.4.1.1.1.1.1.1 14-15|1.4.1.1.1.1 17-18|1.4.1.1.1.2 19-20|1.4.1.1.2 23-24|1.4.1.1.2.1 * * * * *
+# ::alignments 6-7|1 5-6|1.1.1 4-5|1.1.1.1 2-3|1.1.1.1.1 5-6|1.1 11-12|1.2.1 8-9|1.2.1.1 7-8|1.2.2 11-12|1.2 0-1|1.3 18-19|1.4.1.1 16-17|1.4.1.1.1 14-15|1.4.1.1.1.1.1 13-14|1.4.1.1.1.1.1.1 14-15|1.4.1.1.1.1 17-18|1.4.1.1.1.2 19-20|1.4.1.1.2 23-24|1.4.1.1.2.1 22-23|1.4.1.1.2.1.1 * * * * *
 (b / beat-03
       :ARG0 (t3 / thing
             :ARG1-of (y2 / yield-03
@@ -995,7 +995,7 @@
 # ::snt The top money funds are currently yielding well over 9 % .
 # ::save-date
 # ::tok 0-The 1-top 2-money 3-funds 4-are 5-currently 6-yielding 7-well 8-over 9-9 10-% 11-.
-# ::alignments 6-7|1 3-4|1.1 1-2|1.1.1 2-3|1.1.2 8-9|1.2 9-10|1.2.1.1 7-8|1.2.2 5-6|1.3 * * * * *
+# ::alignments 6-7|1 3-4|1.1 1-2|1.1.1 2-3|1.1.2 8-9|1.2 10-11|1.2.1 9-10|1.2.1.1 7-8|1.2.2 5-6|1.3 * * * * *
 (y / yield-03
   :ARG0 (f / fund
           :mod (t / top)
@@ -1010,7 +1010,7 @@
 # ::snt Dreyfus World - Wide Dollar , the top - yielding fund , had a seven - day compound yield of 9.37 % during the latest week , down from 9.45 % a week earlier .
 # ::save-date
 # ::tok 0-Dreyfus 1-World 2-- 3-Wide 4-Dollar 5-, 6-the 7-top 8-- 9-yielding 10-fund 11-, 12-had 13-a 14-seven 15-- 16-day 17-compound 18-yield 19-of 20-9.37 21-% 22-during 23-the 24-latest 25-week 26-, 27-down 28-from 29-9.45 30-% 31-a 32-week 33-earlier 34-.
-# ::alignments 9-10|1 10-11|1.1 0-1|1.1.1.1 4-5|1.1.1.3 18-19|1.1.2 7-8|1.1.2.1 20-21|1.2.1 29-30|1.2.2.1.1 25-26|1.2.2.1.2.1.1.2 32-33|1.3 16-17|1.4.2 17-18|1.5 * * * * *
+# ::alignments 9-10|1 10-11|1.1 0-1|1.1.1.1 4-5|1.1.1.3 18-19|1.1.2 7-8|1.1.2.1 21-22|1.2 20-21|1.2.1 30-31|1.2.2.1 29-30|1.2.2.1.1 33-34|1.2.2.1.2 25-26|1.2.2.1.2.1.1.2 32-33|1.3 24-25|1.3.1 16-17|1.4.2 17-18|1.5 * * * * *
 (y3 / yield-03
       :ARG0 (f / fund
             :name (n / name :op1 "Dreyfus" :op2 "World-Wide" :op3 "Dollar")
@@ -1057,7 +1057,7 @@
 # ::snt The average seven - day simple yield of the 400 funds was 8.12 % , down from 8.14 % .
 # ::save-date
 # ::tok 0-The 1-average 2-seven 3-- 4-day 5-simple 6-yield 7-of 8-the 9-400 10-funds 11-was 12-8.12 13-% 14-, 15-down 16-from 17-8.14 18-% 19-.
-# ::alignments 6-7|1 10-11|1.1 9-10|1.1.1 12-13|1.2.1 17-18|1.2.2.1.1 4-5|1.3.2 5-6|1.4 1-2|1.5 * * * * *
+# ::alignments 6-7|1 10-11|1.1 9-10|1.1.1 13-14|1.2 12-13|1.2.1 18-19|1.2.2.1 17-18|1.2.2.1.1 4-5|1.3.2 5-6|1.4 1-2|1.5 * * * * *
 (y / yield-03
       :ARG0 (f / fund :quant 400)
       :ARG1 (p2 / percentage-entity :value 8.12
@@ -1072,7 +1072,7 @@
 # ::snt The 30 - day simple yield fell to an average 8.19 % from 8.22 % ; the 30 - day compound yield slid to an average 8.53 % from 8.56 % .
 # ::save-date
 # ::tok 0-The 1-30 2-- 3-day 4-simple 5-yield 6-fell 7-to 8-an 9-average 10-8.19 11-% 12-from 13-8.22 14-% 15-; 16-the 17-30 18-- 19-day 20-compound 21-yield 22-slid 23-to 24-an 25-average 26-8.53 27-% 28-from 29-8.56 30-% 31-.
-# ::alignments 5-6|1.1.1.1 1-2|1.1.1.1.1.1 3-4|1.1.1.1.1.2 4-5|1.1.1.1.2 5-6|1.1.1 13-14|1.1.2.1 10-11|1.1.3.1 9-10|1.1.3.2 21-22|1.2.1.1 17-18|1.2.1.1.1.1 19-20|1.2.1.1.1.2 20-21|1.2.1.1.2 21-22|1.2.1 29-30|1.2.2.1 26-27|1.2.3.1 25-26|1.2.3.2 * * * * *
+# ::alignments 5-6|1.1.1.1 1-2|1.1.1.1.1.1 3-4|1.1.1.1.1.2 4-5|1.1.1.1.2 5-6|1.1.1 11-12|1.1.2 13-14|1.1.2.1 14-15|1.1.3 10-11|1.1.3.1 9-10|1.1.3.2 22-23|1.2 21-22|1.2.1.1 17-18|1.2.1.1.1.1 19-20|1.2.1.1.1.2 20-21|1.2.1.1.2 21-22|1.2.1 27-28|1.2.2 29-30|1.2.2.1 30-31|1.2.3 26-27|1.2.3.1 25-26|1.2.3.2 * * * * *
 (a / and
       :op1 (f / fall-01
             :ARG1 (t3 / thing
@@ -1097,7 +1097,7 @@
 # ::snt J.P. Bolduc , vice chairman of W.R. Grace & Co. , which holds a 83.4 % interest in this energy - services company , was elected a director .
 # ::save-date
 # ::tok 0-J.P. 1-Bolduc 2-, 3-vice 4-chairman 5-of 6-W.R. 7-Grace 8-& 9-Co. 10-, 11-which 12-holds 13-a 14-83.4 15-% 16-interest 17-in 18-this 19-energy 20-- 21-services 22-company 23-, 24-was 25-elected 26-a 27-director 28-.
-# ::alignments 25-26|1 0-1|1.1.1.1 1-2|1.1.1.2 22-23|1.1.2.1 6-7|1.1.2.1.1.1 7-8|1.1.2.1.1.2 8-9|1.1.2.1.1.3 9-10|1.1.2.1.1.4 12-13|1.1.2.1.2 16-17|1.1.2.1.2.1 14-15|1.1.2.1.2.1.1.1 18-19|1.1.2.1.2.1.2.1 21-22|1.1.2.1.2.1.2.2 19-20|1.1.2.1.2.1.2.2.1 4-5|1.1.2.2 3-4|1.1.2.2.1 27-28|1.2 * * * * *
+# ::alignments 25-26|1 0-1|1.1.1.1 1-2|1.1.1.2 22-23|1.1.2.1 6-7|1.1.2.1.1.1 7-8|1.1.2.1.1.2 8-9|1.1.2.1.1.3 9-10|1.1.2.1.1.4 12-13|1.1.2.1.2 16-17|1.1.2.1.2.1 15-16|1.1.2.1.2.1.1 14-15|1.1.2.1.2.1.1.1 18-19|1.1.2.1.2.1.2.1 21-22|1.1.2.1.2.1.2.2 19-20|1.1.2.1.2.1.2.2.1 4-5|1.1.2.2 3-4|1.1.2.2.1 27-28|1.2 * * * * *
 (e / elect-01
       :ARG1 (p / person
             :name (j / name :op1 "J.P." :op2 "Bolduc")
@@ -1154,7 +1154,7 @@
 # ::snt McDermott International Inc. said its Babcock & Wilcox unit completed the sale of its Bailey Controls Operations to Finmeccanica S.p . A. for $ 295 million .
 # ::save-date
 # ::tok 0-McDermott 1-International 2-Inc. 3-said 4-its 5-Babcock 6-& 7-Wilcox 8-unit 9-completed 10-the 11-sale 12-of 13-its 14-Bailey 15-Controls 16-Operations 17-to 18-Finmeccanica 19-S.p 20-. 21-A. 22-for 23-$ 24-295 25-million 26-.
-# ::alignments 0-1|1.1.1.1 1-2|1.1.1.2 2-3|1.1.1.3 9-10|1.2 8-9|1.2.1 5-6|1.2.1.1.1 6-7|1.2.1.1.2 7-8|1.2.1.1.3 14-15|1.2.2.1.1.1 15-16|1.2.2.1.1.2 16-17|1.2.2.1.1.3 18-19|1.2.2.2.1.1 * * * * *
+# ::alignments 3-4|1 0-1|1.1.1.1 1-2|1.1.1.2 2-3|1.1.1.3 9-10|1.2 8-9|1.2.1 5-6|1.2.1.1.1 6-7|1.2.1.1.2 7-8|1.2.1.1.3 14-15|1.2.2.1.1.1 15-16|1.2.2.1.1.2 16-17|1.2.2.1.1.3 18-19|1.2.2.2.1.1 23-24|1.2.2.3.2 * * * * *
 (s / say-01
       :ARG0 (c / company
             :name (m / name :op1 "McDermott" :op2 "International" :op3 "Inc."))
@@ -1211,7 +1211,7 @@
 # ::snt It employs 2,700 people and has annual revenue of about $ 370 million .
 # ::save-date
 # ::tok 0-It 1-employs 2-2,700 3-people 4-and 5-has 6-annual 7-revenue 8-of 9-about 10-$ 11-370 12-million 13-.
-# ::alignments 4-5|1 1-2|1.1 0-1|1.1.1 7-8|1.2.1 9-10|1.2.1.1.1 * * * * *
+# ::alignments 4-5|1 1-2|1.1 0-1|1.1.1 5-6|1.2 7-8|1.2.1 9-10|1.2.1.1.1 10-11|1.2.1.1.1.1.2 * * * * *
 (a2 / and
       :op1 (e / employ-01
             :ARG0 (i / it)
@@ -1248,7 +1248,7 @@
 # ::snt The House has voted to raise the ceiling to $ 3.1 trillion , but the Senate is n't expected to act until next week at the earliest .
 # ::save-date
 # ::tok 0-The 1-House 2-has 3-voted 4-to 5-raise 6-the 7-ceiling 8-to 9-$ 10-3.1 11-trillion 12-, 13-but 14-the 15-Senate 16-is 17-n't 18-expected 19-to 20-act 21-until 22-next 23-week 24-at 25-the 26-earliest 27-.
-# ::alignments 3-4|1.1 1-2|1.1.1.1.1 5-6|1.1.2 7-8|1.1.2.1 18-19|1.2 20-21|1.2.1 17-18|1.2.1.1 15-16|1.2.1.2.1.1 23-24|1.2.1.3.1 22-23|1.2.1.3.1.1 * * * * *
+# ::alignments 3-4|1.1 1-2|1.1.1.1.1 5-6|1.1.2 7-8|1.1.2.1 9-10|1.1.2.2.2 18-19|1.2 20-21|1.2.1 17-18|1.2.1.1 15-16|1.2.1.2.1.1 23-24|1.2.1.3.1 22-23|1.2.1.3.1.1 * * * * *
 (c2 / contrast-01
       :ARG1 (v / vote-01
             :ARG0 (g / government-organization
@@ -1269,7 +1269,7 @@
 # ::snt The Treasury said the U.S. will default on Nov. 9 if Congress does n't act by then .
 # ::save-date
 # ::tok 0-The 1-Treasury 2-said 3-the 4-U.S. 5-will 6-default 7-on 8-Nov. 9-9 10-if 11-Congress 12-does 13-n't 14-act 15-by 16-then 17-.
-# ::alignments 1-2|1.1.1.1 6-7|1.2 4-5|1.2.1.1.1 9-10|1.2.2.2 14-15|1.2.3 13-14|1.2.3.1 11-12|1.2.3.2.1.1 15-16|1.2.3.3 * * * * *
+# ::alignments 2-3|1 1-2|1.1.1.1 6-7|1.2 4-5|1.2.1.1.1 9-10|1.2.2.2 14-15|1.2.3 13-14|1.2.3.1 11-12|1.2.3.2.1.1 15-16|1.2.3.3 * * * * *
 (s / say-01
       :ARG0 (g / government-organization
             :name (n / name :op1 "Treasury"))
@@ -1287,7 +1287,7 @@
 # ::snt Clark J. Vitulli was named senior vice president and general manager of this U.S. sales and marketing arm of Japanese auto maker Mazda Motor Corp .
 # ::save-date
 # ::tok 0-Clark 1-J. 2-Vitulli 3-was 4-named 5-senior 6-vice 7-president 8-and 9-general 10-manager 11-of 12-this 13-U.S. 14-sales 15-and 16-marketing 17-arm 18-of 19-Japanese 20-auto 21-maker 22-Mazda 23-Motor 24-Corp 25-.
-# ::alignments 4-5|1 0-1|1.1.1.1 1-2|1.1.1.2 2-3|1.1.1.3 8-9|1.2 7-8|1.2.1 6-7|1.2.1.1 5-6|1.2.1.2 10-11|1.2.2.1 9-10|1.2.2.2 10-11|1.2.2 17-18|1.2.3.1 12-13|1.2.3.1.1 22-23|1.2.3.1.2.1.1 23-24|1.2.3.1.2.1.2 24-25|1.2.3.1.2.1.3 20-21|1.2.3.1.2.3.1 13-14|1.2.3.1.3.1.1 16-17|1.2.3.1.5 * * * * *
+# ::alignments 4-5|1 0-1|1.1.1.1 1-2|1.1.1.2 2-3|1.1.1.3 8-9|1.2 7-8|1.2.1 6-7|1.2.1.1 5-6|1.2.1.2 10-11|1.2.2.1 9-10|1.2.2.2 10-11|1.2.2 17-18|1.2.3.1 12-13|1.2.3.1.1 22-23|1.2.3.1.2.1.1 23-24|1.2.3.1.2.1.2 24-25|1.2.3.1.2.1.3 21-22|1.2.3.1.2.3 20-21|1.2.3.1.2.3.1 13-14|1.2.3.1.3.1.1 16-17|1.2.3.1.5 * * * * *
 (n / name-03
       :ARG1 (p / person
             :name (c / name :op1 "Clark" :op2 "J." :op3 "Vitulli"))
@@ -1430,7 +1430,7 @@
 # ::snt And the city decided to treat its guests more like royalty or rock stars than factory owners .
 # ::save-date
 # ::tok 0-And 1-the 2-city 3-decided 4-to 5-treat 6-its 7-guests 8-more 9-like 10-royalty 11-or 12-rock 13-stars 14-than 15-factory 16-owners 17-.
-# ::alignments 0-1|1 3-4|1.1 2-3|1.1.1 5-6|1.1.2 7-8|1.1.2.1 11-12|1.1.2.2 10-11|1.1.2.2.1 13-14|1.1.2.2.2 12-13|1.1.2.2.2.1 8-9|1.1.2.2.3 15-16|1.1.2.2.4.1.1 * * * * *
+# ::alignments 0-1|1 3-4|1.1 2-3|1.1.1 5-6|1.1.2 7-8|1.1.2.1 11-12|1.1.2.2 10-11|1.1.2.2.1 13-14|1.1.2.2.2 12-13|1.1.2.2.2.1 8-9|1.1.2.2.3 16-17|1.1.2.2.4.1 15-16|1.1.2.2.4.1.1 16-17|1.1.2.2.4 * * * * *
 (a / and
   :op2 (d / decide-01
          :ARG0 (c / city)
@@ -1474,7 +1474,7 @@
 # ::snt On the receiving end of the message were officials from giants like Du Pont and Maytag , along with lesser knowns like Trojan Steel and the Valley Queen Cheese Factory .
 # ::save-date
 # ::tok 0-On 1-the 2-receiving 3-end 4-of 5-the 6-message 7-were 8-officials 9-from 10-giants 11-like 12-Du 13-Pont 14-and 15-Maytag 16-, 17-along 18-with 19-lesser 20-knowns 21-like 22-Trojan 23-Steel 24-and 25-the 26-Valley 27-Queen 28-Cheese 29-Factory 30-.
-# ::alignments 2-3|1 14-15|1.1.1.1 10-11|1.1.1.1.1 24-25|1.1.1.1.1.1 12-13|1.1.1.1.1.1.1.1.1 13-14|1.1.1.1.1.1.1.1.2 15-16|1.1.1.1.1.1.2.1.1 22-23|1.1.1.1.2.2.1.1.1 23-24|1.1.1.1.2.2.1.1.2 26-27|1.1.1.1.2.2.2.1.1 27-28|1.1.1.1.2.2.2.1.2 28-29|1.1.1.1.2.2.2.1.3 29-30|1.1.1.1.2.2.2.1.4 8-9|1.1.1.2 6-7|1.2.1 6-7|1.2 * * * * *
+# ::alignments 2-3|1 14-15|1.1.1.1 10-11|1.1.1.1.1 24-25|1.1.1.1.1.1 12-13|1.1.1.1.1.1.1.1.1 13-14|1.1.1.1.1.1.1.1.2 15-16|1.1.1.1.1.1.2.1.1 19-20|1.1.1.1.2.1.1 22-23|1.1.1.1.2.2.1.1.1 23-24|1.1.1.1.2.2.1.1.2 26-27|1.1.1.1.2.2.2.1.1 27-28|1.1.1.1.2.2.2.1.2 28-29|1.1.1.1.2.2.2.1.3 29-30|1.1.1.1.2.2.2.1.4 8-9|1.1.1.2 6-7|1.2.1 6-7|1.2 * * * * *
 (r / receive-01
       :ARG0 (p / person
             :ARG0-of (h / have-org-role-91
@@ -1537,7 +1537,7 @@
 # ::snt The next morning , with a police escort , busloads of executives and their wives raced to the Indianapolis Motor Speedway , unimpeded by traffic or red lights .
 # ::save-date
 # ::tok 0-The 1-next 2-morning 3-, 4-with 5-a 6-police 7-escort 8-, 9-busloads 10-of 11-executives 12-and 13-their 14-wives 15-raced 16-to 17-the 18-Indianapolis 19-Motor 20-Speedway 21-, 22-unimpeded 23-by 24-traffic 25-or 26-red 27-lights 28-.
-# ::alignments 15-16|1 12-13|1.1 11-12|1.1.1.1.1 9-10|1.1.3 7-8|1.1.4 6-7|1.1.4.1 18-19|1.2.1.1 19-20|1.2.1.2 20-21|1.2.1.3 25-26|1.3.2 24-25|1.3.2.1 27-28|1.3.2.2 26-27|1.3.2.2.1 2-3|1.4.1 1-2|1.4.2 * * * * *
+# ::alignments 15-16|1 12-13|1.1 11-12|1.1.1.1.1 14-15|1.1.2.1.1 9-10|1.1.3 7-8|1.1.4 6-7|1.1.4.1 18-19|1.2.1.1 19-20|1.2.1.2 20-21|1.2.1.3 25-26|1.3.2 24-25|1.3.2.1 27-28|1.3.2.2 26-27|1.3.2.2.1 2-3|1.4.1 1-2|1.4.2 * * * * *
 (r / race-01
       :ARG0 (a / and
             :op1 (p2 / person
@@ -1584,7 +1584,7 @@
 # ::snt A buffet breakfast was held in the museum , where food and drinks are banned to everyday visitors .
 # ::save-date
 # ::tok 0-A 1-buffet 2-breakfast 3-was 4-held 5-in 6-the 7-museum 8-, 9-where 10-food 11-and 12-drinks 13-are 14-banned 15-to 16-everyday 17-visitors 18-.
-# ::alignments 2-3|1.1 1-2|1.1.1 7-8|1.2 14-15|1.2.1 11-12|1.2.1.1 10-11|1.2.1.1.1 12-13|1.2.1.1.2 16-17|1.2.1.2.2 * * * * *
+# ::alignments 4-5|1 2-3|1.1 1-2|1.1.1 7-8|1.2 14-15|1.2.1 11-12|1.2.1.1 10-11|1.2.1.1.1 12-13|1.2.1.1.2 16-17|1.2.1.2.2 * * * * *
 (h / hold-04
   :ARG1 (b / breakfast-01
           :mod (b2 / buffet))
@@ -1601,7 +1601,7 @@
 # ::snt Then , in the guests ' honor , the speedway hauled out four drivers , crews and even the official Indianapolis 500 announcer for a 10 - lap exhibition race .
 # ::save-date
 # ::tok 0-Then 1-, 2-in 3-the 4-guests 5-' 6-honor 7-, 8-the 9-speedway 10-hauled 11-out 12-four 13-drivers 14-, 15-crews 16-and 17-even 18-the 19-official 20-Indianapolis 21-500 22-announcer 23-for 24-a 25-10 26-- 27-lap 28-exhibition 29-race 30-.
-# ::alignments 10-11|1 9-10|1.1 16-17|1.2 15-16|1.2.2 22-23|1.2.3.1 20-21|1.2.3.2.1.1 21-22|1.2.3.2.1.2 19-20|1.2.3.3 17-18|1.2.3.4 22-23|1.2.3 29-30|1.3 27-28|1.3.1 25-26|1.3.1.1 28-29|1.3.2 0-1|1.4 6-7|1.5 4-5|1.5.1 * * * * *
+# ::alignments 10-11|1 9-10|1.1 16-17|1.2 13-14|1.2.1.2 13-14|1.2.1 15-16|1.2.2 22-23|1.2.3.1 20-21|1.2.3.2.1.1 21-22|1.2.3.2.1.2 19-20|1.2.3.3 17-18|1.2.3.4 22-23|1.2.3 29-30|1.3 27-28|1.3.1 25-26|1.3.1.1 28-29|1.3.2 0-1|1.4 6-7|1.5 4-5|1.5.1 * * * * *
 (h / haul-03
       :ARG0 (s / speedway)
       :ARG1 (a / and
@@ -1625,7 +1625,7 @@
 # ::snt After the race , Fortune 500 executives drooled like schoolboys over the cars and drivers .
 # ::save-date
 # ::tok 0-After 1-the 2-race 3-, 4-Fortune 5-500 6-executives 7-drooled 8-like 9-schoolboys 10-over 11-the 12-cars 13-and 14-drivers 15-.
-# ::alignments 7-8|1 4-5|1.1.1.1.1.1.1 5-6|1.1.1.1.1.1.2 6-7|1.1.1.2 13-14|1.2 12-13|1.2.1 0-1|1.3 2-3|1.3.1 9-10|1.4.1.1 * * * * *
+# ::alignments 7-8|1 4-5|1.1.1.1.1.1.1 5-6|1.1.1.1.1.1.2 6-7|1.1.1.2 13-14|1.2 12-13|1.2.1 14-15|1.2.2.1 14-15|1.2.2 0-1|1.3 2-3|1.3.1 9-10|1.4.1.1 * * * * *
 (d / drool-02
       :ARG0 (p2 / person
             :ARG0-of (h / have-org-role-91
@@ -1647,7 +1647,7 @@
 # ::snt No dummies , the drivers pointed out they still had space on their machines for another sponsor 's name or two .
 # ::save-date
 # ::tok 0-No 1-dummies 2-, 3-the 4-drivers 5-pointed 6-out 7-they 8-still 9-had 10-space 11-on 12-their 13-machines 14-for 15-another 16-sponsor 17-'s 18-name 19-or 20-two 21-.
-# ::alignments 5-6|1 1-2|1.1.2 0-1|1.1.2.1 10-11|1.2.1 13-14|1.2.1.1 18-19|1.2.1.2 19-20|1.2.1.2.1 16-17|1.2.1.2.2.1 15-16|1.2.1.2.2.2 8-9|1.2.2 * * * * *
+# ::alignments 5-6|1 4-5|1.1.1 1-2|1.1.2 0-1|1.1.2.1 4-5|1.1 9-10|1.2 10-11|1.2.1 13-14|1.2.1.1 18-19|1.2.1.2 19-20|1.2.1.2.1 16-17|1.2.1.2.2.1 15-16|1.2.1.2.2.2 8-9|1.2.2 * * * * *
 (p / point-02
       :ARG0 (p2 / person
             :ARG0-of (d / drive-01)
@@ -1668,7 +1668,7 @@
 # ::snt Back downtown , the execs squeezed in a few meetings at the hotel before boarding the buses again .
 # ::save-date
 # ::tok 0-Back 1-downtown 2-, 3-the 4-execs 5-squeezed 6-in 7-a 8-few 9-meetings 10-at 11-the 12-hotel 13-before 14-boarding 15-the 16-buses 17-again 18-.
-# ::alignments 5-6|1 9-10|1.2 12-13|1.2.1 8-9|1.2.2 13-14|1.3 14-15|1.3.1 17-18|1.3.1.2 1-2|1.4 0-1|1.4.1 * * * * *
+# ::alignments 5-6|1 9-10|1.2 12-13|1.2.1 8-9|1.2.2 13-14|1.3 14-15|1.3.1 16-17|1.3.1.1 17-18|1.3.1.2 1-2|1.4 0-1|1.4.1 * * * * *
 (s / squeeze-02
       :ARG0 (p / person
             :ARG0-of (h2 / have-org-role-91
@@ -1737,7 +1737,7 @@
 # ::snt Knowing a tasty -- and free -- meal when they eat one , the executives gave the chefs a standing ovation .
 # ::save-date
 # ::tok 0-Knowing 1-a 2-tasty 3--- 4-and 5-free 6--- 7-meal 8-when 9-they 10-eat 11-one 12-, 13-the 14-executives 15-gave 16-the 17-chefs 18-a 19-standing 20-ovation 21-.
-# ::alignments 14-15|1.1.1.1 20-21|1.2 19-20|1.2.1 17-18|1.3 0-1|1.4.1 7-8|1.4.1.1 2-3|1.4.1.1.1 5-6|1.4.1.1.2 10-11|1.4.1.2 * * * * *
+# ::alignments 15-16|1 14-15|1.1.1.1 20-21|1.2 19-20|1.2.1 17-18|1.3 0-1|1.4.1 7-8|1.4.1.1 2-3|1.4.1.1.1 5-6|1.4.1.1.2 10-11|1.4.1.2 * * * * *
 (g / give-01
       :ARG0 (p / person
             :ARG0-of (h / have-org-role-91
@@ -1800,7 +1800,7 @@
 # ::snt South Korea registered a trade deficit of $ 101 million in October , reflecting the country 's economic sluggishness , according to government figures released Wednesday .
 # ::save-date
 # ::tok 0-South 1-Korea 2-registered 3-a 4-trade 5-deficit 6-of 7-$ 8-101 9-million 10-in 11-October 12-, 13-reflecting 14-the 15-country 16-'s 17-economic 18-sluggishness 19-, 20-according 21-to 22-government 23-figures 24-released 25-Wednesday 26-.
-# ::alignments 23-24|1.1 22-23|1.1.1.1 24-25|1.1.2 25-26|1.1.2.1.1 2-3|1.2 15-16|1.2.1 0-1|1.2.1.1.1 1-2|1.2.1.1.2 5-6|1.2.2 4-5|1.2.2.1 13-14|1.2.2.3 18-19|1.2.2.3.1 11-12|1.2.3.1 * * * * *
+# ::alignments 23-24|1.1 22-23|1.1.1.1 24-25|1.1.2 25-26|1.1.2.1.1 2-3|1.2 15-16|1.2.1 0-1|1.2.1.1.1 1-2|1.2.1.1.2 5-6|1.2.2 4-5|1.2.2.1 7-8|1.2.2.2.2 13-14|1.2.2.3 18-19|1.2.2.3.1 11-12|1.2.3.1 * * * * *
 (s3 / say-01
       :ARG0 (f / figure
             :source (g2 / government-organization
@@ -1853,7 +1853,7 @@
 # ::snt Exports in October stood at $ 5.29 billion , a mere 0.7 % increase from a year earlier , while imports increased sharply to $ 5.39 billion , up 20 % from last October .
 # ::save-date
 # ::tok 0-Exports 1-in 2-October 3-stood 4-at 5-$ 6-5.29 7-billion 8-, 9-a 10-mere 11-0.7 12-% 13-increase 14-from 15-a 16-year 17-earlier 18-, 19-while 20-imports 21-increased 22-sharply 23-to 24-$ 25-5.39 26-billion 27-, 28-up 29-20 30-% 31-from 32-last 33-October 34-.
-# ::alignments 0-1|1.1.1.1 2-3|1.1.1.1.1.1 0-1|1.1.1 13-14|1.1.2.3 11-12|1.1.2.3.1.1 10-11|1.1.2.3.1.2 16-17|1.1.2.3.2.1.1.1.2 21-22|1.2 20-21|1.2.1.1 20-21|1.2.1 29-30|1.2.2.1 33-34|1.2.3.1.1 32-33|1.2.3.1.2 * * * * *
+# ::alignments 0-1|1.1.1.1 2-3|1.1.1.1.1.1 0-1|1.1.1 5-6|1.1.2.2 13-14|1.1.2.3 12-13|1.1.2.3.1 11-12|1.1.2.3.1.1 10-11|1.1.2.3.1.2 17-18|1.1.2.3.2.1 16-17|1.1.2.3.2.1.1.1.2 21-22|1.2 20-21|1.2.1.1 20-21|1.2.1 30-31|1.2.2 29-30|1.2.2.1 33-34|1.2.3.1.1 32-33|1.2.3.1.2 24-25|1.2.4.2 * * * * *
 (c / contrast-01
       :ARG1 (s / stand-04
             :ARG1 (t2 / thing
@@ -1884,7 +1884,7 @@
 # ::snt South Korea 's economic boom , which began in 1986 , stopped this year because of prolonged labor disputes , trade conflicts and sluggish exports .
 # ::save-date
 # ::tok 0-South 1-Korea 2-'s 3-economic 4-boom 5-, 6-which 7-began 8-in 9-1986 10-, 11-stopped 12-this 13-year 14-because 15-of 16-prolonged 17-labor 18-disputes 19-, 20-trade 21-conflicts 22-and 23-sluggish 24-exports 25-.
-# ::alignments 11-12|1 4-5|1.1 0-1|1.1.1.1.1.1 1-2|1.1.1.1.1.2 9-10|1.1.2.1.1 13-14|1.2 12-13|1.2.1 22-23|1.3.1 18-19|1.3.1.1 17-18|1.3.1.1.1 16-17|1.3.1.1.2 21-22|1.3.1.2 20-21|1.3.1.2.1 24-25|1.3.1.3 23-24|1.3.1.3.1 * * * * *
+# ::alignments 11-12|1 4-5|1.1 0-1|1.1.1.1.1.1 1-2|1.1.1.1.1.2 7-8|1.1.2 9-10|1.1.2.1.1 13-14|1.2 12-13|1.2.1 22-23|1.3.1 18-19|1.3.1.1 17-18|1.3.1.1.1 16-17|1.3.1.1.2 21-22|1.3.1.2 20-21|1.3.1.2.1 24-25|1.3.1.3 23-24|1.3.1.3.1 * * * * *
 (s2 / stop-01
       :ARG1 (b / boom-02
             :ARG0 (e / economy
@@ -1908,7 +1908,7 @@
 # ::snt Government officials said exports at the end of the year would remain under a government target of $ 68 billion .
 # ::save-date
 # ::tok 0-Government 1-officials 2-said 3-exports 4-at 5-the 6-end 7-of 8-the 9-year 10-would 11-remain 12-under 13-a 14-government 15-target 16-of 17-$ 18-68 19-billion 20-.
-# ::alignments 0-1|1.1.1.1.1 1-2|1.1.1.2 11-12|1.2 3-4|1.2.1.1 6-7|1.2.1.2 9-10|1.2.1.2.1 3-4|1.2.1 12-13|1.2.2 15-16|1.2.2.1.3 * * * * *
+# ::alignments 2-3|1 0-1|1.1.1.1.1 1-2|1.1.1.2 11-12|1.2 3-4|1.2.1.1 6-7|1.2.1.2 9-10|1.2.1.2.1 3-4|1.2.1 12-13|1.2.2 17-18|1.2.2.1.2 15-16|1.2.2.1.3 * * * * *
 (s / say-01
       :ARG0 (p / person
             :ARG0-of (h / have-org-role-91
@@ -1930,7 +1930,7 @@
 # ::snt Despite the gloomy forecast , South Korea has recorded a trade surplus of $ 71 million so far this year .
 # ::save-date
 # ::tok 0-Despite 1-the 2-gloomy 3-forecast 4-, 5-South 6-Korea 7-has 8-recorded 9-a 10-trade 11-surplus 12-of 13-$ 14-71 15-million 16-so 17-far 18-this 19-year 20-.
-# ::alignments 8-9|1 5-6|1.1.1.1 6-7|1.1.1.2 11-12|1.2 10-11|1.2.1 19-20|1.2.3.1 18-19|1.2.3.1.1 3-4|1.3.1 2-3|1.3.2 3-4|1.3 * * * * *
+# ::alignments 8-9|1 5-6|1.1.1.1 6-7|1.1.1.2 11-12|1.2 10-11|1.2.1 13-14|1.2.2.2 19-20|1.2.3.1 18-19|1.2.3.1.1 3-4|1.3.1 2-3|1.3.2 3-4|1.3 * * * * *
 (r / record-01
       :ARG0 (c / country :name (s / name :op1 "South" :op2 "Korea"))
       :ARG1 (s2 / surplus
@@ -1948,7 +1948,7 @@
 # ::snt From January to October , the nation 's accumulated exports increased 4 % from the same period last year to $ 50.45 billion .
 # ::save-date
 # ::tok 0-From 1-January 2-to 3-October 4-, 5-the 6-nation 7-'s 8-accumulated 9-exports 10-increased 11-4 12-% 13-from 14-the 15-same 16-period 17-last 18-year 19-to 20-$ 21-50.45 22-billion 23-.
-# ::alignments 10-11|1 9-10|1.1.1 6-7|1.1.1.1 8-9|1.1.2 9-10|1.1 11-12|1.2.1 1-2|1.3.1.1.1 18-19|1.3.1.1.2 17-18|1.3.1.1.2.1 3-4|1.3.1.2.1 * * * * *
+# ::alignments 10-11|1 9-10|1.1.1 6-7|1.1.1.1 8-9|1.1.2 9-10|1.1 12-13|1.2 11-12|1.2.1 1-2|1.3.1.1.1 18-19|1.3.1.1.2 17-18|1.3.1.1.2.1 3-4|1.3.1.2.1 20-21|1.4.2 * * * * *
 (i / increase-01
       :ARG1 (t / thing
             :ARG1-of (e / export-01
@@ -1972,7 +1972,7 @@
 # ::snt Imports were at $ 50.38 billion , up 19 % .
 # ::save-date
 # ::tok 0-Imports 1-were 2-at 3-$ 4-50.38 5-billion 6-, 7-up 8-19 9-% 10-.
-# ::alignments 0-1|1.1.1 0-1|1.1 8-9|1.2.1 * * * * *
+# ::alignments 0-1|1.1.1 0-1|1.1 9-10|1.2 8-9|1.2.1 3-4|1.3.2 * * * * *
 (i / increase-01
       :ARG1 (t / thing
             :ARG1-of (i2 / import-01))
@@ -1984,7 +1984,7 @@
 # ::snt Newsweek , trying to keep pace with rival Time magazine , announced new advertising rates for 1990 and said it will introduce a new incentive plan for advertisers .
 # ::save-date
 # ::tok 0-Newsweek 1-, 2-trying 3-to 4-keep 5-pace 6-with 7-rival 8-Time 9-magazine 10-, 11-announced 12-new 13-advertising 14-rates 15-for 16-1990 17-and 18-said 19-it 20-will 21-introduce 22-a 23-new 24-incentive 25-plan 26-for 27-advertisers 28-.
-# ::alignments 17-18|1 11-12|1.1 9-10|1.1.1 0-1|1.1.1.1.1 14-15|1.1.2 12-13|1.1.2.1 13-14|1.1.2.2 16-17|1.1.2.3.1 21-22|1.2.1 25-26|1.2.1.1 23-24|1.2.1.1.1 27-28|1.2.1.1.2.1.1 2-3|1.3.1 4-5|1.3.1.1 8-9|1.3.1.1.1.1.1 7-8|1.3.1.1.1.2 * * * * *
+# ::alignments 17-18|1 11-12|1.1 9-10|1.1.1 0-1|1.1.1.1.1 14-15|1.1.2 12-13|1.1.2.1 13-14|1.1.2.2 16-17|1.1.2.3.1 18-19|1.2 21-22|1.2.1 25-26|1.2.1.1 23-24|1.2.1.1.1 27-28|1.2.1.1.2.1.1 2-3|1.3.1 4-5|1.3.1.1 8-9|1.3.1.1.1.1.1 7-8|1.3.1.1.1.2 * * * * *
 (a2 / and
       :op1 (a / announce-01
             :ARG0 (m2 / magazine
@@ -2085,7 +2085,7 @@
 # ::snt Alan Spoon , recently named Newsweek president , said Newsweek 's ad rates would increase 5 % in January .
 # ::save-date
 # ::tok 0-Alan 1-Spoon 2-, 3-recently 4-named 5-Newsweek 6-president 7-, 8-said 9-Newsweek 10-'s 11-ad 12-rates 13-would 14-increase 15-5 16-% 17-in 18-January 19-.
-# ::alignments 4-5|1.1.1 0-1|1.1.1.1 1-2|1.1.1.2 6-7|1.1.2.1 5-6|1.1.2.1.1.1.1.1 3-4|1.1.2.2 14-15|1.2 12-13|1.2.1 15-16|1.2.2.1 18-19|1.2.3.1 * * * * *
+# ::alignments 8-9|1 4-5|1.1.1 0-1|1.1.1.1 1-2|1.1.1.2 6-7|1.1.2.1 5-6|1.1.2.1.1.1.1.1 3-4|1.1.2.2 14-15|1.2 12-13|1.2.1 16-17|1.2.2 15-16|1.2.2.1 18-19|1.2.3.1 * * * * *
 (s / say-01
       :ARG0 (p / person
             :name (a / name :op1 "Alan" :op2 "Spoon")
@@ -2108,7 +2108,7 @@
 # ::snt A full , four - color page in Newsweek will cost $ 100,980 .
 # ::save-date
 # ::tok 0-A 1-full 2-, 3-four 4-- 5-color 6-page 7-in 8-Newsweek 9-will 10-cost 11-$ 12-100,980 13-.
-# ::alignments 10-11|1 6-7|1.1 5-6|1.1.1 1-2|1.1.2 8-9|1.1.3.1.1 * * * * *
+# ::alignments 10-11|1 6-7|1.1 5-6|1.1.1 1-2|1.1.2 8-9|1.1.3.1.1 11-12|1.2.2 * * * * *
 (c / cost-01
       :ARG1 (p / page
             :mod (c2 / color :quant 4)

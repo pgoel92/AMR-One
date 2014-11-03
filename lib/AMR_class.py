@@ -72,12 +72,13 @@ class AMR:
 		return;
 	
 	def evaluate_alignments(self, true_str):
-
-		self.Evaluator.read(self.alignments, true_str, 1, self.AMR_tree);
+	
+		print self.ID;
+		self.Evaluator.read(self.alignments, true_str, 0, self.AMR_tree);
 
 	def print_alignments(self):
 		
-		self.evaluator.print_alignments();
+		self.Evaluator.print_alignments();
 
 	def generate_printable_AMR(self):
 

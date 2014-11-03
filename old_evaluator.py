@@ -186,10 +186,18 @@ def isAlignmentCorrect2(jamr_nodes,true_nodes,token,amr_obj):
 		#	else: FP_dict[jamr_concept] = 1;
 
 	FN = 0;
+	global FN_dict;
 	#if len(newtruenodes) > 1:			#If one-to-many alignment, count FNs
-	for truenode in newtruenodes:
-		if truenode not in jamr_nodes:
-				FN = FN + 1;	
+	for truenode in true_nodes:
+		newtruenode = amr_obj.convertISItoJAMR(truenode);
+		if newtruenode not in jamr_nodes:
+			FN = FN + 1;
+			#print truenode;
+			ct = amr_obj.getNodeByAddress(truenode,0);
+			#print ct;
+			true_concept = get_concept_name(ct);
+			if true_concept == 'more': print "###" + truenode;
+			FN_dict = count_dict_insert(FN_dict, true_concept);
 
 	return (correct,incorrect,FN);
 
@@ -271,11 +279,11 @@ def evaluate(bin_arrays,toklist,amr_obj):
 	FP = 0;
 	FN = 0;
 
-#	print amr_obj.ID;
-#	print amr_obj.tokens;	
-#	print amr_obj.alignments;
-#	print amr_obj.AMR_string_printable;
-#	print;
+	print amr_obj.ID;
+	print amr_obj.tokens;	
+	print amr_obj.alignments;
+	print amr_obj.AMR_string_printable;
+	print;
 
 	for i in range(0,len(aligned_and_shouldve)):
 		if aligned_and_shouldve[i]:
@@ -307,6 +315,7 @@ def evaluate(bin_arrays,toklist,amr_obj):
 					else: FN_examples[tconcept][token] = 1;
 				else: FN_examples[tconcept] = {};
 				
+				if tconcept == 'more' : print "###", addr;
 				FN_dict = count_dict_insert(FN_dict,tconcept);
 			#	print "##"
 			#	print token, tconcept
