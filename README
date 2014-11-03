@@ -1,39 +1,14 @@
-Week 3 :
-
 Contents :
 
-evaluate_jamr_isi.py : Evaluation script for JAMR alignments with ISI alignments
-my_amr_parser.py : Parses the AMR and stores it in a tree. Supports node retrieval by address.
-mod_out.py : Used to generate corp_span from JAMR outputs corp and span
-run.sh : Runs JAMR on the dev and test data that was used by ISI for their alignments
-accuracy : Final precision, recall measures over the combined dev and test datasets
-dev/
-  corp
-  span
-  true : ISI gold alignments for the dev 100 dataset
-  corp-span
-  accuracy
-test/
-  corp
-  span
-  true : ISI gold alignments for the test 100 dataset
-  corp-span
-  accuracy
-manual_testing/ : contains sampled data from the dev and test sets to verify manually if my evaluation was correct
+aligner.py	: Reads an AMR-corpus and aligns each AMR with the text.
+evaluator.py : Reads an aligned AMR-corpus and a gold set and outputs the Precision and Recall.
+lib/
+ - AMR_class.py : Object of this class is an element in the AMR-corpus. 
+ - Alignment_Evaluator.py : Saves the evaluation results and dictionaries for FP and FNs as an object
+ - Node_class.py : Object of this class is a node in the AMR graph 
+ - dictlib.py : Dictionary manipulation functions
+ - lemmatizer.py : POS tags and lemmatizes a list of tokens
 
-Summary :
-
-I fixed the evaluation error. I had to write a function that converts an ISI address to a JAMR address in cases where there are re-entrancies. The new precision recall numbers are : 
-
-Dev Precision : 93.26
-Dev Recall : 39.85
-Test Precision : 92.67
-Test Recall : 39.30
-
-I also calculated the number of FPs caused due to the ordering problem.
-
-Dev : 31/46
-Test : 21/34
-
-Meeting summary :
+dev/ : Contains the dev corpus and associated files
+test/ : Contains the test corpus and associated files
 
