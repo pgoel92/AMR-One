@@ -1,0 +1,71 @@
+#!/usr/bin/python
+
+from __future__ import print_function
+import sys
+
+#Alignment format specification
+#Test alignments
+test_tok_addr_separator = '|';
+test_tok_range_separator = '-';
+test_multiple_addr_separator = '+';
+test_addr_child_separator = '.';
+
+#Test alignments
+true_tok_addr_separator = '-';
+true_tok_range_separator = '_';
+true_multiple_addr_separator = '+';
+true_addr_child_separator = '.';
+
+class AlignmentEvaluator():
+
+	def __init__(self):
+		self.test_tokens = [];
+		self.true_tokens = [];
+		self.test_addr = [];
+		self.true_addr = [];
+		self.test_concepts = [];
+		self.true_concepts = [];
+		self.TP = 0;
+		self.FP = 0;
+		self.FN = 0;
+		self.FP_examples = [];
+		self.FN_examples = [];
+
+	def OffsetNodeAddress(addr, offset):
+               
+        if addr == '': return ''; 
+        if offset == 0: return addr;
+
+        addr = addr.split(test_addr_child_separator)		#If test and true child separators are not the same, this won't work. I just dont want extra arguments right now.
+        new_addr = []; 
+        for num in addr:
+            if int(num) < 0:
+                print("Invalid address: Negative node addresses not supported", file=sys.stderr);
+                sys.exit(0);
+            new_addr.append(str(int(num) + offset));
+                
+        return test_addr_child_separator.join(new_addr);
+
+	def read(test_str,true_str,addr_offset, AMR_tree):	#if test address is 0.1.2 and corresponding true address is 1.2.3, then addr_offset is 1
+		
+		test_alignments = test_str.split();
+		true_alignments = true_str.split();
+
+		for alignment in test_alignments:
+			alignment = alignment.split(test_tok_addr_separator);	#Splits alignment into token and node address
+			tokens = alignment[0].split('-');	#For token sequences of the form 23-25
+			addresses = alignment[1].split('+');		#For addresses of the form 1.1+1.1.1+1.1.1.1
+			start_token = token[0];
+			end_token = token[1];
+			for i in range(int(start_token),int(end_token)):	#For each token aligned to the given addresses
+				self.test_tokens.append(i);						#Add token to test_tokens
+				for address in addresses:
+					address = OffsetNodeAddress(address, addr_offset);		#Correct the node address by adding offset to each number in the address
+					concept = AMR_tree.getNodeByAddress(address); 			#Lookup the AMR tree using the address
+					self.test_addr.append(address);		
+					self.test_concepts.append(concept);		
+		
+		for alignment in true_alignments:
+			alignment = alignment.split('-');
+			tokens = alignment[0].split('_');
+			addresses = alignment[1].split('+'); 

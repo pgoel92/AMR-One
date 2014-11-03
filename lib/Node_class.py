@@ -1,4 +1,4 @@
-class node():
+class node:
 
 	def __init__(self, val, edge_ptrs,edge_ptrs_nr,edge_name):
 		self.value = val;				#value of current node
@@ -44,6 +44,16 @@ class node():
 			concepts = concepts + subc;	
 
 		return concepts;
+
+	def getNodeByAddress(self,address,jamr_addr):
+		
+		role = 0;
+		if address[-1] == 'r':
+		    address = address[:-2]; 
+		    role = 1;
+		if address == '1':
+		    return self.getValue();
+		return self.getNode(address[2:],role,jamr_addr);
 		
 	def generatePrintableAMR(self,s,tabs):
 		
@@ -216,7 +226,10 @@ def parse(amrstr,i,varlist,edgename):
 				#print leafnodeval
 				reent = 1;
 				edgeptr = varlist[leafnodeval];	#Re route re-entrancy to the original node
-
+		#	elif (len(leafnodeval) == 1 or len(leafnodeval) == 2) and leafnodeval not in varlist: 	#Node is a reentrancy but the original node has not occurred.
+		#																							#Assumption that variable names can only be 1 or 2 character long
+		#		reent = 1;	
+		#		edgeptr = node(leafnodeval,[],[],edgename);
 			else: edgeptr = node(leafnodeval,[],[],edgename);	#Store pointer to leaf node
 		root.addEdge(edgeptr,reent);		#Add new edge to current root
 		#print "New edge added"
@@ -237,7 +250,7 @@ def parse_amr(amr):
 
 		
 	(r,i) = parse(amr,1,{},'');
-	r.adjustIndices();
+	r.adjustIndices();				#Removes re-entrancy nodes to create edge_ptrs_nr from edge_ptrs
 	return r;
 
 #def printStuff(amr):

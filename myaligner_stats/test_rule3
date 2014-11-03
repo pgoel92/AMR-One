@@ -1,8 +1,8 @@
-Precision :  94.2253521127
-Recall :  72.6384364821
+Precision :  94.8126801153
+Recall :  66.8020304569
 
-False Positives :  41
-False Negatives :  252
+False Positives :  36
+False Negatives :  327
 
 16 cause
 14 possible
@@ -11,39 +11,41 @@ False Negatives :  252
 9 have-purpose
 8 400000000
 7 dollar
+7 we
+7 you
 6 thing
 6 of-course
 5 contrast
-4 we
+5 -
 4 imperative
+4 live
 4 entitle
 4 recommend
-4 13000000
 4 more
+4 13000000
 4 be-from
 4 be-destined-for
 4 spend
+3 they
 3 south-west
 3 business
 3 government-organization
 3 location
 3 road
-3 live
 3 have
-3 -
 3 same
 3 1
-3 you
 3 i
 2 in-fact
+2 money
 2 relieve
+2 choose
 2 before
 2 ease
 2 288
-2 choose
+2 4
 2 times-dispatch
 2 good
-2 they
 2 p
 2 y'all
 2 close
@@ -53,14 +55,16 @@ False Negatives :  252
 2 nowhere
 2 last
 2 r2
+2 w
 2 more-than
-2 4
 2 demand
 2 even-if
+2 project
+2 and
 2 as-well
+2 it
 2 expend
 2 solve
-1 money
 1 find
 1 interrogative
 1 bi-directional
@@ -91,7 +95,6 @@ False Negatives :  252
 1 circumference
 1 residence
 1 place
-1 w
 1 think
 1 primary
 1 be-located-at
@@ -105,14 +108,12 @@ False Negatives :  252
 1 true
 1 commerce
 1 none
-1 project
 1 obvious
-1 and
 1 predict
-1 it
 1 say
 1 need
 1 pay
+1 airport
 1 tight
 1 take
 1 economy

@@ -1,9 +1,9 @@
+
+from AlignmentEvaluator_class import * 
+
 def main():
 
-	def test(x):
-		
-		print x
-
-	test('hello');
+	A = AlignmentEvaluator();
+	
 
 main();

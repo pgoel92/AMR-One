@@ -1,8 +1,8 @@
-Precision :  94.3430656934
-Recall :  74.1218637993
+Precision :  95.504587156
+Recall :  68.262295082
 
-False Positives :  62
-False Negatives :  361
+False Positives :  49
+False Negatives :  484
 
 28 person
 22 say
@@ -38,10 +38,13 @@ False Negatives :  361
 3 temporal-quantity
 3 long
 3 2
-3 endanger
 3 rate-entity
+3 dana-farber
+3 endanger
+3 and
 3 world-wide
 3 make
+3 company
 3 drive
 2 they
 2 date-interval
@@ -65,18 +68,15 @@ False Negatives :  361
 2 352700000000
 2 crocidolite
 2 that
-2 dana-farber
 2 11
 2 5290000000
 2 rust
-2 and
 2 have
 2 tax
 2 incentivize
 2 50380000000
 2 295000000
 2 5
-2 company
 2 economy
 2 of-course
 2 3100000000000
@@ -116,10 +116,12 @@ False Negatives :  361
 1 lead
 1 increase
 1 previous
+1 government-organization
 1 have-concession
 1 succeed
 1 date-entity
 1 strong
+1 of
 1 contract
 1 keep
 1 think
@@ -146,6 +148,7 @@ False Negatives :  361
 1 maturity
 1 have-purpose
 1 give
+1 it
 1 britain
 1 have-rel-role
 1 sharp

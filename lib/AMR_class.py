@@ -1,5 +1,7 @@
 import re
 from Node_class import node, parse_amr;
+from AlignmentEvaluator_class import AlignmentEvaluator
+
 class AMR:
 
 	def __init__(self):
@@ -19,6 +21,7 @@ class AMR:
 		self.AMR_tree = None;	
 		self.AMR_tree_aligned = None;			#AMR tree annotated with alignment information
 		self.AMR_dict = {};						#facilitates AMR string and tree lookup by ID
+		self.Evaluator = AlignmentEvaluator();
 
 	def read(self,s):
 	#reads a string that describes the AMR and parses the string into components
@@ -27,6 +30,7 @@ class AMR:
 		#Read AMR literal
 		AMR_lines = s[5:];
 		self.AMR_string_printable='\n'.join(AMR_lines);
+		self.AMR_aligned_string_printable=self.AMR_string_printable;
 		
 		AMR_lines = map(lambda s: s.lstrip(),AMR_lines);	
 		self.AMR_string_parsable=' '.join(AMR_lines);
@@ -66,6 +70,14 @@ class AMR:
 	#	alignments = alignments[1:];
 
 		return;
+	
+	def evaluate_alignments(self, true_str):
+
+		self.Evaluator.read(self.alignments, true_str, 1, self.AMR_tree);
+
+	def print_alignments(self):
+		
+		self.evaluator.print_alignments();
 
 	def generate_printable_AMR(self):
 

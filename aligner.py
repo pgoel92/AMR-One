@@ -55,6 +55,7 @@ def align(tokens, aligned_tokens, amr, addr, alignment, amrobj):
 	global polarity_token_list;
 	month_map = initialize_month_map();
 	concept = getConcept(amr.getValue());
+	this_concept_aligned = 0;
 
 	for i in range(0,len(tokens)):
 		token = tokens[i];
@@ -65,21 +66,27 @@ def align(tokens, aligned_tokens, amr, addr, alignment, amrobj):
 			amr.aligned_to = i;
 			aligned_tokens[i] = 1;
 			alignment = push_alignment(i, addr, alignment, amrobj); 
+			this_concept_aligned = 1;
+			break;
 
 		#Rule 2 : Polarity 
-		if concept == '-' and token in polarity_token_list and not already_aligned: 
+		elif concept == '-' and token in polarity_token_list and not already_aligned: 
 			amr.aligned_to = i;
 			aligned_tokens[i] = 1;
 			alignment = push_alignment(i, addr, alignment, amrobj);
+			this_concept_aligned = 1;
+			break;
 
 		#Rule 3 : Month. 
-		if amr.edge_name == 'month':
+		elif amr.edge_name == 'month':
 			month_name = month_map[concept];
 			#print month_name, token
 			if month_name == token and not already_aligned:
 				amr.aligned_to = i;	
 				aligned_tokens[i] = 1;
 				alignment = push_alignment(i, addr, alignment, amrobj);
+				this_concept_aligned = 1;
+				break;
 
 	if len(amr.edge_ptrs_nr) == 0: return alignment;
 	
@@ -91,12 +98,12 @@ def align(tokens, aligned_tokens, amr, addr, alignment, amrobj):
 	#The following rules are triggered when all children are done aligning because they need their alignments to align the current node 
 
 	#Rule 3 : Person-of, Thing-of
-	if concept == 'person' or concept == 'thing':
+	if (not this_concept_aligned) and (concept == 'person' or concept == 'thing'):
 		for j in range(0,len(amr.edge_ptrs)):			#For each outgoing edge
 			name = amr.edge_ptrs[j].edge_name;
 			if re.match('.*-of',name) != None:			#Is it a *-of edge?
-				align_to = amr.edge_ptrs[j].aligned_to;
-				if align_to != -1:
+				align_to = amr.edge_ptrs[j].aligned_to;	
+				if align_to != -1:						#Is the head of the *-of edge aligned?
 				 	amr.aligned_to = align_to;
 					aligned_tokens[align_to] = 1;
 					alignment = push_alignment(align_to, addr, alignment, amrobj);
@@ -152,7 +159,7 @@ def main():
 		amr = a.getAMRTree();
 		#print "####", a.ID;
 		a.setAlignments(aligner(tokens,amr,a));
-		a.generate_printable_AMR();
+		#a.generate_printable_AMR();
 		s = a.generate_writable();
 		print s;
 	#print polarity_concepts;
