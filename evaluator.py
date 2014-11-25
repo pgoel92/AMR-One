@@ -38,6 +38,12 @@ def main():
 	for i in range(0,len(AMR_objects)):
 
 		amrobj = AMR_objects[i];
+
+		print amrobj.ID;
+		print amrobj.tokens;
+		print amrobj.alignments;
+		print amrobj.AMR_string_printable;
+
 		true = true_alignments[i];
 		
 		(tp, fp, fn) = amrobj.evaluate_alignments(true);

@@ -755,26 +755,6 @@
                   :ARG2 (t2 / transport-01)))
       :ARG2 (a / amr-unknown))
 
-# ::id wb.eng_0003.51 ::date 2012-09-28T09:31:27 ::annotator ISI-AMR-01 ::preferred
-# ::snt In Virginia , it 's to benefit private business plans and not to serve the public interest .
-# ::save-date Mon Oct 15, 2012 ::file wb_eng_0003_51.txt
-# ::tok In Virginia , it 's to benefit private business plans and not to serve the public interest .
-# ::alignments 1-2|0.2+0.2.0+0.2.0.0  10-11|0 13-14|0.1.1 16-17|0.1.1.0 15-16|0.1.1.0.0 3-4|0.0.0 6-7|0.0.1 9-10|0.0.1.0 8-9|0.0.1.0.0 7-8|0.0.1.0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.391
-(a / and
-      :op1 (h / have-purpose-91
-            :ARG1 (i / it)
-            :ARG2 (b / benefit-01
-                  :ARG1 (p / plan
-                        :mod (b2 / business
-                              :mod (p2 / private)))))
-      :op2 (h2 / have-purpose-91 :polarity -
-            :ARG1 i
-            :ARG2 (s2 / serve-01
-                  :ARG1 (i2 / interest
-                        :poss (p3 / public))))
-      :location (s / state
-            :name (v / name :op1 "Virginia")))
-
 # ::id wb.eng_0003.52 ::date 2012-09-28T09:33:32 ::annotator ISI-AMR-01 ::preferred
 # ::snt You all are dead wrong .
 # ::save-date Mon Oct 15, 2012 ::file wb_eng_0003_52.txt
@@ -1003,29 +983,6 @@
 # ::alignments 0-1|0+0.0+0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.536
 (p / person
       :name (n / name :op1 "EMR"))
-
-# ::id wb.eng_0003.66 ::date 2012-10-17T07:36:42 ::annotator ISI-AMR-01 ::preferred
-# ::snt TMT said `` In Virginia , it 's to benefit private business plans and not to serve the public interest . ''
-# ::save-date Mon Nov 5, 2012 ::file wb_eng_0003_66.txt
-# ::tok TMT said " In Virginia , it 's to benefit private business plans and not to serve the public interest . "
-# ::alignments 0-1|0.0+0.0.0+0.0.0.0 4-5|0.1.2+0.1.2.0+0.1.2.0.0  1-2|0 13-14|0.1 16-17|0.1.1.1 19-20|0.1.1.1.0 18-19|0.1.1.1.0.0 6-7|0.1.0.0 9-10|0.1.0.1 12-13|0.1.0.1.0 11-12|0.1.0.1.0.0 10-11|0.1.0.1.0.0.0 ::annotator Aligner v.02 ::date 2014-09-27T13:32:46.548
-(s2 / say-01
-      :ARG0 (p2 / person
-            :name (n / name :op1 "TMT"))
-      :ARG1 (a / and
-            :op1 (h / have-purpose-91
-                  :ARG1 (i / it)
-                  :ARG2 (b / benefit-01
-                        :ARG1 (p3 / plan
-                              :mod (b2 / business
-                                    :mod (p5 / private)))))
-            :op2 (h2 / have-purpose-91 :polarity -
-                  :ARG1 i
-                  :ARG2 (s / serve-01
-                        :ARG1 (i2 / interest
-                              :poss (p / public))))
-            :location (s3 / state
-                  :name (n2 / name :op1 "Virginia"))))
 
 # ::id wb.eng_0003.67 ::date 2012-11-05T09:04:12 ::annotator ISI-AMR-01 ::preferred
 # ::snt I do n't see the point of this statement because it appears to demonize private business plans and put the public interest above all else .

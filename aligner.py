@@ -39,18 +39,18 @@ def getConcept(value):	#Takes a raw concept and processes it such that it can be
 def initialize_month_map():
 
 	m = {};
-	m['1'] = 'januari';	
-	m['2'] = 'februari';	
-	m['3'] = 'march';	
-	m['4'] = 'april';	
-	m['5'] = 'may';	
-	m['6'] = 'june';	
-	m['7'] = 'juli';	
-	m['8'] = 'august';	
-	m['9'] = 'septemb';	
-	m['10'] = 'octob';	
-	m['11'] = 'novemb';	
-	m['12'] = 'decemb';	
+	m['1'] = ['januari','jan','jan.'];	
+	m['2'] = ['februari','feb','feb.'];	
+	m['3'] = ['march'];	
+	m['4'] = ['april','apr'];	
+	m['5'] = ['may'];	
+	m['6'] = ['june'];	
+	m['7'] = ['juli'];
+	m['8'] = ['august','aug','aug.'];	
+	m['9'] = ['septemb','sept','sept.'];	
+	m['10'] = ['octob','oct','oct.'];	
+	m['11'] = ['novemb','nov','nov.'];	
+	m['12'] = ['decemb','dec','dec.'];	
 	
 	return m;
 
@@ -106,18 +106,18 @@ def align(tokens, aligned_tokens, amr_node, addr, alignment, amrobj):
 			break;
 		
 		#Rule 4 : e.g. Worker -> Work. Not a very good rule. Will cause false positives.
-		elif (concept + 'er' == token or concept + 'r' == token ) and not already_aligned:
-			amr_node.aligned_to = i;
-			aligned_tokens[i] = 1;
-			alignment = push_alignment(i, addr, alignment, amrobj);
-			this_concept_aligned = 1;
-			break;
+	#	elif (concept + 'er' == token or concept + 'r' == token ) and not already_aligned:
+	#		amr_node.aligned_to = i;
+	#		aligned_tokens[i] = 1;
+	#		alignment = push_alignment(i, addr, alignment, amrobj);
+	#		this_concept_aligned = 1;
+	#		break;
 	
 		#Rule 5 : Month. 
 		elif amr_node.edge_name == 'month':			#If current node is the head of a 'month' edge
-			month_name = month_map[concept];
+			month_name_list = month_map[concept];
 			#print month_name, token
-			if month_name == token and not already_aligned:
+			if token in month_name_list and not already_aligned:
 				amr_node.aligned_to = i;	
 				aligned_tokens[i] = 1;
 				alignment = push_alignment(i, addr, alignment, amrobj);

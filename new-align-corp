@@ -4,7 +4,7 @@
 # ::snt Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .
 # ::save-date
 # ::tok 0-Pierre 1-Vinken 2-, 3-61 4-years 5-old 6-, 7-will 8-join 9-the 10-board 11-as 12-a 13-nonexecutive 14-director 15-Nov. 16-29 17-.
-# ::alignments 8-9|1 0-1|1.1.1.1 1-2|1.1.1.2 3-4|1.1.2.1 4-5|1.1.2.2 10-11|1.2 14-15|1.2.1.1 16-17|1.3.2 * * * * *
+# ::alignments 8-9|1 0-1|1.1.1.1 1-2|1.1.1.2 3-4|1.1.2.1 4-5|1.1.2.2 10-11|1.2 14-15|1.2.1.1 15-16|1.3.1 16-17|1.3.2 * * * * *
 (j / join-01
       :ARG0 (p / person
             :name (p2 / name :op1 "Pierre" :op2 "Vinken")
@@ -60,7 +60,7 @@
 # ::snt A form of asbestos once used to make Kent cigarette filters has caused a high percentage of cancer deaths among a group of workers exposed to it more than 30 years ago , researchers reported .
 # ::save-date
 # ::tok 0-A 1-form 2-of 3-asbestos 4-once 5-used 6-to 7-make 8-Kent 9-cigarette 10-filters 11-has 12-caused 13-a 14-high 15-percentage 16-of 17-cancer 18-deaths 19-among 20-a 21-group 22-of 23-workers 24-exposed 25-to 26-it 27-more 28-than 29-30 30-years 31-ago 32-, 33-researchers 34-reported 35-.
-# ::alignments 34-35|1 33-34|1.1.1 33-34|1.1 12-13|1.2 3-4|1.2.1 1-2|1.2.1.1 5-6|1.2.1.2 7-8|1.2.1.2.1 10-11|1.2.1.2.1.1.1 9-10|1.2.1.2.1.1.2 8-9|1.2.1.2.1.1.2.1.1 4-5|1.2.1.2.2 14-15|1.2.2 15-16|1.2.2.1 17-18|1.2.2.1.1.1.1.1.1 23-24|1.2.2.1.1.2.1 24-25|1.2.2.1.1.2.2 29-30|1.2.2.1.1.2.2.1.2.1.1 30-31|1.2.2.1.1.2.2.1.2.1.2 23-24|1.2.2.1.1.2 * * * * *
+# ::alignments 34-35|1 33-34|1.1.1 33-34|1.1 12-13|1.2 3-4|1.2.1 1-2|1.2.1.1 5-6|1.2.1.2 7-8|1.2.1.2.1 10-11|1.2.1.2.1.1.1 9-10|1.2.1.2.1.1.2 8-9|1.2.1.2.1.1.2.1.1 4-5|1.2.1.2.2 14-15|1.2.2 15-16|1.2.2.1 17-18|1.2.2.1.1.1.1.1.1 24-25|1.2.2.1.1.2.2 29-30|1.2.2.1.1.2.2.1.2.1.1 30-31|1.2.2.1.1.2.2.1.2.1.2 * * * * *
 (r / report-01
       :ARG0 (p4 / person
             :ARG0-of (r2 / research-01))
@@ -228,7 +228,7 @@
 # ::snt `` We have no useful information on whether users are at risk , '' said James A. Talcott of Boston 's Dana - Farber Cancer Institute .
 # ::save-date
 # ::tok 0-" 1-We 2-have 3-no 4-useful 5-information 6-on 7-whether 8-users 9-are 10-at 11-risk 12-, 13-" 14-said 15-James 16-A. 17-Talcott 18-of 19-Boston 20-'s 21-Dana 22-- 23-Farber 24-Cancer 25-Institute 26-.
-# ::alignments 14-15|1 15-16|1.1.1.1 16-17|1.1.1.2 17-18|1.1.1.3 24-25|1.1.2.1.1.2 25-26|1.1.2.1.1.3 19-20|1.1.2.1.2.1.1 2-3|1.2 3-4|1.2.1 1-2|1.2.2 5-6|1.2.3 4-5|1.2.3.1.2.1 4-5|1.2.3.1.2 8-9|1.2.3.2 * * * * *
+# ::alignments 14-15|1 15-16|1.1.1.1 16-17|1.1.1.2 17-18|1.1.1.3 24-25|1.1.2.1.1.2 25-26|1.1.2.1.1.3 19-20|1.1.2.1.2.1.1 2-3|1.2 3-4|1.2.1 1-2|1.2.2 5-6|1.2.3 4-5|1.2.3.1.2.1 4-5|1.2.3.1.2 * * * * *
 (s / say-01
       :ARG0 (p / person
             :name (j / name :op1 "James" :op2 "A." :op3 "Talcott")
@@ -336,7 +336,7 @@
 # ::snt Four of the five surviving workers have asbestos - related diseases , including three with recently diagnosed cancer .
 # ::save-date
 # ::tok 0-Four 1-of 2-the 3-five 4-surviving 5-workers 6-have 7-asbestos 8-- 9-related 10-diseases 11-, 12-including 13-three 14-with 15-recently 16-diagnosed 17-cancer 18-.
-# ::alignments 6-7|1 12-13|1.1.2 5-6|1.1.2.1.2 4-5|1.1.2.1.3 5-6|1.1.2.1 16-17|1.1.3.1.2 17-18|1.1.3.1.2.1 15-16|1.1.3.1.2.2 16-17|1.1.3.1 12-13|1.1 10-11|1.2 9-10|1.2.1 7-8|1.2.1.1 * * * * *
+# ::alignments 6-7|1 12-13|1.1.2 4-5|1.1.2.1.3 16-17|1.1.3.1.2 17-18|1.1.3.1.2.1 15-16|1.1.3.1.2.2 16-17|1.1.3.1 12-13|1.1 10-11|1.2 9-10|1.2.1 7-8|1.2.1.1 * * * * *
 (h / have-03
       :ARG0 (p4 / person :quant 4
             :ARG1-of (i / include-91
@@ -400,7 +400,7 @@
 # ::snt The percentage of lung cancer deaths among the workers at the West Groton , Mass. , paper factory appears to be the highest for any asbestos workers studied in Western industrialized countries , he said .
 # ::save-date
 # ::tok 0-The 1-percentage 2-of 3-lung 4-cancer 5-deaths 6-among 7-the 8-workers 9-at 10-the 11-West 12-Groton 13-, 14-Mass. 15-, 16-paper 17-factory 18-appears 19-to 20-be 21-the 22-highest 23-for 24-any 25-asbestos 26-workers 27-studied 28-in 29-Western 30-industrialized 31-countries 32-, 33-he 34-said 35-.
-# ::alignments 34-35|1 33-34|1.1 18-19|1.2 22-23|1.2.1 8-9|1.2.1.2.1 25-26|1.2.1.2.1.1 27-28|1.2.1.2.2 31-32|1.2.1.2.3 30-31|1.2.1.2.3.1 11-12|1.2.1.2.3.2.1.1 24-25|1.2.1.2.4 8-9|1.2.1.2 1-2|1.2.1.3 4-5|1.2.1.3.1.1.1.1 3-4|1.2.1.3.1.1.1.1.1 26-27|1.2.1.3.1.2.1.1 17-18|1.2.1.3.1.2.1.1.1 16-17|1.2.1.3.1.2.1.1.1.1 12-13|1.2.1.3.1.2.1.1.1.2.1.2 26-27|1.2.1.3.1.2.1 * * * * *
+# ::alignments 34-35|1 33-34|1.1 18-19|1.2 22-23|1.2.1 25-26|1.2.1.2.1.1 27-28|1.2.1.2.2 31-32|1.2.1.2.3 30-31|1.2.1.2.3.1 11-12|1.2.1.2.3.2.1.1 24-25|1.2.1.2.4 1-2|1.2.1.3 4-5|1.2.1.3.1.1.1.1 3-4|1.2.1.3.1.1.1.1.1 17-18|1.2.1.3.1.2.1.1.1 16-17|1.2.1.3.1.2.1.1.1.1 12-13|1.2.1.3.1.2.1.1.1.2.1.2 * * * * *
 (s3 / say-01
       :ARG0 (h2 / he)
       :ARG1 (a3 / appear-02
@@ -577,7 +577,7 @@
 # ::snt About 160 workers at a factory that made paper for the Kent filters were exposed to asbestos in the 1950s .
 # ::save-date
 # ::tok 0-About 1-160 2-workers 3-at 4-a 5-factory 6-that 7-made 8-paper 9-for 10-the 11-Kent 12-filters 13-were 14-exposed 15-to 16-asbestos 17-in 18-the 19-1950s 20-.
-# ::alignments 14-15|1 2-3|1.1.1 5-6|1.1.1.1 7-8|1.1.1.1.1 8-9|1.1.1.1.1.1 11-12|1.1.1.1.1.1.1.1.1 12-13|1.1.1.1.1.1.1.2 0-1|1.1.2 1-2|1.1.2.1 2-3|1.1 16-17|1.2 19-20|1.3.1 * * * * *
+# ::alignments 14-15|1 5-6|1.1.1.1 7-8|1.1.1.1.1 8-9|1.1.1.1.1.1 11-12|1.1.1.1.1.1.1.1.1 12-13|1.1.1.1.1.1.1.2 0-1|1.1.2 1-2|1.1.2.1 16-17|1.2 19-20|1.3.1 * * * * *
 (e / expose-01
       :ARG1 (p2 / person
             :ARG0-of (w / work-01
@@ -607,7 +607,7 @@
 # ::snt Workers dumped large burlap sacks of the imported material into a huge bin , poured in cotton and acetate fibers and mechanically mixed the dry fibers in a process used to make filters .
 # ::save-date
 # ::tok 0-Workers 1-dumped 2-large 3-burlap 4-sacks 5-of 6-the 7-imported 8-material 9-into 10-a 11-huge 12-bin 13-, 14-poured 15-in 16-cotton 17-and 18-acetate 19-fibers 20-and 21-mechanically 22-mixed 23-the 24-dry 25-fibers 26-in 27-a 28-process 29-used 30-to 31-make 32-filters 33-.
-# ::alignments 17-18|1 1-2|1.1 0-1|1.1.1.1 0-1|1.1.1 8-9|1.1.2 7-8|1.1.2.1 4-5|1.1.2.2 3-4|1.1.2.2.1 2-3|1.1.2.2.2 12-13|1.1.3 11-12|1.1.3.1 14-15|1.2 20-21|1.2.1 19-20|1.2.1.1 16-17|1.2.1.1.1 25-26|1.2.1.2 18-19|1.2.1.2.1 22-23|1.3 24-25|1.3.1.1 21-22|1.3.2 28-29|1.4 29-30|1.4.1 31-32|1.4.1.1 32-33|1.4.1.1.1.1 * * * * *
+# ::alignments 17-18|1 1-2|1.1 8-9|1.1.2 7-8|1.1.2.1 4-5|1.1.2.2 3-4|1.1.2.2.1 2-3|1.1.2.2.2 12-13|1.1.3 11-12|1.1.3.1 14-15|1.2 20-21|1.2.1 19-20|1.2.1.1 16-17|1.2.1.1.1 25-26|1.2.1.2 18-19|1.2.1.2.1 22-23|1.3 24-25|1.3.1.1 21-22|1.3.2 28-29|1.4 29-30|1.4.1 31-32|1.4.1.1 32-33|1.4.1.1.1.1 * * * * *
 (a / and
       :op1 (d / dump-01
             :ARG0 (p2 / person
@@ -642,7 +642,7 @@
 # ::snt Workers described `` clouds of blue dust '' that hung over parts of the factory , even though exhaust fans ventilated the area .
 # ::save-date
 # ::tok 0-Workers 1-described 2-" 3-clouds 4-of 5-blue 6-dust 7-" 8-that 9-hung 10-over 11-parts 12-of 13-the 14-factory 15-, 16-even 17-though 18-exhaust 19-fans 20-ventilated 21-the 22-area 23-.
-# ::alignments 1-2|1 0-1|1.1.1 0-1|1.1 3-4|1.2 6-7|1.2.1 5-6|1.2.1.1 10-11|1.2.2.1 14-15|1.2.2.1.1.1 14-15|1.2.2.1.1 20-21|1.2.2.2 19-20|1.2.2.2.1 18-19|1.2.2.2.1.1 22-23|1.2.2.2.2 * * * * *
+# ::alignments 1-2|1 3-4|1.2 6-7|1.2.1 5-6|1.2.1.1 10-11|1.2.2.1 14-15|1.2.2.1.1.1 14-15|1.2.2.1.1 20-21|1.2.2.2 19-20|1.2.2.2.1 18-19|1.2.2.2.1.1 22-23|1.2.2.2.2 * * * * *
 (d / describe-01
       :ARG0 (p / person
             :ARG0-of (w / work-01))
@@ -662,7 +662,7 @@
 # ::snt `` There 's no question that some of those workers and managers contracted asbestos - related diseases , '' said Darrell Phillips , vice president of human resources for Hollingsworth & Vose .
 # ::save-date
 # ::tok 0-" 1-There 2-'s 3-no 4-question 5-that 6-some 7-of 8-those 9-workers 10-and 11-managers 12-contracted 13-asbestos 14-- 15-related 16-diseases 17-, 18-" 19-said 20-Darrell 21-Phillips 22-, 23-vice 24-president 25-of 26-human 27-resources 28-for 29-Hollingsworth 30-& 31-Vose 32-.
-# ::alignments 19-20|1 20-21|1.1.1.1 21-22|1.1.1.2 29-30|1.1.2.1.1.1 30-31|1.1.2.1.1.2 31-32|1.1.2.1.1.3 24-25|1.1.2.2 23-24|1.1.2.2.1 27-28|1.1.2.2.2 26-27|1.1.2.2.2.1 4-5|1.2 3-4|1.2.1 12-13|1.2.2 10-11|1.2.2.1.1.1 9-10|1.2.2.1.1.1.1.1 9-10|1.2.2.1.1.1.1 11-12|1.2.2.1.1.1.2.1 11-12|1.2.2.1.1.1.2 5-6|1.2.2.1.1.1.3 16-17|1.2.2.2 15-16|1.2.2.2.1 13-14|1.2.2.2.1.1 * * * * *
+# ::alignments 19-20|1 20-21|1.1.1.1 21-22|1.1.1.2 29-30|1.1.2.1.1.1 30-31|1.1.2.1.1.2 31-32|1.1.2.1.1.3 24-25|1.1.2.2 23-24|1.1.2.2.1 27-28|1.1.2.2.2 26-27|1.1.2.2.2.1 4-5|1.2 3-4|1.2.1 12-13|1.2.2 10-11|1.2.2.1.1.1 11-12|1.2.2.1.1.1.2.1 11-12|1.2.2.1.1.1.2 5-6|1.2.2.1.1.1.3 16-17|1.2.2.2 15-16|1.2.2.2.1 13-14|1.2.2.2.1.1 * * * * *
 (s / say-01
       :ARG0 (p / person
             :name (d / name :op1 "Darrell" :op2 "Phillips")
@@ -686,6 +686,23 @@
                   :ARG2 (d2 / disease
                         :ARG1-of (r / relate-01
                               :ARG2 (a2 / asbestos))))))
+
+# ::id nw.wsj_0003.29
+# ::snt `` But you have to recognize that these events took place 35 years ago .
+# ::save-date
+# ::tok 0-" 1-But 2-you 3-have 4-to 5-recognize 6-that 7-these 8-events 9-took 10-place 11-35 12-years 13-ago 14-.
+# ::alignments 5-6|1.1.2 2-3|1.1.2.1 8-9|1.1.2.2 11-12|1.1.2.2.2.2.1 12-13|1.1.2.2.2.2.2 * * * * *
+(c / contrast-01
+      :ARG2 (o / obligate-01
+            :ARG1 y
+            :ARG2 (r / recognize-02
+                  :ARG0 (y / you)
+                  :ARG1 (e / event
+                        :mod (t / this)
+                        :time (b / before
+                              :op1 (n / now)
+                              :quant (t2 / temporal-quantity :quant 35
+                                    :unit (y2 / year)))))))
 
 # ::id nw.wsj_0003.30
 # ::snt It has no bearing on our work force today .
@@ -827,7 +844,7 @@
 # ::snt Shorter maturities are considered a sign of rising rates because portfolio managers can capture higher rates sooner .
 # ::save-date
 # ::tok 0-Shorter 1-maturities 2-are 3-considered 4-a 5-sign 6-of 7-rising 8-rates 9-because 10-portfolio 11-managers 12-can 13-capture 14-higher 15-rates 16-sooner 17-.
-# ::alignments 3-4|1 1-2|1.1.1 0-1|1.1.1.1 7-8|1.1.2 8-9|1.1.2.1 13-14|1.2.1.1 11-12|1.2.1.1.1.1 10-11|1.2.1.1.1.1.1 11-12|1.2.1.1.1 15-16|1.2.1.1.2 14-15|1.2.1.1.2.1 16-17|1.2.1.1.3 * * * * *
+# ::alignments 3-4|1 1-2|1.1.1 7-8|1.1.2 8-9|1.1.2.1 13-14|1.2.1.1 11-12|1.2.1.1.1.1 10-11|1.2.1.1.1.1.1 11-12|1.2.1.1.1 15-16|1.2.1.1.2 14-15|1.2.1.1.2.1 * * * * *
 (c / consider-01
       :ARG1 (s / signal-01
             :ARG0 (m / maturity
@@ -1226,6 +1243,71 @@
                         :ARG2 (t / temporal-quantity :quant 1
                               :unit (y / year))))))
 
+# ::id nw.wsj_0008.1
+# ::snt The federal government suspended sales of U.S. savings bonds because Congress has n't lifted the ceiling on government debt .
+# ::save-date
+# ::tok 0-The 1-federal 2-government 3-suspended 4-sales 5-of 6-U.S. 7-savings 8-bonds 9-because 10-Congress 11-has 12-n't 13-lifted 14-the 15-ceiling 16-on 17-government 18-debt 19-.
+# ::alignments 3-4|1 2-3|1.1.1 1-2|1.1.2 8-9|1.2.1 7-8|1.2.1.1 6-7|1.2.1.2.1.1 13-14|1.3.1 12-13|1.3.1.1 10-11|1.3.1.2.1.1 15-16|1.3.1.3 18-19|1.3.1.3.1 17-18|1.3.1.3.1.1.1 * * * * *
+(s / suspend-01
+      :ARG0 (g4 / government-organization
+            :ARG0-of (g / govern-01)
+            :mod (f / federal))
+      :ARG1 (s2 / sell-01
+            :ARG1 (b / bond
+                  :mod (s3 / savings)
+                  :mod (c3 / country
+                        :name (n / name :op1 "U.S."))))
+      :ARG1-of (c / cause-01
+            :ARG0 (l / lift-01 :polarity -
+                  :ARG0 (g3 / government-organization
+                        :name (n2 / name :op1 "Congress"))
+                  :ARG1 (c4 / ceiling
+                        :prep-on (d / debt
+                              :mod (g5 / government-organization
+                                    :ARG0-of (g2 / govern-01)))))))
+
+# ::id nw.wsj_0008.2
+# ::snt Until Congress acts , the government has n't any authority to issue new debt obligations of any kind , the Treasury said .
+# ::save-date
+# ::tok 0-Until 1-Congress 2-acts 3-, 4-the 5-government 6-has 7-n't 8-any 9-authority 10-to 11-issue 12-new 13-debt 14-obligations 15-of 16-any 17-kind 18-, 19-the 20-Treasury 21-said 22-.
+# ::alignments 21-22|1 20-21|1.1.1.1 9-10|1.2 7-8|1.2.1 11-12|1.2.2 14-15|1.2.2.2 13-14|1.2.2.2.1 12-13|1.2.2.2.2 17-18|1.2.2.2.3 8-9|1.2.2.2.3.1 5-6|1.2.3.1 0-1|1.2.4 2-3|1.2.4.1 1-2|1.2.4.1.1.1.1 * * * * *
+(s / say-01
+      :ARG0 (g3 / government-organization
+            :name (t / name :op1 "Treasury"))
+      :ARG1 (a / authorize-01 :polarity -
+            :ARG1 (i / issue-01
+                  :ARG0 g4
+                  :ARG1 (o2 / obligation
+                        :mod (d / debt)
+                        :mod (n / new)
+                        :mod (k / kind
+                              :mod (a3 / any))))
+            :ARG2 (g4 / government-organization
+                  :ARG0-of (g / govern-01))
+            :time (u / until
+                  :op1 (a2 / act-02
+                        :ARG0 (g2 / government-organization
+                              :name (c / name :op1 "Congress"))))))
+
+# ::id nw.wsj_0008.3
+# ::snt The government 's borrowing authority dropped at midnight Tuesday to $ 2.80 trillion from $ 2.87 trillion .
+# ::save-date
+# ::tok 0-The 1-government 2-'s 3-borrowing 4-authority 5-dropped 6-at 7-midnight 8-Tuesday 9-to 10-$ 11-2.80 12-trillion 13-from 14-$ 15-2.87 16-trillion 17-.
+# ::alignments 5-6|1 3-4|1.1.1 4-5|1.1.1.2 1-2|1.1.1.2.1.1 3-4|1.1 10-11|1.2.2 14-15|1.3.2 * * * * *
+(d4 / drop-01
+      :ARG1 (t / thing
+            :ARG1-of (b / borrow-01
+                  :ARG0 g
+                  :ARG1-of (a / authorize-01
+                        :ARG2 (g / government-organization
+                              :ARG0-of (g2 / govern-01)))))
+      :ARG3 (m2 / monetary-quantity :quant 2870000000000
+            :unit (d3 / dollar))
+      :ARG4 (m / monetary-quantity :quant 2800000000000
+            :unit (d2 / dollar))
+      :time (d / date-entity :time "0:00"
+            :weekday (w / wednesday)))
+
 # ::id nw.wsj_0008.4
 # ::snt Legislation to lift the debt ceiling is ensnarled in the fight over cutting capital - gains taxes .
 # ::save-date
@@ -1269,7 +1351,7 @@
 # ::snt The Treasury said the U.S. will default on Nov. 9 if Congress does n't act by then .
 # ::save-date
 # ::tok 0-The 1-Treasury 2-said 3-the 4-U.S. 5-will 6-default 7-on 8-Nov. 9-9 10-if 11-Congress 12-does 13-n't 14-act 15-by 16-then 17-.
-# ::alignments 2-3|1 1-2|1.1.1.1 6-7|1.2 4-5|1.2.1.1.1 9-10|1.2.2.2 14-15|1.2.3 13-14|1.2.3.1 11-12|1.2.3.2.1.1 15-16|1.2.3.3 * * * * *
+# ::alignments 2-3|1 1-2|1.1.1.1 6-7|1.2 4-5|1.2.1.1.1 8-9|1.2.2.1 9-10|1.2.2.2 14-15|1.2.3 13-14|1.2.3.1 11-12|1.2.3.2.1.1 15-16|1.2.3.3 * * * * *
 (s / say-01
       :ARG0 (g / government-organization
             :name (n / name :op1 "Treasury"))
@@ -1287,7 +1369,7 @@
 # ::snt Clark J. Vitulli was named senior vice president and general manager of this U.S. sales and marketing arm of Japanese auto maker Mazda Motor Corp .
 # ::save-date
 # ::tok 0-Clark 1-J. 2-Vitulli 3-was 4-named 5-senior 6-vice 7-president 8-and 9-general 10-manager 11-of 12-this 13-U.S. 14-sales 15-and 16-marketing 17-arm 18-of 19-Japanese 20-auto 21-maker 22-Mazda 23-Motor 24-Corp 25-.
-# ::alignments 4-5|1 0-1|1.1.1.1 1-2|1.1.1.2 2-3|1.1.1.3 8-9|1.2 7-8|1.2.1 6-7|1.2.1.1 5-6|1.2.1.2 10-11|1.2.2.1 9-10|1.2.2.2 10-11|1.2.2 17-18|1.2.3.1 12-13|1.2.3.1.1 22-23|1.2.3.1.2.1.1 23-24|1.2.3.1.2.1.2 24-25|1.2.3.1.2.1.3 21-22|1.2.3.1.2.3 20-21|1.2.3.1.2.3.1 13-14|1.2.3.1.3.1.1 16-17|1.2.3.1.5 * * * * *
+# ::alignments 4-5|1 0-1|1.1.1.1 1-2|1.1.1.2 2-3|1.1.1.3 8-9|1.2 7-8|1.2.1 6-7|1.2.1.1 5-6|1.2.1.2 10-11|1.2.2.1 9-10|1.2.2.2 10-11|1.2.2 17-18|1.2.3.1 12-13|1.2.3.1.1 22-23|1.2.3.1.2.1.1 23-24|1.2.3.1.2.1.2 24-25|1.2.3.1.2.1.3 20-21|1.2.3.1.2.3.1 13-14|1.2.3.1.3.1.1 16-17|1.2.3.1.5 * * * * *
 (n / name-03
       :ARG1 (p / person
             :name (c / name :op1 "Clark" :op2 "J." :op3 "Vitulli"))
@@ -1430,7 +1512,7 @@
 # ::snt And the city decided to treat its guests more like royalty or rock stars than factory owners .
 # ::save-date
 # ::tok 0-And 1-the 2-city 3-decided 4-to 5-treat 6-its 7-guests 8-more 9-like 10-royalty 11-or 12-rock 13-stars 14-than 15-factory 16-owners 17-.
-# ::alignments 0-1|1 3-4|1.1 2-3|1.1.1 5-6|1.1.2 7-8|1.1.2.1 11-12|1.1.2.2 10-11|1.1.2.2.1 13-14|1.1.2.2.2 12-13|1.1.2.2.2.1 8-9|1.1.2.2.3 16-17|1.1.2.2.4.1 15-16|1.1.2.2.4.1.1 16-17|1.1.2.2.4 * * * * *
+# ::alignments 0-1|1 3-4|1.1 2-3|1.1.1 5-6|1.1.2 7-8|1.1.2.1 11-12|1.1.2.2 10-11|1.1.2.2.1 13-14|1.1.2.2.2 12-13|1.1.2.2.2.1 8-9|1.1.2.2.3 15-16|1.1.2.2.4.1.1 * * * * *
 (a / and
   :op2 (d / decide-01
          :ARG0 (c / city)
@@ -1474,7 +1556,7 @@
 # ::snt On the receiving end of the message were officials from giants like Du Pont and Maytag , along with lesser knowns like Trojan Steel and the Valley Queen Cheese Factory .
 # ::save-date
 # ::tok 0-On 1-the 2-receiving 3-end 4-of 5-the 6-message 7-were 8-officials 9-from 10-giants 11-like 12-Du 13-Pont 14-and 15-Maytag 16-, 17-along 18-with 19-lesser 20-knowns 21-like 22-Trojan 23-Steel 24-and 25-the 26-Valley 27-Queen 28-Cheese 29-Factory 30-.
-# ::alignments 2-3|1 14-15|1.1.1.1 10-11|1.1.1.1.1 24-25|1.1.1.1.1.1 12-13|1.1.1.1.1.1.1.1.1 13-14|1.1.1.1.1.1.1.1.2 15-16|1.1.1.1.1.1.2.1.1 19-20|1.1.1.1.2.1.1 22-23|1.1.1.1.2.2.1.1.1 23-24|1.1.1.1.2.2.1.1.2 26-27|1.1.1.1.2.2.2.1.1 27-28|1.1.1.1.2.2.2.1.2 28-29|1.1.1.1.2.2.2.1.3 29-30|1.1.1.1.2.2.2.1.4 8-9|1.1.1.2 6-7|1.2.1 6-7|1.2 * * * * *
+# ::alignments 2-3|1 14-15|1.1.1.1 10-11|1.1.1.1.1 24-25|1.1.1.1.1.1 12-13|1.1.1.1.1.1.1.1.1 13-14|1.1.1.1.1.1.1.1.2 15-16|1.1.1.1.1.1.2.1.1 22-23|1.1.1.1.2.2.1.1.1 23-24|1.1.1.1.2.2.1.1.2 26-27|1.1.1.1.2.2.2.1.1 27-28|1.1.1.1.2.2.2.1.2 28-29|1.1.1.1.2.2.2.1.3 29-30|1.1.1.1.2.2.2.1.4 8-9|1.1.1.2 6-7|1.2.1 6-7|1.2 * * * * *
 (r / receive-01
       :ARG0 (p / person
             :ARG0-of (h / have-org-role-91
@@ -1601,7 +1683,7 @@
 # ::snt Then , in the guests ' honor , the speedway hauled out four drivers , crews and even the official Indianapolis 500 announcer for a 10 - lap exhibition race .
 # ::save-date
 # ::tok 0-Then 1-, 2-in 3-the 4-guests 5-' 6-honor 7-, 8-the 9-speedway 10-hauled 11-out 12-four 13-drivers 14-, 15-crews 16-and 17-even 18-the 19-official 20-Indianapolis 21-500 22-announcer 23-for 24-a 25-10 26-- 27-lap 28-exhibition 29-race 30-.
-# ::alignments 10-11|1 9-10|1.1 16-17|1.2 13-14|1.2.1.2 13-14|1.2.1 15-16|1.2.2 22-23|1.2.3.1 20-21|1.2.3.2.1.1 21-22|1.2.3.2.1.2 19-20|1.2.3.3 17-18|1.2.3.4 22-23|1.2.3 29-30|1.3 27-28|1.3.1 25-26|1.3.1.1 28-29|1.3.2 0-1|1.4 6-7|1.5 4-5|1.5.1 * * * * *
+# ::alignments 10-11|1 9-10|1.1 16-17|1.2 15-16|1.2.2 22-23|1.2.3.1 20-21|1.2.3.2.1.1 21-22|1.2.3.2.1.2 19-20|1.2.3.3 17-18|1.2.3.4 22-23|1.2.3 29-30|1.3 27-28|1.3.1 25-26|1.3.1.1 28-29|1.3.2 0-1|1.4 6-7|1.5 4-5|1.5.1 * * * * *
 (h / haul-03
       :ARG0 (s / speedway)
       :ARG1 (a / and
@@ -1625,7 +1707,7 @@
 # ::snt After the race , Fortune 500 executives drooled like schoolboys over the cars and drivers .
 # ::save-date
 # ::tok 0-After 1-the 2-race 3-, 4-Fortune 5-500 6-executives 7-drooled 8-like 9-schoolboys 10-over 11-the 12-cars 13-and 14-drivers 15-.
-# ::alignments 7-8|1 4-5|1.1.1.1.1.1.1 5-6|1.1.1.1.1.1.2 6-7|1.1.1.2 13-14|1.2 12-13|1.2.1 14-15|1.2.2.1 14-15|1.2.2 0-1|1.3 2-3|1.3.1 9-10|1.4.1.1 * * * * *
+# ::alignments 7-8|1 4-5|1.1.1.1.1.1.1 5-6|1.1.1.1.1.1.2 6-7|1.1.1.2 13-14|1.2 12-13|1.2.1 0-1|1.3 2-3|1.3.1 9-10|1.4.1.1 * * * * *
 (d / drool-02
       :ARG0 (p2 / person
             :ARG0-of (h / have-org-role-91
@@ -1647,7 +1729,7 @@
 # ::snt No dummies , the drivers pointed out they still had space on their machines for another sponsor 's name or two .
 # ::save-date
 # ::tok 0-No 1-dummies 2-, 3-the 4-drivers 5-pointed 6-out 7-they 8-still 9-had 10-space 11-on 12-their 13-machines 14-for 15-another 16-sponsor 17-'s 18-name 19-or 20-two 21-.
-# ::alignments 5-6|1 4-5|1.1.1 1-2|1.1.2 0-1|1.1.2.1 4-5|1.1 9-10|1.2 10-11|1.2.1 13-14|1.2.1.1 18-19|1.2.1.2 19-20|1.2.1.2.1 16-17|1.2.1.2.2.1 15-16|1.2.1.2.2.2 8-9|1.2.2 * * * * *
+# ::alignments 5-6|1 1-2|1.1.2 0-1|1.1.2.1 9-10|1.2 10-11|1.2.1 13-14|1.2.1.1 18-19|1.2.1.2 19-20|1.2.1.2.1 16-17|1.2.1.2.2.1 15-16|1.2.1.2.2.2 8-9|1.2.2 * * * * *
 (p / point-02
       :ARG0 (p2 / person
             :ARG0-of (d / drive-01)
