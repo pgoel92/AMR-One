@@ -1,3 +1,7 @@
+####
+# Concept : A concept is the value of an AMR node after the variable has been removed
+# Concept cleaning : Includes removal of quotation marks and stripping out number tags
+
 import re
 from Node_class import node, parse_amr;
 from AlignmentEvaluator_class import AlignmentEvaluator
@@ -15,6 +19,7 @@ class AMR:
 		self.alignments = '';
 		self.alignment_annotator = '';
 		self.alignment_date = '';
+		self.NumberOfConcepts = 0;
 		self.AMR_string_printable = '';			#AMR string prints just like in the original file
 		self.AMR_aligned_string_printable = '';	#AMR string annotated with alignment information prints in tree format
 		self.AMR_string_parsable = '';			#Linearized AMR string
@@ -22,13 +27,36 @@ class AMR:
 		self.AMR_tree_aligned = None;			#AMR tree annotated with alignment information
 		self.AMR_dict = {};						#facilitates AMR string and tree lookup by ID
 		self.Evaluator = AlignmentEvaluator();
+		
+	#	Methods :
 
+	#	read(self,s)
+	#	evaluate_alignments
+	#	print_alignments
+	#	generate_printable_AMR
+	#	generate_writable
+	#	printAMR
+	#	getNodeByAddress
+	#	annotate
+	#	convertISItoJAMR
+	#	getConcepts
+	#	getTokens
+	#	getAlignments
+	#	getAMRTree
+	#	getAMRStringByID
+	#	getAMRTreeByID
+	#	setAlignments
+	
 	def read(self,s):
 	#reads a string that describes the AMR and parses the string into components
 		s = s.split('\n');
-
+		
 		#Read AMR literal
-		AMR_lines = s[5:];
+		if s[3][0] == '#':		#indicates that there is an alignment line
+			alignment_line = (s[3]).split();
+			self.alignments = alignment_line[2:-5];	#remove the ::alignment tag
+			AMR_lines = s[4:];
+		else: AMR_lines = s[3:];
 		self.AMR_string_printable='\n'.join(AMR_lines);
 		self.AMR_aligned_string_printable=self.AMR_string_printable;
 		
@@ -45,20 +73,19 @@ class AMR:
 				self.date = ID_line[i];
 			if(prev_token == '::annotator'):
 				self.annotator = ID_line[i];
-	
 		self.AMR_tree = parse_amr(self.AMR_string_parsable);		
 		self.AMR_tree_aligned = self.AMR_tree;
 		self.AMR_dict[self.ID] = [self.AMR_string_printable, self.AMR_tree];	#Ideally, we should be able to generate the printable string from the tree. 
 																				#Then we wouldn't have to save the printable string at all.
+
+		self.NumberOfConcepts = len(self.getConcepts(0));
 		snt_line = s[1];	
 		self.sentence = snt_line[8:];
 
-		tok_line = s[3];
-		self.tokens = (tok_line[8:]).split();
-		#print self.tokens;	
+	#	tok_line = s[3];
+	#	self.tokens = (tok_line[8:]).split();
+	#	#print self.tokens;	
 
-		alignment_line = (s[4]).split();
-		self.alignments = alignment_line[2:-5];	#remove the ::alignment tag
 	#	for i in range(0,len(alignment_line)):	#not sure what this is for, probably some border case
 	#		if alignment_line[i] == ':':
 	#			break;
@@ -71,9 +98,9 @@ class AMR:
 
 		return;
 	
-	def evaluate_alignments(self, true_str):
+	def evaluate_alignments(self, true_alignments):
 	
-		self.Evaluator.read(self.alignments, true_str, 0, self.AMR_tree);
+		self.Evaluator.read(self.alignments, true_alignments, 0, self.AMR_tree);
 		self.Evaluator.evaluate();
 		return self.Evaluator.getStatistics();
 
@@ -91,10 +118,10 @@ class AMR:
 		s = s + "# ::id " + self.ID + '\n';
 		s = s + "# ::snt " + self.sentence + '\n';
 		s = s + "# ::save-date\n";
-		s = s + "# ::tok";
-		for i in range(0,len(self.tokens)):
-			s = s + ' ' + str(i) + '-' + self.tokens[i];
-		s = s + '\n';
+		#s = s + "# ::tok";
+		#for i in range(0,len(self.tokens)):
+		#	s = s + ' ' + str(i) + '-' + self.tokens[i];
+		#s = s + '\n';
 		s = s + '# ::alignments ' + ' '.join(self.alignments) + ' * * * * *\n';
 		s = s + self.AMR_aligned_string_printable;
 		s = s + '\n';
@@ -131,11 +158,25 @@ class AMR:
 		
 		if address == '1': return '1';
 		return (self.AMR_tree).ISItoJAMR(address[2:],'1');
-		
-	def getConcepts(self):
-			
-		return self.AMR_tree.getConcepts('1');
+	
+	def cleanConcept(self, concept):
+	#Takes a concept as input and returns the cleaned version
+		print "__"+concept+"__";	
+		if len(concept) > 1 and concept[0] == '"': concept = concept[1:-1];  #Remove quotation marks
+		concept = re.sub('\-[0-9]+$','',concept);       #Remove number tags
+	
+		return concept;
+	
+	def getConcepts(self, clean):
+	#clean == 1 means the concepts should be cleaned. 
+	#Returns a list of tuples of the form (concept, address).
 
+		clist = self.AMR_tree.getConcepts('1');
+		if clean: 
+			cleanclist = [(self.cleanConcept(x[0]),x[1]) for x in clist];
+			clist = cleanclist;
+		return clist;
+		
 	def getTokens(self):
 		
 		return self.tokens;	
@@ -172,10 +213,11 @@ def read_corpus_file(fname):
 	s = s.split('\n\n');	
 	del s[0];
 	del s[-1];
-
+	
 	for amr_desc in s:
 		a = AMR();
 		a.read(amr_desc);
+		#print a.ID;
 		amr_objects.append(a);
 		
 	return amr_objects;

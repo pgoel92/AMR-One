@@ -3,7 +3,7 @@
 from lib.AMR_class import read_corpus_file
 from lib.dictlib import threshold_dict, count_dict_insert
 from lib.lemmatizer import mylemmatizer
-from nltk.stem.porter import *
+from nltk.stem.porter import PorterStemmer 
 import re
 import sys
 
@@ -13,11 +13,29 @@ d = {};
 polarity_token_list = ['no','not','non','never','n\'t','without'];
 symbol_concepts = ['dollar', 'percentage-ent'];
 
-def push_alignment(toknum,address,alignment, a):
+atable_flag = 1;
+
+def WriteToAtable(i, j, l, m, p, type):
+	
+	if type == 'f':
+		f = open('fAtable','a');	
+	else:
+		f = open('bAtable','a');	
+	f.write(str(i)+" "+str(j)+" "+str(l)+" "+str(m)+" "+str(p)+"\n");
+	f.close();
+		
+def push_alignment(toknum,address,alignment, a, BFSpos):
 
 	a.annotate(toknum, address);
 	alignment.append(str(toknum) + "-" + str(toknum+1) + "|" + address);
 	
+	if(atable_flag == 1):
+		#Add alignment to ATable in the form i, j, l, m, p
+		#Forward ATable (eng -> amr)
+		WriteToAtable(toknum, BFSpos, len(a.tokens), a.NumberOfConcepts, 1, 'f');
+		#Backward ATable (amr -> eng)
+		WriteToAtable(BFSpos, toknum, a.NumberOfConcepts, len(a.tokens), 1, 'b');
+
 	return alignment;
 
 def getConcept(value):	#Takes a raw concept and processes it such that it can be compared with a token 
@@ -62,7 +80,7 @@ def initialize_symbol_map():
 	
 	return m;	
 
-def align(tokens, aligned_tokens, amr_node, addr, alignment, amrobj):
+def align(tokens, aligned_tokens, amr_node, addr, alignment, amrobj,BFSpos):
 #tokens 		: List of tokens in the sentence to be aligned
 #aligned_tokens : A binary list of size [1xtoknum] that tells which tokens have already been aligned
 #amr_node 		: Pointer to the current AMR tree node being aligned
@@ -85,7 +103,7 @@ def align(tokens, aligned_tokens, amr_node, addr, alignment, amrobj):
 		if concept == '-' and token in polarity_token_list and not already_aligned: 
 			amr_node.aligned_to = i;
 			aligned_tokens[i] = 1;
-			alignment = push_alignment(i, addr, alignment, amrobj);
+			alignment = push_alignment(i, addr, alignment, amrobj, BFSpos);
 			this_concept_aligned = 1;
 			break;
 
@@ -93,7 +111,7 @@ def align(tokens, aligned_tokens, amr_node, addr, alignment, amrobj):
 		elif concept == token and not already_aligned: 
 			amr_node.aligned_to = i;
 			aligned_tokens[i] = 1;
-			alignment = push_alignment(i, addr, alignment, amrobj); 
+			alignment = push_alignment(i, addr, alignment, amrobj, BFSpos); 
 			this_concept_aligned = 1;
 			break;
 
@@ -101,7 +119,7 @@ def align(tokens, aligned_tokens, amr_node, addr, alignment, amrobj):
 		elif concept in symbol_concepts and token == symbol_map[concept] and not already_aligned:
 			amr_node.aligned_to = i;
 			aligned_tokens[i] = 1;
-			alignment = push_alignment(i, addr, alignment, amrobj);
+			alignment = push_alignment(i, addr, alignment, amrobj, BFSpos);
 			this_concept_aligned = 1;
 			break;
 		
@@ -120,7 +138,7 @@ def align(tokens, aligned_tokens, amr_node, addr, alignment, amrobj):
 			if token in month_name_list and not already_aligned:
 				amr_node.aligned_to = i;	
 				aligned_tokens[i] = 1;
-				alignment = push_alignment(i, addr, alignment, amrobj);
+				alignment = push_alignment(i, addr, alignment, amrobj, BFSpos);
 				this_concept_aligned = 1;
 				break;
 		
@@ -129,7 +147,7 @@ def align(tokens, aligned_tokens, amr_node, addr, alignment, amrobj):
 	#Recurse on all children
 	for i in range(0,len(amr_node.edge_ptrs_nr)):
 		ptr = amr_node.edge_ptrs_nr[i];
-		alignment = align(tokens, aligned_tokens, ptr, addr + "." + str(i+1), alignment, amrobj);
+		alignment = align(tokens, aligned_tokens, ptr, addr + "." + str(i+1), alignment, amrobj, BFSpos+1);
 	
 	#The following rules are triggered when all children are done aligning because they need their alignments to align the current node 
 
@@ -142,7 +160,7 @@ def align(tokens, aligned_tokens, amr_node, addr, alignment, amrobj):
 				if align_to != -1:						#Is the head of the *-of edge aligned?
 				 	amr_node.aligned_to = align_to;
 					aligned_tokens[align_to] = 1;
-					alignment = push_alignment(align_to, addr, alignment, amrobj);
+					alignment = push_alignment(align_to, addr, alignment, amrobj, BFSpos);
 				break;
 
 	return alignment;
@@ -160,7 +178,7 @@ def aligner(tokens, amr, amrobj):
 		newtokens.append(newtoken);
 
 	aligned_tokens = [0] * len(newtokens);
-	alignment = align(newtokens, aligned_tokens, amr, '1', [], amrobj);	
+	alignment = align(newtokens, aligned_tokens, amr, '1', [], amrobj,0);	
 #	for i in range(0,len(concepts)):
 #		concept = concepts[i][0];
 #		concept = concept.lower();	

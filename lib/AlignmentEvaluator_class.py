@@ -9,7 +9,7 @@ test_tok_range_separator = '-';
 test_multiple_addr_separator = '+';
 test_addr_child_separator = '.';
 
-#Test alignments
+#True alignments
 true_tok_addr_separator = '-';
 true_tok_range_separator = '_';
 true_multiple_addr_separator = '+';
@@ -61,7 +61,7 @@ class AlignmentEvaluator:
 		return;
 
 	def read(self, test_alignments, true_alignments,addr_offset, AMR_tree):	#if test address is 0.1.2 and corresponding true address is 1.2.3, then addr_offset is 1
-		
+	
 		#test_alignments = test_str.split();
 		#true_alignments = true_str.split();
 		#print AMR_tree.generatePrintableAMR('','\t');
@@ -82,7 +82,8 @@ class AlignmentEvaluator:
 					else:
 						atleast_one_non_role = 1;
 						address = self.OffsetNodeAddress(address, addr_offset);		#Correct the node address by adding offset to each number in the address
-						concept = AMR_tree.getNodeByAddress(address, 1); 			#Lookup the AMR tree using the address
+						concept = AMR_tree.getNodeByAddress(address, 0); 			#Lookup the AMR tree using the address
+						#print address, concept;
 						self.test_addr.append(address);		
 						self.test_concepts.append(concept);		
 				if atleast_one_non_role: self.test_tokens.append(str(i));						#Add token to test_tokens
@@ -105,6 +106,7 @@ class AlignmentEvaluator:
 						atleast_one_non_role = 1;
 						address = self.OffsetNodeAddress(address, 0);		#Correct the node address by adding offset to each number in the address
 						newaddress = self.ConvertISItoJAMR(address, AMR_tree); 		###Convert ISI address to JAMR style address (not a general feature)
+						#print address; 
 						concept = AMR_tree.getNodeByAddress(address,0); 			#Lookup the AMR tree using the ISI address, which is the most general addressing scheme
 						self.true_addr.append(newaddress);						#Add the converted address to the list for comparison
 						self.true_concepts.append(concept);		
@@ -123,20 +125,30 @@ class AlignmentEvaluator:
 			test_alignments.append((self.test_tokens)[i] + '-' + (self.test_addr)[i]);
 		for i in range(0,len(self.true_tokens)):
 			true_alignments.append((self.true_tokens)[i] + '-' + (self.true_addr)[i]);
-	
 		for elt in test_alignments:
 			if elt in true_alignments:			#True Positive
 				self.TP += 1;	
 			else: 								#False Positive
 				self.FP += 1;
+				self.FP_examples.append(elt);
 		
 		for elt in true_alignments:
 			if elt not in test_alignments:		#False Negative
-				self.FN += 1;	
+				self.FN += 1;
+				self.FN_examples.append(elt);
 
 	def getStatistics(self):
 			
 		return (self.TP, self.FP, self.FN);
+
+	def print_result(self):
+
+		print "False Positives : ";
+		for elt in self.FP_examples:
+			print elt;
+		print "False Negatives : ";
+		for elt in self.FN_examples:
+			print elt;
 
 	def print_alignments(self):
 	

@@ -219,9 +219,18 @@ def parse(amrstr,i,varlist,edgename):
 		else:							#If edge points to a leaf node
 			#(cur,i) = increment(amrstr,i);
 			leafnodeval = '';
-			while cur != ' ' and cur != ')':	#End conditions for a leaf node name
-				leafnodeval = leafnodeval + cur;	
+			if cur == '"':							#leafnode is a quoted entity
+				leafnodeval += '\"';
 				(cur,i) = increment(amrstr,i);
+				while cur != '\"':
+					leafnodeval = leafnodeval + cur;
+					(cur,i) = increment(amrstr,i);
+				leafnodeval += '\"';
+				(cur,i) = increment(amrstr,i);
+			else:
+				while cur != ' ' and cur != ')':	#End conditions for a leaf node name
+					leafnodeval = leafnodeval + cur;	
+					(cur,i) = increment(amrstr,i);
 			if leafnodeval in varlist:			#Re-entrancy
 				#print leafnodeval
 				reent = 1;

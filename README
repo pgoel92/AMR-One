@@ -12,3 +12,4 @@ lib/
 dev/ : Contains the dev corpus and associated files
 test/ : Contains the test corpus and associated files
 
+NOTE : Current evaluator fails for certain AMRs : 0003.8, 0003.29, 0008.1, 0008.2, 0008.3 

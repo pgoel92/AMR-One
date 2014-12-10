@@ -1,5 +1,11 @@
-- Read IBM Models lecture notes by Mike Collins and ISI alignment paper
-- Have a basic IBM aligner. Use alignments obtained using heuristic method to initialize the a variables in the IBM model.
+Now :
+1. Create vocabulary for English and AMR
+2. Create input file for GIZA
+3. Extract alignments from the A Table    
 
-- Ordering? IBM models take care of it.
+In time :
+ 
+- Fix the 2 problems with parsing :
+	- ISI addresses polarity edges in a different manner than JAMR
+	- Reentrancies appear before the original mention
 - NomBank. Sent.
