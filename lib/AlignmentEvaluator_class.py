@@ -82,8 +82,8 @@ class AlignmentEvaluator:
 					else:
 						atleast_one_non_role = 1;
 						address = self.OffsetNodeAddress(address, addr_offset);		#Correct the node address by adding offset to each number in the address
-						concept = AMR_tree.getNodeByAddress(address, 0); 			#Lookup the AMR tree using the address
-						#print address, concept;
+						#print address;
+						concept = AMR_tree.getNodeByAddress(address, 1); 			#Lookup the AMR tree using the address
 						self.test_addr.append(address);		
 						self.test_concepts.append(concept);		
 				if atleast_one_non_role: self.test_tokens.append(str(i));						#Add token to test_tokens
@@ -106,8 +106,9 @@ class AlignmentEvaluator:
 						atleast_one_non_role = 1;
 						address = self.OffsetNodeAddress(address, 0);		#Correct the node address by adding offset to each number in the address
 						newaddress = self.ConvertISItoJAMR(address, AMR_tree); 		###Convert ISI address to JAMR style address (not a general feature)
-						#print address; 
+						#print address, newaddress;
 						concept = AMR_tree.getNodeByAddress(address,0); 			#Lookup the AMR tree using the ISI address, which is the most general addressing scheme
+						#print address, concept; 
 						self.true_addr.append(newaddress);						#Add the converted address to the list for comparison
 						self.true_concepts.append(concept);		
 				if atleast_one_non_role: self.true_tokens.append(str(i));						#If all alignments are roles, then true_addr would be empty
@@ -118,9 +119,10 @@ class AlignmentEvaluator:
 		#if len(true_alignments) != (len(self.true_addr) + self.role_count): print "Error";
 
 	def evaluate(self):
-	
+
 		test_alignments = [];	
 		true_alignments = [];	
+
 		for i in range(0,len(self.test_tokens)):
 			test_alignments.append((self.test_tokens)[i] + '-' + (self.test_addr)[i]);
 		for i in range(0,len(self.true_tokens)):

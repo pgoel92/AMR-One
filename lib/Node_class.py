@@ -1,7 +1,9 @@
+import re;
+
 class node:
 
 	def __init__(self, val, edge_ptrs,edge_ptrs_nr,edge_name):
-		self.value = val;				#value of current node
+		self.value = self.DecomposeNodeValue(val);				#value of current node
 		self.edge_name = edge_name;		#name of the edge pointing to this node
 		self.edge_ptrs = edge_ptrs;		#list of child node objects
 		#self.edge_names = edge_names;	#list of edge names for each child node edge
@@ -10,7 +12,7 @@ class node:
 		self.aligned_to = -1;			#token number of the token this node is aligned to. -1 if the node is unaligned.
 
 	def setValue(self,val):
-		self.value = val;
+		self.value = self.DecomposeNodeValue(val);
 
 	def addEdge(self,ptr,reent):
 		#self.edge_names.append(name);
@@ -19,22 +21,70 @@ class node:
 		self.reent.append(reent);
 
 	def printSubtree(self,index):
-		print index,"(" + self.value + ")";
+		print index,"(" + self.RecomposeNodeValue(self.value) + ")";
 		for i in range(0,len(self.edge_ptrs_nr)):
 			#print len(self.edge_ptrs_nr);
 			#print self.edge_names[i];
 			self.edge_ptrs_nr[i].printSubtree(index+'.'+str(i+1));
 
+	'''
+	 Takes as input a node value from an AMR graph
+	 and returns the list : [ node_name, concept ]
+	 i.e. "a / person" -> [ "a", "person" ]
+		  "1992" 	   -> [ "", "1992" ]
+	'''	
+	def DecomposeNodeValue(self, val):
+	
+		try:
+			i = val.index('/');	
+		#If unnamed node
+		except ValueError:
+			# [ node_name, concept ]
+			return ['', val];
+
+		# [ node_name, concept ]
+		return [val[:i-1], val[i+2:]];
+
+	def RecomposeNodeValue(self, val_ls):		
+
+		if val_ls[0] == '':
+			return val_ls[1];	
+		
+		return val_ls[0] + " / " + val_ls[1];
+
+	def cleanConcept(self, concept):
+	#Takes a concept as input and returns the cleaned version
+		#print "__"+concept+"__";   
+		if len(concept) > 1 and concept[0] == '"': concept = concept[1:-1];  #Remove quotation marks
+		concept = re.sub('\-[0-9]+$','',concept);       #Remove number tags
+		
+		return concept;
+
+	def linearize(self, addr):
+
+		out = [];
+
+		#If leaf node	
+		if len(self.edge_ptrs_nr) == 0:
+			#Append ( (incoming_edge_name, concept), node_address ) to output
+			out.append(((self.edge_name, self.cleanConcept(self.value[1])), addr));
+			return out;
+		
+		#Add incoming edge name and value to list	
+		out.append(((self.edge_name, self.cleanConcept(self.value[1])), addr));
+
+		#Recurse on children
+		for i in range(0,len(self.edge_ptrs_nr)):
+			child = self.edge_ptrs_nr[i];
+			out += child.linearize(addr+'.'+str(i+1));
+
+		return out;
+
+
 	def getConcepts(self,index):	#Returns a list of concepts and their JAMR node addresses
 	
 		concepts = [];	
-		v = self.value.split('/');
-		if len(v) > 1: c = v[1][1:];
-		else: 
-			c = v[0];
-			#if c[0] == '"':
-			#	c = c[1:-1];
-		concepts.append((c,index));	
+		concepts.append((self.value[1],index));	
 		
 		if len(self.edge_ptrs) == 0: return concepts;
 	
@@ -53,26 +103,52 @@ class node:
 		    role = 1;
 		if address == '1':
 		    return self.getValue();
-		return self.getNode(address[2:],role,jamr_addr);
-		
-	def generatePrintableAMR(self,s,tabs):
-		
-		s = s + '(' + self.value;			
-		if len(self.edge_ptrs) == 0: return s;
+		childnum, newaddress = self.getSubtreeAddress(address);
+		return self.getNode(newaddress,role,jamr_addr);
+	
+	'''
+	 Converts the AMR tree into a string.
+	'''	
+	def generatePrintableAMR(self,s,tabs, nobracket):
+	
+		#nonewlinelist = ['op1','op2','op3','op4','op5','quant','polarity','month','day'];
+
+		#if nobracket: s = s + self.value;
+		#else: s = s + '(' + self.value;			
+		child_nobracket = True;
+		s = s + '(' + self.RecomposeNodeValue(self.value);
+
+		if len(self.edge_ptrs) == 0: 
+			#if nobracket: return s;
+			return s + ')';
+
 		for i in range(0,len(self.edge_ptrs)):
 			child = self.edge_ptrs[i];
-			#print self.edge_names[i],child.value
+		
+			##If special child, don't add brackets and don't add newline
+			#if child.edge_name in nonewlinelist:
+			#	child_nobracket = True;
+			#else: 
+			#	child_nobracket = False;
 			s = s + '\n' + tabs + ':' + child.edge_name + ' ';
-			#print s;
+		
+			#If not reentrancy, recurse
 			if self.reent[i] == 0:
-				s = child.generatePrintableAMR(s,tabs + '\t');
+				s = child.generatePrintableAMR(s,tabs + '\t', child_nobracket);
 			else:
-				s = s + '(' + self.edge_ptrs[i].getValue();
-			s = s + ')';
+				v = self.edge_ptrs[i].getValue();
+				v = v.split('/');
+				s = s + v[0]; 
+				
+
+		#if not nobracket : s = s + ')';
+		s = s + ')';
+
 		return s;
 
 	def getValue(self):
-		return self.value
+
+		return self.RecomposeNodeValue(self.value);
 
 #	def getCorrectEdgeIndex(self,index):	#Skips re-entrancy edges and assigns a new index
 #		
@@ -106,7 +182,7 @@ class node:
 		#address : The address of node relative to the root of the current subtree
 		#r : Tells whether or not the address refers to a role	
 		#jamr_addr : Tells whether addressing format is from JAMR (1) or ISI (0)
-		childnum = int(address[0])-1;	
+		childnum, newaddress = self.getSubtreeAddress(address);	
 		if len(address) == 1:	#if we are 1 step away from target node 
 			if not r: 
 				if jamr_addr == 1: return self.edge_ptrs_nr[childnum].getValue();
@@ -117,18 +193,28 @@ class node:
 			if len(self.edge_ptrs) == 0: return "Node does not exist";
 			elif childnum > len(self.edge_ptrs): return "Node does not exist";	
 			else: 
-				if jamr_addr == 1: return self.edge_ptrs_nr[childnum].getNode(address[2:],r,jamr_addr);
-				return self.edge_ptrs[childnum].getNode(address[2:],r,jamr_addr);	#recurse on child node
+				if jamr_addr == 1: return self.edge_ptrs_nr[childnum].getNode(newaddress,r,jamr_addr);
+				return self.edge_ptrs[childnum].getNode(newaddress,r,jamr_addr);	#recurse on child node
 
+	def getSubtreeAddress(self, address):
+
+		i = address.find('.');	
+		
+		if i == -1: 
+			return int(address)-1, address;
+
+		childnum = int(address[0:i])-1;
+		return childnum, address[i+1:];
+		
 	def getNodePointer(self,address,r,jamr_addr):
 		
 		#address : The address of node relative to the root of the current subtree
 		#r : Tells whether or not the address refers to a role	
 		#jamr_addr : Tells whether addressing format is from JAMR (1) or ISI (0)
-		childnum = int(address[0])-1;	
-		if len(address) == 1:	#if we are 1 step away from target node 
+		childnum, newaddress = self.getSubtreeAddress(address);
+		#childnum = int(address[0])-1;	
+		if address.find('.') == -1:	#if we are 1 step away from target node 
 			if not r: 
-				#print childnum;
 				if jamr_addr == 1: return self.edge_ptrs_nr[childnum];
 				return self.edge_ptrs[childnum];
 			else: return self.edge_ptrs[childnum-1].edge_name;
@@ -136,8 +222,8 @@ class node:
 			if len(self.edge_ptrs) == 0: return "Node does not exist";
 			elif childnum > len(self.edge_ptrs): return "Node does not exist";	
 			else: 
-				if jamr_addr == 1: return self.edge_ptrs_nr[childnum].getNodePointer(address[2:],r,jamr_addr);
-				return self.edge_ptrs[childnum].getNodePointer(address[2:],r,jamr_addr);	#recurse on child node
+				if jamr_addr == 1: return self.edge_ptrs_nr[childnum].getNodePointer(newaddress,r,jamr_addr);
+				return self.edge_ptrs[childnum].getNodePointer(newaddress,r,jamr_addr);	#recurse on child node
 	
 	def ISItoJAMR(self,address, new_address):
 		
@@ -172,7 +258,13 @@ def increment(amrstr,i):
 	if i==len(amrstr)-1: return ('EOF',i);
 	return (amrstr[i+1],i+1);
 
+def cloneNodeWithNewEdgename(n, ename):
+
+	return node(n.value, n.edge_ptrs, n.edge_ptrs_nr, ename);
+
 def parse(amrstr,i,varlist,edgename):
+
+	nonreentleaf_edgenames = ['polarity', 'op1', 'op2', 'op3', 'op4', 'op5', 'day', 'month', 'year', 'decade', 'time', 'value', 'quant', 'mode'];
 
 	root = node("",[],[],edgename);				#Create root node
 	#print len(amrstr),i	
@@ -231,10 +323,16 @@ def parse(amrstr,i,varlist,edgename):
 				while cur != ' ' and cur != ')':	#End conditions for a leaf node name
 					leafnodeval = leafnodeval + cur;	
 					(cur,i) = increment(amrstr,i);
-			if leafnodeval in varlist:			#Re-entrancy
-				#print leafnodeval
+			#print edgename, leafnodeval;
+			#if leafnodeval in varlist:			#Re-entrancy
+			if leafnodeval in varlist or edgename not in nonreentleaf_edgenames:			#Re-entrancy
+			#Note : 2nd condition alone should do the job
 				reent = 1;
-				edgeptr = varlist[leafnodeval];	#Re route re-entrancy to the original node
+				try:
+					#edgeptr = varlist[leafnodeval];	#Re route re-entrancy to the original node
+					edgeptr = cloneNodeWithNewEdgename(varlist[leafnodeval], edgename);		#Re route re-entrancy to the original node
+				except KeyError:					#If re-entrancy variable occurs before actual node, create a new node because rerouting not possible
+					edgeptr = node(leafnodeval, [], [], edgename);
 		#	elif (len(leafnodeval) == 1 or len(leafnodeval) == 2) and leafnodeval not in varlist: 	#Node is a reentrancy but the original node has not occurred.
 		#																							#Assumption that variable names can only be 1 or 2 character long
 		#		reent = 1;	

@@ -37,7 +37,7 @@ class AMR:
 	#	generate_writable
 	#	printAMR
 	#	getNodeByAddress
-	#	annotate
+	#	annotate_node
 	#	convertISItoJAMR
 	#	getConcepts
 	#	getTokens
@@ -50,7 +50,6 @@ class AMR:
 	def read(self,s):
 	#reads a string that describes the AMR and parses the string into components
 		s = s.split('\n');
-		
 		#Read AMR literal
 		if s[3][0] == '#':		#indicates that there is an alignment line
 			alignment_line = (s[3]).split();
@@ -111,18 +110,34 @@ class AMR:
 	def generate_printable_AMR(self):
 
 		self.AMR_aligned_string_printable =  self.AMR_tree_aligned.generatePrintableAMR('','\t');
-			
-	def generate_writable(self):
+		
+	'''
+	 Generates the AMR in corpus format. If annotation_flag is set, checks if alignment string is null,
+	 if not, adds alignments to the nodes. 
+	'''
+	def generate_writable(self, annotation_flag):
 	
 		s = '';
 		s = s + "# ::id " + self.ID + '\n';
-		s = s + "# ::snt " + self.sentence + '\n';
+		tokens = self.sentence.split();
+		sentencewithnum = '';
+		for i in range(0,len(tokens)):
+			sentencewithnum += (tokens[i]+'-'+str(i)+' ');
+		s = s + "# ::snt " + sentencewithnum[:-1] + '\n';
 		s = s + "# ::save-date\n";
 		#s = s + "# ::tok";
 		#for i in range(0,len(self.tokens)):
 		#	s = s + ' ' + str(i) + '-' + self.tokens[i];
 		#s = s + '\n';
 		s = s + '# ::alignments ' + ' '.join(self.alignments) + ' * * * * *\n';
+		if annotation_flag and len(self.alignments) != 0:
+			for alignment in self.alignments:
+				alignment = alignment.split('|');
+				address = alignment[1];
+				toknum = alignment[0].split('-');
+				toknum = toknum[0];
+				self.annotate_node(address, toknum);	
+			self.AMR_aligned_string_printable = self.AMR_tree_aligned.generatePrintableAMR('','\t',False);
 		s = s + self.AMR_aligned_string_printable;
 		s = s + '\n';
 		
@@ -143,16 +158,40 @@ class AMR:
 			return (self.AMR_tree).getValue();
 		return (self.AMR_tree).getNode(address[2:],role,jamr_addr);
 
-	def annotate(self, token_number, address):
+	def getSubtreeAddress(self, address):
+	
+		i = address.find('.');  
+		
+		if i == -1: 
+			return int(address)-1, address;
+		
+		childnum = int(address[0:i])-1;
+		return childnum, address[i+1:];
 
-		if (address == '1'): n = self.AMR_tree_aligned;
-		else: n = self.AMR_tree_aligned.getNodePointer(address[2:], 0, 1);	
-		v = n.getValue();
-		v = v.split();	#v[0] is the variable, v[1] is the '/' character and v[2] is the concept name
-		newvar = v[0]+"~"+str(token_number);
-		if len(v) > 1: 
-			n.setValue(newvar + " " + v[1] + " " + v[2]);
-		else: n.setValue(newvar);	
+	'''
+	 Find the AMR node using given address and annotates the concept with given
+	 token number.
+	'''
+	def annotate_node(self, address, token_number):
+
+		#If my getNode and getNodeByAddress functions were designed better, I wouldn't have to access the tree directly. 
+		#Right now, those functions return the value at node. Instead, they should simply return the node itself.
+		#Now there's too many strings attached to those functions and I'm afraid I'll mess something up.
+		if (address == '1'): node = self.AMR_tree_aligned;
+		else: 
+			c, addr = self.getSubtreeAddress(address);
+			node = self.AMR_tree_aligned.getNodePointer(addr, 0, 1);	
+
+		v = node.getValue();
+		i = v.find('/');
+	
+		if i == -1 or v[0] == '"':	#leaf node
+			newval = v+"~"+str(token_number);
+		else:
+			v = v.split();	#v[0] is the variable, v[1] is the '/' character and v[2] is the concept name
+			newval = v[0]+"~"+str(token_number) + " / " + v[2];
+
+		node.setValue(newval);
 
 	def convertISItoJAMR(self,address):
 		
@@ -161,7 +200,7 @@ class AMR:
 	
 	def cleanConcept(self, concept):
 	#Takes a concept as input and returns the cleaned version
-		print "__"+concept+"__";	
+		#print "__"+concept+"__";	
 		if len(concept) > 1 and concept[0] == '"': concept = concept[1:-1];  #Remove quotation marks
 		concept = re.sub('\-[0-9]+$','',concept);       #Remove number tags
 	
@@ -176,10 +215,15 @@ class AMR:
 			cleanclist = [(self.cleanConcept(x[0]),x[1]) for x in clist];
 			clist = cleanclist;
 		return clist;
+	
+	def linearize(self):	
+
+		linearAMR = self.AMR_tree.linearize('1');
+		return linearAMR;
 		
 	def getTokens(self):
 		
-		return self.tokens;	
+		return (self.sentence).split();	
 	
 	def getAlignments(self):
 		

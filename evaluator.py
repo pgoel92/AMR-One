@@ -40,7 +40,6 @@ def main():
 		amrobj = AMR_objects[i];
 
 		#print amrobj.ID;
-		#print amrobj.tokens;
 		#print amrobj.alignments;
 		#print amrobj.AMR_string_printable;
 
@@ -49,10 +48,12 @@ def main():
 		try:
 			(tp, fp, fn) = amrobj.evaluate_alignments(true);
 		except IndexError:
+			#print "Index Error : ", amrobj.ID;
 			continue;
 		TP = TP + tp;
 		FP = FP + fp;
 		FN = FN + fn;
+
 	Precision = (TP/float(TP+FP))*100;
 	Recall = (TP/float(TP+FN))*100;
 	print "Precision : ", Precision;
